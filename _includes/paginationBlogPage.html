@@ -1,0 +1,35 @@
+<!-- pagination -->
+<div class="bottompagination">
+    <div class="pointerup"><i class="fa fa-caret-up"></i></div>
+    <span class="navigation" role="navigation"></span>
+</div>
+{% if paginator.total_pages > 1 %}
+<div class="blog-pagination">
+    {% if paginator.previous_page %}
+    <a style="color: #00ab6b; font-weight: 900;"
+        href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+    {% else %}
+    <span class="text-muted">&laquo; Prev</span>
+    {% endif %}
+
+    {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+    <span class="webjeda text-muted">{{ page }}</span>
+    {% elsif page == 1 %}
+    <a href="/blog" style="color: #00ab6b; font-weight: 900;">{{ page }}</a>
+    {% else %}
+    <a style="color: #00ab6b; font-weight: 900;"
+        href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page
+        }}</a>
+    {% endif %}
+    {% endfor %}
+
+    {% if paginator.next_page %}
+    <a style="color:#00ab6b; font-weight: 900;"
+        href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next
+        &raquo;</a>
+    {% else %}
+    <span class="text-muted">Next &raquo;</span>
+    {% endif %}
+</div>
+{% endif %}

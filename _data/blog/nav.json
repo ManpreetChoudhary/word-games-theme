@@ -1,0 +1,14 @@
+{
+  "navbarBrandText": "",
+  "navbarBrandLogo": "/assets/images/word-games-logo.svg",
+  "navItems": [
+    {
+      "name": "Blog",
+      "url": "blog"
+    },
+    {
+      "name": "",
+      "url": ""
+    }
+  ]
+}

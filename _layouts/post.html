@@ -1,0 +1,69 @@
+<html>
+
+{% include custom-head.html %}
+<body>
+    {%- include header/blogHeader.html -%}
+    <section class="section_post">
+        <div class="container">
+            <div class="row section-title-wrap">
+                <div class="col-md-12 mt-5">
+                    <h1 class="display-4" style="font-weight: 900;">{{ page.title }}</h1>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-2">
+                    <div class="socialIons">
+                        <ul class="list-unstyled item-lists2">
+                            <li><a style="pointer-events: none;">{{ site.data.blog.share.label }}</a></li>
+                            {% capture title %}{{ page.title }}{% endcapture %}
+                            {% assign url = page.url | relative_url | prepend: site.url %}
+                            {% for share in site.data.blog.share.platforms %}
+                            {% assign link = share.link | replace: 'TITLE', title | replace: 'URL', url %}
+                            <li> <a href=" {{ link }}" data-toggle="tooltip"
+                                    onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+                                    data-placement="top" title="{{ share.type }}" aria-label="{{ share.type }}">
+                                    <i class="fa-fw {{ share.icon }}"></i>
+                                </a>
+                            </li>
+                            {% endfor %}
+                            </span>
+                        </ul>
+                        <div class="sep"></div>
+                        <div class="comments-count">
+                            <a href="{{ content.absolute_url  }}#disqus_thread" class="comment_count"></a>
+                        </div>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    {%- include authors/authors.html -%}
+                    {%- include postauthorbio.html -%}
+                    {% if page.author %}
+                    {%- include author_bio.html -%}
+                    {% endif %}
+                    <div class="post-content">
+                        {{ content }}
+                    </div>
+        
+                    {%- include paginationPostPage.html -%}
+                    {%- if page.categories or page.tags-%}
+                    {%- include section/related_categories_post.html -%}
+                    {%- else -%}
+                    {%- include section/recent_posts.html -%}
+                    {% endif %}
+                    <div class="commentsection">
+                        {%- if site.disqus.shortname -%}
+                        {%- include disqus_comments.html -%}
+                        {%- endif -%}
+                    </div>
+                </div>
+            </div>
+    </section>
+    {%- include section/count.html -%}
+    {%- include section/alertbar.html -%}
+    {% include script.html %}
+    <script src="{{ '/assets/js/TopScroll.js' | relative_url }}"></script>
+</body>
+
+</html>

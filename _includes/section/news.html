@@ -1,0 +1,33 @@
+{% assign file = page.fileName %}
+{% assign lang = page.lang %}
+{% assign dataToShow = site.data.[page.folderName][lang][file] %}
+<!-- starting news section -->
+<div class="container-fluid">
+    <div class="row rowHeight2">
+        <div class="col-xl-3 col-lg-12">
+            <div class="row">
+                <div class="col-xl-3 p-0">
+                    <div class="news">
+                        <img src="/assets/images/left_obj_02.webp" alt="">
+                        <span class="site-no">{{dataToShow.newsNo}}</span>
+                        <span class="site-no">{{dataToShow.FaqNo}}</span>
+                        <h5 class="title">{{dataToShow.Faq_title}}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-9 col-lg-12">
+            <div class="row my-xl-0">
+                {% for entry in dataToShow.faqList %}
+                <div class="col-md-12 pt-5">
+                    <p class="meduim-text2 mb-0">{{entry.faqQuestion}}</p>
+                    <p class="meduim-text mb-0">{{entry.faqAnswer}}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- close -->

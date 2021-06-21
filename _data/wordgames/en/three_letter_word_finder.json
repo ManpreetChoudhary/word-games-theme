@@ -1,0 +1,188 @@
+{
+  "title": "Three letter word finder ",
+  "h1": "Three letter word finder ",
+  "meta": "Worried with an Three popping up in your word game? Use our Three letter word finder now itself!",
+  "featureNo": "02",
+  "feature_title": "Features",
+  "blogNo": "03",
+  "blog_title": "Blog",
+  "FaqNo": "04",
+  "Faq_title": "FAQ",
+  "aboutNo": "05",
+  "about_title": "About",
+  "featureList": [
+    {
+      "feature_heading": "Bring a turning point in your game with Three letter word finder ",
+      "feature_text": "Often this letter Three comes a lot in word games. But the main thing is that these words can sometimes be highly scoring. To help you score more, we have designed this Three letter word finder ",
+      "fa_class": "far fa-star"
+    },
+    {
+      "feature_heading": "Find any numbered word with letter Three in it",
+      "feature_text": "Three letter word finder lets you find all {Three in words} letter words with given letters whether it's a four lettered, fine-lettered or even seven-lettered word.",
+      "fa_class": "far fa-star"
+    },
+    {
+      "feature_heading": "Supports a number of dictionaries",
+      "feature_text": "We love to play Scrabble and understand all the fine details. We will find all valid words from dictionaries of your choice along with their scores.",
+      "fa_class": "far fa-star"
+    }
+  ],
+  "faqList": [
+    {
+      "faqQuestion": "How many 3 letter words can you find with letters 'ZAIOKH' using our 3 letter word finder?",
+      "faqAnswer": "\"Using our 3 letter word finder, for the letters 'ZAIOKH' you can find following words zho ,azo ,zoa ,hok ,khi ,kai ,kia ,koa ,koi ,oak ,oik ,oka ,ahi ,hai \n\""
+    },
+    {
+      "faqQuestion": "How many 3 letter words can you find with letters 'CVIUNA' using our 3 letter word finder?",
+      "faqAnswer": "Using our 3 letter word finder, for the letters 'CVIUNA' you can find following words vac ,van ,vau ,vin ,can ,cui ,via ,uan ,uni ,ain ,ani ,nai "
+    },
+    {
+      "faqQuestion": "How many 3 letter words can you find with letters 'GOPIUR' using our 3 letter word finder?",
+      "faqAnswer": "Using our 3 letter word finder, for the letters 'GOPIUR' you can find following words pug,gip ,pig ,piu ,pur ,upo ,gur ,pir ,poi ,pro ,rip ,rug"
+    },
+    {
+      "faqQuestion": "How many 3 letter words can you find with letters 'CAZTION' using our 3 letter word finder?",
+      "faqAnswer": "Using our 3 letter word finder, for the letters 'CAZTION' you can find following words coz ,zac ,zin ,azo ,tiz ,zit ,zoa ,can ,con ,act ,cat ,cot ,oca ,tic "
+    },
+    {
+      "faqQuestion": "How many 3 letter words can you find with letters 'ZODBLA' using our 3 letter word finder?",
+      "faqAnswer": "Using our 3 letter word finder, for the letters 'ZODBLA' you can find following words adz ,dzo ,zol ,azo ,zoa ,alb ,bad ,bal ,bod ,bol ,dab "
+    },
+    {
+      "faqQuestion": "How many 3 letter words can you find with letters 'JADWOI' using our 3 letter word finder?",
+      "faqAnswer": "Using our 3 letter word finder, for the letters 'JADWOI' you can find following words jaw ,jow ,jai ,daw ,dow ,wad ,ado ,aid ,dai ,oda"
+    },
+    {
+      "faqQuestion": "How many 3 letter words can you find with letters 'NAWSIO' using our 3 letter word finder?",
+      "faqAnswer": "Using our 3 letter word finder, for the letters 'NAWSIO' you can find following words awn ,naw ,now ,own ,wan ,win ,won ,saw ,sow ,was ,wis ,wos ,ain"
+    },
+    {
+      "faqQuestion": "How many 3 letter words can you find with letters 'HASCOG' using our 3 letter word finder?",
+      "faqAnswer": "Using our 3 letter word finder, for the letters 'HASCOG' you can find following words ach ,cha ,cog ,hac ,hoc ,och ,gah ,hag ,hog ,cos ,oca ,sac ,soc ,ago, ahs "
+    },
+    {
+      "faqQuestion": "How many 3 letter words can you find with letters 'URIYMP' using our 3 letter word finder?",
+      "faqAnswer": "Using our 3 letter word finder, for the letters 'URIYMP' you can find following words ump,imp ,puy ,yum ,yup ,pry ,yip ,imu ,piu ,pur ,rum,mir"
+    },
+    {
+      "faqQuestion": "How many 3 letter words can you find with letters 'GHJOIL' using our 3 letter word finder?",
+      "faqAnswer": "\"Using our 3 letter word finder, for the letters 'GHJOIL' you can find following words jig ,jog ,jol ,ghi ,hog ,lig ,log ,hoi \n\""
+    },
+    {
+      "faqQuestion": "Is there a 3 letter scrabble word with C ?",
+      "faqAnswer": "3 letter scrabble word with C are CAI,cal,cam,can, cap,car,cat,aw ,cax,cay,caz"
+    },
+    {
+      "faqQuestion": "Is there a 3 letter scrabble word that end with Q  ?",
+      "faqAnswer": "3 letter scrabble word that end with Q is suq"
+    },
+    {
+      "faqQuestion": "Is there a 3 letter scrabble word with Z and X ?",
+      "faqAnswer": "3 letter scrabble word with Z and X are zax,zex"
+    },
+    {
+      "faqQuestion": "Is there a 3 letter scrabble word with Q ?",
+      "faqAnswer": "3 letter scrabble word with Q are qaf,qis,qua,quo,suq"
+    },
+    {
+      "faqQuestion": "Is there a 3 letter scrabble word with Z ?",
+      "faqAnswer": "3 letter scrabble word with Z are AZO,ZAP,ZAG,WIZ,LEZ,FIZ,FEZ,COZ"
+    },
+    {
+      "faqQuestion": "Is there a 3 letter scrabble word with X ?",
+      "faqAnswer": "3 letter scrabble word with X are aux,box,cox,dox,dux,fax,fix"
+    },
+    {
+      "faqQuestion": "Is there a 3 letter scrabble word with Q and E ?",
+      "faqAnswer": "3 letter scrabble word with Q and E are que,esq ,seq "
+    },
+    {
+      "faqQuestion": "How many meaningful 3 letter words can be created by solving jumble word 'BPOIU'?",
+      "faqAnswer": "Some 3 letter words that can be created from jumble word 'BPOIU' are  pub ,bop ,piu ,upo ,bio ,obi ,poi "
+    },
+    {
+      "faqQuestion": "How many meaningful 3 letter words can be created by solving jumble word 'FASHGY'?",
+      "faqAnswer": "Some 3 letter words that can be created from jumble word 'FASHGY' are,fah ,fay,gah ,gay ,hag ,hay ,shy ,yag ,yah ,fas ,ahs ,ash "
+    },
+    {
+      "faqQuestion": "How many meaningful 3 letter words can be created by solving jumble word 'JGHAI'?",
+      "faqAnswer": "Some 3 letter words that can be created from jumble word 'JGHAI' are haj,jag ,jig ,jai ,gah ,ghi ,hag ,ahi  "
+    },
+    {
+      "faqQuestion": "How many meaningful 3 letter words can be created by solving jumble word 'ZADMIO'?",
+      "faqAnswer": "Some 3 letter words that can be created from jumble word 'ZADMIO' are adz ,dzo ,azo ,zoa ,dam ,dim ,dom ,mad ,mid ,mod  "
+    },
+    {
+      "faqQuestion": "How many meaningful 3 letter words can be created by solving jumble word 'DASITO'?",
+      "faqAnswer": "Some 3 letter words that can be created from jumble word 'DASITO' are ado ,ads ,aid ,dai ,dis ,dit ,dos ,dot ,ids ,itd ,oda ,ods ,sad ,sod "
+    },
+    {
+      "faqQuestion": "How many meaningful 3 letter words can be created by solving jumble word 'BCSAIR'?",
+      "faqAnswer": "Some 3 letter words that can be created from jumble word 'BCSAIR' are cab ,abs ,arb ,arc ,bai,bar ,bas ,bis ,car ,cis ,cri ,rib ,sab "
+    },
+    {
+      "faqQuestion": "How many meaningful 3 letter words can be created by solving jumble word 'GACRIO'?",
+      "faqAnswer": "Some 3 letter words that can be created from jumble word 'GACRIO' are cig,cog ,arc ,car ,cor ,cri,oca ,orc,roc ,ago ,gar ,goa  "
+    },
+    {
+      "faqQuestion": "How many meaningful 3 letter words can be created by solving jumble word 'VWNIOL'?",
+      "faqAnswer": "Some 3 letter words that can be created from jumble word 'VWNIOL' are vow ,vin ,von ,low ,now ,owl ,own ,win ,won ,lin ,nil ,ion "
+    },
+    {
+      "faqQuestion": "How many meaningful 3 letter words can be created by solving jumble word 'DEOLIC'?",
+      "faqAnswer": "Some 3 letter words that can be created from jumble word 'DEOLIC' are cel ,cod ,col ,doc ,eco ,ice ,del,dol ,eld ,led ,lid ,old ,die ,doe "
+    },
+    {
+      "faqQuestion": "How many meaningful 3 letter words can be created by solving jumble word 'ASHPSR'?",
+      "faqAnswer": "Some 3 letter words that can be created from jumble word 'ASHPSR' are hap ,pah ,asp ,par ,pas ,rap ,sap ,spa ,ahs ,ash ,has ,rah ,sha "
+    },
+    {
+      "faqQuestion": "Is  NIB  3 letter valid scrabble word?",
+      "faqAnswer": "Yes,NIB is a 3 letter valid scrabble word"
+    },
+    {
+      "faqQuestion": "Is  LOY  3 letter valid scrabble word?",
+      "faqAnswer": "Yes, LOY is a 3 letter valid scrabble word"
+    },
+    {
+      "faqQuestion": "Is  HAW  3 letter valid scrabble word?",
+      "faqAnswer": "Yes,HAW is a 3 letter valid scrabble word"
+    },
+    {
+      "faqQuestion": "Is  FAS  3 letter valid scrabble word?",
+      "faqAnswer": "Yes, FAS is a 3 letter valid scrabble word"
+    },
+    {
+      "faqQuestion": "Is  FAW  3 letter valid scrabble word?",
+      "faqAnswer": "Yes,FAW is a 3 letter valid scrabble word"
+    },
+    {
+      "faqQuestion": "Is  DEB  3 letter valid scrabble word?",
+      "faqAnswer": "Yes,DEB is a 3 letter valid scrabble word"
+    },
+    {
+      "faqQuestion": "Is  CHE 3 letter valid scrabble word?",
+      "faqAnswer": "Yes, CHE is a 3 letter valid scrabble word"
+    },
+    {
+      "faqQuestion": "Is  YAG   3 letter valid scrabble word?",
+      "faqAnswer": "Yes, YAG is a  3 letter valid scrabble word"
+    },
+    {
+      "faqQuestion": "Is  VAE  3 letter valid scrabble word?",
+      "faqAnswer": "Yes, VAE is a 3 letter valid scrabble word"
+    },
+    {
+      "faqQuestion": "Is  SAC  3 letter valid scrabble word?",
+      "faqAnswer": "Yes, SAC is a 3 letter valid scrabble word"
+    }
+  ],
+  "aboutList": [
+    {
+      "aboutText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim odio sapiente unde voluptatibus, excepturi saepe quisquam veniam architecto delectus dolor eos dolorem id itaque necessitatibus laborum cupiditate asperiores officia? Deleniti!"
+    },
+    {
+      "aboutText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim odio sapiente unde voluptatibus, excepturi saepe quisquam veniam architecto delectus dolor eos dolorem id itaque necessitatibus laborum cupiditate asperiores officia? Deleniti!"
+    }
+  ]
+}

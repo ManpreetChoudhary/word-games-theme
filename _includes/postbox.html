@@ -1,0 +1,30 @@
+{%- include /authors/authors.html -%}
+<div class="col-lg-4 col-md-6 mb-4 card-group">
+    <div class="card h-100">
+        <a href="{{ post.url }}">
+            <img src="{{ post.image }}" class="card-img-top"  height="208px" width="100%" loading="lazy" alt="">
+        </a>
+        <div class="card-body">
+            <a class="text-decoration-none text-dark" href="{{ post.url }}" class="anchor_link">
+                <h4 class="card-title mb-4 text-left">{{ post.title }}</h4>
+            </a>
+        </div>
+        <div class="card-footer bg-white">
+            <div class="wrapfooter">
+                {% if post.author %}
+                <span class="meta-footer-thumb">
+                    <img class="author-thumb" loading="lazy" src="{{image}}" alt="{{ authorName }}">
+                </span>
+                {% endif %}
+                <span class="author-meta">
+                    <span class="post-name">
+                        <a target="_blank" href="/blog">{{authorName}}</a>
+                    </span><br>
+                    <span class="post-date">{{post.date | date_to_string }}</span>
+                </span>
+                <span class="post-read-more"><a class="text-dark" href="{{ post.url }}"
+                        title="Read Story">Read More</a></span>
+            </div>
+        </div>
+    </div>
+</div>

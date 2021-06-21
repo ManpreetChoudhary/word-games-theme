@@ -1,0 +1,57 @@
+{%- if seo_title -%}
+{%- assign seo_title = seo_title | markdownify | strip_html | strip_newlines | escape_once -%}
+{%- endif -%}
+
+{% if page.canonical_url %}
+{%- assign canonical_url = page.canonical_url %}
+{% else %}
+{%- assign canonical_url = page.url | replace: "index.html", "" | absolute_url %}
+{% endif %}
+
+{%- assign seo_description = page.description | default: page.excerpt | default: site.description -%}
+{%- if seo_description -%}
+{%- assign seo_description = seo_description | markdownify | strip_html | strip_newlines | escape_once -%}
+{%- endif -%}
+
+{%- assign author = page.author | default: page.authors[0] | default: site.author -%}
+{%- assign author = site.data.authors[author] | default: author -%}
+
+{%- if author.twitter -%}
+{%- assign author_twitter = author.twitter | replace: "@", "" -%}
+{%- endif -%}
+
+{%- if page.date -%}
+{%- assign og_type = "article" -%}
+{%- else -%}
+{%- assign og_type = "website" -%}
+{%- endif -%}
+
+{% if author.name %}
+<meta name="author" content="{{ author.name | default: author }}">
+{% endif %}
+
+{% unless page.layout == 'post' %}
+<meta name="description" content="{{ dataToShow.meta }}">
+<meta name="og:description" content="{{ dataToShow.meta }}">
+<meta property="og:title" content="{{ dataToShow.title }}">
+{% endunless%}
+
+{% if page.layout == 'post'%}
+<meta name="description" content="{{ seo_description }}">
+<meta name="og:description" content="{{ seo_description }}">
+<meta property="og:title"
+    content="{{ page.title | default: site.title | markdownify | strip_html | strip_newlines | escape_once }}">
+{% endif %}
+
+<meta property="og:type" content="{{ og_type }}">
+<meta property="og:locale" content="{{ site.locale | replace: " -", "_" | default: "en_US" }}">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:url" content="{{ canonical_url }}">
+<meta data-rh="true" property="og:url" content="{{ canonical_url }}">
+<meta data-rh="true" property="og:site_name" content="{{site.name}}">
+<meta data-rh="true" property="twitter:domain"  content="{{site.url}}">
+<meta data-rh="true" property="twitter:url"  content="{{site.url | append:  page.url}}">
+<meta data-rh="true" name="twitter:title" content="{{ dataToShow.title }}">
+<meta data-rh="true" name="twitter:description" content="{{ dataToShow.meta }}">
+<meta data-rh="true" name="twitter:image:src" content="{{ canonical_url }}">
+<link rel="canonical" content="{{ canonical_url }}">

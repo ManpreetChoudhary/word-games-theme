@@ -1,0 +1,18 @@
+{%- assign postAuthor = page.author | split: " " -%}
+{%- assign author = postAuthor.first | downcase -%}
+                        {%- assign collection = [author] -%}
+                        {%- for item in collection -%}
+                        {%- if forloop.index==1 -%}
+                            {%- assign authorName = item -%}
+                        {%- endif -%}
+                        {%- if forloop.index==2 -%}
+                            {%- assign image = item -%}
+                        {%- endif -%}
+                        {%- if forloop.index==3 -%}
+                            {%- assign bio = item -%}
+                        {%- endif -%}
+                        {%- if forloop.index==4 -%}
+                            {%- assign twitter = item -%}
+                        {%- endif -%}
+                    {%- endfor -%}
+                    

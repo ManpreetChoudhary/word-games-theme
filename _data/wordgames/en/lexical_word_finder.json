@@ -1,0 +1,54 @@
+{
+   "title": "Lexical word finder",
+   "h1": "Lexical word finder",
+
+   "meta": "Still thinking of unscrambling words ? Use our lexical word finder now!",
+   
+   "featureNo": "02",
+   "feature_title": "Features",
+
+   "blogNo": "03",
+   "blog_title": "Blog",
+
+   "FaqNo": "04",
+   "Faq_title": "FAQ",
+  
+   "aboutNo": "05",
+   "about_title": "About",
+
+   "featureList": [
+      {
+         "feature_heading": "What this Lexical word finder actually is?",
+         "feature_text": "Lexical Word Finder is a very cool tool that can assist you breeze through any word recreation  in opposition to your friends or the computer. With the lexical word finder tool, winning becomes a lot simpler.",
+         "fa_class": "far fa-star"
+      },
+      {
+        "feature_heading": "Where to use this Lexical word finder?",
+        "feature_text": "Lexical word finder can be used in any word game like Scrabble, Super Scrabble, AbbleDabble, AlphaJax, Wordfeud, Droidwords,Word By Post, Word hums, Wordsmith,  Lexulous, Literati, etc.",
+        "fa_class": "far fa-star"
+     },
+     {
+        "feature_heading": "Lexical Word finder with improved dictionaries",
+        "feature_text": " Lexical Word Finder can also be added to use dictionaries like Enable, SOWPODS, OSPD4,ODS5, TWL, CSW, and YAWL.",
+        "fa_class": "far fa-star"
+     },
+     {
+     "feature_heading": "Simple Steps to use this handy tool",
+     "feature_text": "Select the type of game, Add the letters or words in the board you are playing on, make an replica of the board on our Lexical Word Finder tool, type in the letters, if you have a blank tile on your  board, use an uppercase letter. Also remeber to type in the rest of the letters in lowercase. Finally click on Search and put the best move when your turn comes.",
+     "fa_class": "far fa-star"
+    }
+ ],
+
+
+ "faqList":[
+
+],
+"aboutList":[
+{
+   "aboutText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim odio sapiente unde voluptatibus, excepturi saepe quisquam veniam architecto delectus dolor eos dolorem id itaque necessitatibus laborum cupiditate asperiores officia? Deleniti!"
+},
+{
+ "aboutText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim odio sapiente unde voluptatibus, excepturi saepe quisquam veniam architecto delectus dolor eos dolorem id itaque necessitatibus laborum cupiditate asperiores officia? Deleniti!"
+}
+]
+}

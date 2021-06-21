@@ -1,0 +1,76 @@
+---
+name:  word-games-testing-theme
+title: Word Games
+email: marketing@wordgames.com
+address: Noida, India
+phone: ''
+tagline: wordgames - Smartest website for scrabbler world
+description: word games testing theme description
+siteurl: https://word-games.netlify.app
+logo: /assets/images/word-games-logo.svg
+pwalogo: /assets/images/word-games-logo.svg
+baseurl: ''
+permalink: /blog/:title
+author_name: Harshit Raghav
+alternateName: wordgames
+url: https://word-games.netlify.app
+copyright_text: © 2020 Word-Games
+facebook_username: https://www.facebook.com/
+twitter_username: https://twitter.com/
+slack_username: https://slack.com/intl/en-in/
+favicon: /assets/images/word-games-logo.svg
+paginate: '12'
+paginate_path: '/blog/page:num/'
+keyboard: "Scrabble,Unscrabbler, Words with letters"
+production_google_analytics: 'Your_GA_ID'
+development_google_analytics: 'Your_GA_ID'
+sass:
+  sass_dir: _sass
+  style: compressed
+markdown: kramdown
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-include-cache
+disqus:
+  shortname: word-games
+hero: product_fixed_image
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+whitelist:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-include-cache
+getform_id:
+mailchimp:
+  user-id:
+  list-id:
+copyright_text: © 2020 Word-Games
+company_url: https://word-games.com
+google_site_verificatcomn:
+bing_site_verificatcomn:
+yandex_site_verificatcomn:
+naver_site_verificatcomn:
+twitter:
+  username:
+facebook:
+  username:
+  app_id:
+  publisher:
+og_image:
+social:
+  type:
+  name:
+  links:
+analytics:
+  provider: false
+  google:
+    tracking_id:
+    anonymize_ip:
+timezone:

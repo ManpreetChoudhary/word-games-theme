@@ -1,0 +1,68 @@
+{% assign file = page.fileName %}
+{% assign lang = page.lang %}
+{% assign dataToShow = site.data.[page.folderName][lang][file] %}
+
+<!-- starting landingPage -->
+<div class="pageHeaderBg">
+    <div class="container">
+        <div class="pageHeading text-center">
+            <h1 class="heading pb-3">
+                {{dataToShow.h1}}</h1>
+        </div>
+    </div>
+    <div class="container-fluid" id="containerWd">
+        <div class="serachSection">
+            <div class="position-relative serachBox">
+                <form action="/result" id='form' method="GET">
+                    <input type="text" placeholder="Enter up to 15 letters?" class="txtBox" autocomplete="off" value
+                        name="search" maxlength="15" required>
+                    <input type="submit" class="serachBtn" id="serach" value>
+
+                    <div class="wrapper_dropDown d-flex justify-content-end mt-5" style="gap:15px">
+                        <div class="dictonaryDropdown">
+                            <select class="form-select" name="dictonary" id="select_dropDown"
+                                aria-label="Default select example">
+                                <option selected value="">Dictonary</option>
+                                <option value="twl06">TWL06 (US, Canada, Thailand)</option>
+                                <option value="sowpods">SOWPODS (Uk and Others)</option>
+                                <option value="wwf">Enable (Words With Friends)</option>
+                            </select>
+                        </div>
+
+                        <div class="advancedFilter" style="position: relative;">
+                            <input type="button" value="Advanced Filter" class="filterButton">
+                            <div class="angle-arrow2"></div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="fillterWrapper">
+                        <div class="startsWith">
+                            <label for="startsWith">Starts With</label>
+                            <input type="text" id="startsWith" placeholder="Prefix" value="" name="prefix">
+                        </div>
+                        <div class="mustInclude">
+                            <label for="mustInclude">Must Include </label>
+                            <input type="text" id="mustInclude" placeholder="Contains" name="contains">
+
+                        </div>
+                        <div class="endsWith">
+                            <label for="endsWith">End With</label>
+                            <input type="text" id="endsWith" placeholder="Suffix" name="suffix">
+
+                        </div>
+                        <div class="wordLength">
+                            <label for="wordLength">Word Length </label>
+                            <input type="text" id="wordLength" placeholder="Length" name="length">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/assets/js/advancedFilter2.js"></script>
+<!-- close landingPage -->
+<!-- // page conditions -->

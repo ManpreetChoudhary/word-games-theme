@@ -1,0 +1,28 @@
+<header id="header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light py-3">
+        {%- assign navbar = site.data.blog.nav -%}
+        {% if navbar.navbarBrandText != "" %}
+        <a class="navbar-brand" href="/" title="{{navbar.navbarBrandText}}">{{navbar.navbarBrandText}}</a>
+
+        {% else %}
+        <a href="/">
+            <img class="logo-height" loading="lazy" src="{{navbar.navbarBrandLogo}}" alt="{{navbar.navbarBrandLogo}}" style="height: 40px; width: 40px;" class="navbar-brand-image">
+
+        </a>
+        {% endif %}
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <i class="fas fa-bars fa-2x" style="color:#000"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                {%- for item in site.data.blog.nav.navItems -%}
+                <li class="nav-item">
+                    <a class="nav-link" href="/{{item.url}}">{{item.name}}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </nav>
+</header>

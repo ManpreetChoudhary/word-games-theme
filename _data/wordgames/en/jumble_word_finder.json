@@ -1,0 +1,62 @@
+{
+   "title": "Jumble word finder",
+   "h1": "Jumble word finder",
+
+   "meta": "Still worried of unscrambling jumbled words ? Use our jumble word finder now!",
+   
+   "featureNo": "02",
+   "feature_title": "Features",
+
+   "blogNo": "03",
+   "blog_title": "Blog",
+
+   "FaqNo": "04",
+   "Faq_title": "FAQ",
+  
+   "aboutNo": "05",
+   "about_title": "About",
+
+   "featureList": [
+      {
+         "feature_heading": "Heard of Jumbler Word finder?",
+         "feature_text": "Are you acquainted with a jumble solver? It’s simply no longer some thing that you hear about each and every day! ",
+         "fa_class": "far fa-star"
+      },
+      {
+        "feature_heading": "But you'd surely know it if you are huge fan of jumble games",
+        "feature_text": "However, if you’re hooked on word games and particularly love jumble puzzles, you’ll understand a jumble solver as an essential invention for figuring out unscrambled words.",
+        "fa_class": "far fa-star"
+     },
+     {
+        "feature_heading": "Jumble Word finder in SIMPLE TERMS",
+        "feature_text": "To put it simply, a Jumble Solver or Jumble word finder is a tool that accepts jumbled language and promptly clarifies the hidden meaning.",
+        "fa_class": "far fa-star"
+     },
+     {
+     "feature_heading": "here to use this jumbler word finder?",
+     "feature_text": "Jumble word finder can be used in any word game like Scrabble, Super Scrabble, AbbleDabble, AlphaJax, Wordfeud, Droidwords,Word By Post, Word hums, Wordsmith, Lexulous, Literati, etc.",
+     "fa_class": "far fa-star"
+    },
+    {
+      "feature_heading": "How this Jumble Word finder works?",
+      "feature_text": ["It's extremely simple!: Just enter the jumbled word and there you get the actual word. For example:",
+      "\nATLS EON ADLCWIRD will become ONE LAST WILDCARD",
+      "\nOT AEKM NWI DORWS turns into MAKE WORDS TO WIN",
+      "\nBJMLU EELPHR turns into JUMBLE HELPER"],
+      "fa_class": "far fa-star"
+   }
+ ],
+
+
+ "faqList":[
+
+],
+"aboutList":[
+{
+   "aboutText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim odio sapiente unde voluptatibus, excepturi saepe quisquam veniam architecto delectus dolor eos dolorem id itaque necessitatibus laborum cupiditate asperiores officia? Deleniti!"
+},
+{
+ "aboutText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim odio sapiente unde voluptatibus, excepturi saepe quisquam veniam architecto delectus dolor eos dolorem id itaque necessitatibus laborum cupiditate asperiores officia? Deleniti!"
+}
+]
+}

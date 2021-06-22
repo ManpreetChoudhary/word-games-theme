@@ -1,9 +1,2 @@
 [build]
-  functions = "functions" 
-
-
-[[redirects]]
-  from = "/wordGames/*"
-  to = "https://word-games.netlify.app/.netlify/functions/:splat"
-  force = true
-  status = 200
+  functions = "lambda" 

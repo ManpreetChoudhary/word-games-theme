@@ -29,7 +29,7 @@ const getData = async (serachValue) => {
     </div>`
     /// loader
     const response = await fetch(
-      `wordGames/getWords?name=${serachValue}`
+      `/.netlify/functions/getWords?name=${serachValue}`
     )
     const data = await response.json()
     main.innerHTML = ''

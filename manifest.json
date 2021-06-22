@@ -12,7 +12,7 @@
         {
             "src": "{{site.logo}}",
             "type": "image/png",
-            "sizes": "512x512"
+            "sizes": "500x500"
         },
         {
             "src": "{{site.logo}}",

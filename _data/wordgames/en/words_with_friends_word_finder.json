@@ -1,0 +1,56 @@
+{
+    "title": "Words with friends word finder ",
+    "h1": "Words with friends word finder ",
+ 
+    "meta": "Still thinking of unscrambling words? Use our Words with friends word finder now!",
+    
+    
+    "featureNo": "02",
+    "feature_title": "Features",
+ 
+    "blogNo": "03",
+    "blog_title": "Blog",
+ 
+    "FaqNo": "04",
+    "Faq_title": "FAQ",
+   
+    "aboutNo": "05",
+    "about_title": "About",
+ 
+    "featureList": [
+       {
+          "feature_heading": "Words with friends word finder",
+          "feature_text": "It’s the time of recreation with your fiercest rival and weWords with friends word finder assist you with the words you can get. ",
+          "fa_class": "far fa-star"
+       },
+       {
+         "feature_heading": "Unearth the excessive scoring words",
+         "feature_text": "What are the fantastic phrases you can make with these letters? Specially if your rival is doing the same, it is sincerely in your activity to use our Words with friends word finder. That’s how you’ll unearth the excessive scoring words for the win!",
+         "fa_class": "far fa-star"
+      },
+      {
+         "feature_heading": "Get cheats with friends",
+         "feature_text": "Get a free access to cheats along with Words with friends word finder for your word games",
+         "fa_class": "far fa-star"
+      },
+      {
+      "feature_heading": "Responsive website and aesthetic design",
+      "feature_text": "Using A Tab? A phone? Worry not! It is built in a mobile friendly manner with beautiful UI/UX.",
+      "fa_class": "far fa-star"
+     }
+  ],
+ 
+ 
+  "faqList":[
+
+ ],
+ "aboutList":[
+ {
+    "aboutText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim odio sapiente unde voluptatibus, excepturi saepe quisquam veniam architecto delectus dolor eos dolorem id itaque necessitatibus laborum cupiditate asperiores officia? Deleniti!"
+ },
+ {
+  "aboutText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim odio sapiente unde voluptatibus, excepturi saepe quisquam veniam architecto delectus dolor eos dolorem id itaque necessitatibus laborum cupiditate asperiores officia? Deleniti!"
+ }
+ ]
+ }
+ 

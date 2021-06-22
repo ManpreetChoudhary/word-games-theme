@@ -1,0 +1,88 @@
+{%- if page.tool -%}
+{%- assign tool = page.tool -%}
+{%- assign data = site.data.rating.rating.tools -%}
+<div class="rating-tool">
+  <img id="rating-img" loading='lazy' src="/assets/images/rating.webp" alt="rating-img">
+  <div class="rating-text">Rate this tool</div>
+  <div class="rating-stars" >
+    <i class="fas fa-star rating-star"></i><i class="fas fa-star rating-star"></i
+    ><i class="fas fa-star rating-star"></i><i class="fas fa-star rating-star"></i
+    ><i class="fas fa-star rating-star"></i>
+  </div>
+  <div class="rating-value ml-2">
+    {%- for item in data -%}
+     {%- if item.name ==tool -%}
+     {%- assign rating = item.rating -%}
+     {%- assign votes = item.votes -%}
+     {%- endif -%}
+    {%- endfor -%}
+    <span class="rating"> <strong id='rating'>{{rating}}</strong><span>/5</span> </span>
+    &nbsp; <span class="total-ratings" id='count'>{{votes}} </span> votes
+  </div>
+</div>
+<script>
+   const ratingValue=document.getElementById('rating')
+    const count=document.getElementById('count')
+  const setRating=async(rating)=>{
+   const name= '{{site.name}}'
+   const tool='{{page.tool}}'
+   const data = { website: name,feature:tool,rating:rating };
+fetch('https://ratingapi-main.netlify.app/.netlify/functions/api/v1/rating/add', {
+  method: 'POST', 
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(data),
+})
+.then(response => response.json())
+.then(data => {
+  ratingValue.innerText=data.rating
+  count.innerText=data.count
+})
+.catch((error) => {
+  console.error('Error:', error);
+});
+  }
+  const tool='{{page.tool}}'
+  const fetchRating=async()=>{
+   
+  const data=  await fetch(`https://ratingapi-main.netlify.app/.netlify/functions/api/v1/${tool}/rating`).then(res=>res.json())
+  ratingValue.innerText=data.rating
+  count.innerText=data.votes
+  }
+  let ratingImg = document.querySelector('#rating-img');
+ratingImg.addEventListener('load', (event) => {
+  fetchRating()
+});
+  const ratingNode=document.getElementsByClassName('rating-star')
+  let ratedValue=localStorage.getItem(`${tool}rating`)
+  if(ratedValue){
+    Array.from(ratingNode).slice(0,ratedValue).map(item=>{
+  item.style.color='#FDD300'
+})
+  }
+ 
+Array.from(ratingNode).map(item=>item.addEventListener('click',()=>{
+  const tool='{{page.tool}}'
+  if(!localStorage.getItem(`${tool}rating`)){
+  function indexInClass(node) {
+    var className = node.className;
+    var num = 0;
+    for (var i = 0; i < ratingNode.length; i++) {
+        if (ratingNode[i] === node) {
+            return num;
+        }
+        num++;
+    }
+    return -1;
+}
+const index=indexInClass(item)
+Array.from(ratingNode).slice(0,index+1).map(item=>{
+  item.style.color='#FDD300'
+})
+setRating(index+1)
+localStorage.setItem(`${tool}rating`,index+1)
+}}))
+</script>
+
+{%- endif -%}

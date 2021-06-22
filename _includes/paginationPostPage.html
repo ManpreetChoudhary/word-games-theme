@@ -1,0 +1,15 @@
+<div class="post-links">
+    <div class="bottompagination">
+        <div class="pointerup"><i class="fa fa-caret-up"></i></div>
+        <span class="navigation" role="navigation">
+            <div class="pagination">
+                {% if page.previous.url %}
+                <a class="ml-1 mr-1 pageUrl" href="{{page.previous.url}}">« Prev</a>
+                {% endif %}
+                {% if page.next.url %}
+                <a class="ml-1 mr-1 pageUrl" href="{{page.next.url}}"> Next »</a>
+                {% endif %}
+            </div>
+        </span>
+    </div>
+</div>

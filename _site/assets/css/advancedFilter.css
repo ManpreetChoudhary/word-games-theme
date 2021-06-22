@@ -1,0 +1,134 @@
+.Advancedbtn .filterButton {
+  background: #f8f9fa;
+  box-shadow: 0 0 3px #343a4063;
+  width: 190px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  font-weight: 900;
+  font-size: 13px;
+  padding: 10px;
+  text-align: left;
+  z-index: 99;
+}
+.hide {
+  visibility: hidden;
+}
+.fillterWrapper {
+  display: block;
+  background: #fff;
+  position: absolute;
+  z-index: 999;
+  top: 155px;
+  right: 123px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  padding: 30px 15px;
+  border-radius: 15px;
+}
+
+.fa-times {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.fillterWrapper .same {
+  margin-bottom: 10px;
+}
+.fillterWrapper input[type='text'] {
+  border-radius: 15px;
+  width: 100%;
+  outline: none;
+  text-indent: 8px;
+}
+.sticky_nav {
+  position: sticky;
+  width: inherit;
+  top: 63px;
+  background-color: #fff;
+  z-index: 99;
+}
+.flex-row {
+  -ms-flex-direction: row !important;
+  flex-direction: row !important;
+  display: flex;
+  overflow: hidden;
+  margin: 0 35px;
+}
+.tab_link_wrapper {
+  display: flex;
+  width: 100%;
+  /* overflow: auto; */
+  justify-content: center;
+  background: #f8f9fa;
+  border-radius: 40px;
+  padding: 8px;
+  /* white-space: wrap; */
+}
+.tab_link {
+  font-size: 15px;
+  font-weight: 900;
+  margin: 0 5px;
+  padding-top: 5px;
+  border: none;
+  outline: none;
+  background-color: inherit;
+}
+a {
+  text-decoration: none !important;
+}
+.active-tab {
+  border-bottom: solid 2px black;
+}
+
+#next {
+  background: url('/assets/images/next.webp');
+  background-size: cover;
+  width: 21px;
+  object-fit: cover;
+  padding: 3px;
+  border: none;
+  position: absolute;
+  top: 12px;
+  right: 43px;
+}
+#prev {
+  background: url('/assets/images/prev.webp');
+  background-size: cover;
+  width: 21px;
+  object-fit: cover;
+  padding: 3px;
+  border: none;
+  position: absolute;
+  top: 12px;
+  left: 43px;
+}
+
+@media (max-width: 768px) {
+  .Advancedbtn {
+    margin: 0;
+    height: 0;
+    width: 0;
+  }
+  .Advancedbtn .filterButton {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+  }
+  .fillterWrapper {
+    right: auto;
+    position: fixed;
+    left: 0;
+    top: 215px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 576px) {
+  #containerWd {
+    max-width: 100% !important;
+  }
+}
+/* close */

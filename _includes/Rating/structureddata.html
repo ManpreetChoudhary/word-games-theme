@@ -1,0 +1,53 @@
+{% assign dataArr = site.data.[page.folderName][lang][file] %}
+{% assign dataToShow = dataArr %}
+{% assign description = dataToShow.META | replace:"$variable", page.value | default: site.description %}
+{%- assign tool = page.tool -%}
+{%- assign data = site.data.rating.rating.tools -%}
+{%- for item in data -%}
+{%- if item.name ==tool -%}
+{%- assign name = item.name -%}
+{%- assign rating = item.rating -%}
+{%- assign votes = item.votes -%}
+{%- endif -%}
+{%- endfor -%}
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "WebApplication",
+    "operatingSystem":"All - Windows/Mac/iOS/Linux/Android",
+    "applicationCategory":"UtilitiesApplication",
+    "name": "{{name}}",
+    "url":"{{site.url | append:  page.url}}",
+    "image":"{{site.siteurl}}{{site.logo}}",
+    "aggregateRating": {
+      "@type": "AggregateRating", 
+      "worstRating":"1",
+      "bestRating":"5",	
+      "ratingValue":
+      {%- if rating -%}
+      {%- if rating=='NaN' -%}
+      "5"
+    {%- else -%}
+    "{{rating}}"
+    {%- endif -%}
+      {%- else -%}
+        "5"
+      {%- endif -%},
+      "ratingCount": {%- if votes -%}
+      {%- if votes== 0 -%}
+      "1"
+    {%- else -%}
+    "{{votes}}" 
+    {%- endif -%}
+      {%- else -%}
+       "1"
+      {%- endif -%}
+       
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0.00",
+      "priceCurrency": "USD"
+    }
+  }
+</script>

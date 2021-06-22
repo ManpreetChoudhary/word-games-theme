@@ -1,0 +1,35 @@
+{% assign file = page.fileName %}
+{% assign lang = page.lang %}
+{% assign dataToShow = site.data.[page.folderName][lang][file] %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xl-3 col-lg-12">
+            <div class="row">
+                <div class="col-xl-3 p-0">
+                    <div class="feature">
+                        <img src="/assets/images/left_obj_01.png" alt="">
+                        <span class="site-no"> {{dataToShow.featureNo}}</span>
+                        <h5 class="title">{{dataToShow.feature_title}}</h5>
+                        <p class="description">{{dataToShow.feature_description}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-9 col-lg-12">
+            <div class="row text-center">
+                {% for entry in dataToShow.featureList %}
+                <div class="col-lg-4 col-md-6 my-3">
+                    <div class="card-body h-100">
+                        <i class="{{ entry.fa_class }} FA"></i>
+                        <h5 class="card-title">
+                            {{ entry.feature_heading }}
+                        </h5>
+                        <p class="card-text" style="color: #a7a7a7;
+                        font-size: 14px;">{{ entry.feature_text}}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

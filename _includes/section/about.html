@@ -1,0 +1,26 @@
+{% assign file = page.fileName %}
+{% assign lang = page.lang %}
+{% assign dataToShow = site.data.[page.folderName][lang][file] %}
+
+<!-- staring about-seciton -->
+<div class="container-fluid">
+    <div class="row rowHeight">
+        <div class="col-md-12 p-0">
+            <div class="about">
+                <img src="/assets/images/right_obj_01.png" alt="">
+                <div class="content">
+                    <span class="site-no">{{dataToShow.aboutNo}}</span>
+                    <h5 class="title">{{dataToShow.about_title}}</h5>
+                </div>
+            </div>
+        </div>
+        <!-- {% for entry in dataToShow.aboutList %}
+        <div class="col-lg-4 pt-5">
+            <div class="about_content" style="margin-top:100px;">
+                <p class="meduim-text mb-0">{{entry.aboutText}}</p>
+            </div>
+        </div>
+        {% endfor %} -->
+    </div>
+</div>
+<!-- close about-section -->

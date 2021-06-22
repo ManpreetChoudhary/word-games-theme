@@ -1,0 +1,119 @@
+{% assign file = page.fileName %}
+{% assign lang = page.lang %}
+{% assign dataToShow = site.data.[page.folderName][lang][file] %}
+
+<!-- start commonPage as LandingPage -->
+
+<div class="container" id="containerWd">
+    <section class="sticky_nav">
+        <div class="pageHeading text-center pt-5">
+            <h1 class="heading pb-0">
+                {{dataToShow.h1}}</h1>
+        </div>
+        <div class="serachSection2">
+            <div class="position-relative serachBox">
+                <form action="" id='form'>
+                    <input type="text" placeholder="Enter up to 15 letters?" class="txtBox" autocomplete="off" value
+                        name="search" maxlength="15" required>
+                    <input type="submit" class="serachBtn" id="serach" value>
+                    <div class="dictonaryDropdown">
+                        <select class="form-select select_dropDown2" name="dictonary"
+                            aria-label="Default select example">
+                            <option selected value="">Dictonary</option>
+                            <option value="twl06">TWL06 (US, Canada, Thailand)</option>
+                            <option value="sowpods">SOWPODS (Uk and Others)</option>
+                            <option value="wwf">Enable (Words With Friends)</option>
+                        </select>
+                    </div>
+                    {%- include filterWords/index.html -%}
+
+                    <div class="mt-3 wrapper_dropDown d-flex justify-content-end" style="gap:10px">
+                        <div class="Advancedbtn" style="position: relative;" onclick="myFunction()">
+                            <input type="button" value="Advanced Filter" class="filterButton">
+                            <div class="angle-arrow"></div>
+                        </div>
+                        <div id="sort-select">
+                            <select class="form-select sort-select" id="select_dropDown">
+                                <!-- <option selected="true" hidden>Sort by</option> -->
+                                <option id="alpha" value="alpha">A-Z</option>
+                                <option id="points" value="points">Z-A</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="fillterWrapper hide">
+                        <i class="fas fa-times"></i>
+                        <div class="startsWith same">
+                            <label for="startsWith">Starts With</label>
+                            <input type="text" id="startsWith" placeholder="Prefix" value="" name="prefix">
+                        </div>
+                        <div class="mustInclude same">
+                            <label for="mustInclude">Must Include </label>
+                            <input type="text" id="mustInclude" placeholder="Contains" name="contains">
+                        </div>
+                        <div class="endsWith same">
+                            <label for="endsWith">End With</label>
+                            <input type="text" id="endsWith" placeholder="Suffix" name="suffix">
+                        </div>
+                        <div class="wordLength same">
+                            <label for="wordLength">Word Length </label>
+                            <input type="text" id="wordLength" placeholder="Length" name="length">
+                        </div>
+
+                        <div style="margin-top: 1.2rem;">
+                            <input type="submit" value="Apply" class="btn-info w-100 text-white"
+                                style="background: #BD67DD">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    {% include section/wordGroup.html %}
+</div>
+
+
+<!-- close commonPage as LandingPage -->
+<link rel="stylesheet" href="{{ '/assets/css/advancedFilter.css' | relative_url }}">
+<script>
+    const fillterWrapper = document.querySelector('.fillterWrapper')
+    function myFunction() {
+        fillterWrapper.classList.toggle('hide')
+    }
+    const close = document.querySelector('.fa-times')
+    close.addEventListener('click', () => {
+        fillterWrapper.classList.add('hide')
+    })
+
+</script>
+
+
+{% if page.url == "/result" %}
+
+<script src="/assets/js/wordScrabble.js"></script>
+
+{% elsif page.url == "/anagram-word-finder/result" %}
+
+<script src="/assets/js/wordScrabble.js"></script>
+
+{% elsif page.url == "/jumble-word-finder/result" %}
+
+<script src="/assets/js/wordScrabble.js"></script>
+
+{% elsif page.url == "/lexical-word-finder/result" %}
+
+<script src="/assets/js/wordScrabble.js"></script>
+
+{% elsif page.url == "/scrabble-word-finder-cheat/result" %}
+
+<script src="/assets/js/wordScrabble.js"></script>
+
+{% elsif page.url == "/words-with-friends-word-finder/result" %}
+
+<script src="/assets/js/wordScrabble.js"></script>
+
+{% else %}
+
+<script src="/assets/js/X-letter.js"></script>
+<script src="/assets/js/advancedFilter.js"></script>
+
+{% endif %}

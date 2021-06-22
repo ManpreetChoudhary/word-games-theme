@@ -1,0 +1,27 @@
+{% assign ankita = "Ankita&&/assets/images/Ankita.webp&&Ankita has majored in Applied Communication studies, with over 4 years of experience content writing. She is an expert at word games and freqently shares her thoughts on word games, and many other topics.&&https://twitter.com/roy93anki" | split: '&&' %}
+{% assign keshav = "Keshav Agarwal&&/assets/images/keshav.webp&&Keshav Agarwal is an aspiring Android developer with keen interest in computers, technology and development. He also has a knack of writing and loves to share his knowledge with the help of his posts.&&https://mobile.twitter.com/KeshavA76099697" | split: '&&' %}
+{% assign anushka = "Anushka Guha&&/assets/images/Anushka.webp&&Anushka is an aspiring Instrumentation engineer who thrives on good music, books and travelling. She has been creating content on all of this and often shares her thoughts on the technicalities behind various file formats and their processing.
+&&https://twitter.com/its_anushka_" | split: '&&' %}
+{% assign paavan = "Thandra Paavan Kumar&&/assets/images/paavan.webp&&Paavan Kumar is an enthusiastic nanotech engineer who has a keen intererst in micro and nano science with a good sense of content creation on diverse topics and often shares his thoughts and helps those he can. He have a knack of writing essays,stories and poems.&&https://twitter.com/PaavanThandra" | split: '&&' %}
+{% assign thandra = "Thandra Paavan Kumar&&/assets/images/paavan.webp&&Paavan Kumar is an enthusiastic nanotech engineer who has a keen intererst in micro and nano science with a good sense of content creation on diverse topics and often shares his thoughts and helps those he can. He have a knack of writing essays,stories and poems.&&https://twitter.com/PaavanThandra" | split: '&&' %}
+{% assign arjyahi = "Arjyahi Bhattacharya&&/assets/images/Arjyahi.webp&&Arjyahi is an aspiring Civil engineer who loves photography, music, books and philosophy. She also loves nature and animals. She enjoys reading and sharing information on various topics involving her knacks.&&https://twitter.com/arjyahi" | split: '&&' %}
+{% assign nikita = "Nikita Gupta&&/assets/images/Nikita.webp&&Nikita is an aspiring MBA graduate, who loves creating content. She loves reading and watching anime. She is into other languages and currently learning Spanish, French and Japanese. Her favourite timepass is solving sudokus. &&N/A" | split: '&&' %}
+{% assign alka = "Alka Bisht&&/assets/images/Alka.webp&&Alka Bisht is an experienced content writer with a penchnat for writing compellinmg content within technical and non- technical areas. As a content writer her goals include providing the best content throughout her writing journey.&&N/A" | split: '&&' %}
+{%- assign postAuthor = post.author | split: " " -%}
+{%- assign author = postAuthor.first | downcase -%}
+{%- assign collection = [author] -%}
+{%- for item in collection -%}
+    {%- if forloop.index==1 -%}
+        {%- assign authorName = item -%}
+    {%- endif -%}
+    {%- if forloop.index==2 -%}
+        {%- assign image = item -%}
+    {%- endif -%}
+    {%- if forloop.index==3 -%}
+        {%- assign bio = item -%}
+    {%- endif -%}
+    {%- if forloop.index==4 -%}
+        {%- assign twitter = item -%}
+    {%- endif -%}
+{%- endfor -%}
+

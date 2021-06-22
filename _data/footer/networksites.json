@@ -1,0 +1,16 @@
+{
+    "networkSites": [
+        {
+            "name": "wordswithletters",
+            "url": "http://wordswithletters.org/"
+        },
+        {
+            "name": "alarmsetter",
+            "url": "https://alarmsetter.com/"
+        },
+        {
+            "name": "safepdfkit",
+            "url": "http://safepdfkit.com/"
+        }
+    ]
+}

@@ -5,7 +5,7 @@
     "name": "{{site.name}}",
     "icons": [
         {
-            "src": "{{site.pwalogo}}",
+            "src": "{{site.logo}}",
             "type": "image/png",
             "sizes": "435x435"
         }

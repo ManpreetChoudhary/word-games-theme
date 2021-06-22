@@ -8,17 +8,16 @@ tagline: wordgames - Smartest website for scrabbler world
 description: word games testing theme description
 siteurl: https://word-games.netlify.app
 logo: /assets/images/word-games-logo.svg
-pwalogo: /assets/images/word-games-logo.svg
+favicon: /assets/images/word-games-logo.svg
+alternateName: wordgames
 baseurl: ''
 permalink: /blog/:title
 author_name: Harshit Raghav
-alternateName: wordgames
 url: https://word-games.netlify.app
 copyright_text: © 2020 Word-Games
 facebook_username: https://www.facebook.com/
 twitter_username: https://twitter.com/
 slack_username: https://slack.com/intl/en-in/
-favicon: /assets/images/word-games-logo.svg
 paginate: '12'
 paginate_path: '/blog/page:num/'
 keyboard: "Scrabble,Unscrabbler, Words with letters"

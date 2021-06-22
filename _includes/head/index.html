@@ -8,15 +8,15 @@
 
   <meta charset="UTF-8">
 
- {%- if site.keyboard -%}
+  {%- if site.keyboard -%}
   <meta name="keywords" content="{{site.keyboard}}" />
- {%- endif -%}
+  {%- endif -%}
   {% include seo.html %}
- 
+
   <link rel="shortcut icon" href="{{ site.favicon | relative_url }}">
 
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
- 
+
   <link rel="manifest" href="/assets/js/manifest.json">
 
 
@@ -67,8 +67,8 @@
       "url": "{{site.siteurl}}"}
   </script>
 
-  {%- if dataToShow.FAQ  -%}
-    {%- if dataToShow.FAQ.first.question !='' -%}
+  {%- if dataToShow.faqList -%}
+  {%- if dataToShow.faqList.first.question !='' -%}
   <script type="application/ld+json">
       {
      "@context": "http://schema.org",
@@ -97,7 +97,7 @@
     }
   </script>
   {%- endif -%}
-   {%- endif -%}
+  {%- endif -%}
 
   {%- if page.tool -%}
   {%- include Rating/structureddata.html -%}
@@ -105,4 +105,3 @@
   </script>
   {%- include google-analytics.html -%}
 </head>
-

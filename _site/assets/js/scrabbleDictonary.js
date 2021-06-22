@@ -41,7 +41,7 @@ const fetchTWL06Dic = async (serachValue) => {
   }
 
   try {
-    let res = await fetch(`/.netlify/functions/gettwl06?search=${serachValue}`)
+    let res = await fetch(`wordGames/gettwl06?search=${serachValue}`)
     let getData = await res.text()
 
     if (getData) {
@@ -96,7 +96,7 @@ const fetchSOWPODSDic = async (serachValue) => {
     sum += newAlphabet[item[i]] || 0 // for unknown characters
   }
 
-  let res = await fetch(`/.netlify/functions/getsowpods?search=${serachValue}`)
+  let res = await fetch(`wordGames/getsowpods?search=${serachValue}`)
   let getData = await res.text()
   if (getData) {
     document.getElementsByClassName('found-word')[1].innerHTML = 'Yes'
@@ -146,7 +146,7 @@ const fetchEnableDic = async (serachValue) => {
     sum += newAlphabet[item[i]] || 0 // for unknown characters
   }
 
-  let res = await fetch(`/.netlify/functions/getenable?search=${serachValue}`)
+  let res = await fetch(`wordGames/getenable?search=${serachValue}`)
   let getData = await res.text()
   if (getData) {
     document.getElementsByClassName('found-word')[2].innerHTML = 'Yes'

@@ -1,9 +1,9 @@
 [build]
-  functions = "lambda" 
+  functions = "functions" 
 
 
 [[redirects]]
   from = "/wordGames/*"
-  to = "https://contenttool-newtools-main.netlify.app/.netlify/functions/:splat"
+  to = "https://word-games.netlify.app/.netlify/functions/:splat"
   force = true
   status = 200

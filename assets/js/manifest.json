@@ -8,6 +8,16 @@
             "src": "{{site.logo}}",
             "type": "image/png",
             "sizes": "435x435"
+        },
+        {
+            "src": "{{site.logo}}",
+            "type": "image/png",
+            "sizes": "512x512"
+        },
+        {
+            "src": "{{site.logo}}",
+            "type": "image/png",
+            "sizes": "1024x1024"
         }
     ],
     "start_url": ".",

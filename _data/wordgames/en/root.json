@@ -1,21 +1,15 @@
 {
    "title": "Word finders to help you find word with given letters.",
    "h1": "Word Games Scrabble World",
-
    "meta": "Use wordfinders to win any word games such as scrabble, word with friends etc.",
-   
    "featureNo": "02",
    "feature_title": "Features",
-
    "blogNo": "03",
    "blog_title": "Blog",
-
    "FaqNo": "04",
    "Faq_title": "FAQ",
-  
    "aboutNo": "05",
    "about_title": "About",
-
    "featureList": [
       {
          "feature_heading": "The Simple, Easy-to-go word finder for you",
@@ -23,66 +17,64 @@
          "fa_class": "far fa-star"
       },
       {
-        "feature_heading": "A-Z words finder solver",
-        "feature_text": "Enter any scrabled word and use the advanced options to enter the mandatory letter. There you have all the lists of the words. ",
-        "fa_class": "far fa-star"
-     },
-     {
-        "feature_heading": "word finder with blanks",
-        "feature_text": "Don't worry about blanks. Our word finder generator will take care of that!",
-        "fa_class": "far fa-star"
-     },
-     {
-     "feature_heading": "An array of Word finder tools you need for word games",
-     "feature_text": "Apart from our Word finder tool we also have Lexical word finder, jumble word finder, anagram word finder and x letter word finder!",
-     "fa_class": "far fa-star"
-    },
-    {
-     "feature_heading": "Cheats for Scrabble games",
-     "feature_text": "Worried a bit? Cheat a bit!",
-     "fa_class": "far fa-star"
-    },
-    {
-     "feature_heading": "Word finder for playing with friends",
-     "feature_text": "",
-     "fa_class": "far fa-star"
-  },
-  {
-   "feature_heading": "New Updates to be Highlighted",
-   "feature_text": "Every new feature related to word finder game will be highlighted right at our home page so that you can implement them in your word finder game!",
-   "fa_class": "far fa-star"
-}
- ],
-
-
- "faqList":[
-  {
-     "faqQuestion": "How many words can I enter in this Word Finder?",
-     "faqAnswer": "You can enter upto 15 letters in our Word Finder."
-  },
-  {
-     "faqQuestion": "Can I customize my requirements to get words of my choice? ",
-     "faqAnswer": "You can apply the filters on our word finder to get tailored words."
-  },
-  {
-     "faqQuestion": "I need some 2-lettered words from this word finder. Is it possible",
-     "faqAnswer": "Yes, you can find a range of words starting from 2 letters to 15 letters."
-  },
-  {
-     "faqQuestion": "Can I get the cheat sheet for this word finder?",
-     "faqAnswer": "Yes, the cheat sheet for this word finder is available. It also supports multiple dictionaries."
-  },
-  {
-   "faqQuestion": "Can I use this wordfinder on my phone?",
-   "faqAnswer": "Yes, our word finder is mobile friendly. So you can use it on your laptop, tab or smart phone also."
-}
-],
-"aboutList":[
-{
-   "aboutText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim odio sapiente unde voluptatibus, excepturi saepe quisquam veniam architecto delectus dolor eos dolorem id itaque necessitatibus laborum cupiditate asperiores officia? Deleniti!"
-},
-{
- "aboutText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim odio sapiente unde voluptatibus, excepturi saepe quisquam veniam architecto delectus dolor eos dolorem id itaque necessitatibus laborum cupiditate asperiores officia? Deleniti!"
-}
-]
+         "feature_heading": "A-Z words finder solver",
+         "feature_text": "Enter any scrabled word and use the advanced options to enter the mandatory letter. There you have all the lists of the words. ",
+         "fa_class": "far fa-star"
+      },
+      {
+         "feature_heading": "word finder with blanks",
+         "feature_text": "Don't worry about blanks. Our word finder generator will take care of that!",
+         "fa_class": "far fa-star"
+      },
+      {
+         "feature_heading": "An array of Word finder tools you need for word games",
+         "feature_text": "Apart from our Word finder tool we also have Lexical word finder, jumble word finder, anagram word finder and x letter word finder!",
+         "fa_class": "far fa-star"
+      },
+      {
+         "feature_heading": "Cheats for Scrabble games",
+         "feature_text": "Worried a bit? Cheat a bit!",
+         "fa_class": "far fa-star"
+      },
+      {
+         "feature_heading": "Word finder for playing with friends",
+         "feature_text": "",
+         "fa_class": "far fa-star"
+      },
+      {
+         "feature_heading": "New Updates to be Highlighted",
+         "feature_text": "Every new feature related to word finder game will be highlighted right at our home page so that you can implement them in your word finder game!",
+         "fa_class": "far fa-star"
+      }
+   ],
+   "faqList": [
+      {
+         "Question": "How many words can I enter in this Word Finder?",
+         "Answer": "You can enter upto 15 letters in our Word Finder."
+      },
+      {
+         "Question": "Can I customize my requirements to get words of my choice? ",
+         "Answer": "You can apply the filters on our word finder to get tailored words."
+      },
+      {
+         "Question": "I need some 2-lettered words from this word finder. Is it possible",
+         "Answer": "Yes, you can find a range of words starting from 2 letters to 15 letters."
+      },
+      {
+         "Question": "Can I get the cheat sheet for this word finder?",
+         "Answer": "Yes, the cheat sheet for this word finder is available. It also supports multiple dictionaries."
+      },
+      {
+         "Question": "Can I use this wordfinder on my phone?",
+         "Answer": "Yes, our word finder is mobile friendly. So you can use it on your laptop, tab or smart phone also."
+      }
+   ],
+   "aboutList": [
+      {
+         "aboutText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim odio sapiente unde voluptatibus, excepturi saepe quisquam veniam architecto delectus dolor eos dolorem id itaque necessitatibus laborum cupiditate asperiores officia? Deleniti!"
+      },
+      {
+         "aboutText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim odio sapiente unde voluptatibus, excepturi saepe quisquam veniam architecto delectus dolor eos dolorem id itaque necessitatibus laborum cupiditate asperiores officia? Deleniti!"
+      }
+   ]
 }

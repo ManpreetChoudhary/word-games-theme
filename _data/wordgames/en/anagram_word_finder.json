@@ -1,22 +1,15 @@
 {
    "title": "Anagram word finder",
    "h1": "Anagram word finder",
-
    "meta": "Still thinking of unscrambling words and anagrams ? Use our anagram finder now!",
-   
-   
    "featureNo": "02",
    "feature_title": "Features",
-
    "blogNo": "03",
    "blog_title": "Blog",
-
    "FaqNo": "04",
    "Faq_title": "FAQ",
-  
    "aboutNo": "05",
    "about_title": "About",
-
    "featureList": [
       {
          "feature_heading": "Our Anagram solver and word finder  for your word games",
@@ -24,32 +17,33 @@
          "fa_class": "far fa-star"
       },
       {
-        "feature_heading": "Where to use this Anagram word finder?",
-        "feature_text": "You can use this anagram solver for the Scrabble crossword game, facebook games like Wordscraper, Scrabulous, Lexulous and many other wrd games.",
-        "fa_class": "far fa-star"
-     },
-     {
-        "feature_heading": "How this Anagram solver works?",
-        "feature_text": "Take the word “painter” which on anagramming becomes, “repaint” by moving the suffix to the beginning. In the same way, the letters could be rearranged to make the word “pertain”.",
-        "fa_class": "far fa-star"
-     },
-     {
-     "feature_heading": "Supports a number of dictionaries",
-     "feature_text": "We love to play Scrabble and understand all the fine details. We will find all valid words from dictionaries of your choice along with their scores.",
-     "fa_class": "far fa-star"
-    }
- ],
-
-
- "faqList":[
-
-],
-"aboutList":[
-{
-   "aboutText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim odio sapiente unde voluptatibus, excepturi saepe quisquam veniam architecto delectus dolor eos dolorem id itaque necessitatibus laborum cupiditate asperiores officia? Deleniti!"
-},
-{
- "aboutText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim odio sapiente unde voluptatibus, excepturi saepe quisquam veniam architecto delectus dolor eos dolorem id itaque necessitatibus laborum cupiditate asperiores officia? Deleniti!"
-}
-]
+         "feature_heading": "Where to use this Anagram word finder?",
+         "feature_text": "You can use this anagram solver for the Scrabble crossword game, facebook games like Wordscraper, Scrabulous, Lexulous and many other wrd games.",
+         "fa_class": "far fa-star"
+      },
+      {
+         "feature_heading": "How this Anagram solver works?",
+         "feature_text": "Take the word “painter” which on anagramming becomes, “repaint” by moving the suffix to the beginning. In the same way, the letters could be rearranged to make the word “pertain”.",
+         "fa_class": "far fa-star"
+      },
+      {
+         "feature_heading": "Supports a number of dictionaries",
+         "feature_text": "We love to play Scrabble and understand all the fine details. We will find all valid words from dictionaries of your choice along with their scores.",
+         "fa_class": "far fa-star"
+      }
+   ],
+   "faqList": [
+      {
+         "Question": "",
+         "Answer": ""
+      }
+   ],
+   "aboutList": [
+      {
+         "aboutText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim odio sapiente unde voluptatibus, excepturi saepe quisquam veniam architecto delectus dolor eos dolorem id itaque necessitatibus laborum cupiditate asperiores officia? Deleniti!"
+      },
+      {
+         "aboutText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim odio sapiente unde voluptatibus, excepturi saepe quisquam veniam architecto delectus dolor eos dolorem id itaque necessitatibus laborum cupiditate asperiores officia? Deleniti!"
+      }
+   ]
 }

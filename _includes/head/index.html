@@ -75,18 +75,18 @@
          {%- for item in dataToShow.faqList-%}
          {%- if forloop.last == true -%}
          {"@type": "Question",
-         "name": "{{item.faqQuestion}}",
+         "name": "{{item.Question}}",
          "acceptedAnswer": {
            "@type": "Answer",
-           "text": "{{item.faqAnswer}}"
+           "text": "{{item.Answer}}"
          }
        }
          {%- else -%}
          {"@type": "Question",
-         "name": "{{item.faqQuestion}}",
+         "name": "{{item.Question}}",
          "acceptedAnswer": {
            "@type": "Answer",
-           "text": "{{item.faqAnswer}}"
+           "text": "{{item.Answer}}"
          }
        },
        {%- endif -%}

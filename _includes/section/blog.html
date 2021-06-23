@@ -29,9 +29,12 @@
                     </div>
                     {% endfor %}
 
+                    {%- if site.posts.size>0 -%}
                     <div class="col-lg-6 my-5">
                         <a href="{{ 'blog' | relative_url }}" class="genric-btn2">Browse More</a>
                     </div>
+                    {% endif %}
+
                 </div>
             </section>
         </div>

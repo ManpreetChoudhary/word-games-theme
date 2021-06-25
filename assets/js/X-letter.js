@@ -12,6 +12,12 @@ let dictonary = params.get('dictonary')
 
 let tab_container = document.querySelector('.tab_container')
 
+let txtBox = document.querySelector('.txtBox')
+txtBox.value = serachValue
+
+var theSelect = document.getElementById('select_dropDown')
+document.querySelector('.select_dropDown2').value = dictonary
+
 const getData = async (serachValue) => {
   try {
     main.innerHTML = `<div class="loader">

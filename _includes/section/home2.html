@@ -17,17 +17,17 @@
                     <input type="text" placeholder="Enter up to 15 letters?" class="txtBox" autocomplete="off" value
                         name="search" maxlength="15" required>
                     <input type="submit" class="serachBtn" id="serach" value>
+                    <div class="dictonaryDropdown">
+                        <select class="form-select select_dropDown2" name="dictonary"
+                            aria-label="Default select example">
+                            <option selected value="">Dictonary</option>
+                            <option value="twl06" id="twl06">TWL06 (US, Canada, Thailand)</option>
+                            <option value="sowpods" id="sowpods">SOWPODS (Uk and Others)</option>
+                            <option value="wwf" id="wwf">Enable (Words With Friends)</option>
+                        </select>
+                    </div>
 
                     <div class="wrapper_dropDown d-flex justify-content-end mt-5" style="gap:15px">
-                        <div class="dictonaryDropdown">
-                            <select class="form-select" name="dictonary" id="select_dropDown"
-                                aria-label="Default select example">
-                                <option selected value="">Dictonary</option>
-                                <option value="twl06">TWL06 (US, Canada, Thailand)</option>
-                                <option value="sowpods">SOWPODS (Uk and Others)</option>
-                                <option value="wwf">Enable (Words With Friends)</option>
-                            </select>
-                        </div>
 
                         <div class="advancedFilter" style="position: relative;">
                             <input type="button" value="Advanced Filter" class="filterButton">

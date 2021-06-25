@@ -2,6 +2,9 @@
 const params = new URLSearchParams(window.location.search)
 let serachValue = params.get('search')
 
+let txtBox = document.querySelector('.txtBox')
+txtBox.value = serachValue
+
 // DICTONARY
 const fetchTWL06Dic = async (serachValue) => {
   let newAlphabet = {

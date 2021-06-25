@@ -13,6 +13,9 @@ let suffixValue = params.get('suffix')
 let lengthValue = params.get('length')
 let dictonary = params.get('dictonary')
 
+let txtBox = document.querySelector('.txtBox')
+txtBox.value = serachValue
+
 let ok = true
 
 let tab_container = document.querySelector('.tab_container')
@@ -21,6 +24,7 @@ var sortValue
 var sortBool = false
 var theSelect = document.getElementById('select_dropDown')
 
+document.querySelector('.select_dropDown2').value = dictonary
 // getWords define...
 const getData = async (serachValue) => {
   try {

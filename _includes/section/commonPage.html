@@ -14,15 +14,15 @@
             <div class="position-relative serachBox">
                 <form action="" id='form'>
                     <input type="text" placeholder="Enter up to 15 letters?" class="txtBox" autocomplete="off" value
-                        name="search" maxlength="15" required>
+                        name="search" maxlength="15" value required>
                     <input type="submit" class="serachBtn" id="serach" value>
                     <div class="dictonaryDropdown">
                         <select class="form-select select_dropDown2" name="dictonary"
                             aria-label="Default select example">
                             <option selected value="">Dictonary</option>
-                            <option value="twl06">TWL06 (US, Canada, Thailand)</option>
-                            <option value="sowpods">SOWPODS (Uk and Others)</option>
-                            <option value="wwf">Enable (Words With Friends)</option>
+                            <option value="twl06" id="twl06">TWL06 (US, Canada, Thailand)</option>
+                            <option value="sowpods" id="sowpods">SOWPODS (Uk and Others)</option>
+                            <option value="wwf" id="wwf">Enable (Words With Friends)</option>
                         </select>
                     </div>
                     {%- include filterWords/index.html -%}
@@ -34,7 +34,7 @@
                         </div>
                         <div id="sort-select">
                             <select class="form-select sort-select" id="select_dropDown">
-                                <!-- <option selected="true" hidden>Sort by</option> -->
+                                <option selected="true" hidden>Sort by</option>
                                 <option id="alpha" value="alpha">A-Z</option>
                                 <option id="points" value="points">Z-A</option>
                             </select>

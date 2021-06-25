@@ -17,18 +17,17 @@
                     <input type="text" placeholder="Enter up to 15 letters?" class="txtBox" autocomplete="off" value
                         name="search" maxlength="15" required>
                     <input type="submit" class="serachBtn" id="serach" value>
+                    <div class="dictonaryDropdown">
+                        <select class="form-select select_dropDown2" name="dictonary"
+                            aria-label="Default select example">
+                            <option selected value="">Dictonary</option>
+                            <option value="twl06">TWL06 (US, Canada, Thailand)</option>
+                            <option value="sowpods">SOWPODS (Uk and Others)</option>
+                            <option value="wwf">Enable (Words With Friends)</option>
+                        </select>
+                    </div>
 
                     <div class="wrapper_dropDown d-flex justify-content-end mt-5" style="gap:15px">
-                        <div class="dictonaryDropdown">
-                            <select class="form-select" name="dictonary" id="select_dropDown"
-                                aria-label="Default select example">
-                                <option selected value="">Dictonary</option>
-                                <option value="twl06">TWL06 (US, Canada, Thailand)</option>
-                                <option value="sowpods">SOWPODS (Uk and Others)</option>
-                                <option value="wwf">Enable (Words With Friends)</option>
-                            </select>
-                        </div>
-
                         <div class="advancedFilter" style="position: relative;">
                             <input type="button" value="Advanced Filter" class="filterButton">
                             <div class="angle-arrow2"></div>
@@ -40,22 +39,31 @@
                     <div class="fillterWrapper">
                         <div class="startsWith">
                             <label for="startsWith">Starts With</label>
+                            <br>
                             <input type="text" id="startsWith" placeholder="Prefix" value="" name="prefix">
                         </div>
                         <div class="mustInclude">
                             <label for="mustInclude">Must Include </label>
+                            <br>
                             <input type="text" id="mustInclude" placeholder="Contains" name="contains">
 
                         </div>
                         <div class="endsWith">
                             <label for="endsWith">End With</label>
+                            <br>
                             <input type="text" id="endsWith" placeholder="Suffix" name="suffix">
 
                         </div>
                         <div class="wordLength">
                             <label for="wordLength">Word Length </label>
+                            <br>
                             <input type="text" id="wordLength" placeholder="Length" name="length">
+                            <div style="margin-top: 1.2rem;">
+                                <input type="submit" value="Apply" class="btn-info w-100 text-white"
+                                    style="background: #BD67DD">
+                            </div>
                         </div>
+
                     </div>
                 </form>
             </div>

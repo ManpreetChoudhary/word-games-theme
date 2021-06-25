@@ -19,7 +19,12 @@ let tab_container = document.querySelector('.tab_container')
 
 var sortValue
 var sortBool = false
+
+let txtBox = document.querySelector('.txtBox')
+txtBox.value = serachValue
+
 var theSelect = document.getElementById('select_dropDown')
+document.querySelector('.select_dropDown2').value = dictonary
 
 // getWords define...
 const getData = async (serachValue) => {
@@ -323,7 +328,7 @@ function Filtering(id) {
       sections[e.id] = e.offsetTop - 10
     } else {
       sections[e.id] = e.offsetTop - 10
-      console.log(sections)
+      // console.log(sections)
     }
   })
   document.body.scrollTop = sections[sort_val + '_' + id] + 5
@@ -343,7 +348,7 @@ window.addEventListener('resize', function () {
 })
 function scroll_visible() {
   let tab_container = document.querySelector('#tab-container')
-  console.log(tab_container)
+  // console.log(tab_container)
   if (tab_container) {
     if (tab_container.clientWidth === tab_container.scrollWidth) {
       prev.style.display = 'none'

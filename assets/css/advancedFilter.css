@@ -45,7 +45,7 @@
 .sticky_nav {
   position: sticky;
   width: inherit;
-  top: 63px;
+  top: 58px;
   background-color: #fff;
   z-index: 99;
 }

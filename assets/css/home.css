@@ -15,12 +15,10 @@
   position: relative;
 }
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active
-{
- transition: background-color 5000s ease-in-out 0s;
-
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 .txtBox {
@@ -44,7 +42,6 @@ input:-webkit-autofill:active
   opacity: 0.5; /* Firefox */
   font-weight: 500 !important;
 }
-
 
 .txtBox::-ms-input-placeholder {
   /* Internet Explorer 10-11 */
@@ -157,7 +154,7 @@ input:-webkit-autofill:active
   outline: none;
 }
 .active {
-  z-index:999;
+  z-index: 999;
   top: 122px;
   background: #fff;
   box-shadow: 0 0 5px rgb(0 0 0 / 40%);
@@ -199,20 +196,20 @@ input:-webkit-autofill:active
     top: 60px;
   }
   .select_dropDown2 {
-       padding: 8px 0;
+    padding: 8px 0;
     width: 20%;
-    right:40px;
+    right: 40px;
   }
 }
 @media (max-width: 768px) {
-  #select_dropDown{
+  #select_dropDown {
     bottom: 0;
     position: fixed;
     width: 50%;
     right: 0;
-    border-radius:0;
-    padding:9.5px;
-    z-index:99;
+    border-radius: 0;
+    padding: 9.5px;
+    z-index: 99;
   }
   .pageHeading h1 {
     font-size: 2.5rem;

@@ -36,7 +36,7 @@
   background: #fff;
   position: absolute;
   z-index: 999;
-  top: 155px;
+  top: unset;
   right: 123px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
   padding: 30px 15px;
@@ -139,8 +139,15 @@ a {
     right: auto;
     position: fixed;
     left: 0;
-    top: 236px;
+    bottom: 39px;
     width: 100%;
+  }
+  .filter_count {
+    z-index: 999;
+    display: inline-block;
+    position: fixed;
+    left: 112px;
+    bottom: 8px;
   }
 }
 

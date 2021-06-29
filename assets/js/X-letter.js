@@ -76,10 +76,48 @@ function x_with_letters(data) {
       filterData = data.filter((item) => item.length == 2)
     }
 
+    if (prefixValue) {
+      filterData = filterData.filter((item2) =>
+        item2.startsWith(prefixValue.toLowerCase())
+      )
+      startsWith.classList.add('tick')
+      startsWith.value = prefixValue
+    }
+    if (containsValue) {
+      filterData = filterData.filter((item) =>
+        item.includes(containsValue.toLowerCase())
+      )
+      mustInclude.classList.add('tick')
+      mustInclude.value = containsValue
+    }
+    if (suffixValue) {
+      filterData = filterData.filter((item) =>
+        item.endsWith(suffixValue.toLowerCase())
+      )
+      endsWith.classList.add('tick')
+      endsWith.value = suffixValue
+    }
+
     if (filterData.length === 0) {
       main.innerHTML += ''
       errorMsg.innerHTML = 'No words Found with this length'
     } else {
+      // sort eventlistener
+      theSelect.addEventListener('change', () => {
+        sortValue = theSelect[theSelect.selectedIndex].text
+        if (sortValue == 'Z-A') {
+          sortBool = true
+          sortby(sortBool, filterData, itemLength)
+        } else {
+          sortBool = false
+          sortby(sortBool, filterData, itemLength)
+        }
+        if (sortValue == 'Points') {
+          sortBool = true
+          sortPointsby(sortBool, filterData, itemLength)
+        }
+      })
+
       newWordsLength += filterData.length
       let itemLength = ''
       const result = filterData.map((item) => {
@@ -121,6 +159,138 @@ function x_with_letters(data) {
     wordCount.innerHTML = `<strong>${newWordsLength} words with letters ${serachValue.split(
       ''
     )}</strong>`
+  }
+}
+
+//Handling of filter counter in advanced filter
+function addFilterCount() {
+  let filter_val = document.getElementsByClassName('filter_val')
+  let filter = document.querySelector('.filter_count')
+  let filter_count = 0
+
+  filter_val[0].value = prefixValue
+  filter_val[1].value = containsValue
+  filter_val[2].value = suffixValue
+  filter_val[3].value = lengthValue
+
+  for (var i = 0; i < 4; i++) {
+    if (filter_val[i].value != '') {
+      filter_count += 1
+    }
+    if (filter_count === 0) {
+      filter.style.display = 'none'
+    } else {
+      filter.style.display = 'inline-block'
+    }
+
+    filter.innerHTML = filter_count
+  }
+}
+addFilterCount()
+
+// sorting by points
+function sortPointsby(sortValue, data, i) {
+  if (sortValue) {
+    main.innerHTML = ''
+    let newArray = []
+    data.map((item) => {
+      let ScrabbleLetterScore = ScrabbleScore()
+      let points = 0
+      item = item.toLowerCase()
+      for (let i = 0; i < item.length; i++) {
+        points += ScrabbleLetterScore[item[i]] || 0 // for unknown characters
+      }
+      const value = {
+        words: item,
+        points: points,
+      }
+      newArray.push(value)
+      newArray.sort(function (a, b) {
+        return b.points - a.points
+      })
+    })
+    const result = newArray.map((item) => {
+      return `<a class="anchor__style" title="Lookup python in Dictionary" target="_blank" href="/word-meaning?search=${item.words}">
+      <li>${item.words}
+    <span class="points" value="${item.points}" style="position:relative; top:4px; font-size:12px"> ${item.points}</span>
+      </li></a>`
+    })
+
+    main.innerHTML += `
+    <div class="allGroupWords wordlistContainer" id="alpha_${i}">
+        <div class="wordListHeading">
+            <h3 class="lead">${i} Letter Words</h3>
+        </div>
+        <div class="wordList">
+            <ul class="ul list-unstyled">
+             ${result.join('')}
+            </ul>
+        </div>
+    </div>
+    `
+  }
+}
+
+// sort by aplhabets
+function sortby(sortBool, data, i) {
+  if (sortBool) {
+    main.innerHTML = ''
+    data.reverse()
+    const result = data.map((item) => {
+      let ScrabbleLetterScore = ScrabbleScore()
+      let sum = 0
+      item = item.toLowerCase()
+      for (let i = 0; i < item.length; i++) {
+        sum += ScrabbleLetterScore[item[i]] || 0 // for unknown characters
+      }
+      return `<a class="anchor__style" title="Lookup python in Dictionary" target="_blank" href="/word-meaning?search=${item}">
+            <li>${item}
+        <span class="points" value="${sum}" style="position:relative; top:4px; font-size:12px"> ${sum}</span>
+          </li></a>`
+    })
+
+    main.innerHTML += `
+        <div class="allGroupWords wordlistContainer" id="alpha_${i}">
+            <div class="wordListHeading">
+                <h3 class="lead">${i} Letter Words</h3>
+            </div>
+            <div class="wordList">
+                <ul class="ul list-unstyled">
+                 ${result.join('')}
+                </ul>
+            </div>
+        </div>
+     
+        `
+  } else {
+    main.innerHTML = ''
+    data.sort()
+    const result = data.map((item) => {
+      let ScrabbleLetterScore = ScrabbleScore()
+      let sum = 0
+      item = item.toLowerCase()
+      for (let i = 0; i < item.length; i++) {
+        sum += ScrabbleLetterScore[item[i]] || 0 // for unknown characters
+      }
+      return `<a class="anchor__style" title="Lookup python in Dictionary" target="_blank" href="/word-meaning?search=${item}">
+              <li>${item}
+          <span class="points" value="${sum}" style="position:relative; top:4px; font-size:12px"> ${sum}</span>
+            </li></a>`
+    })
+
+    main.innerHTML += `
+          <div class="allGroupWords wordlistContainer" id="alpha_${i}">
+              <div class="wordListHeading">
+                  <h3 class="lead">${i} Letter Words</h3>
+              </div>
+              <div class="wordList">
+                  <ul class="ul list-unstyled">
+                   ${result.join('')}
+                  </ul>
+              </div>
+          </div>
+       
+          `
   }
 }
 

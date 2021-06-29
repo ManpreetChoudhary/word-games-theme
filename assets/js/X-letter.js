@@ -162,32 +162,6 @@ function x_with_letters(data) {
   }
 }
 
-//Handling of filter counter in advanced filter
-function addFilterCount() {
-  let filter_val = document.getElementsByClassName('filter_val')
-  let filter = document.querySelector('.filter_count')
-  let filter_count = 0
-
-  filter_val[0].value = prefixValue
-  filter_val[1].value = containsValue
-  filter_val[2].value = suffixValue
-  filter_val[3].value = lengthValue
-
-  for (var i = 0; i < 4; i++) {
-    if (filter_val[i].value != '') {
-      filter_count += 1
-    }
-    if (filter_count === 0) {
-      filter.style.display = 'none'
-    } else {
-      filter.style.display = 'inline-block'
-    }
-
-    filter.innerHTML = filter_count
-  }
-}
-addFilterCount()
-
 // sorting by points
 function sortPointsby(sortValue, data, i) {
   if (sortValue) {

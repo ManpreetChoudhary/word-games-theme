@@ -14,8 +14,8 @@
         <div class="serachSection">
             <div class="position-relative serachBox">
                 <form action="{{page.url}}/result" id='form' method="GET">
-                    <input type="text" placeholder="Enter up to 15 letters?" class="txtBox" autocomplete="off" value
-                        name="search" maxlength="15" required>
+                    <input type="text" placeholder="Enter up to 15 letters?" class="txtBox" value name="search"
+                        maxlength="15" required>
                     <input type="submit" class="serachBtn" id="serach" value>
                     <div class="dictonaryDropdown">
                         <select class="form-select select_dropDown2" name="dictonary"
@@ -34,9 +34,6 @@
                             <div class="angle-arrow2"></div>
                         </div>
                     </div>
-
-
-
                     <div class="fillterWrapper">
                         <div class="startsWith">
                             <label for="startsWith">Starts With</label>
@@ -55,6 +52,11 @@
                         <div class="wordLength">
                             <label for="wordLength">Word Length </label>
                             <input type="text" id="wordLength" placeholder="Length" name="length">
+
+                        </div>
+                        <div style="margin-top: 1.2rem;">
+                            <input type="submit" value="Apply" class="btn-info w-100 text-white"
+                                style="background: #BD67DD">
                         </div>
                     </div>
                 </form>
@@ -64,6 +66,7 @@
 </div>
 <!-- close landingPage -->
 <!-- // page conditions -->
+
 
 
 {% if page.url == "/anagram-word-finder" %}
@@ -88,6 +91,7 @@
 
 {% else %}
 
-<script src="/assets/js/advancedFilter3.js"></script>
+<script src="/assets/js/advancedFilter.js"></script>
+<script src="/assets/js/advancedFilter2.js"></script>
 
 {% endif %}

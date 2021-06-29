@@ -1,3 +1,7 @@
+/***************
+ SCRABBLER_JS
+***************/
+
 // grab some html elements
 let form = document.querySelector('#form')
 let wordCount = document.querySelector('.wordCount')
@@ -12,6 +16,13 @@ let containsValue = params.get('contains')
 let suffixValue = params.get('suffix')
 let lengthValue = params.get('length')
 let dictonary = params.get('dictonary')
+
+// advanced filter element grabs
+let tick
+let startsWith = document.getElementById('startsWith')
+let mustInclude = document.getElementById('mustInclude')
+let endsWith = document.getElementById('endsWith')
+let wordLength = document.getElementById('wordLength')
 
 let ok = true
 
@@ -71,6 +82,10 @@ function getWords(data) {
         sortBool = false
         sortby(sortBool, data)
       }
+      if (sortValue == 'Points') {
+        sortBool = true
+        sortPointsby(sortBool, data)
+      }
     })
 
     for (let i = serachValue.length; i >= 1; i--) {
@@ -79,20 +94,30 @@ function getWords(data) {
         newdata = newdata.filter((item2) =>
           item2.startsWith(prefixValue.toLowerCase())
         )
+        startsWith.classList.add('tick')
+        startsWith.value = prefixValue
       }
+
       if (containsValue) {
         newdata = newdata.filter((item) =>
           item.includes(containsValue.toLowerCase())
         )
+        mustInclude.classList.add('tick')
+        mustInclude.value = containsValue
       }
       if (suffixValue) {
         newdata = newdata.filter((item) =>
           item.endsWith(suffixValue.toLowerCase())
         )
+        endsWith.classList.add('tick')
+        endsWith.value = suffixValue
       }
       if (lengthValue) {
         newdata = newdata.filter((item) => item.length == lengthValue)
+        wordLength.classList.add('tick')
+        wordLength.value = lengthValue
       }
+
       if (newdata.length === 0) {
         main.innerHTML += ''
       } else {
@@ -146,6 +171,66 @@ function getWords(data) {
       wordCount.innerHTML = `<strong>${newWordsLength} words with letters ${serachValue.split(
         ''
       )}</strong>`
+    }
+  }
+}
+
+// sorting by points
+function sortPointsby(sortValue, data) {
+  main.innerHTML = ''
+  if (sortValue) {
+    let newWordsLength = 0
+    for (let i = serachValue.length; i >= 1; i--) {
+      var newdata = data.filter((item) => item.length === i)
+
+      if (newdata.length === 0) {
+        main.innerHTML += ''
+      } else {
+        newWordsLength += newdata.length
+        var newArray = []
+        newdata.map((item) => {
+          if (item.length === 1) {
+            ok = false
+            newWordsLength = newWordsLength - 1
+          } else {
+            let ScrabbleLetterScore = ScrabbleScore()
+            let points = 0
+            item = item.toLowerCase()
+            for (let i = 0; i < item.length; i++) {
+              points += ScrabbleLetterScore[item[i]] || 0 // for unknown characters
+            }
+            const value = {
+              words: item,
+              points: points,
+            }
+            newArray.push(value)
+          }
+        })
+
+        newArray.sort(function (a, b) {
+          return b.points - a.points
+        })
+
+        const result = newArray.map((item) => {
+          return `<a class="anchor__style" title="Lookup python in Dictionary" target="_blank" href="/word-meaning?search=${item.words}">
+          <li>${item.words}
+        <span class="points" value="${item.points}" style="position:relative; top:4px; font-size:12px"> ${item.points}</span>
+          </li></a>`
+        })
+
+        main.innerHTML += `
+        <div class="allGroupWords wordlistContainer" id="alpha_${i}">
+            <div class="wordListHeading">
+                <h3 class="lead">${i} Letter Words</h3>
+            </div>
+            <div class="wordList">
+                <ul class="ul list-unstyled">
+                 ${result.join('')}
+                </ul>
+            </div>
+        </div>
+        `
+      }
     }
   }
 }
@@ -239,7 +324,7 @@ function sortby(sortBool, data) {
   }
 }
 
-// Scrabble Point Counts
+// Scrabble Point Array
 const ScrabbleScore = () => {
   let twl06_sowpods = {
     a: 1,
@@ -306,7 +391,33 @@ const ScrabbleScore = () => {
   }
 }
 
-// Implement Filtering
+//Handling of filter counter in advanced filter
+function addFilterCount() {
+  let filter_val = document.getElementsByClassName('filter_val')
+  let filter = document.querySelector('.filter_count')
+  let filter_count = 0
+
+  filter_val[0].value = prefixValue
+  filter_val[1].value = containsValue
+  filter_val[2].value = suffixValue
+  filter_val[3].value = lengthValue
+
+  for (var i = 0; i < 4; i++) {
+    if (filter_val[i].value != '') {
+      filter_count += 1
+    }
+    if (filter_count === 0) {
+      filter.style.display = 'none'
+    } else {
+      filter.style.display = 'inline-block'
+    }
+
+    filter.innerHTML = filter_count
+  }
+}
+addFilterCount()
+
+// Add Filtering
 let sections = {}
 function Filtering(id) {
   let tabs = document.getElementsByClassName('tab_link')
@@ -317,23 +428,49 @@ function Filtering(id) {
   })
   main.innerHTML += ``
   let activeLetter = event.target
-  // console.log(activeLetter)
   activeLetter.classList.add('active-tab')
 
   var section = document.querySelectorAll('.wordlistContainer')
   var sort_val = document.querySelector('.sort-select').value
-  sections = {}
   Array.prototype.forEach.call(section, function (e) {
     if (document.body.clientWidth > 991) {
       sections[e.id] = e.offsetTop - 10
     } else {
       sections[e.id] = e.offsetTop - 10
-      // console.log(sections)
     }
   })
+
   document.body.scrollTop = sections[sort_val + '_' + id] + 5
 }
 
+// handling of filter on scroll
+window.onscroll = function () {
+  var section = document.querySelectorAll('.wordlistContainer')
+  let new_sections = {}
+  Array.prototype.forEach.call(section, function (e) {
+    if (document.body.clientWidth > 991) {
+      new_sections[e.id] = e.offsetTop - 10
+    } else {
+      new_sections[e.id] = e.offsetTop - 10
+    }
+  })
+  var scrollPosition =
+    document.body.scrollTop || document.documentElement.scrollTop
+  for (i in new_sections) {
+    let sort_val = document.querySelector('.sort-select').value
+    if (
+      i.split('_')[0] == sort_val &&
+      new_sections[i] &&
+      new_sections[i] <= scrollPosition
+    ) {
+      document.querySelector('.active-tab').classList.remove('active-tab')
+      var active_now = document.querySelector('#Tab_' + i.split('_')[1])
+      active_now.classList.add('active-tab')
+    }
+  }
+}
+
+// next && previous functionality
 let prev = document.getElementById('prev')
 let next = document.getElementById('next')
 
@@ -359,7 +496,7 @@ function scroll_visible() {
     }
   }
 }
-scroll_visible()
+
 function scroll_Left() {
   tab_container.scrollLeft += 130
 }

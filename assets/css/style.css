@@ -111,7 +111,7 @@ header {
   right: 5px;
   margin: -3px 0;
   cursor: pointer;
-  z-index: 999;
+  /* z-index: 999; */
 }
 .post-link {
   font-size: 1.5rem;
@@ -225,8 +225,8 @@ header {
   }
   .angle-arrow {
     position: fixed;
-    bottom: 4px;
-    right: 32px;
+    bottom: 5px;
+    right: 52%;
     z-index: 999;
     top: auto;
   }

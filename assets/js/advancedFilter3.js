@@ -1,2 +1,2 @@
-const advancedFilter = document.querySelector('.advancedFilter')
-advancedFilter.style.display = ' none'
+// const advancedFilter = document.querySelector('.advancedFilter')
+// advancedFilter.style.display = ' none'

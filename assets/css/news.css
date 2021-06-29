@@ -1,5 +1,5 @@
 .rowHeight2 {
-  margin-top: 700px;
+  margin-top: 300px;
 }
 .news {
   margin-top: -120px;
@@ -44,7 +44,7 @@
 }
 @media (max-width: 1125px) {
   .rowHeight2 {
-    margin-top: 0px;
+    margin-top: 50px;
     margin-bottom: 120px;
   }
   .news {

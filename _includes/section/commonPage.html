@@ -13,8 +13,8 @@
         <div class="serachSection2">
             <div class="position-relative serachBox">
                 <form action="" id='form'>
-                    <input type="text" placeholder="Enter up to 15 letters?" class="txtBox" autocomplete="off" value
-                        name="search" maxlength="15" value required>
+                    <input type="text" placeholder="Enter up to 15 letters?" class="txtBox" value name="search"
+                        maxlength="15" value required>
                     <input type="submit" class="serachBtn" id="serach" value>
                     <div class="dictonaryDropdown">
                         <select class="form-select select_dropDown2" name="dictonary"
@@ -26,9 +26,9 @@
                         </select>
                     </div>
                     {%- include filterWords/index.html -%}
-
-                    <div class="mt-3 wrapper_dropDown d-flex justify-content-end" style="gap:10px">
+                    <div class="wrapper_dropDown mt-2 d-flex justify-content-end" style="gap:10px;">
                         <div class="Advancedbtn" style="position: relative;" onclick="myFunction()">
+                            <span class="filter_count" style="display: inline-block;"></span>
                             <input type="button" value="Advanced Filter" class="filterButton">
                             <div class="angle-arrow"></div>
                         </div>
@@ -37,6 +37,7 @@
                                 <option selected="true" hidden id="alpha" value="alpha">Sort by</option>
                                 <option id="alpha" value="alpha">A-Z</option>
                                 <option id="points" value="points">Z-A</option>
+                                <option id="points" value="points">Points</option>
                             </select>
                         </div>
                     </div>
@@ -44,30 +45,37 @@
                         <i class="fas fa-times"></i>
                         <div class="startsWith same">
                             <label for="startsWith">Starts With</label>
-                            <input type="text" id="startsWith" placeholder="Prefix" value="" name="prefix">
+                            <input type="text" class="filter_val" id="startsWith" placeholder="Prefix" value=""
+                                name="prefix">
                         </div>
                         <div class="mustInclude same">
                             <label for="mustInclude">Must Include </label>
-                            <input type="text" id="mustInclude" placeholder="Contains" name="contains">
+                            <input type="text" class="filter_val" id="mustInclude" placeholder="Contains"
+                                name="contains" value="">
                         </div>
                         <div class="endsWith same">
                             <label for="endsWith">End With</label>
-                            <input type="text" id="endsWith" placeholder="Suffix" name="suffix">
+                            <input type="text" class="filter_val" id="endsWith" placeholder="Suffix" name="suffix"
+                                value="">
                         </div>
                         <div class="wordLength same">
                             <label for="wordLength">Word Length </label>
-                            <input type="text" id="wordLength" placeholder="Length" name="length">
+                            <input type="text" class="filter_val" id="wordLength" placeholder="Length" name="length"
+                                value="">
                         </div>
 
                         <div style="margin-top: 1.2rem;">
                             <input type="submit" value="Apply" class="btn-info w-100 text-white"
-                                style="background: #BD67DD">
+                                style="background: #808080">
                         </div>
                     </div>
+
                 </form>
             </div>
         </div>
     </section>
+
+
     {% include section/wordGroup.html %}
 </div>
 

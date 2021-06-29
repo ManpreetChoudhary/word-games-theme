@@ -1,3 +1,20 @@
+.tick {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAL7SURBVEhL7ZZdSBRRFMf/s+PWSrsUFGoUfi1ooWISFUQPvfRhH1hUL5agvogvaQ/hamBRbz0W2VNBQb2IgqJsGL2VVBK11UNpPkhGKmWK6wfu7kznzFxGx5lxZ+tN/MGdOefOzP3PnTn3noN11jySOLvnWamfniqGJGVovqpOQMVnHI9ENd8l7oTDe/zwSGfp7nPkHaPm0/qXWKD2kl7gERS1A+Uf5vVuZ1YXbg9KCAT2kWgjeaeoBbR+Z/gFupFQWhGNDuLCsKp3W3EW1kQ3HYRHfkhegd7pmkEoiVrMzPY7iXvE2YrfXyJEg3pHShTQsw9oDMcXthfuLfNDlq+RxQ/KWl/qFNIYN7WxbLAX9uIMhWu58P4D9TSNVSEcE06fmqM3WSAZ+DwbcCXnEk5sO7QyaNKpVeumGWtw9ZYE4E2bIGvlkrGFRZtyqxHKq8HQ3HfsfVOJmBIXVzUWEItn4OSnGeFrWGcspxXR0ZXolrQAmkgwlFeL4blRtAzdRVxJiKsGPhqzUNgGVmFJzRSWCVmSqZlvb8ipRCi3BtPxGYSG7qD3F+8hNqtHUncIy8DpH5tg0VvBeoTL7iHbl6XN9HqwDjfy6zCy8BPnI1edRXUsv9QqrEo/hGXAA+7fXIwjWw+gbXczmunTNmZX4uvcCFq/teHVVGQ1UR5zTFgGroMrJz0LbbtatMhlxhd/azNNKuoQXNbN4enEIqq2HyYrX+/QmY5H8XzyNYr8QSwqMVz+chsvJgeSiTI9KI88FraB/V7dV3aRjvepWdYyz3znxkz0T310I8qzrMfR9090dwn74Iqhk94pLDwTI/Njbj6vQOqhsbqEY8J+xky4lPZaTzdZqWYmhhfzMBSligqEt3qXGeflxPmUUxunuNQhUU6L0QHhW3DOPO1/gAr/KLzePioEuMzhYPNq15zhf9pJhUADorPv/q0QWA6XPrLEWYaTB2ctu9KHY6IDCbWLSp+k9Zc74eVwseehXAuJt0GJir1xirOUi7111jrAXwKK6K/PgrsYAAAAAElFTkSuQmCC)
+    no-repeat;
+  background-position: 95% 50%;
+}
+.filter_count {
+  width: 20px;
+  color: white;
+  height: 20px;
+  text-align: center;
+  background-color: #808080;
+  padding-top: 2px;
+  border-radius: 50%;
+  margin-right: 1px;
+  position: relative;
+  left: 150px;
+}
 .Advancedbtn .filterButton {
   background: #f8f9fa;
   box-shadow: 0 0 3px #343a4063;
@@ -114,8 +131,9 @@ a {
   .Advancedbtn .filterButton {
     position: fixed;
     bottom: 0;
-    width: 100%;
-    left: 0;
+    width: 50%;
+    left:0px;
+    border-radius:0;
   }
   .fillterWrapper {
     right: auto;

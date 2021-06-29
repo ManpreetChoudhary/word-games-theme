@@ -31,7 +31,7 @@
 }
 @media (max-width: 1125px) {
   .rowHeight {
-    margin: 0px -15px 0px -15px;
+    margin: 100px -15px 0px -15px;
   }
   .about {
     background: #b641da;

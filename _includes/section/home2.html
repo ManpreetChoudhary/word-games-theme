@@ -14,8 +14,8 @@
         <div class="serachSection">
             <div class="position-relative serachBox">
                 <form action="{{page.url}}/result" id='form' method="GET">
-                    <input type="text" placeholder="Enter up to 15 letters?" class="txtBox" autocomplete="off" value
-                        name="search" maxlength="15" required>
+                    <input type="text" placeholder="Enter up to 15 letters?" class="txtBox" value name="search"
+                        maxlength="15" required>
                     <input type="submit" class="serachBtn" id="serach" value>
                     <div class="dictonaryDropdown">
                         <select class="form-select select_dropDown2" name="dictonary"
@@ -55,6 +55,10 @@
                         <div class="wordLength">
                             <label for="wordLength">Word Length </label>
                             <input type="text" id="wordLength" placeholder="Length" name="length">
+                          <div style="margin-top: 1.2rem;">
+                                <input type="submit" value="Apply" class="btn-info w-100 text-white"
+                                    style="background: #BD67DD">
+                            </div>
                         </div>
                     </div>
                 </form>

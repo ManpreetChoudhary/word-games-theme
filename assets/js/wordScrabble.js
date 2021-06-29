@@ -13,6 +13,13 @@ let suffixValue = params.get('suffix')
 let lengthValue = params.get('length')
 let dictonary = params.get('dictonary')
 
+let tick
+// advanced filter element grabs
+let startsWith = document.getElementById('startsWith')
+let mustInclude = document.getElementById('mustInclude')
+let endsWith = document.getElementById('endsWith')
+let wordLength = document.getElementById('wordLength')
+
 let ok = true
 
 let tab_container = document.querySelector('.tab_container')
@@ -79,20 +86,30 @@ function getWords(data) {
         newdata = newdata.filter((item2) =>
           item2.startsWith(prefixValue.toLowerCase())
         )
+        startsWith.classList.add('tick')
+        startsWith.value = prefixValue
       }
+
       if (containsValue) {
         newdata = newdata.filter((item) =>
           item.includes(containsValue.toLowerCase())
         )
+        mustInclude.classList.add('tick')
+        mustInclude.value = containsValue
       }
       if (suffixValue) {
         newdata = newdata.filter((item) =>
           item.endsWith(suffixValue.toLowerCase())
         )
+        endsWith.classList.add('tick')
+        endsWith.value = suffixValue
       }
       if (lengthValue) {
         newdata = newdata.filter((item) => item.length == lengthValue)
+        wordLength.classList.add('tick')
+        wordLength.value = lengthValue
       }
+
       if (newdata.length === 0) {
         main.innerHTML += ''
       } else {
@@ -306,7 +323,33 @@ const ScrabbleScore = () => {
   }
 }
 
-// Implement Filtering
+//Handling of filter counter in advanced filter
+function addFilterCount() {
+  let filter_val = document.getElementsByClassName('filter_val')
+  let filter = document.querySelector('.filter_count')
+  let filter_count = 0
+
+  filter_val[0].value = prefixValue
+  filter_val[1].value = containsValue
+  filter_val[2].value = suffixValue
+  filter_val[3].value = lengthValue
+
+  for (var i = 0; i < 4; i++) {
+    if (filter_val[i].value != '') {
+      filter_count += 1
+    }
+    if (filter_count === 0) {
+      filter.style.display = 'none'
+    } else {
+      filter.style.display = 'inline-block'
+    }
+
+    filter.innerHTML = filter_count
+  }
+}
+addFilterCount()
+
+// Add Filtering
 let sections = {}
 function Filtering(id) {
   let tabs = document.getElementsByClassName('tab_link')
@@ -317,23 +360,48 @@ function Filtering(id) {
   })
   main.innerHTML += ``
   let activeLetter = event.target
-  // console.log(activeLetter)
   activeLetter.classList.add('active-tab')
 
   var section = document.querySelectorAll('.wordlistContainer')
   var sort_val = document.querySelector('.sort-select').value
-  sections = {}
   Array.prototype.forEach.call(section, function (e) {
     if (document.body.clientWidth > 991) {
       sections[e.id] = e.offsetTop - 10
     } else {
       sections[e.id] = e.offsetTop - 10
-      // console.log(sections)
     }
   })
   document.body.scrollTop = sections[sort_val + '_' + id] + 5
 }
 
+// handling of filter on scroll
+window.onscroll = function () {
+  var section = document.querySelectorAll('.wordlistContainer')
+  let new_sections = {}
+  Array.prototype.forEach.call(section, function (e) {
+    if (document.body.clientWidth > 991) {
+      new_sections[e.id] = e.offsetTop - 10
+    } else {
+      new_sections[e.id] = e.offsetTop - 10
+    }
+  })
+  var scrollPosition =
+    document.body.scrollTop || document.documentElement.scrollTop
+  for (i in new_sections) {
+    let sort_val = document.querySelector('.sort-select').value
+    if (
+      i.split('_')[0] == sort_val &&
+      new_sections[i] &&
+      new_sections[i] <= scrollPosition
+    ) {
+      document.querySelector('.active-tab').classList.remove('active-tab')
+      var active_now = document.querySelector('#Tab_' + i.split('_')[1])
+      active_now.classList.add('active-tab')
+    }
+  }
+}
+
+// next && previous functionality
 let prev = document.getElementById('prev')
 let next = document.getElementById('next')
 

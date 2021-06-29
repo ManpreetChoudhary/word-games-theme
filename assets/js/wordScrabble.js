@@ -1,3 +1,7 @@
+/***************
+ SCRABBLER_JS
+***************/
+
 // grab some html elements
 let form = document.querySelector('#form')
 let wordCount = document.querySelector('.wordCount')
@@ -13,8 +17,8 @@ let suffixValue = params.get('suffix')
 let lengthValue = params.get('length')
 let dictonary = params.get('dictonary')
 
-let tick
 // advanced filter element grabs
+let tick
 let startsWith = document.getElementById('startsWith')
 let mustInclude = document.getElementById('mustInclude')
 let endsWith = document.getElementById('endsWith')
@@ -77,6 +81,10 @@ function getWords(data) {
       } else {
         sortBool = false
         sortby(sortBool, data)
+      }
+      if (sortValue == 'Points') {
+        sortBool = true
+        sortPointsby(sortBool, data)
       }
     })
 
@@ -163,6 +171,66 @@ function getWords(data) {
       wordCount.innerHTML = `<strong>${newWordsLength} words with letters ${serachValue.split(
         ''
       )}</strong>`
+    }
+  }
+}
+
+// sorting by points
+function sortPointsby(sortValue, data) {
+  main.innerHTML = ''
+  if (sortValue) {
+    let newWordsLength = 0
+    for (let i = serachValue.length; i >= 1; i--) {
+      var newdata = data.filter((item) => item.length === i)
+
+      if (newdata.length === 0) {
+        main.innerHTML += ''
+      } else {
+        newWordsLength += newdata.length
+        var newArray = []
+        newdata.map((item) => {
+          if (item.length === 1) {
+            ok = false
+            newWordsLength = newWordsLength - 1
+          } else {
+            let ScrabbleLetterScore = ScrabbleScore()
+            let points = 0
+            item = item.toLowerCase()
+            for (let i = 0; i < item.length; i++) {
+              points += ScrabbleLetterScore[item[i]] || 0 // for unknown characters
+            }
+            const value = {
+              words: item,
+              points: points,
+            }
+            newArray.push(value)
+          }
+        })
+
+        newArray.sort(function (a, b) {
+          return b.points - a.points
+        })
+
+        const result = newArray.map((item) => {
+          return `<a class="anchor__style" title="Lookup python in Dictionary" target="_blank" href="/word-meaning?search=${item.words}">
+          <li>${item.words}
+        <span class="points" value="${item.points}" style="position:relative; top:4px; font-size:12px"> ${item.points}</span>
+          </li></a>`
+        })
+
+        main.innerHTML += `
+        <div class="allGroupWords wordlistContainer" id="alpha_${i}">
+            <div class="wordListHeading">
+                <h3 class="lead">${i} Letter Words</h3>
+            </div>
+            <div class="wordList">
+                <ul class="ul list-unstyled">
+                 ${result.join('')}
+                </ul>
+            </div>
+        </div>
+        `
+      }
     }
   }
 }
@@ -256,7 +324,7 @@ function sortby(sortBool, data) {
   }
 }
 
-// Scrabble Point Counts
+// Scrabble Point Array
 const ScrabbleScore = () => {
   let twl06_sowpods = {
     a: 1,
@@ -371,6 +439,7 @@ function Filtering(id) {
       sections[e.id] = e.offsetTop - 10
     }
   })
+
   document.body.scrollTop = sections[sort_val + '_' + id] + 5
 }
 
@@ -427,7 +496,7 @@ function scroll_visible() {
     }
   }
 }
-scroll_visible()
+
 function scroll_Left() {
   tab_container.scrollLeft += 130
 }

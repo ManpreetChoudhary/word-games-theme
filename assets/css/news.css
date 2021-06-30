@@ -1,5 +1,7 @@
 .rowHeight2 {
-  margin-top: 300px;
+  position: relative;
+  top: 300px;
+  margin-bottom: 450px;
 }
 .news {
   margin-top: -120px;
@@ -46,6 +48,7 @@
   .rowHeight2 {
     margin-top: 50px;
     margin-bottom: 120px;
+    top: 0;
   }
   .news {
     padding: 15px;

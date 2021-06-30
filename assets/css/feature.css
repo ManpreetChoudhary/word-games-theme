@@ -1,6 +1,7 @@
 .feature {
   margin-top: -120px;
   margin-left: 60px;
+  margin-bottom: 450px;
   color: #fff;
 }
 .feature img {
@@ -45,6 +46,7 @@
     background-color: #b641da;
     margin-left: 0;
     margin-top: 0;
+    margin-bottom: 0;
   }
   .feature .feature-title,
   .feature-description {

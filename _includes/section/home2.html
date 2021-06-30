@@ -29,12 +29,13 @@
 
                     <div class="wrapper_dropDown d-flex justify-content-end mt-5" style="gap:15px">
 
-                        <div class="advancedFilter" style="position: relative;">
+                        <div class="advancedFilter" style="position: relative;" onclick="myFunction()">
                             <input type="button" value="Advanced Filter" class="filterButton">
                             <div class="angle-arrow2"></div>
                         </div>
                     </div>
-                    <div class="fillterWrapper">
+                    <div class="fillterWrapper hide">
+                        <i class="fas fa-times"></i>
                         <div class="startsWith">
                             <label for="startsWith">Starts With</label>
                             <input type="text" id="startsWith" placeholder="Prefix" value="" name="prefix">
@@ -67,7 +68,17 @@
 <!-- close landingPage -->
 <!-- // page conditions -->
 
+<script>
+    const fillterWrapper = document.querySelector('.fillterWrapper')
+    function myFunction() {
+        fillterWrapper.classList.toggle('hide')
+    }
+    const close = document.querySelector('.fa-times')
+    close.addEventListener('click', () => {
+        fillterWrapper.classList.add('hide')
+    })
 
+</script>
 
 {% if page.url == "/anagram-word-finder" %}
 

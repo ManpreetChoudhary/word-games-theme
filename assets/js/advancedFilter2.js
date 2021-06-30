@@ -1,5 +1,8 @@
-const advancedFilter = document.querySelector('.advancedFilter')
 const fillterWrapper = document.querySelector('.fillterWrapper')
-advancedFilter.addEventListener('click', () => {
-  fillterWrapper.classList.toggle('active')
+function myFunction() {
+  fillterWrapper.classList.toggle('hide')
+}
+const close = document.querySelector('.fa-times')
+close.addEventListener('click', () => {
+  fillterWrapper.classList.add('hide')
 })

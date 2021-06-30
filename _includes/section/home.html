@@ -70,8 +70,20 @@
     </div>
 </div>
 
+<script>
+    const advancedFilter = document.querySelector('.advancedFilter')
+    const fillterWrapper = document.querySelector('.fillterWrapper')
+    advancedFilter.addEventListener('click', () => {
+        fillterWrapper.classList.toggle('active')
+        fillterWrapper.classList.remove('hide')
+    })
 
-<script src="/assets/js/advancedFilter2.js"></script>
+    const close = document.querySelector('.fa-times')
+    close.addEventListener('click', () => {
+        fillterWrapper.classList.remove('active')
+        fillterWrapper.classList.add('hide')
+    })
 
+</script>
 <!-- close landingPage -->
 <!-- // page conditions -->

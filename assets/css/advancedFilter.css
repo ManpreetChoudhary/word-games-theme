@@ -139,7 +139,8 @@ a {
     right: auto;
     position: fixed;
     left: 0;
-    bottom: 39px;
+    bottom: 29px;
+    top: unset;
     width: 100%;
   }
   .filter_count {

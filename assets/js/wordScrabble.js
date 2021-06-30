@@ -417,6 +417,34 @@ function addFilterCount() {
 }
 addFilterCount()
 
+// handling of filter on scroll
+window.onscroll = function () {
+  var section = document.querySelectorAll('.wordlistContainer')
+  let new_sections = {}
+  Array.prototype.forEach.call(section, function (e) {
+    if (document.body.clientWidth > 991) {
+      new_sections[e.id] = e.offsetTop - 10
+    } else {
+      new_sections[e.id] = e.offsetTop - 10
+    }
+  })
+  var scrollPosition =
+    document.documentElement.scrollTop || document.body.scrollTop
+  for (i in new_sections) {
+    let sort_val = document.querySelector('.sort-select').value
+    if (
+      i.split('_')[0] == sort_val &&
+      new_sections[i] &&
+      new_sections[i] <= scrollPosition
+    ) {
+      document.querySelector('.active-tab').classList.remove('active-tab')
+      var active_now = document.querySelector('#Tab_' + i.split('_')[1])
+      active_now.classList.add('active-tab')
+      // active_now.scrollIntoView()
+    }
+  }
+}
+
 // Add Filtering
 let sections = {}
 function Filtering(id) {
@@ -441,33 +469,6 @@ function Filtering(id) {
   })
 
   document.body.scrollTop = sections[sort_val + '_' + id] + 5
-}
-
-// handling of filter on scroll
-window.onscroll = function () {
-  var section = document.querySelectorAll('.wordlistContainer')
-  let new_sections = {}
-  Array.prototype.forEach.call(section, function (e) {
-    if (document.body.clientWidth > 991) {
-      new_sections[e.id] = e.offsetTop - 10
-    } else {
-      new_sections[e.id] = e.offsetTop - 10
-    }
-  })
-  var scrollPosition =
-    document.body.scrollTop || document.documentElement.scrollTop
-  for (i in new_sections) {
-    let sort_val = document.querySelector('.sort-select').value
-    if (
-      i.split('_')[0] == sort_val &&
-      new_sections[i] &&
-      new_sections[i] <= scrollPosition
-    ) {
-      document.querySelector('.active-tab').classList.remove('active-tab')
-      var active_now = document.querySelector('#Tab_' + i.split('_')[1])
-      active_now.classList.add('active-tab')
-    }
-  }
 }
 
 // next && previous functionality

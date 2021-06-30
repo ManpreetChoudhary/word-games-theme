@@ -19,9 +19,18 @@
 
     {% include section/feature.html %}
 
+
+    {%- if dataToShow.faqList -%}
+    {%- if dataToShow.faqList.first.Question !='' -%}
     {% include section/news.html %}
+    {% endif %}
+    {% endif %}
+
+    {%- if site.posts.size>0 -%}
     {% include section/blog.html %}
-  
+    {%- endif -%}
+
+
     {%- include share/socialshare.html -%}
     {%- include Rating/rating.html -%}
     {%- include footer/index.html -%}

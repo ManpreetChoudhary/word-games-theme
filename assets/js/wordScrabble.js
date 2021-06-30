@@ -483,9 +483,12 @@ if (next) {
 window.addEventListener('resize', function () {
   scroll_visible()
 })
+window.addEventListener('scroll', function () {
+  scroll_visible()
+})
 function scroll_visible() {
   let tab_container = document.querySelector('#tab-container')
-  // console.log(tab_container)
+
   if (tab_container) {
     if (tab_container.clientWidth === tab_container.scrollWidth) {
       prev.style.display = 'none'
@@ -496,6 +499,7 @@ function scroll_visible() {
     }
   }
 }
+scroll_visible()
 
 function scroll_Left() {
   tab_container.scrollLeft += 130

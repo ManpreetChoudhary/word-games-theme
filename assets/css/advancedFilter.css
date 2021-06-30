@@ -36,7 +36,7 @@
   background: #fff;
   position: absolute;
   z-index: 999;
-  top: unset;
+  top: 150px;
   right: 123px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
   padding: 30px 15px;
@@ -107,7 +107,7 @@ a {
   padding: 3px;
   border: none;
   position: absolute;
-  top: 12px;
+  top: 15px;
   right: 43px;
 }
 #prev {
@@ -118,7 +118,7 @@ a {
   padding: 3px;
   border: none;
   position: absolute;
-  top: 12px;
+  top: 15px;
   left: 43px;
 }
 
@@ -139,7 +139,8 @@ a {
     right: auto;
     position: fixed;
     left: 0;
-    bottom: 39px;
+    bottom: 40px;
+    top: unset;
     width: 100%;
   }
   .filter_count {

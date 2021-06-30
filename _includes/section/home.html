@@ -28,15 +28,14 @@
                     </div>
 
                     <div class="wrapper_dropDown d-flex justify-content-end mt-5" style="gap:15px">
-                        <div class="advancedFilter" style="position: relative;">
+                        <div class="advancedFilter" style="position: relative;" onclick="myFunction()">
                             <input type="button" value="Advanced Filter" class="filterButton">
                             <div class="angle-arrow2"></div>
                         </div>
                     </div>
 
-
-
                     <div class="fillterWrapper">
+                        <i class="fas fa-times"></i>
                         <div class="startsWith">
                             <label for="startsWith">Starts With</label>
                             <br>
@@ -71,6 +70,20 @@
     </div>
 </div>
 
-<script src="/assets/js/advancedFilter2.js"></script>
+<script>
+    const advancedFilter = document.querySelector('.advancedFilter')
+    const fillterWrapper = document.querySelector('.fillterWrapper')
+    advancedFilter.addEventListener('click', () => {
+        fillterWrapper.classList.toggle('active')
+        fillterWrapper.classList.remove('hide')
+    })
+
+    const close = document.querySelector('.fa-times')
+    close.addEventListener('click', () => {
+        fillterWrapper.classList.remove('active')
+        fillterWrapper.classList.add('hide')
+    })
+
+</script>
 <!-- close landingPage -->
 <!-- // page conditions -->

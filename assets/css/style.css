@@ -124,6 +124,17 @@ header {
   color: #fff;
 }
 
+.hide {
+  visibility: hidden;
+}
+.fa-times {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
 /* newspaper subscribbe styling */
 .alertbar {
   box-shadow: 0 -3px 10px 0 rgba(0, 0, 0, 0.0785);

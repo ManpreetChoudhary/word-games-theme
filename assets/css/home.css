@@ -217,7 +217,7 @@ input:-webkit-autofill:active {
   #containerWd {
     width: 100% !important;
   }
-  .active {
+  .fillterWrapper {
     top: 102px;
     display: flex;
     right: -5px;

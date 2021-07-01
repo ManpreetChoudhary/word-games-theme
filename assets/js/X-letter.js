@@ -1,3 +1,8 @@
+---
+---
+const getScript=document.currentScript
+const letterLen = getScript.dataset.letter
+
 let errorMsg = document.querySelector('.errorMsg')
 let wordCount = document.querySelector('.wordCount')
 let main = document.querySelector('.main')
@@ -46,35 +51,11 @@ function x_with_letters(data) {
     let newWordsLength = 0
     let filterData = ''
 
-    if (window.location.pathname == '/thirteen-letter-word-finder/result') {
-      filterData = data.filter((item) => item.length == 13)
-    } else if (
-      window.location.pathname == '/twelve-letter-word-finder/result'
-    ) {
-      filterData = data.filter((item) => item.length == 12)
-    } else if (
-      window.location.pathname == '/eleven-letter-word-finder/result'
-    ) {
-      filterData = data.filter((item) => item.length == 11)
-    } else if (window.location.pathname == '/ten-letter-word-finder/result') {
-      filterData = data.filter((item) => item.length == 10)
-    } else if (window.location.pathname == '/nine-letter-word-finder/result') {
-      filterData = data.filter((item) => item.length == 9)
-    } else if (window.location.pathname == '/eight-letter-word-finder/result') {
-      filterData = data.filter((item) => item.length == 8)
-    } else if (window.location.pathname == '/seven-letter-word-finder/result') {
-      filterData = data.filter((item) => item.length == 7)
-    } else if (window.location.pathname == '/six-letter-word-finder/result') {
-      filterData = data.filter((item) => item.length == 6)
-    } else if (window.location.pathname == '/five-letter-word-finder/result') {
-      filterData = data.filter((item) => item.length == 5)
-    } else if (window.location.pathname == '/four-letter-word-finder/result') {
-      filterData = data.filter((item) => item.length == 4)
-    } else if (window.location.pathname == '/three-letter-word-finder/result') {
-      filterData = data.filter((item) => item.length == 3)
-    } else if (window.location.pathname == '/two-letter-word-finder/result') {
-      filterData = data.filter((item) => item.length == 2)
+
+    if (letterLen) {
+      filterData = data.filter((item) => item.length == letterLen)
     }
+  
 
     if (prefixValue) {
       filterData = filterData.filter((item2) =>

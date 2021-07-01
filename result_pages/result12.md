@@ -5,4 +5,5 @@ lang: en
 fileName: eight_letter_word_finder
 permalink: eight-letter-word-finder/result
 sitemap: false
+letter: 8
 ---

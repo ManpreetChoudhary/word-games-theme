@@ -97,7 +97,7 @@ input:-webkit-autofill:active {
   right: 9px;
   margin: -3px 0;
   cursor: pointer;
-  z-index: 9999;
+  /* z-index: 9999; */
 }
 #select_dropDown {
   background: #f8f9fa;

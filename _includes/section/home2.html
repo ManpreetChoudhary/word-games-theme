@@ -50,11 +50,13 @@
                             <input type="text" id="endsWith" placeholder="Suffix" name="suffix">
 
                         </div>
-                        <div class="wordLength">
-                            <label for="wordLength">Word Length </label>
-                            <input type="text" id="wordLength" placeholder="Length" name="length">
 
+                        <div class="wordLength same">
+                            <label for="wordLength">Word Length </label>
+                            <input type="text" class="filter_val" id="wordLength" placeholder="Length" name="length"
+                                value="">
                         </div>
+
                         <div style="margin-top: 1.2rem;">
                             <input type="submit" value="Apply" class="btn-info w-100 text-white"
                                 style="background: #BD67DD">
@@ -79,32 +81,4 @@
         fillterWrapper.classList.remove('active')
         fillterWrapper.classList.add('hide')
     })
-
 </script>
-
-{% if page.url == "/anagram-word-finder" %}
-
-<script src="/assets/js/advancedFilter2.js"></script>
-
-{% elsif page.url == "/jumble-word-finder" %}
-
-<script src="/assets/js/advancedFilter2.js"></script>
-
-{% elsif page.url == "/lexical-word-finder" %}
-
-<script src="/assets/js/advancedFilter2.js"></script>
-
-{% elsif page.url == "/scrabble-word-finder-cheat" %}
-
-<script src="/assets/js/advancedFilter2.js"></script>
-
-{% elsif page.url == "/words-with-friends-word-finder" %}
-
-<script src="/assets/js/advancedFilter2.js"></script>
-
-{% else %}
-
-<script src="/assets/js/advancedFilter.js"></script>
-<script src="/assets/js/advancedFilter2.js"></script>
-
-{% endif %}

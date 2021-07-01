@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: page2
 folderName: wordgames
 lang: en
 fileName: four_letter_word_finder

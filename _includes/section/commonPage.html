@@ -3,7 +3,6 @@
 {% assign dataToShow = site.data.[page.folderName][lang][file] %}
 
 <!-- start commonPage as LandingPage -->
-
 <div class="container" id="containerWd">
     <section class="sticky_nav">
         <div class="pageHeading text-center pt-5">
@@ -79,7 +78,6 @@
     {% include section/wordGroup.html %}
 </div>
 
-
 <!-- close commonPage as LandingPage -->
 <link rel="stylesheet" href="{{ '/assets/css/advancedFilter.css' | relative_url }}">
 <script>
@@ -93,35 +91,3 @@
     })
 
 </script>
-
-
-{% if page.url == "/result" %}
-
-<script src="/assets/js/wordScrabble.js"></script>
-
-{% elsif page.url == "/anagram-word-finder/result" %}
-
-<script src="/assets/js/wordScrabble.js"></script>
-
-{% elsif page.url == "/jumble-word-finder/result" %}
-
-<script src="/assets/js/wordScrabble.js"></script>
-
-{% elsif page.url == "/lexical-word-finder/result" %}
-
-<script src="/assets/js/wordScrabble.js"></script>
-
-{% elsif page.url == "/scrabble-word-finder-cheat/result" %}
-
-<script src="/assets/js/wordScrabble.js"></script>
-
-{% elsif page.url == "/words-with-friends-word-finder/result" %}
-
-<script src="/assets/js/wordScrabble.js"></script>
-
-{% else %}
-
-<script src="/assets/js/X-letter.js"></script>
-<script src="/assets/js/advancedFilter.js"></script>
-
-{% endif %}

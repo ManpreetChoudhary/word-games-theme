@@ -128,6 +128,7 @@ function x_with_letters(data) {
         for (let i = 0; i < item.length; i++) {
           sum += ScrabbleLetterScore[item[i]] || 0 // for unknown characters
         }
+        wordLength.value = itemLength
         return `<a class="anchor__style" title="Lookup python in Dictionary" target="_blank" href="/word-meaning?search=${item}">
         <li>${item}
           <span class="points" value="${sum}" style="position:relative; top:4px; font-size:12px"> ${sum}</span>
@@ -140,6 +141,7 @@ function x_with_letters(data) {
       class="tab_link">
       </a>
       `
+
       let tabs = document.getElementsByClassName('tab_link')
       tabs[0] ? tabs[0].classList.add('active-tab') : ''
 

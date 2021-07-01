@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: page2
 folderName: wordgames
 lang: en
 permalink: twelve-letter-word-finder/result

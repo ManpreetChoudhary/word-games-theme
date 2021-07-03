@@ -45,7 +45,7 @@ const getData = async (serachValue) => {
     </div>`
     /// loader
     const response = await fetch(
-      `/.netlify/functions/getWords?name=${serachValue}`
+      `http://127.0.0.1:9000/getWords?name=${serachValue}`
     )
     const data = await response.json()
     main.innerHTML = ''
@@ -90,6 +90,7 @@ function getWords(data) {
 
     for (let i = serachValue.length; i >= 1; i--) {
       let newdata = data.filter((item) => item.length === i)
+
       if (prefixValue) {
         newdata = newdata.filter((item2) =>
           item2.startsWith(prefixValue.toLowerCase())

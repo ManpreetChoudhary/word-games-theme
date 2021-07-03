@@ -1,11 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
 /* styling........ */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 :root {
   --txtColor: #000;
@@ -73,6 +71,7 @@ header {
 
 /* for heading */
 .heading {
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
   font-size: 4rem;
   color: #000;
@@ -82,16 +81,19 @@ header {
 .site-no {
   font-size: 100px;
   font-weight: 700;
+  font-family: 'Poppins', sans-serif;
 }
 .title {
   text-indent: 10px;
   font-size: 25px;
   font-weight: 900;
+  font-family: 'Poppins', sans-serif;
 }
 .description {
   width: 250px;
   padding: 0 10px;
   font-size: 15px;
+  font-family: 'Poppins', sans-serif;
 }
 /* advanced filtering angle styling. */
 .angle-arrow {

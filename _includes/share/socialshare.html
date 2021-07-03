@@ -8,18 +8,18 @@
     {% for share in site.data.blog.share.platforms %}
     {% assign link = share.link | replace: 'URL', url %}
     {{page.title}}
-     <a  id="{{share.type}}" href="{{ link }}" data-toggle="tooltip"
-            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
-            data-placement="top" title="{{ share.type }}" aria-label="{{ share.type }}">
-            <i class="fa-fw {{ share.icon }} mb-0 py-3"></i>
-        </a>
-   
+    <a id="{{share.type}}" href="{{ link }}" data-toggle="tooltip"
+        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+        data-placement="top" title="{{ share.type }}" aria-label="{{ share.type }}">
+        <i class="fa-fw {{ share.icon }} mb-0 py-3"></i>
+    </a>
+
     {% endfor %}
-</ul>    
-</ul>
+    </ul>
+    </ul>
 </div>
 {%- endif -%}
-<script>
+<!-- <script>
     const fetchShareCount=async()=>{
 try {
     const faceBookShare=document.querySelector('#Facebook')
@@ -47,4 +47,4 @@ try {
 
 });
 </script>
-
+ -->

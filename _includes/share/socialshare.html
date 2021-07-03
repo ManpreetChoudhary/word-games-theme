@@ -19,32 +19,31 @@
     </ul>
 </div>
 {%- endif -%}
-<!-- <script>
-    const fetchShareCount=async()=>{
-try {
-    const faceBookShare=document.querySelector('#Facebook')
-        const twitterShare=document.querySelector('#Twitter')
-        const faceBookCount= await fetch(`https://graph.facebook.com/v10.0/?id=${window.location.href}&access_token=275277164346802|6255ba7980a711477b429c302cb009cd&fields=engagement`).then(res=>res.json())
-        const twitterCount=await fetch(`https://counts.twitcount.com/counts.php?url=${window.location.href}`).then(res=>res.json())        
-        if(faceBookCount.engagement.share_count>0){
-        const FacebookInfo =document.createElement('span')
-        FacebookInfo.setAttribute("class", "social-count")
-        FacebookInfo.innerHTML=faceBookCount.engagement.share_count
-        faceBookShare.appendChild(FacebookInfo)
+<script>
+    const fetchShareCount = async () => {
+        try {
+            const faceBookShare = document.querySelector('#Facebook')
+            const twitterShare = document.querySelector('#Twitter')
+            const faceBookCount = await fetch(`https://graph.facebook.com/v10.0/?id=${window.location.href}&access_token=275277164346802|6255ba7980a711477b429c302cb009cd&fields=engagement`).then(res => res.json())
+            const twitterCount = await fetch(`https://counts.twitcount.com/counts.php?url=${window.location.href}`).then(res => res.json())
+            if (faceBookCount.engagement.share_count > 0) {
+                const FacebookInfo = document.createElement('span')
+                FacebookInfo.setAttribute("class", "social-count")
+                FacebookInfo.innerHTML = faceBookCount.engagement.share_count
+                faceBookShare.appendChild(FacebookInfo)
+            }
+            if (twitterCount > 0) {
+                const TwitterInfo = document.createElement('span')
+                TwitterInfo.setAttribute("class", "social-count")
+                TwitterInfo.innerHTML = twitterCount.count
+                twitterShare.appendChild(TwitterInfo)
+            }
+        } catch (error) {
         }
-        if(twitterCount>0){
-        const TwitterInfo =document.createElement('span')
-        TwitterInfo.setAttribute("class", "social-count")
-        TwitterInfo.innerHTML=twitterCount.count
-        twitterShare.appendChild(TwitterInfo)
-   }
-} catch (error) {
-}
     }
- 
-    window.addEventListener("load",()=>{
+
+    window.addEventListener("load", () => {
         fetchShareCount()
 
-});
+    });
 </script>
- -->

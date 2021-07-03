@@ -268,6 +268,10 @@ header {
 /* styling close */
 /* rating css */
 /* .rating css */
+.ratingSTar {
+  width: 30px;
+  padding: 5px;
+}
 #rating-img {
   height: 1px;
   width: 1px;

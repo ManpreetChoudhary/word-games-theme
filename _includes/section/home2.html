@@ -37,7 +37,7 @@
                         </div>
                     </div>
                     <div class="fillterWrapper hide">
-                        <div class="text-right times" style="cursor: pointer">
+                        <div class="text-right times" style="cursor: pointer; margin-top:-15px;">
                             <img src="../../assets/images/window-close.png" alt="" width="15px">
 
                         </div>
@@ -81,7 +81,7 @@
         fillterWrapper.classList.remove('hide')
     })
 
-    const close = document.querySelector('.fa-times')
+    const close = document.querySelector('.times')
     close.addEventListener('click', () => {
         fillterWrapper.classList.remove('active')
         fillterWrapper.classList.add('hide')

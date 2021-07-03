@@ -30,24 +30,12 @@
   <link rel="stylesheet" href="{{ '/assets/css/wordGroup.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/footer.css' | relative_url }}">
 
-  <link rel="manifest" href="./manifest.json">
 
   <title>
     {%- unless page.layout == "home" -%}
     {{dataToShow.title }}
     {%- endunless -%}
     {{ page.title}}</title>
-
-
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./serviceworker.js')
-          .then((reg) => console.log('Success: ', reg.scope))
-          .catch((err) => console.log('Failure: ', err));
-      })
-    }
-  </script>
 
   <script type="application/ld+json">
       {

@@ -7,7 +7,6 @@ phone: ''
 tagline: wordgames - Smartest website for scrabbler world
 description: word games testing theme description
 siteurl: https://word-games.netlify.app
-favicon: /assets/images/word-games-logo.svg
 alternateName: wordgames
 baseurl: ''
 permalink: /blog/:title

@@ -124,7 +124,7 @@ input:-webkit-autofill:active {
   overflow: hidden;
   object-fit: cover;
   right: 69px;
-  padding: 18px 0;
+  padding: 19px 0;
   border-bottom: 0 !important;
   border-radius: 0;
   border: none;
@@ -197,9 +197,10 @@ input:-webkit-autofill:active {
     top: 60px;
   }
   .select_dropDown2 {
-    padding: 8px 0;
     width: 30%;
     right: 40px;
+    padding: 9.5px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
   }
 }
 @media (max-width: 768px) {

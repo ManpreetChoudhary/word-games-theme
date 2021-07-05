@@ -1,8 +1,13 @@
 /* styling........ */
+@font-face {
+  font-family: myFirstFont;
+  src: url(../../OpenSans-Regular.ttf);
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: myFirstFont !important;
 }
 :root {
   --txtColor: #000;

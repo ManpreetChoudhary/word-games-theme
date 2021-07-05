@@ -14,17 +14,17 @@
     {
       "feature_heading": "Bring a turning point in your game with Eight letter word finder ",
       "feature_text": "Often this letter Eight comes a lot in word games. But the main thing is that these words can sometimes be highly scoring. To help you score more, we have designed this Eight letter word finder ",
-      "fa_class": "far fa-star"
+      "fa_class": "../assets/images/star.svg"
     },
     {
       "feature_heading": "Find any numbered word with letter Eight in it",
       "feature_text": "Eight letter word finder lets you find all {Eight in words} letter words with given letters whether it's a four lettered, fine-lettered or even seven-lettered word.",
-      "fa_class": "far fa-star"
+      "fa_class": "../assets/images/star.svg"
     },
     {
       "feature_heading": "Supports a number of dictionaries",
       "feature_text": "We love to play Scrabble and understand all the fine details. We will find all valid words from dictionaries of your choice along with their scores.",
-      "fa_class": "far fa-star"
+      "fa_class": "../assets/images/star.svg"
     }
   ],
   "faqList": [

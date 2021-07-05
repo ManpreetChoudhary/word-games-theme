@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
 /* styling........ */
+@font-face {
+  font-family: myFirstFont;
+  src: url(../../OpenSans-Regular.ttf);
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+  font-family: myFirstFont !important;
 }
 :root {
   --txtColor: #000;
@@ -72,7 +72,15 @@ header {
   padding: 13.5px;
   background: transparent;
 }
-
+.bars {
+  position: relative;
+  top: 3px;
+  color: #000;
+  font-size: 35px;
+}
+.bars::before {
+  font-weight: 900 !important;
+}
 /* for heading */
 .heading {
   font-family: 'Poppins', sans-serif;
@@ -273,6 +281,10 @@ header {
 /* styling close */
 /* rating css */
 /* .rating css */
+.ratingSTar {
+  width: 30px;
+  padding: 5px;
+}
 #rating-img {
   height: 1px;
   width: 1px;
@@ -342,7 +354,7 @@ header {
   width: 47px;
   height: 174px;
   display: flex;
-  font-size: 15px;
+  font-size: 16px;
   color: #fff;
   flex-direction: column;
   align-items: center;
@@ -356,6 +368,7 @@ header {
 }
 .social-icons a {
   color: #000 !important;
+  padding: 4px 0;
 }
 @media (max-width: 768px) {
   .social-icons {

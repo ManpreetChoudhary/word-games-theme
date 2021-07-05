@@ -90,6 +90,7 @@ function getWords(data) {
 
     for (let i = serachValue.length; i >= 1; i--) {
       let newdata = data.filter((item) => item.length === i)
+
       if (prefixValue) {
         newdata = newdata.filter((item2) =>
           item2.startsWith(prefixValue.toLowerCase())

@@ -6,8 +6,12 @@
 <div class="pageHeaderBg">
     <div class="container">
         <div class="pageHeading text-center">
-            <h1 class="heading pb-3">
+            <h1 class="heading pb-0 m-0">
                 {{dataToShow.h1}}</h1>
+            {%- if dataToShow.h2 -%}
+            <h2>
+                {{dataToShow.h2}}</h2>
+            {%- endif -%}
         </div>
     </div>
     <div class="container-fluid" id="containerWd">
@@ -35,7 +39,10 @@
                     </div>
 
                     <div class="fillterWrapper">
-                        <i class="fas fa-times"></i>
+                        <div class="text-right times" style="cursor: pointer">
+                            <img src="../../assets/images/window-close.png" alt="" width="15px">
+
+                        </div>
                         <div class="startsWith">
                             <label for="startsWith">Starts With</label>
                             <br>
@@ -78,12 +85,10 @@
         fillterWrapper.classList.remove('hide')
     })
 
-    const close = document.querySelector('.fa-times')
+    const close = document.querySelector('.times')
     close.addEventListener('click', () => {
         fillterWrapper.classList.remove('active')
         fillterWrapper.classList.add('hide')
     })
 
 </script>
-<!-- close landingPage -->
-<!-- // page conditions -->

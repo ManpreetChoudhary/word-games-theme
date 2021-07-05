@@ -1,7 +1,4 @@
 {
-  "navbarBrandText": "",
-  "navbarBrandLogo": "/assets/images/word-games-logo.svg",
-  
   "more": [
     {
       "name": "Anagram word finder",
@@ -27,45 +24,45 @@
       "name": "Thirteen letter word finder",
       "url": "/thirteen-letter-word-finder"
     },
-     {
+    {
       "name": "Twelve letter word finder",
       "url": "/twelve-letter-word-finder"
     },
-     {
+    {
       "name": "Ten letter word finder",
       "url": "/ten-letter-word-finder"
     },
-     {
+    {
       "name": "Nine letter word finder",
       "url": "/nine-letter-word-finder"
     },
-     {
+    {
       "name": "Eight letter word finder",
       "url": "/eight-letter-word-finder"
     },
-     {
+    {
       "name": "Seven letter word finder",
       "url": "/seven-letter-word-finder"
     },
-     {
+    {
       "name": "Six letter word finder",
       "url": "/six-letter-word-finder"
     },
-     {
+    {
       "name": "Five letter word finder",
       "url": "/five-letter-word-finder"
     },
-     {
+    {
       "name": "Four letter word finder",
       "url": "/four-letter-word-finder"
     },
-     {
+    {
       "name": "Three letter word finder",
       "url": "/three-letter-word-finder"
     },
-     {
+    {
       "name": "Two letter word finder",
       "url": "/two-letter-word-finder"
-    },
+    }
   ]
 }

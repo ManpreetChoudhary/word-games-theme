@@ -14,22 +14,22 @@
       {
          "feature_heading": "Our Anagram solver and word finder  for your word games",
          "feature_text": "Take an ordinary word and rearrange the letters. That's an anagram. The anagram word finder compares these letters to all the possible words those letters of another could make.",
-         "fa_class": "far fa-star"
+         "fa_class": "../assets/images/star.svg"
       },
       {
          "feature_heading": "Where to use this Anagram word finder?",
          "feature_text": "You can use this anagram solver for the Scrabble crossword game, facebook games like Wordscraper, Scrabulous, Lexulous and many other wrd games.",
-         "fa_class": "far fa-star"
+         "fa_class": "../assets/images/star.svg"
       },
       {
          "feature_heading": "How this Anagram solver works?",
          "feature_text": "Take the word “painter” which on anagramming becomes, “repaint” by moving the suffix to the beginning. In the same way, the letters could be rearranged to make the word “pertain”.",
-         "fa_class": "far fa-star"
+         "fa_class": "../assets/images/star.svg"
       },
       {
          "feature_heading": "Supports a number of dictionaries",
          "feature_text": "We love to play Scrabble and understand all the fine details. We will find all valid words from dictionaries of your choice along with their scores.",
-         "fa_class": "far fa-star"
+         "fa_class": "../assets/images/star.svg"
       }
    ],
    "faqList": [

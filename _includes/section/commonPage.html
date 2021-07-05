@@ -6,8 +6,12 @@
 <div class="container" id="containerWd">
     <section class="sticky_nav">
         <div class="pageHeading text-center pt-5">
-            <h1 class="heading pb-0">
+            <h1 class="heading m-0 pb-0">
                 {{dataToShow.h1}}</h1>
+            {%- if dataToShow.h2 -%}
+            <h2>
+                {{dataToShow.h2}}</h2>
+            {%- endif -%}
         </div>
         <div class="serachSection2">
             <div class="position-relative serachBox">
@@ -41,7 +45,10 @@
                         </div>
                     </div>
                     <div class="fillterWrapper hide">
-                        <i class="fas fa-times"></i>
+                        <div class="text-right times" style="cursor: pointer; margin-top:-15px;">
+                            <img src="../../assets/images/window-close.png" alt="" width="15px">
+
+                        </div>
                         <div class="startsWith same">
                             <label for="startsWith">Starts With</label>
                             <input type="text" class="filter_val" id="startsWith" placeholder="Prefix" value=""
@@ -85,7 +92,7 @@
     function myFunction() {
         fillterWrapper.classList.toggle('hide')
     }
-    const close = document.querySelector('.fa-times')
+    const close = document.querySelector('.times')
     close.addEventListener('click', () => {
         fillterWrapper.classList.add('hide')
     })

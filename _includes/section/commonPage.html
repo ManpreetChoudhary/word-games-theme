@@ -6,10 +6,12 @@
 <div class="container" id="containerWd">
     <section class="sticky_nav">
         <div class="pageHeading text-center pt-5">
-            <h1 class="heading pb-0">
+            <h1 class="heading m-0 pb-0">
                 {{dataToShow.h1}}</h1>
-            <h2 class="pb-3">
+            {%- if dataToShow.h2 -%}
+            <h2>
                 {{dataToShow.h2}}</h2>
+            {%- endif -%}
         </div>
         <div class="serachSection2">
             <div class="position-relative serachBox">

@@ -2,13 +2,13 @@ label: 'Share'
 
 platforms:
   - type: Twitter
-    icon: './assets/images/twitter2.svg'
+    icon: '/assets/images/twitter2.svg'
     link: 'https://twitter.com/intent/tweet?text=TITLE&url=URL'
   - type: Facebook
-    icon: './assets/images/facebook.svg'
+    icon: '/assets/images/facebook.svg'
     link: 'https://www.facebook.com/sharer/sharer.php?title=TITLE&u=URL'
   - type: Linkedin
-    icon: './assets/images/linkedin2.svg'
+    icon: '/assets/images/linkedin2.svg'
     link: 'https://www.linkedin.com/sharing/share-offsite/?url=URL'
 
   # Uncomment below if you need to.

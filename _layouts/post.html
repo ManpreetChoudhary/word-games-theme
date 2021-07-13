@@ -4,6 +4,10 @@
 
 
 <style>
+    .theseFeatures {
+        padding-left: 40px;
+    }
+
     .theseFeatures .featureLink:hover {
         text-decoration: underline !important;
     }
@@ -11,6 +15,7 @@
     @media (max-width:768px) {
         .theseFeatures {
             text-align: center !important;
+            padding-left: 0;
         }
 
     }
@@ -76,7 +81,7 @@
 
                 </div>
 
-                <div class="col-md-2 text-right theseFeatures">
+                <div class="col-md-2 theseFeatures">
                     {%- if page.URLS -%}
                     <h6 class="font-weight-bolder">Checkout out these features</h6>
                     <br>
@@ -84,14 +89,15 @@
                     <p> <a class="featureLink" style="font-size: 11px" href="{{item.url}}">{{item.name}}</a></p>
                     {%- endfor -%}
                     {% else %}
-                    <h6 class="font-weight-bolder">Checkout out these features</h6>
+                    <h5 class="font-weight-bolder">Checkout out these features</h5>
                     <br>
                     {%- for item in site.pages limit: 10 -%}
                     {%- if item.tool != "wordfinders" and item.tool != 'wordswithletter' and item.tool != '
                     word-scramble-help' and item.tool != 'wordfinders' and item.tool != "wordscramblers" and item.tool
                     != 'wordunscramblerss' -%}
 
-                    <p> <a class="featureLink" style="font-size: 11px" href="/{{item.tool}}">{{item.tool | capitalize |
+                    <p> <a class="featureLink" style="font-size: 11px" href="/{{item.permalink }}">{{item.permalink |
+                            capitalize |
                             replace: '-', ' '
                             }}</a></p>
                     {%- endif -%}

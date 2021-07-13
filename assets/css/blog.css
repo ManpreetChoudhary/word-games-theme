@@ -258,7 +258,7 @@ header {
 }
 .socialIons > .item-lists2 {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   width: 100%;
 }
 .socialIons > .item-lists2 > li {

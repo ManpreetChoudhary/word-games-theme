@@ -6,6 +6,8 @@
 <style>
     .theseFeatures {
         padding-left: 40px;
+        position: sticky;
+        top: 150px;
     }
 
     .theseFeatures .featureLink:hover {
@@ -16,6 +18,8 @@
         .theseFeatures {
             text-align: center !important;
             padding-left: 0;
+            position: static;
+            top: auto;
         }
 
     }
@@ -31,7 +35,31 @@
                 </div>
             </div>
             <div class="row mt-5">
-                <div class="col-md-2">
+                <div class="col-md-8">
+                    {%- include authors/authors.html -%}
+                    {%- include postauthorbio.html -%}
+                    {% if page.author %}
+                    {%- include author_bio.html -%}
+                    {% endif %}
+                    <div class="post-content">
+                        {{ content }}
+                    </div>
+
+                    {%- include paginationPostPage.html -%}
+                    {%- if page.categories or page.tags-%}
+                    {%- include section/related_categories_post.html -%}
+                    {%- else -%}
+                    {%- include section/recent_posts.html -%}
+                    {% endif %}
+                    <div class="commentsection">
+                        {%- if site.disqus.shortname -%}
+                        {%- include disqus_comments.html -%}
+                        {%- endif -%}
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <!-- <div class="col-md-2"> -->
                     <div class="socialIons">
                         <ul class="list-unstyled item-lists2">
                             <li><a style="pointer-events: none;">{{ site.data.blog.share.label }}</a></li>
@@ -48,61 +76,39 @@
                             {% endfor %}
                             </span>
                         </ul>
-                        <div class="sep"></div>
+                        <!-- <div class="sep"></div> -->
                         <div class="comments-count">
                             <a href="{{ content.absolute_url  }}#disqus_thread" class="comment_count"></a>
                         </div>
                         </ul>
                     </div>
-                </div>
 
-                <div class="col-md-8">
-                    {%- include authors/authors.html -%}
-                    {%- include postauthorbio.html -%}
-                    {% if page.author %}
-                    {%- include author_bio.html -%}
-                    {% endif %}
-                    <div class="post-content">
-                        {{ content }}
-                    </div>
+                    <div class="theseFeatures">
+                        {%- if page.URLS -%}
+                        <h3 class="font-weight-bolder">Checkout out these features</h3>
+                        <br>
+                        {%- for item in page.URLS -%}
+                        <p> <a class="featureLink" style="font-size: 13px" href="{{item.url}}">{{item.name}}</a></p>
+                        {%- endfor -%}
+                        {% else %}
+                        <h3 class="font-weight-bolder">Checkout out these features</h3>
+                        <br>
+                        {%- for item in site.pages limit: 10 -%}
+                        {%- if item.tool != "wordfinders" and item.tool != 'wordswithletter' and item.tool != '
+                        word-scramble-help' and item.tool != 'wordfinders' and item.tool != "wordscramblers" and
+                        item.tool
+                        != 'wordunscramblerss' -%}
 
-                    {%- include paginationPostPage.html -%}
-
-                    {%- if page.categories or page.tags-%}
-                    {%- include section/related_categories_post.html -%}
-                    {%- else -%}
-                    {%- include section/recent_posts.html -%}
-                    {% endif %}
-                    <div class="commentsection">
-                        {%- if site.disqus.shortname -%}
-                        {%- include disqus_comments.html -%}
+                        <p> <a class="featureLink" style="font-size: 13px" href="/{{item.permalink }}">{{item.permalink
+                                |
+                                capitalize |
+                                replace: '-', ' '
+                                }}</a></p>
                         {%- endif -%}
+                        {%- endfor -%}
+                        {%- endif -%}
+
                     </div>
-
-                </div>
-
-                <div class="col-md-2 theseFeatures">
-                    {%- if page.URLS -%}
-                    <h6 class="font-weight-bolder">Checkout out these features</h6>
-                    <br>
-                    {%- for item in page.URLS -%}
-                    <p> <a class="featureLink" style="font-size: 11px" href="{{item.url}}">{{item.name}}</a></p>
-                    {%- endfor -%}
-                    {% else %}
-                    <h5 class="font-weight-bolder">Checkout out these features</h5>
-                    <br>
-                    {%- for item in site.pages limit: 10 -%}
-                    {%- if item.tool != "wordfinders" and item.tool != 'wordswithletter' and item.tool != '
-                    word-scramble-help' and item.tool != 'wordfinders' and item.tool != "wordscramblers" and item.tool
-                    != 'wordunscramblerss' -%}
-
-                    <p> <a class="featureLink" style="font-size: 11px" href="/{{item.permalink }}">{{item.permalink |
-                            capitalize |
-                            replace: '-', ' '
-                            }}</a></p>
-                    {%- endif -%}
-                    {%- endfor -%}
-                    {%- endif -%}
 
                 </div>
             </div>

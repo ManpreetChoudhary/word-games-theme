@@ -1,0 +1,44 @@
+{
+    "URLS": [
+        {
+            "name": "Anagram word finder",
+            "url": "/anagram-word-finder"
+        },
+        {
+            "name": "Jumble word finder",
+            "url": "/jumble-word-finder"
+        },
+        {
+            "name": "Lexical word finder",
+            "url": "/lexical-word-finder"
+        },
+        {
+            "name": "Scrabble word finder cheat",
+            "url": "/scrabble-word-finder-cheat"
+        },
+        {
+            "name": "Words with friends word",
+            "url": "/words-with-friends-word-finder"
+        },
+        {
+            "name": "Thirteen letter word finder",
+            "url": "/thirteen-letter-word-finder"
+        },
+        {
+            "name": "Twelve letter word finder",
+            "url": "/twelve-letter-word-finder"
+        },
+        {
+            "name": "Ten letter word finder",
+            "url": "/ten-letter-word-finder"
+        },
+        {
+            "name": "Nine letter word finder",
+            "url": "/nine-letter-word-finder"
+        },
+        {
+            "name": "Eight letter word finder",
+            "url": "/eight-letter-word-finder"
+        }
+    ]
+}

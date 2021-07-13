@@ -4,10 +4,14 @@
 
 
 <style>
-    .theseFeatures {
+    p {
+        margin-bottom: 3rem;
+    }
+
+    .mainThings {
         padding-left: 40px;
         position: sticky;
-        top: 150px;
+        top: 80px;
     }
 
     .theseFeatures .featureLink:hover {
@@ -46,72 +50,76 @@
                     </div>
 
                     {%- include paginationPostPage.html -%}
+                </div>
+                <div class="col-md-4">
+                    <div class="mainThings">
+                        <div class="socialIons">
+                            <ul class="list-unstyled item-lists2">
+                                <li><a style="pointer-events: none;">{{ site.data.blog.share.label }}</a></li>
+                                {% capture title %}{{ page.title }}{% endcapture %}
+                                {% assign url = page.url | relative_url | prepend: site.url %}
+                                {% for share in site.data.blog.share.platforms %}
+                                {% assign link = share.link | replace: 'TITLE', title | replace: 'URL', url %}
+                                <li> <a href=" {{ link }}" data-toggle="tooltip"
+                                        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+                                        data-placement="top" title="{{ share.type }}" aria-label="{{ share.type }}">
+                                        <img src="{{ share.icon }}" class="mb-0 py-1" style="width: 18px"></img>
+                                    </a>
+                                </li>
+                                {% endfor %}
+                                </span>
+                            </ul>
+                            <!-- <div class="sep"></div> -->
+                            <div class="comments-count">
+                                <a href="{{ content.absolute_url  }}#disqus_thread" class="comment_count"></a>
+                            </div>
+                            </ul>
+                        </div>
+
+                        <div class="theseFeatures">
+                            {%- if page.URLS -%}
+                            <h3 class="font-weight-bolder">Checkout out these features</h3>
+                            <br>
+                            {%- for item in page.URLS -%}
+                            <p class="mb-3"> <a class="featureLink" style="font-size: 13px"
+                                    href="{{item.url}}">{{item.name}}</a></p>
+                            {%- endfor -%}
+                            {% else %}
+                            <h3 class="font-weight-bolder">Checkout out these features</h3>
+                            <br>
+                            {%- for item in site.pages limit: 10 -%}
+                            {%- if item.tool != "wordfinders" and item.tool != 'wordswithletter' and item.tool != '
+                            word-scramble-help' and item.tool != 'wordfinders' and item.tool != "wordscramblers" and
+                            item.tool
+                            != 'wordunscramblerss' -%}
+
+                            <p class="mb-3"> <a class="featureLink" style="font-size: 13px"
+                                    href="/{{item.permalink }}">{{item.permalink
+                                    |
+                                    capitalize |
+                                    replace: '-', ' '
+                                    }}</a></p>
+                            {%- endif -%}
+                            {%- endfor -%}
+                            {%- endif -%}
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
                     {%- if page.categories or page.tags-%}
                     {%- include section/related_categories_post.html -%}
                     {%- else -%}
                     {%- include section/recent_posts.html -%}
                     {% endif %}
-                    <div class="commentsection">
+                    <div class="commentsection my-5">
                         {%- if site.disqus.shortname -%}
                         {%- include disqus_comments.html -%}
                         {%- endif -%}
                     </div>
-
-                </div>
-                <div class="col-md-4">
-                    <!-- <div class="col-md-2"> -->
-                    <div class="socialIons">
-                        <ul class="list-unstyled item-lists2">
-                            <li><a style="pointer-events: none;">{{ site.data.blog.share.label }}</a></li>
-                            {% capture title %}{{ page.title }}{% endcapture %}
-                            {% assign url = page.url | relative_url | prepend: site.url %}
-                            {% for share in site.data.blog.share.platforms %}
-                            {% assign link = share.link | replace: 'TITLE', title | replace: 'URL', url %}
-                            <li> <a href=" {{ link }}" data-toggle="tooltip"
-                                    onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
-                                    data-placement="top" title="{{ share.type }}" aria-label="{{ share.type }}">
-                                    <img src="{{ share.icon }}" class="mb-0 py-1" style="width: 18px"></img>
-                                </a>
-                            </li>
-                            {% endfor %}
-                            </span>
-                        </ul>
-                        <!-- <div class="sep"></div> -->
-                        <div class="comments-count">
-                            <a href="{{ content.absolute_url  }}#disqus_thread" class="comment_count"></a>
-                        </div>
-                        </ul>
-                    </div>
-
-                    <div class="theseFeatures">
-                        {%- if page.URLS -%}
-                        <h3 class="font-weight-bolder">Checkout out these features</h3>
-                        <br>
-                        {%- for item in page.URLS -%}
-                        <p> <a class="featureLink" style="font-size: 13px" href="{{item.url}}">{{item.name}}</a></p>
-                        {%- endfor -%}
-                        {% else %}
-                        <h3 class="font-weight-bolder">Checkout out these features</h3>
-                        <br>
-                        {%- for item in site.pages limit: 10 -%}
-                        {%- if item.tool != "wordfinders" and item.tool != 'wordswithletter' and item.tool != '
-                        word-scramble-help' and item.tool != 'wordfinders' and item.tool != "wordscramblers" and
-                        item.tool
-                        != 'wordunscramblerss' -%}
-
-                        <p> <a class="featureLink" style="font-size: 13px" href="/{{item.permalink }}">{{item.permalink
-                                |
-                                capitalize |
-                                replace: '-', ' '
-                                }}</a></p>
-                        {%- endif -%}
-                        {%- endfor -%}
-                        {%- endif -%}
-
-                    </div>
-
                 </div>
             </div>
+        </div>
     </section>
     {%- include section/count.html -%}
     {%- include section/alertbar.html -%}

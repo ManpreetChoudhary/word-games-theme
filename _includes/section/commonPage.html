@@ -2,6 +2,7 @@
 {% assign lang = page.lang %}
 {% assign dataToShow = site.data.[page.folderName][lang][file] %}
 
+{%- assign CustomColor = site.data.theme.colors -%}
 <!-- start commonPage as LandingPage -->
 <div class="container" id="containerWd">
     <section class="sticky_nav">
@@ -16,9 +17,12 @@
         <div class="serachSection2">
             <div class="position-relative serachBox">
                 <form action="" id='form'>
-                    <input type="text" placeholder="Enter up to 15 letters?" class="txtBox" value name="search"
-                        maxlength="15" value required>
-                    <input type="submit" class="serachBtn" id="serach" value>
+                    <input style="border-radius: {{CustomColor.inputFieldBorder}}" type="text"
+                        placeholder="Enter up to 15 letters?" class="txtBox" value name="search" maxlength="15" value
+                        required>
+                    <input
+                        style="border-radius: {{CustomColor.inputFieldBorder}}; background-color: {{CustomColor.inputButtonBg}};"
+                        type="submit" class="serachBtn" id="serach" value>
                     <div class="dictonaryDropdown">
                         <select class="form-select select_dropDown2" name="dictonary"
                             aria-label="Default select example">

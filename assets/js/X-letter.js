@@ -29,7 +29,7 @@ const getData = async (serachValue) => {
     <img src='/assets/images/loading.gif'>
     </div>`
     const response = await fetch(
-      `/.netlify/functions/getWords?name=${serachValue}`
+      `http://127.0.0.1:9000/getWords?name=${serachValue}`
     )
     const data = await response.json()
     main.innerHTML = ''

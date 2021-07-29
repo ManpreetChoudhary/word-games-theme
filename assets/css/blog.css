@@ -443,6 +443,14 @@ header {
   .socialIons > .item-lists2 {
     justify-content: center;
   }
+  .socialIons > .item-lists2 {
+    flex-direction: row;
+    align-items: center;
+  }
+  .socialIons > .item-lists2 > li {
+    padding-right: 30px;
+    margin: 0;
+  }
 }
 
 @media (max-width: 768px) {
@@ -470,7 +478,6 @@ header {
     margin: 18px 0;
     text-align: left;
   }
-
   .navbar {
     padding-left: 7% !important;
     padding-right: 7% !important;

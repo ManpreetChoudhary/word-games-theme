@@ -2,6 +2,8 @@
 {% assign lang = page.lang %}
 {% assign dataToShow = site.data.[page.folderName][lang][file] %}
 
+{%- assign CustomColor = site.data.theme.colors -%}
+
 <!-- starting landingPage -->
 <div class="pageHeaderBg">
     <div class="container">
@@ -18,9 +20,12 @@
         <div class="serachSection">
             <div class="position-relative serachBox">
                 <form action="/result" id='form' method="GET">
-                    <input type="text" placeholder="Enter up to 15 letters?" class="txtBox" value name="search"
-                        maxlength="15" required>
-                    <input type="submit" class="serachBtn" id="serach" value>
+                    <input style="border-radius: {{CustomColor.inputFieldBorder}}" type="text"
+                        placeholder="Enter up to 15 letters?" class="txtBox" value name="search" maxlength="15"
+                        required>
+                    <input style="border-radius: {{CustomColor.inputFieldBorder}}; 
+                        background-color: {{CustomColor.inputButtonBg}};" type="submit" class="serachBtn" id="serach"
+                        value>
                     <div class="dictonaryDropdown">
                         <select class="form-select select_dropDown2" name="dictonary"
                             aria-label="Default select example">
@@ -66,7 +71,8 @@
                             <input type="text" id="wordLength" placeholder="Length" name="length">
                             <div style="margin-top: 1.2rem;">
                                 <input type="submit" value="Apply" class="btn-info w-100 text-white"
-                                    style="background: #BD67DD">
+                                    style="background-color: {{CustomColor.inputButtonBg}};">
+
                             </div>
                         </div>
 

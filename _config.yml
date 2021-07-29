@@ -21,6 +21,7 @@ twitter_username: https://twitter.com/wordfindersorg
 paginate: '12'
 paginate_path: '/blog/page:num/'
 keyboard: "Scrabble,Unscrabbler, Words with letters"
+clientId: 762288849553-blsuhbaecksbh4tsi5blkhvp2hq9beo5.apps.googleusercontent.com
 production_google_analytics: 'Your_GA_ID'
 development_google_analytics: 'Your_GA_ID'
 sass:

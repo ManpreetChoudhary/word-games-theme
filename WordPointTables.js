@@ -133,7 +133,10 @@ wordsData.map((i) => {
         })
         wordsResults.push(result)
         // console.log(wordsResults)
-        fs.writeFileSync('./_data/test.json', `${JSON.stringify(wordsResults)}`)
+        fs.writeFileSync(
+          './_data/WordPointTables.json',
+          `${JSON.stringify(wordsResults)}`
+        )
       }
     }
   })

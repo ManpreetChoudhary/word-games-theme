@@ -2,7 +2,7 @@
     <div class="row mx-auto">
         <div class="col-md-10 mx-auto text-center">
             {%- assign fileName = {{page.fileName}} -%}
-            {%- for o in site.data.test -%}
+            {%- for o in site.data.WordPointTables -%}
             {%- for item in o limit: 1 -%}
             {%- assign filename = item.filename | replace: '.json', ''-%}
             {%- if filename == {{fileName}} -%}

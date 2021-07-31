@@ -122,8 +122,8 @@ wordsData.map((i) => {
             sum += ScrabbleLetterScore[item[i]] || 0 // for unknown characters
           }
           let wordsTable = {
+            letter: t.word,
             filename: name,
-            websitename: t.websitename,
             word: item,
             points: sum,
             x: t.word.length,

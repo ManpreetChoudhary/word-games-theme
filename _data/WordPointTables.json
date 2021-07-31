@@ -1,1 +1,370 @@
-[[{"filename":"two_letter_word_finder.json","websitename":"wordswithletters","word":"ar","points":2,"x":3,"gameName":"scrabble"}],[{"filename":"two_letter_word_finder.json","websitename":"wordswithletters","word":"ar","points":2,"x":3,"gameName":"words with friends"}],[{"filename":"three_letter_word_finder.json","websitename":"wordswithletters","word":"act","points":5,"x":3,"gameName":"scrabble"},{"filename":"three_letter_word_finder.json","websitename":"wordswithletters","word":"cat","points":5,"x":3,"gameName":"scrabble"}],[{"filename":"three_letter_word_finder.json","websitename":"wordswithletters","word":"arc","points":6,"x":3,"gameName":"words with friends"},{"filename":"three_letter_word_finder.json","websitename":"wordswithletters","word":"car","points":6,"x":3,"gameName":"words with friends"}]]
+[
+    [
+        {
+            "letter": "car",
+            "filename": "two_letter_word_finder.json",
+            "word": "ar",
+            "points": 2,
+            "x": 3,
+            "gameName": "scrabble"
+        }
+    ],
+    [
+        {
+            "letter": "car",
+            "filename": "two_letter_word_finder.json",
+            "word": "ar",
+            "points": 2,
+            "x": 3,
+            "gameName": "words with friends"
+        }
+    ],
+    [
+        {
+            "letter": "cat",
+            "filename": "three_letter_word_finder.json",
+            "word": "act",
+            "points": 5,
+            "x": 3,
+            "gameName": "scrabble"
+        },
+        {
+            "letter": "cat",
+            "filename": "three_letter_word_finder.json",
+            "word": "cat",
+            "points": 5,
+            "x": 3,
+            "gameName": "scrabble"
+        }
+    ],
+    [
+        {
+            "letter": "car",
+            "filename": "three_letter_word_finder.json",
+            "word": "arc",
+            "points": 6,
+            "x": 3,
+            "gameName": "words with friends"
+        },
+        {
+            "letter": "car",
+            "filename": "three_letter_word_finder.json",
+            "word": "car",
+            "points": 6,
+            "x": 3,
+            "gameName": "words with friends"
+        }
+    ],
+    [
+        {
+            "letter": "race",
+            "filename": "four_letter_word_finder.json",
+            "word": "acre",
+            "points": 6,
+            "x": 4,
+            "gameName": "scrabble"
+        },
+        {
+            "letter": "race",
+            "filename": "four_letter_word_finder.json",
+            "word": "care",
+            "points": 6,
+            "x": 4,
+            "gameName": "scrabble"
+        },
+        {
+            "letter": "race",
+            "filename": "four_letter_word_finder.json",
+            "word": "race",
+            "points": 6,
+            "x": 4,
+            "gameName": "scrabble"
+        }
+    ],
+    [
+        {
+            "letter": "race",
+            "filename": "four_letter_word_finder.json",
+            "word": "acre",
+            "points": 7,
+            "x": 4,
+            "gameName": "words with friends"
+        },
+        {
+            "letter": "race",
+            "filename": "four_letter_word_finder.json",
+            "word": "care",
+            "points": 7,
+            "x": 4,
+            "gameName": "words with friends"
+        },
+        {
+            "letter": "race",
+            "filename": "four_letter_word_finder.json",
+            "word": "race",
+            "points": 7,
+            "x": 4,
+            "gameName": "words with friends"
+        }
+    ],
+    [
+        {
+            "letter": "aahed",
+            "filename": "five_letter_word_finder.json",
+            "word": "aahed",
+            "points": 9,
+            "x": 5,
+            "gameName": "scrabble"
+        },
+        {
+            "letter": "aahed",
+            "filename": "five_letter_word_finder.json",
+            "word": "ahead",
+            "points": 9,
+            "x": 5,
+            "gameName": "scrabble"
+        }
+    ],
+    [
+        {
+            "letter": "aahed",
+            "filename": "five_letter_word_finder.json",
+            "word": "aahed",
+            "points": 8,
+            "x": 5,
+            "gameName": "words with friends"
+        },
+        {
+            "letter": "aahed",
+            "filename": "five_letter_word_finder.json",
+            "word": "ahead",
+            "points": 8,
+            "x": 5,
+            "gameName": "words with friends"
+        }
+    ],
+    [
+        {
+            "letter": "python",
+            "filename": "six_letter_word_finder.json",
+            "word": "phyton",
+            "points": 14,
+            "x": 6,
+            "gameName": "scrabble"
+        },
+        {
+            "letter": "python",
+            "filename": "six_letter_word_finder.json",
+            "word": "python",
+            "points": 14,
+            "x": 6,
+            "gameName": "scrabble"
+        },
+        {
+            "letter": "python",
+            "filename": "six_letter_word_finder.json",
+            "word": "typhon",
+            "points": 14,
+            "x": 6,
+            "gameName": "scrabble"
+        }
+    ],
+    [
+        {
+            "letter": "design",
+            "filename": "six_letter_word_finder.json",
+            "word": "deigns",
+            "points": 10,
+            "x": 6,
+            "gameName": "words with friends"
+        },
+        {
+            "letter": "design",
+            "filename": "six_letter_word_finder.json",
+            "word": "design",
+            "points": 10,
+            "x": 6,
+            "gameName": "words with friends"
+        },
+        {
+            "letter": "design",
+            "filename": "six_letter_word_finder.json",
+            "word": "dinges",
+            "points": 10,
+            "x": 6,
+            "gameName": "words with friends"
+        },
+        {
+            "letter": "design",
+            "filename": "six_letter_word_finder.json",
+            "word": "signed",
+            "points": 10,
+            "x": 6,
+            "gameName": "words with friends"
+        },
+        {
+            "letter": "design",
+            "filename": "six_letter_word_finder.json",
+            "word": "singed",
+            "points": 10,
+            "x": 6,
+            "gameName": "words with friends"
+        }
+    ],
+    [
+        {
+            "letter": "account",
+            "filename": "seven_letter_word_finder.json",
+            "word": "account",
+            "points": 11,
+            "x": 7,
+            "gameName": "scrabble"
+        }
+    ],
+    [
+        {
+            "letter": "account",
+            "filename": "seven_letter_word_finder.json",
+            "word": "account",
+            "points": 15,
+            "x": 7,
+            "gameName": "words with friends"
+        }
+    ],
+    [
+        {
+            "letter": "payments",
+            "filename": "eight_letter_word_finder.json",
+            "word": "payments",
+            "points": 15,
+            "x": 8,
+            "gameName": "scrabble"
+        }
+    ],
+    [
+        {
+            "letter": "absolute",
+            "filename": "eight_letter_word_finder.json",
+            "word": "absolute",
+            "points": 13,
+            "x": 8,
+            "gameName": "words with friends"
+        }
+    ],
+    [
+        {
+            "letter": "Celebrate",
+            "filename": "nine_letter_word_finder.json",
+            "word": "celebrate",
+            "points": 13,
+            "x": 9,
+            "gameName": "scrabble"
+        },
+        {
+            "letter": "Celebrate",
+            "filename": "nine_letter_word_finder.json",
+            "word": "erectable",
+            "points": 13,
+            "x": 9,
+            "gameName": "scrabble"
+        }
+    ],
+    [
+        {
+            "letter": "Celebrate",
+            "filename": "nine_letter_word_finder.json",
+            "word": "celebrate",
+            "points": 16,
+            "x": 9,
+            "gameName": "words with friends"
+        },
+        {
+            "letter": "Celebrate",
+            "filename": "nine_letter_word_finder.json",
+            "word": "erectable",
+            "points": 16,
+            "x": 9,
+            "gameName": "words with friends"
+        }
+    ],
+    [
+        {
+            "letter": "Retirement",
+            "filename": "ten_letter_word_finder.json",
+            "word": "retirement",
+            "points": 12,
+            "x": 10,
+            "gameName": "scrabble"
+        }
+    ],
+    [
+        {
+            "letter": "Retirement",
+            "filename": "ten_letter_word_finder.json",
+            "word": "retirement",
+            "points": 14,
+            "x": 10,
+            "gameName": "words with friends"
+        }
+    ],
+    [
+        {
+            "letter": "Preposition",
+            "filename": "eleven_letter_word_finder.json",
+            "word": "preposition",
+            "points": 15,
+            "x": 11,
+            "gameName": "scrabble"
+        }
+    ],
+    [
+        {
+            "letter": "Preposition",
+            "filename": "eleven_letter_word_finder.json",
+            "word": "preposition",
+            "points": 18,
+            "x": 11,
+            "gameName": "words with friends"
+        }
+    ],
+    [
+        {
+            "letter": "Independence",
+            "filename": "twelve_letter_word_finder.json",
+            "word": "independence",
+            "points": 18,
+            "x": 12,
+            "gameName": "scrabble"
+        }
+    ],
+    [
+        {
+            "letter": "Independence",
+            "filename": "twelve_letter_word_finder.json",
+            "word": "independence",
+            "points": 23,
+            "x": 12,
+            "gameName": "words with friends"
+        }
+    ],
+    [
+        {
+            "letter": "Contemplating",
+            "filename": "thirteen_letter_word_finder.json",
+            "word": "contemplating",
+            "points": 20,
+            "x": 13,
+            "gameName": "scrabble"
+        }
+    ],
+    [
+        {
+            "letter": "Contemplating",
+            "filename": "thirteen_letter_word_finder.json",
+            "word": "contemplating",
+            "points": 27,
+            "x": 13,
+            "gameName": "words with friends"
+        }
+    ]
+]

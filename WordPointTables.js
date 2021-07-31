@@ -104,7 +104,7 @@ wordsData.map((i) => {
       console.log('no words found')
     } else {
       if (t.word) {
-        filterData = data.filter((r) => r.length == t.word.length)
+        filterData = data.filter((r) => r.length == t.x)
       }
       if (filterData.length === 0) {
         // console.log('Table Not Found')

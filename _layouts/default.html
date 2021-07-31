@@ -25,6 +25,10 @@
     {% endif %}
     {% endif %}
 
+
+    {%- if page.letter -%}
+    {%- include WordPointTables/table.html -%}
+    {%- endif -%}
     {%- if site.posts.size>0 -%}
     {% include section/blog.html %}
     {%- endif -%}

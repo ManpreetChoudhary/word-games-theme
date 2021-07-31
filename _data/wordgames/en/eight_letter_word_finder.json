@@ -1,4 +1,22 @@
 {
+  "filewords": {
+    "name": "",
+    "data": [
+      {
+        "websitename": "wordswithletters",
+        "word": "payments",
+        "x": "8",
+        "gameName": "scrabble"
+      },
+      {
+        "websitename": "wordswithletters",
+        "word": "absolute",
+        "x": "8",
+        "gameName": "words with friends"
+      }
+    ]
+  },
+  "filepath": {},
   "title": "Eight letter word finder ",
   "h1": "Eight letter word finder ",
   "meta": "Worried with an Eight popping up in your word game? Use our Eight letter word finder now itself!",

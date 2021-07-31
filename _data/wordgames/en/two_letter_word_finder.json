@@ -1,4 +1,22 @@
 {
+  "filewords": {
+    "name": "",
+    "data": [
+      {
+        "websitename": "wordswithletters",
+        "word": "car",
+        "x": "2",
+        "gameName": "scrabble"
+      },
+      {
+        "websitename": "wordswithletters",
+        "word": "car",
+        "x": "2",
+        "gameName": "words with friends"
+      }
+    ]
+  },
+  "filepath": {},
   "title": "Two letter word finder ",
   "h1": "Two letter word finder ",
   "meta": "Worried with an Two popping up in your word game? Use our Two letter word finder now itself!",

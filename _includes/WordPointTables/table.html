@@ -1,10 +1,63 @@
 <div class="container">
     <div class="row mx-auto">
         <div class="col-md-10 mx-auto text-center">
-            <h2 class="my-5 Xletters">
-                <h2>
-                    <div class="wordpointtables"></div>
-                    <div style="color:red;" id="errorMsg"></div>
+            {%- assign fileName = {{page.fileName}} -%}
+            {%- for o in site.data.test -%}
+            {%- for item in o limit: 1 -%}
+            {%- assign filename = item.filename | replace: '.json', ''-%}
+            {%- if filename == {{fileName}} -%}
+            <table class="mb-5 table table-bordered" style="font-size: 15px;">
+                <tr>
+                    <th>Word</th>
+                    <th>Points</th>
+                </tr>
+                {%- for item in o limit: 5-%}
+                {%- assign filename = item.filename | replace: '.json', ''-%}
+                {%- if filename == {{fileName}} -%}
+                {%- if forloop.index == 1 -%}
+
+
+                {%- if site.name == "wordswithletters" -%}
+                <h1 style="font-size: 15px;">Highest scoring {{item.x}} words with letters {{item.word}} for
+                    {{item.gameName}}</h1>
+                {%- endif -%}
+
+
+                {%- if site.name == "wordfinders" -%}
+                <h1 style="font-size: 15px;">
+                    Highest scoring {{item.x}} letter words for {{item.gameName}} containing letters {{item.word}}
+                    using {{item.x}} letter word finder
+                </h1>
+                {%- endif -%}
+
+                {%- if site.name == "wordscramblers" -%}
+                <h1 style="font-size: 15px;">Highest scoring {{item.x}} words with letters {{item.word}} for
+                    {{item.gameName}}</h1>
+                {%- endif -%}
+
+
+                {%- if site.name == "wordunscramblerss" -%}
+                <h1 style="font-size: 15px;">
+                    Highest scoring {{item.x}} letter words for {{item.gameName}} containing letters {{item.word}}
+                    using {{item.x}} letter word finder
+                </h1>
+                {%- endif -%}
+
+
+
+
+                {%- endif -%}
+                <tr>
+                    <td>{{item.word}}</td>
+                    <td>{{item.points}}</td>
+                </tr>
+                {%- endif -%}
+                {%- endfor -%}
+
+            </table>
+            {%- endif -%}
+            {%- endfor -%}
+            {%- endfor -%}
         </div>
     </div>
 </div>

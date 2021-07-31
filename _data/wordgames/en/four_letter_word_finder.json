@@ -1,4 +1,22 @@
 {
+  "filewords": {
+    "name": "",
+    "data": [
+      {
+        "websitename": "wordswithletters",
+        "word": "race",
+        "x": "4",
+        "gameName": "scrabble"
+      },
+      {
+        "websitename": "wordswithletters",
+        "word": "race",
+        "x": "4",
+        "gameName": "words with friends"
+      }
+    ]
+  },
+  "filepath": {},
   "title": "Four letter word finder ",
   "h1": "Four letter word finder ",
   "meta": "Worried with an Four popping up in your word game? Use our Four letter word finder now itself!",

@@ -1,4 +1,22 @@
 {
+  "filewords": {
+    "name": "",
+    "data": [
+      {
+        "websitename": "wordswithletters",
+        "word": "design",
+        "x": "6",
+        "gameName": "scrabble"
+      },
+      {
+        "websitename": "wordswithletters",
+        "word": "reacts",
+        "x": "6",
+        "gameName": "words with friends"
+      }
+    ]
+  },
+  "filepath": {},
   "title": "Six letter word finder ",
   "h1": "Six letter word finder ",
   "meta": "Worried with an Six popping up in your word game? Use our Six letter word finder now itself!",

@@ -29,8 +29,6 @@
                 {%- if filename == {{fileName}} -%}
                 {%- if forloop.index == 1 -%}
 
-
-
                 {%- if site.name == "wordswithletters" -%}
                 <h1 style="font-size: 18px;">
                     Top scoring {{item.x}} letter words with letters <span class="joinString">{{item.letter}}</span> for
@@ -43,14 +41,14 @@
                 {%- if site.name == "wordfinders" -%}
                 <h1 style="font-size: 18px;">
                     {{item.x}} letter words with highest score for {{item.gameName}} containing letters
-                    <span class="joinString"> {{item.word }} </span> using {{item.x}} letter word finder
+                    <span class="joinString">{{item.letter }}</span> using {{item.x}} letter word finder
                 </h1>
                 {%- endif -%}
 
                 {%- if site.name == "wordscramblers" -%}
                 <h1 style="font-size: 18px;">
                     Top scoring {{item.x}} letter words for {{item.gameName}} containing letters
-                    <span>{{item.word}}</span>
+                    <span>{{item.letter}}</span>
                     using our {{item.x}} letter
                     word scrambler
                 </h1>
@@ -58,8 +56,8 @@
 
                 {%- if site.name == "wordunscramblerss" -%}
                 <h1 style="font-size: 18px;">
-                    {{item.x}} letter words with highest score for {{item.gameName}} with letters <span>{{item.word
-                        }}</span>
+                    {{item.x}} letter words with highest score for {{item.gameName}} with letters
+                    <span>{{item.letter}}</span>
                     using our {{item.x}} letter
                     word unscrambler
                 </h1>

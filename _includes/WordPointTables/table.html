@@ -49,20 +49,21 @@
 
                 {%- if site.name == "wordscramblers" -%}
                 <h1 style="font-size: 18px;">
-                    {{item.x}} letter words with highest score for {{item.gameName}} with letters <span>{{item.word
-                        }}</span>
-                    using our {{item.x}} letter
-                    word unscrambler
-                </h1>
-                {%- endif -%}
-
-                {%- if site.name == "wordunscramblerss" -%}
-                <h1 style="font-size: 18px;">
                     Top scoring {{item.x}} letter words for {{item.gameName}} containing letters
                     <span>{{item.word}}</span>
                     using our {{item.x}} letter
                     word scrambler
                 </h1>
+                {%- endif -%}
+
+                {%- if site.name == "wordunscramblerss" -%}
+                <h1 style="font-size: 18px;">
+                    {{item.x}} letter words with highest score for {{item.gameName}} with letters <span>{{item.word
+                        }}</span>
+                    using our {{item.x}} letter
+                    word unscrambler
+                </h1>
+
                 {%- endif -%}
                 {%- endif -%}
                 <tr>

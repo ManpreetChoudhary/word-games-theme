@@ -1,4 +1,22 @@
 {
+  "filewords": {
+    "name": "",
+    "data": [
+      {
+        "websitename": "wordswithletters",
+        "word": "Independence",
+        "x": "12",
+        "gameName": "scrabble"
+      },
+      {
+        "websitename": "wordswithletters",
+        "word": "Independence",
+        "x": "12",
+        "gameName": "words with friends"
+      }
+    ]
+  },
+  "filepath": {},
   "title": "Twelve letter word finder ",
   "h1": "Twelve letter word finder ",
   "meta": "Worried with an Twelve popping up in your word game? Use our Twelve letter word finder now itself!",

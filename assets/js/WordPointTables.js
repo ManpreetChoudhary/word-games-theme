@@ -29,8 +29,6 @@ async function Scrabble() {
           ''
         )}</strong>`
       } else {
-       
-
     if (letterLen) {
       filterData = data.filter((item) => item.length == letterLen)
     }

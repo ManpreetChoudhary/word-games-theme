@@ -10,6 +10,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "netlify-lambda": "^2.0.9",
+    "node-fetch": "^2.6.1",
     "nodegit": "^0.27.0",
     "scrabble": "^1.0.10"
   },

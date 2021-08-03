@@ -5,4 +5,5 @@ lang: en
 fileName: ten_letter_word_finder
 permalink: ten-letter-word-finder
 tool: ten-letter-word-finder
+letter: 10
 ---

@@ -1,4 +1,22 @@
 {
+  "filewords": {
+    "name": "",
+    "data": [
+      {
+        "websitename": "wordswithletters",
+        "word": "Retirement",
+        "x": "10",
+        "gameName": "scrabble"
+      },
+      {
+        "websitename": "wordswithletters",
+        "word": "Retirement",
+        "x": "10",
+        "gameName": "words with friends"
+      }
+    ]
+  },
+  "filepath": {},
   "title": "Ten letter word finder ",
   "h1": "Ten letter word finder ",
   "meta": "Worried with an Ten popping up in your word game? Use our Ten letter word finder now itself!",

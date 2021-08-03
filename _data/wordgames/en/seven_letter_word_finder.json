@@ -1,4 +1,22 @@
 {
+  "filewords": {
+    "name": "",
+    "data": [
+      {
+        "websitename": "wordswithletters",
+        "word": "account",
+        "x": "7",
+        "gameName": "scrabble"
+      },
+      {
+        "websitename": "wordswithletters",
+        "word": "account",
+        "x": "7",
+        "gameName": "words with friends"
+      }
+    ]
+  },
+  "filepath": {},
   "title": "Seven letter word finder ",
   "h1": "Seven letter word finder ",
   "meta": "Worried with an Seven popping up in your word game? Use our Seven letter word finder now itself!",

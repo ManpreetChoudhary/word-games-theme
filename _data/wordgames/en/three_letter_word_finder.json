@@ -1,4 +1,22 @@
 {
+  "filewords": {
+    "name": "",
+    "data": [
+      {
+        "websitename": "wordswithletters",
+        "word": "two",
+        "x": "3",
+        "gameName": "scrabble"
+      },
+      {
+        "websitename": "wordswithletters",
+        "word": "car",
+        "x": "3",
+        "gameName": "words with friends"
+      }
+    ]
+  },
+  "filepath": {},
   "title": "Three letter word finder ",
   "h1": "Three letter word finder ",
   "meta": "Worried with an Three popping up in your word game? Use our Three letter word finder now itself!",

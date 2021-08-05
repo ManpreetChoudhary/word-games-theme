@@ -1,0 +1,46 @@
+<style>
+    table td {
+        padding: 1.75rem !important;
+        border-bottom: 1px solid #dee2e6;
+        border: 0;
+        margin-bottom: 10px;
+        background: #FAFAFA;
+        box-shadow: 0 1px 0 rgb(0 0 0 / 10%);
+    }
+</style>
+<div class="row pad" style="padding:54px 0px">
+    <div class=" col-md-12">
+        <div class="wordCount" style="text-indent: 0 ;">
+            <strong>
+                {{dataToShow.wordLength}} words with letters
+            </strong>
+        </div>
+        <div class="main">
+            {%- for scrabblewords in dataToShow.words-%}
+            <div class="allGroupWords wordlistContainer" id="alpha_6">
+                {%- for item in scrabblewords %}
+                {%- if forloop.index == 1 -%}
+                <div class="wordListHeading">
+                    <h3 class="lead">{{item.i}} Letter Words</h3>
+                </div>
+                {%- endif -%}
+                {%- endfor -%}
+                <div class="wordList">
+                    <ul class="ul list-unstyled">
+                        {%- for item in scrabblewords %}
+                        <a class="anchor__style" title="Lookup python in Dictionary" target="_blank"
+                            href="/word-meaning?search=phyton">
+                            <li>{{item.word}}
+                                <span class="points" value="14" style="position:relative; top:4px; font-size:12px">
+                                    {{item.points}}</span>
+                            </li>
+                        </a>
+                        {%- endfor -%}
+                    </ul>
+                </div>
+            </div>
+            {%- endfor -%}
+
+        </div>
+    </div>
+</div>

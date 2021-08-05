@@ -1,0 +1,212 @@
+{
+  "h1": "Words with letters cheat",
+  "h2": "Find Possible combinations of words with letters cheat",
+  "title": "Words with letters cheat | Find all the words with these letters",
+  "meta": "Searching for words with letters cheat for games like word with friends or scrabble? Don't worry ,we have provided all the possible combinations for you.",
+  "wordLength": 39,
+  "words": [
+    [
+      {
+        "word": "cheat",
+        "points": 10,
+        "i": 5
+      },
+      {
+        "word": "tache",
+        "points": 10,
+        "i": 5
+      },
+      {
+        "word": "teach",
+        "points": 10,
+        "i": 5
+      },
+      {
+        "word": "theca",
+        "points": 10,
+        "i": 5
+      }
+    ],
+    [
+      {
+        "word": "ache",
+        "points": 9,
+        "i": 4
+      },
+      {
+        "word": "cate",
+        "points": 6,
+        "i": 4
+      },
+      {
+        "word": "chat",
+        "points": 9,
+        "i": 4
+      },
+      {
+        "word": "each",
+        "points": 9,
+        "i": 4
+      },
+      {
+        "word": "eath",
+        "points": 7,
+        "i": 4
+      },
+      {
+        "word": "echt",
+        "points": 9,
+        "i": 4
+      },
+      {
+        "word": "etch",
+        "points": 9,
+        "i": 4
+      },
+      {
+        "word": "haet",
+        "points": 7,
+        "i": 4
+      },
+      {
+        "word": "hate",
+        "points": 7,
+        "i": 4
+      },
+      {
+        "word": "heat",
+        "points": 7,
+        "i": 4
+      },
+      {
+        "word": "tace",
+        "points": 6,
+        "i": 4
+      },
+      {
+        "word": "tach",
+        "points": 9,
+        "i": 4
+      },
+      {
+        "word": "tech",
+        "points": 9,
+        "i": 4
+      },
+      {
+        "word": "thae",
+        "points": 7,
+        "i": 4
+      }
+    ],
+    [
+      {
+        "word": "ace",
+        "points": 5,
+        "i": 3
+      },
+      {
+        "word": "act",
+        "points": 5,
+        "i": 3
+      },
+      {
+        "word": "ate",
+        "points": 3,
+        "i": 3
+      },
+      {
+        "word": "cat",
+        "points": 5,
+        "i": 3
+      },
+      {
+        "word": "eat",
+        "points": 3,
+        "i": 3
+      },
+      {
+        "word": "eta",
+        "points": 3,
+        "i": 3
+      },
+      {
+        "word": "eth",
+        "points": 6,
+        "i": 3
+      },
+      {
+        "word": "hae",
+        "points": 6,
+        "i": 3
+      },
+      {
+        "word": "hat",
+        "points": 6,
+        "i": 3
+      },
+      {
+        "word": "het",
+        "points": 6,
+        "i": 3
+      },
+      {
+        "word": "tae",
+        "points": 3,
+        "i": 3
+      },
+      {
+        "word": "tea",
+        "points": 3,
+        "i": 3
+      },
+      {
+        "word": "the",
+        "points": 6,
+        "i": 3
+      }
+    ],
+    [
+      {
+        "word": "ae",
+        "points": 2,
+        "i": 2
+      },
+      {
+        "word": "ah",
+        "points": 5,
+        "i": 2
+      },
+      {
+        "word": "at",
+        "points": 2,
+        "i": 2
+      },
+      {
+        "word": "eh",
+        "points": 5,
+        "i": 2
+      },
+      {
+        "word": "et",
+        "points": 2,
+        "i": 2
+      },
+      {
+        "word": "ha",
+        "points": 5,
+        "i": 2
+      },
+      {
+        "word": "he",
+        "points": 5,
+        "i": 2
+      },
+      {
+        "word": "ta",
+        "points": 2,
+        "i": 2
+      }
+    ]
+  ]
+}

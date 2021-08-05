@@ -1,6 +1,8 @@
 <style>
     .tbl {
         margin-bottom: 50px;
+        width: 80%;
+        margin-left: 100px;
     }
 
     .table-striped {
@@ -10,16 +12,36 @@
     .table-striped tbody tr:nth-of-type(odd) {
         background-color: white !important;
     }
+
+    @media (max-width:992px) {
+        .tbl {
+            margin-left: 0 !important;
+            width: 100% !important;
+        }
+    }
 </style>
-<div class="container">
-    <div class="row mx-auto">
-        <div class="col-md-10 mx-auto text-center">
+<div class="container-fluid m-0 p-0">
+    <div class="row mx-auto m-0 p-0">
+        <div class="col-xl-3 col-lg-12">
+            <div class="row">
+                <div class="col-xl-3 p-0">
+                    <div class="feature">
+                        <img src="/assets/images/left_obj_01.png" alt="">
+                        <span class="site-no">04</span>
+                        <h5 class="title" style="width: 300px;">High Scoring Words</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-9 col-lg-12 mx-auto text-center mt-5">
             {%- assign fileName = {{page.fileName}} -%}
             {%- for o in site.data.WordPointTables -%}
             {%- for item in o limit: 1 -%}
             {%- assign filename = item.filename | replace: '.json', ''-%}
             {%- if filename == {{fileName}} -%}
-            <table class="tbl table table-striped table-bordered" style="font-size: 18px;">
+
+            <table class="tbl table table-striped table-bordered" style="font-size: 18px">
                 <tr style="background: #BB66DC !important; color: white">
                     <th>Word</th>
                     <th>Points</th>
@@ -48,7 +70,7 @@
                 {%- if site.name == "wordscramblers" -%}
                 <h1 style="font-size: 18px;">
                     Top scoring {{item.x}} letter words for {{item.gameName}} containing letters
-                    <span>{{item.letter}}</span>
+                    <span class="joinString">{{item.letter}}</span>
                     using our {{item.x}} letter
                     word scrambler
                 </h1>
@@ -57,7 +79,7 @@
                 {%- if site.name == "wordunscramblerss" -%}
                 <h1 style="font-size: 18px;">
                     {{item.x}} letter words with highest score for {{item.gameName}} with letters
-                    <span>{{item.letter}}</span>
+                    <span class="joinString">{{item.letter}}</span>
                     using our {{item.x}} letter
                     word unscrambler
                 </h1>

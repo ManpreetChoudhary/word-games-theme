@@ -16,14 +16,14 @@
         </div>
         <div class="serachSection2">
             <div class="position-relative serachBox">
-                <form action="" id='form'>
+                <form action="{{page.url}}/result" id='form'>
                     <input style="border-radius: {{CustomColor.inputFieldBorder}}" type="text"
-                        placeholder="Enter up to 15 letters?" class="txtBox" value name="search" maxlength="15" value
-                        required>
+                        placeholder="Enter up to 15 letters?" class="txtBox" name="search" maxlength="15"
+                        value={{page.value}} required>
                     <input
                         style="border-radius: {{CustomColor.inputFieldBorder}}; background-color: {{CustomColor.inputButtonBg}};"
                         type="submit" class="serachBtn" id="serach" value>
-                    <div class="dictonaryDropdown">
+                    <div class="dictonaryDropdown mt-4">
                         <select class="form-select select_dropDown2" name="dictonary"
                             aria-label="Default select example">
                             <option selected value="Dictonary">Dictonary</option>
@@ -32,7 +32,7 @@
                             <option value="wwf" id="wwf">Enable (Words With Friends)</option>
                         </select>
                     </div>
-                    {%- include filterWords/index.html -%}
+
                     <div class="wrapper_dropDown mt-2 d-flex justify-content-end" style="gap:10px;">
                         <div class="Advancedbtn" style="position: relative;" onclick="myFunction()">
                             <span class="filter_count" style="display: none;"></span>
@@ -48,7 +48,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="fillterWrapper hide">
+                    <div class="fillterWrapper hide" style="top:115px">
                         <div class="text-right times" style="cursor: pointer; margin-top:-15px;">
                             <img src="../../assets/images/window-close.png" alt="" width="15px">
 
@@ -87,11 +87,12 @@
 
 
     {% include section/xyzGroup.html %}
-    {% include section/wordGroup.html %}
+
 </div>
 
 <!-- close commonPage as LandingPage -->
 <link rel="stylesheet" href="{{ '/assets/css/advancedFilter.css' | relative_url }}">
+
 <script>
     const fillterWrapper = document.querySelector('.fillterWrapper')
     function myFunction() {

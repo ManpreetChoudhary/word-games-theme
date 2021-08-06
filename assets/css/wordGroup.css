@@ -1,5 +1,5 @@
 .wordCount {
-  text-indent: 20px;
+  text-indent: 10px;
   font-size: 18px;
 }
 .allGroupWords {
@@ -32,7 +32,7 @@
 .wordList > ul li {
   border: solid 2px rgba(226, 248, 198, 0.47);
   padding: 8px 0;
-  background: #F8F9FA;
+  background: #f8f9fa;
   border-radius: 5px;
   margin: 6px 6px;
   width: 100px;

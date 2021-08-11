@@ -37,10 +37,11 @@
   position: absolute;
   z-index: 999;
   top: 150px;
-  right: 123px;
+  right: 140px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
   padding: 30px 15px;
   border-radius: 15px;
+  width: 240px;
 }
 
 .fa-times {
@@ -139,7 +140,7 @@ a {
     right: auto;
     position: fixed;
     left: 0;
-    bottom: 40px;
+    bottom: 0px;
     top: unset;
     width: 100%;
   }

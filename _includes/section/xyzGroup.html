@@ -17,17 +17,17 @@
         </div>
         <div class="main">
             {%- for scrabblewords in dataToShow.words-%}
-            <div class="allGroupWords wordlistContainer" id="alpha_6">
-                {%- for item in scrabblewords %}
-                {%- if forloop.index == 1 -%}
+            {%- for item in scrabblewords %}
+            {%- if forloop.index == 1 -%}
+            <div class="allGroupWords wordlistContainer" id="alpha_{{item.i}}">
                 <div class="wordListHeading">
                     <h3 class="lead">{{item.i}} Letter Words</h3>
                 </div>
-                {%- endif -%}
-                {%- endfor -%}
+
                 <div class="wordList">
                     <ul class="ul list-unstyled">
                         {%- for item in scrabblewords %}
+                        {%- assign value = item.word -%}
                         <a class="anchor__style" title="Lookup python in Dictionary" target="_blank"
                             href="/word-meaning?search=phyton">
                             <li>{{item.word}}
@@ -39,8 +39,9 @@
                     </ul>
                 </div>
             </div>
+            {%- endif -%}
             {%- endfor -%}
-
+            {%- endfor -%}
         </div>
     </div>
 </div>

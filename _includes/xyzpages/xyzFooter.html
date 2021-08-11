@@ -1,0 +1,62 @@
+<style>
+    .inner-dropdown {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .inner-dropdown li {
+        list-style: none;
+        padding: 5px 0;
+        text-align: left;
+    }
+
+    .anchor_links {
+        text-decoration: none;
+        color: white;
+    }
+
+    .anchor_links:hover {
+        text-decoration: underline !important;
+        color: white;
+    }
+
+    @media(max-width:768px) {
+        .inner-dropdown {
+            flex-direction: column;
+        }
+    }
+</style>
+<div class="main_row row py-5 mx-0 mt-5">
+    <div class="col-md-11 mx-auto">
+        {%- if dataToShow.megaMenu -%}
+        <ul>
+            <div class="inner-dropdown">
+                {%- for item in dataToShow.megaMenu.dropdown -%}
+                <div class="catPad mb-4">
+                    <li class="text-muted">{{item.categoryName}}</li>
+                    <div> {%- for item in item.links -%}
+                        <li>
+                            <a class="anchor_links" href="{{item.url}}">
+                                {{item.name}}</a>
+                        </li>
+                        {%- endfor -%}
+                    </div>
+                </div>
+                {%- endfor -%}
+            </div>
+        </ul>
+        {%- endif -%}
+    </div>
+</div>
+
+<div class="row m-0 py-3" style="background-color: #000;">
+    <div class="col-12">
+        <div class="d-flex justify-content-between px-md-5 px-0 footer__flexbox">
+            <p class="m-0 text-white">{{site.copyright_text}}</p>
+            <p class="m-0"><a class="footer__link" href="/privacy-policy">Privacy Policy</a>
+                <a class="footer__link" href="/terms-and-conditions">| Terms of Use</a>
+            </p>
+        </div>
+    </div>
+</div>
+</div>

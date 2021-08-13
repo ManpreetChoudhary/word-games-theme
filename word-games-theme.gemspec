@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "word-games-theme"
-  spec.version       = "0.4.1"
+  spec.version       = "0.4.2"
   spec.authors       = ["manpreet-appscms"]
   spec.email         = ["manpreet@appscms.com"]
 

@@ -29,7 +29,7 @@
                         {%- for item in scrabblewords %}
                         {%- assign value = item.word -%}
                         <a class="anchor__style" title="Lookup python in Dictionary" target="_blank"
-                            href="/word-meaning?search=phyton">
+                            href="/word-meaning?search={{item.word}}">
                             <li>{{item.word}}
                                 <span class="points" value="14" style="position:relative; top:4px; font-size:12px">
                                     {{item.points}}</span>

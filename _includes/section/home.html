@@ -69,8 +69,10 @@
                             <label for="wordLength">Word Length </label>
                             <br>
                             <input type="text" id="wordLength" placeholder="Length" name="length">
-                            <div style="margin-top: 1.2rem;">
-                                <input type="submit" value="Apply" class="btn-info w-100 text-white"
+                            <div style="margin-top: 1.2rem; gap:5px" class="d-flex w-100">
+                                <input type="button" value="Clear" class="clearFilter btn-info  text-white"
+                                    style="background-color: {{CustomColor.inputButtonBg}};">
+                                <input type="submit" value="Apply" class="btn-info  text-white"
                                     style="background-color: {{CustomColor.inputButtonBg}};">
 
                             </div>
@@ -84,6 +86,21 @@
 </div>
 
 <script>
+
+    const clearFilter = document.querySelector('.clearFilter')
+    let startsWith = document.getElementById('startsWith')
+    let mustInclude = document.getElementById('mustInclude')
+    let endsWith = document.getElementById('endsWith')
+    let wordLength = document.getElementById('wordLength')
+
+
+    clearFilter.addEventListener("click", (() => {
+        startsWith.value = ""
+        mustInclude.value = ""
+        endsWith.value = ""
+        wordLength.value = ""
+    }))
+
     const advancedFilter = document.querySelector('.advancedFilter')
     const fillterWrapper = document.querySelector('.fillterWrapper')
     advancedFilter.addEventListener('click', () => {

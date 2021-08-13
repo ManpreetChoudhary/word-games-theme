@@ -74,9 +74,10 @@
                                 value="">
                         </div>
 
-                        <div style="margin-top: 1.2rem;">
-                            <input type="submit" value="Apply" class="btn-info w-100 text-white"
-                                style="background: #808080">
+                        <div style="margin-top: 1.2rem; gap:5px" class="d-flex w-100">
+                            <input type="button" value="Clear" class="clearFilter btn-info  text-white"
+                                style="background-color:#808080;">
+                            <input type="submit" value="Apply" class="btn-info  text-white" style="background: #808080">
                         </div>
                     </div>
 
@@ -91,6 +92,14 @@
 <!-- close commonPage as LandingPage -->
 <link rel="stylesheet" href="{{ '/assets/css/advancedFilter.css' | relative_url }}">
 <script>
+    const clearFilter = document.querySelector('.clearFilter')
+
+    clearFilter.addEventListener('click', () => {
+        startsWith.value = ''
+        mustInclude.value = ''
+        endsWith.value = ''
+        wordLength.value = ''
+    })
     const fillterWrapper = document.querySelector('.fillterWrapper')
     function myFunction() {
         fillterWrapper.classList.toggle('hide')

@@ -23,7 +23,7 @@
                     <input
                         style="border-radius: {{CustomColor.inputFieldBorder}}; background-color: {{CustomColor.inputButtonBg}};"
                         type="submit" class="serachBtn" id="serach" value>
-                    <div class="dictonaryDropdown mt-4">
+                    <div class="dictonaryDropdown">
                         <select class="form-select select_dropDown2" name="dictonary"
                             aria-label="Default select example">
                             <option selected value="Dictonary">Dictonary</option>
@@ -32,6 +32,28 @@
                             <option value="wwf" id="wwf">Enable (Words With Friends)</option>
                         </select>
                     </div>
+
+
+                    <div class="tab_link_wrapper" style="position: relative;">
+                        <div id="tab-scroll" class="tab-scroll flex-row">
+                            <input type="button" name="" id="prev" class="prev tabsBg noOutline cursorPointer" value=" "
+                                style="display: none;">
+                            <div id="tab-container" class="search-container tab_container flex-row">
+                                {%- for scrabblewords in dataToShow.words-%}
+                                {%- for item in scrabblewords %}
+                                {%- if forloop.index == 1 -%}
+                                <input type="button" id="Tab_{{item.i}}" onclick="filterLinks({{item.i}})"
+                                    value="{{item.i}} Letter" class="tab_link cursorPointer">
+                                {%- endif -%}
+                                {%- endfor -%}
+                                {%- endfor -%}
+                            </div>
+                            <input type="button" name="" id="next" class="next tabsBg noOutline cursorPointer" value=" "
+                                style="display: none;">
+                        </div>
+                    </div>
+
+
 
                     <div class="wrapper_dropDown mt-2 d-flex justify-content-end" style="gap:10px;">
                         <div class="Advancedbtn" style="position: relative;" onclick="myFunction()">
@@ -92,15 +114,4 @@
 
 <!-- close commonPage as LandingPage -->
 <link rel="stylesheet" href="{{ '/assets/css/advancedFilter.css' | relative_url }}">
-
-<script>
-    const fillterWrapper = document.querySelector('.fillterWrapper')
-    function myFunction() {
-        fillterWrapper.classList.toggle('hide')
-    }
-    const close = document.querySelector('.times')
-    close.addEventListener('click', () => {
-        fillterWrapper.classList.add('hide')
-    })
-
-</script>
+<script src="../../assets/js/xyz.js"></script>

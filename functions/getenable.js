@@ -1,4 +1,24 @@
 const enable = require('./Dictonary/enable.js')
+
+// const scrabble = require('scrabble')
+
+// let userWordLength = 6
+// let userword = 'python'
+// let obj = enable.filter((item) => item.length == userWordLength)
+
+// obj.map((item) => {
+//   let tr = scrabble(item)
+//   if (item.includes(tr)) {
+//     console.log(item)
+//   }
+// })
+
+// ob((elem) => {
+//   if (obj.indexOf(userword) > -1) {
+//     console.log(elem)
+//   }
+// })
+
 exports.handler = function (event, context, callback) {
   // your server-side functionalit
   request_data = event['queryStringParameters']

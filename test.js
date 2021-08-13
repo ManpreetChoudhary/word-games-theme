@@ -1,9 +1,41 @@
-const word = 'python'
+const scrabble = require('scrabble')
 
-const natural = require('natural')
-const wordnet = new natural.WordNet()
+let alphabets = [
+  'A',
+  'B',
+  'C',
+  'D',
+  'E',
+  'F',
+  'G',
+  'H',
+  'I',
+  'J',
+  'K',
+  'L',
+  'M',
+  'N',
+  'O',
+  'P',
+  'Q',
+  'R',
+  'S',
+  'T',
+  'U',
+  'V',
+  'W',
+  'X',
+  'Y',
+  'Z',
+]
 
-wordnet.lookup(word, function (details) {
-  console.log('Definition: ' + details[0].def)
-  console.log('Synonyms: ' + details[0].synonyms)
-})
+let letter = 'pyon'
+let spc = '?'
+let scrmble
+if (spc == '?') {
+  alphabets.forEach((element) => {
+    newElem = spc.replace(spc, element.toLocaleLowerCase())
+    scrmble = scrabble(`${letter}${newElem}`)
+    console.log(scrmble)
+  })
+}

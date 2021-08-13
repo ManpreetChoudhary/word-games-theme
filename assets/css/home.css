@@ -157,6 +157,23 @@ input:-webkit-autofill:active {
   text-indent: 15px;
   width: 190px;
   outline: none;
+  box-shadow: none;
+}
+.btn-info:not(:disabled):not(.disabled).active:focus,
+.btn-info:not(:disabled):not(.disabled):active:focus,
+.show > .btn-info.dropdown-toggle:focus {
+  box-shadow: unset;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+.fillterWrapper input:hover {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+.fillterWrapper input:focus {
+  box-shadow: unset;
+}
+
+.fillterWrapper input:active {
+  box-shadow: unset;
 }
 .active {
   z-index: 999;

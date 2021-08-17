@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+.article {
+  padding-top: 180px;
+  font-family: Montserrat, sans-serif;
+}
+.main_h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  line-height: 52px;
+  color: #1e283c;
+}
+
+#toc_container {
+  background: #fff;
+  box-shadow: 0 0 1px grey;
+  /* border: 1px solid #aaa; */
+  display: table;
+  font-size: 95%;
+  margin-bottom: 1em;
+  padding: 20px;
+  width: 100%;
+}
+.wordsDetails,
+.tabledata {
+  margin-left: 20px;
+  box-sizing: border-box;
+  line-height: 2.63;
+  letter-spacing: 0.3px;
+  margin-left: 20px;
+  box-sizing: border-box;
+  line-height: 2.63;
+  letter-spacing: 0.3px;
+  font-size: 13px;
+  color: #50668f;
+  font-weight: 900;
+}
+
+.wordsdata {
+  margin-bottom: 100px;
+}
+.word-title {
+  margin: 30px 0;
+  /* margin-bottom: 40px; */
+  color: #2d67f7;
+  vertical-align: baseline;
+  cursor: pointer;
+  line-height: 1.5;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.toc_title {
+  font-weight: 700;
+  text-align: center;
+}

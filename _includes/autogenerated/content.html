@@ -1,0 +1,55 @@
+{% assign file = page.fileName %}
+{% assign lang = page.lang %}
+{% assign dataToShow = site.data.[page.folderName][lang][file] %}
+
+<div class="container-fluid mx-0 article">
+    <div class="row mx-autop-0">
+        <div class="col-xl-8 col-lg-10 mx-auto">
+            <h1 class="main_h1">
+                {{dataToShow.h1}}
+            </h1>
+            <h2 class="mt-5" style="font-weight: 900;">Table of contents</h2>
+            <div id="toc_container">
+                <ul class="toc_list">
+                    <li class="tabledata pl-2"><a href="/">
+                            {{dataToShow.letter}}</a>
+                        <ul>
+                            {%- for item in dataToShow.words-%}
+                            {%- for t in item -%}
+                            <li class="tabledata">
+                                <a href="#{{t.word}}">{{t.word}}</a>
+                            </li>
+                            {%- endfor -%}
+                            {%- endfor -%}
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <h6 class="main_h1 mt-5">
+                Using our {{dataToShow.x}} letter words using letters {{dataToShow.letter}} you can find following
+                high scoring words
+            </h6>
+            <div class="listofwords">
+                {%- for item in dataToShow.words-%}
+                {%- for t in item -%}
+                <div class="wordsdata" id="{{t.word}}">
+                    <a>
+                        <h2 class="word-title">
+                            {{forloop.index}}.
+                            {{t.word | capitalize }}
+                        </h2>
+                    </a>
+                    <ul class="word-details">
+                        <li class="wordsDetails"> {{t.scrabble}} </li>
+                        <li class="wordsDetails">{{t.wordswithfriend}}</li>
+                    </ul>
+                </div>
+                {%- endfor -%}
+                {%- endfor -%}
+            </div>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="../../assets/css/content.css">

@@ -2,22 +2,31 @@
 {% assign lang = page.lang %}
 {% assign dataToShow = site.data.[page.folderName][lang][file] %}
 
-<div class="container-fluid mx-0 article">
-    <div class="row mx-autop-0">
-        <div class="col-xl-8 col-lg-10 mx-auto">
-            <h1 class="main_h1">
-                {{dataToShow.h1}}
-            </h1>
-            <h2 class="mt-5" style="font-weight: 900;">Table of contents</h2>
-            <div id="toc_container">
-                <ul class="toc_list">
-                    <li class="tabledata pl-2"><a href="/">
-                            {{dataToShow.letter}}</a>
+<div class="container-fluid mx-0 article auto-gen-content">
+    <div class="row mx-auto-0">
+        <div class="col-md-8 mx-auto">
+            <div class="pageHeading text-left mb-5">
+                <h1 class="content-heading pb-0 m-0">
+                    {{dataToShow.h1}}</h1>
+                {%- if dataToShow.h2 -%}
+                <h2>
+                    {{dataToShow.h2}}</h2>
+                {%- endif -%}
+            </div>
+            <div id="toc_container table-of-content">
+                <ul class="toc_list px-4 pt-5 pb-4">
+                    <h2 class=" text-left" style="font-weight: 900;">Table of contents</h2>
+                    <li class="tabledata mt-4">
+                        <a class="sameStyle" href="#" style="font-size: 15px; font-weight: 600;">
+                            {{dataToShow.letter | capitalize }}
+                        </a>
                         <ul>
-                            {%- for item in dataToShow.words-%}
-                            {%- for t in item -%}
+                            {%- for letter in dataToShow.words-%}
+                            {%- for item in letter -%}
                             <li class="tabledata">
-                                <a href="#{{t.word}}">{{t.word}}</a>
+                                <a class="sameStyle" href="#{{item.word}}">
+                                    {{item.word | capitalize }}
+                                </a>
                             </li>
                             {%- endfor -%}
                             {%- endfor -%}
@@ -26,23 +35,64 @@
                 </ul>
             </div>
 
-            <h6 class="main_h1 mt-5">
-                Using our {{dataToShow.x}} letter words using letters {{dataToShow.letter}} you can find following
-                high scoring words
-            </h6>
+
+            <div class="subHeading" style="margin: 50px 0;">
+                {%- if site.name == "wordswithletters" -%}
+                <h1 class="content_sub_heading pb-0 m-0">
+                    Using our {{dataToShow.x}} letter words with letters , you can find following high
+                    scoring words
+                    using
+                    {{dataToShow.letter | capitalize }}
+                </h1>
+                {%- endif -%}
+                {%- if site.name == "wordfinders" -%}
+                <h1 class="content_sub_heading pb-0 m-0">
+                    Using our {{dataToShow.x}} letter Word Finder you can find the following high scoring words with
+                    given letters
+                    {{dataToShow.letter | capitalize }}
+                </h1>
+                {%- endif -%}
+                {%- if site.name == "wordscramblers" -%}
+                <h1 class="content_sub_heading pb-0 m-0">
+
+                    All possible high scoring words from scrambled letters {{dataToShow.letter | capitalize }} which you
+                    can find
+                    using our
+                    unscramble {{dataToShow.x}}
+                    letter tool are as following
+                </h1>
+                {%- endif -%}
+                {%- if site.name == "wordunscramblerss" -%}
+                <h1 class="content_sub_heading pb-0 m-0">
+                    Following are the high scoring unscrambled words with the letters {{dataToShow.letter | capitalize}}
+                    which you
+                    can find using
+                    our {{dataToShow.x}}
+                    letter word scramble
+                </h1>
+                {%- endif -%}
+            </div>
+
             <div class="listofwords">
-                {%- for item in dataToShow.words-%}
-                {%- for t in item -%}
-                <div class="wordsdata" id="{{t.word}}">
+                {%- for letter in dataToShow.words-%}
+                {%- for item in letter -%}
+                <div class="wordsdata" id="{{item.word}}">
                     <a>
-                        <h2 class="word-title">
+                        <h2 class="word-heading">
                             {{forloop.index}}.
-                            {{t.word | capitalize }}
+                            {{dataToShow.wordLength }}
                         </h2>
                     </a>
                     <ul class="word-details">
-                        <li class="wordsDetails"> {{t.scrabble}} </li>
-                        <li class="wordsDetails">{{t.wordswithfriend}}</li>
+                        <a>
+                            <h2 class="word-title">
+                                {{item.word | capitalize }}
+                            </h2>
+                        </a>
+                        <li class="wordsDetails">
+                            {{item.scrabble}}
+                        </li>
+                        <li class="wordsDetails">{{item.wordswithfriend}}</li>
                     </ul>
                 </div>
                 {%- endfor -%}

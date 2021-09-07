@@ -1,2 +1,22 @@
 [build]
   functions = "lambda" 
+
+    
+[[redirects]]
+  from = "/test"
+  to = "https://words-xyz.netlify.app"
+  force = true
+  status = 200
+
+
+[[redirects]]
+  from = "/test/sitemap.xml"
+  to = "https://words-xyz.netlify.app/sitemap.xml"
+  force = true
+  status = 200
+
+[[redirects]]
+  from = "/test*"
+  to = "https://words-xyz.netlify.app/:splat"
+  force = true
+  status = 200   

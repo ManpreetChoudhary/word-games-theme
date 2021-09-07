@@ -1,6 +1,10 @@
 {
   "more": [
     {
+      "name": "words",
+      "url": "/test"
+    },
+    {
       "name": "Anagram word finder",
       "url": "/anagram-word-finder"
     },

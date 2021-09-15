@@ -1,43 +1,43 @@
 <div class="container">
     <div class="relatedPosts">
-{%- if  site.posts.size>0 -%}
-<h1 class="related_post_heading">Recent Posts</h1>
-{%- endif -%}
-<div class="row">
-{% for post in site.posts offset:1 limit:3 %}
-{% if post.url != page.url %}
-{%- include /authors/authors.html -%}
-<div class="col-lg-4 col-md-6 mb-4 card-group">
-    <div class="card h-100">
-        <a href="{{ post.url }}">
-            <img src="{{ post.image }}" class="card-img-top"  height="215px" width="100%" loading="lazy" alt="">
-        </a>
-        <div class="card-body">
-            <a class="text-decoration-none text-dark" href="{{ post.url }}" class="anchor_link">
-                <h4 class="card-title mb-4 text-left">{{ post.title }}</h4>
-            </a>
-        </div>
-        <div class="card-footer bg-white">
-            <div class="wrapfooter">
-                {% if post.author %}
-                <span class="meta-footer-thumb">
-                    <img class="author-thumb" loading="lazy" src="{{image}}" alt="{{ authorName }}">
-                </span>
-                {% endif %}
-                <span class="author-meta">
-                    <span class="post-name">
-                        <a target="_blank" href="/blog">{{authorName}}</a>
-                    </span><br>
-                    <span class="post-date">{{post.date | date_to_string }}</span>
-                </span>
-                <span class="post-read-more"><a class="text-dark" href="{{ post.url }}"
-                        title="Read Story">Read More</a></span>
+        {%- if site.posts.size>0 -%}
+        <h1 class="related_post_heading">Recent Posts</h1>
+        {%- endif -%}
+        <div class="row">
+            {% assign posts = site.posts | where_exp:"post","post.url != page.url" %}
+            {% for post in posts limit: 6%}
+            {%- include /authors/authors.html -%}
+            <div class="col-lg-4 col-md-6 mb-4 card-group">
+                <div class="card h-100">
+                    <a href="{{ post.url }}">
+                        <img src="{{ post.image }}" class="card-img-top" height="215px" width="100%" loading="lazy"
+                            alt="">
+                    </a>
+                    <div class="card-body">
+                        <a class="text-decoration-none text-dark" href="{{ post.url }}" class="anchor_link">
+                            <h4 class="card-title mb-4 text-left">{{ post.title }}</h4>
+                        </a>
+                    </div>
+                    <div class="card-footer bg-white">
+                        <div class="wrapfooter">
+                            {% if post.author %}
+                            <span class="meta-footer-thumb">
+                                <img class="author-thumb" loading="lazy" src="{{image}}" alt="{{ authorName }}">
+                            </span>
+                            {% endif %}
+                            <span class="author-meta">
+                                <span class="post-name">
+                                    <a target="_blank" href="/blog">{{authorName}}</a>
+                                </span><br>
+                                <span class="post-date">{{post.date | date_to_string }}</span>
+                            </span>
+                            <span class="post-read-more"><a class="text-dark" href="{{ post.url }}"
+                                    title="Read Story">Read More</a></span>
+                        </div>
+                    </div>
+                </div>
             </div>
+            {% endfor %}
         </div>
     </div>
-</div>
-{% endif %}
-{% endfor %}
-</div>
-</div>
 </div>

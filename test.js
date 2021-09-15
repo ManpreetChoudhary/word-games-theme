@@ -1,41 +1,20 @@
-const scrabble = require('scrabble')
+const fs = require('fs')
+// const enable = require('./functions/Dictonary/enable.js')
 
-let alphabets = [
-  'A',
-  'B',
-  'C',
-  'D',
-  'E',
-  'F',
-  'G',
-  'H',
-  'I',
-  'J',
-  'K',
-  'L',
-  'M',
-  'N',
-  'O',
-  'P',
-  'Q',
-  'R',
-  'S',
-  'T',
-  'U',
-  'V',
-  'W',
-  'X',
-  'Y',
-  'Z',
+let enable = [
+  'car',
+  'acerb',
+  'nisha',
+  'manpreet',
+  'raju',
+  'streed',
+  'kala',
+  'ravi',
 ]
 
-let letter = 'pyon'
-let spc = '?'
-let scrmble
-if (spc == '?') {
-  alphabets.forEach((element) => {
-    newElem = spc.replace(spc, element.toLocaleLowerCase())
-    scrmble = scrabble(`${letter}${newElem}`)
-    console.log(scrmble)
-  })
-}
+let matches = enable.filter((state) => {
+  let searchVal = 'car'
+  const regeX = new RegExp(`^${searchVal}`, 'gi')
+  return state.match(regeX)
+})
+console.log(matches)

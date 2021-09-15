@@ -15,6 +15,9 @@
   padding-bottom: 0.8rem;
   color: #1e283c;
 }
+b {
+  color: #000;
+}
 
 .content_sub_heading {
   font-weight: 600;
@@ -72,7 +75,7 @@
   color: #000;
 } */
 .wordsdata {
-  margin-bottom: 100px;
+  margin-bottom: 40px;
 }
 .word-title {
   margin: 0px 0;
@@ -86,7 +89,7 @@
   line-height: 1.5;
 }
 .word-heading {
-  margin: 30px 0;
+  margin: 10px 0;
   /* margin-bottom: 40px; */
   color: #0645ad;
   vertical-align: baseline;

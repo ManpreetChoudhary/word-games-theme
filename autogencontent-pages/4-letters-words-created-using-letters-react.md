@@ -2,6 +2,47 @@
 layout: autogencontent
 folderName: content
 lang: en
+recomendURLS:
+  [
+    [3-letter-words-using-survey-with-3-letter-word-finder],
+    [5-letter-words-using-letters-with-5-letter-word-finder],
+    [6-letter-words-using-popular-with-6-letter-word-finder],
+    [7-letter-words-using-runaway-with-7-letter-word-finder],
+    [4-letter-words-using-health-with-4-letter-word-finder],
+    [3-letter-words-using-cigar-with-3-letter-word-finder],
+    [6-letter-words-using-prove-with-6-letter-word-finder],
+    [6-letter-words-using-eighty-with-6-letter-word-finder],
+    [8-letter-words-using-scrabble-with-8-letter-word-finder],
+    [8-letter-words-using-learning-with-8-letter-word-finder],
+  ]
+randomURLS:
+  [
+    [3-letter-words-using-muscle-with-3-letter-word-finder],
+    [4-letter-words-using-gamei-with-4-letter-word-finder],
+    [4-letter-words-using-jailed-with-4-letter-word-finder],
+    [3-letter-words-using-qualify-with-3-letter-word-finder],
+    [5-letter-words-using-uncle-with-5-letter-word-finder],
+    [5-letter-words-using-percent-with-5-letter-word-finder],
+    [5-letter-words-using-outer-with-5-letter-word-finder],
+    [5-letter-words-using-gamei-with-5-letter-word-finder],
+    [5-letter-words-using-peach-with-5-letter-word-finder],
+    [3-letter-words-using-scooth-with-3-letter-word-finder],
+    [3-letter-words-using-evil-with-3-letter-word-finder],
+    [3-letter-words-using-mystic-with-3-letter-word-finder],
+    [6-letter-words-using-oxford-with-6-letter-word-finder],
+    [3-letter-words-using-hover-with-3-letter-word-finder],
+    [5-letter-words-using-bumble-with-5-letter-word-finder],
+    [3-letter-words-using-jailed-with-3-letter-word-finder],
+    [4-letter-words-using-uncle-with-4-letter-word-finder],
+    [3-letter-words-using-bumble-with-3-letter-word-finder],
+    [3-letter-words-using-pouch-with-3-letter-word-finder],
+    [5-letter-words-using-ground-with-5-letter-word-finder],
+    [3-letter-words-using-ninety-with-3-letter-word-finder],
+    [3-letter-words-using-uranium-with-3-letter-word-finder],
+    [4-letter-words-using-keenly-with-4-letter-word-finder],
+    [6-letter-words-using-learning-with-6-letter-word-finder],
+    [3-letter-words-using-worth-with-3-letter-word-finder],
+  ]
 fileName: react
 permalink: 5-letters-words-created-using-letters-react
 ---

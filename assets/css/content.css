@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+.article {
+  padding-top: 150px;
+  font-family: Montserrat, sans-serif;
+}
+.main_h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  line-height: 52px;
+  color: #1e283c;
+}
+.content-heading {
+  font-weight: 600;
+  font-size: 30px;
+  padding-bottom: 0.8rem;
+  color: #1e283c;
+}
+b {
+  color: #000;
+}
+
+.content_sub_heading {
+  font-weight: 600;
+  font-size: 20px;
+  padding-bottom: 0.8rem;
+  color: #1e283c;
+}
+#toc_container {
+  background: #fff;
+  box-shadow: 0 0 1px grey;
+  /* border: 1px solid #aaa; */
+  display: table;
+  font-size: 95%;
+  margin-bottom: 1em;
+  padding: 20px;
+  width: 100%;
+}
+.toc_list {
+  border: 1px solid #dee2e6;
+  background-color: #f8f9fa;
+}
+
+.tabledata {
+  margin-left: 20px;
+  box-sizing: border-box;
+  line-height: 30px;
+  letter-spacing: 0.3px;
+  margin-left: 20px;
+  box-sizing: border-box;
+  letter-spacing: 0.3px;
+  font-size: 13px;
+  list-style: decimal;
+}
+.wordsDetails {
+  margin-left: 20px;
+  line-height: 30px;
+  letter-spacing: 0.3px;
+  font-size: 13px;
+  color: #50668f;
+  font-weight: 600;
+}
+.sameStyle {
+  color: #0645ad !important;
+}
+/* ul {
+  counter-reset: item;
+}
+.tabledata {
+  display: block;
+}
+.tabledata:before {
+  content: counters(item, '.') ' ';
+  counter-increment: item;
+  padding-right: 8px;
+  color: #000;
+} */
+.wordsdata {
+  margin-bottom: 40px;
+}
+.word-title {
+  margin: 0px 0;
+  /* margin-bottom: 40px; */
+  color: #0645ad;
+  vertical-align: baseline;
+  cursor: pointer;
+  line-height: 1.5;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.word-heading {
+  margin: 10px 0;
+  /* margin-bottom: 40px; */
+  color: #0645ad;
+  vertical-align: baseline;
+  cursor: pointer;
+  line-height: 1.5;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.toc_title {
+  font-weight: 700;
+  text-align: center;
+}

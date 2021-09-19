@@ -1,5 +1,5 @@
 ---
-tags: words
+tags: []
 categories: []
 layout: post
 title: Scrabble strategy

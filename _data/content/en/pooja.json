@@ -1,0 +1,34 @@
+{
+    "letter": "pooja",
+    "x": 2,
+    "h1": "2 letters words created using letters pooja",
+    "h2": "Find Possible combinations of words with letters pooja",
+    "title": "Words with letters pooja | Find all the words with these letters",
+    "meta": "Searching for words with letters pooja for games like word with friends or scrabble? Don't worry ,we have provided all the possible combinations for you.",
+    "wordLength": "3 words with letters p,o,o,j,a",
+    "words": [
+        [
+            {
+                "word": "jo",
+                "points": 9,
+                "i": 5,
+                "scrabble": "jo is a valid word in scrabble. As per TWL06 dictionary it has 9 points, and as per SOWPODS dictionary it has 9 points.",
+                "wordswithfriend": "jo is a valid word in words with friends. As per Words with Friends dictionary it has 11 points."
+            },
+            {
+                "word": "op",
+                "points": 4,
+                "i": 5,
+                "scrabble": "op is a valid word in scrabble. As per TWL06 dictionary it has 4 points, and as per SOWPODS dictionary it has 4 points.",
+                "wordswithfriend": "op is a valid word in words with friends. As per Words with Friends dictionary it has 5 points."
+            },
+            {
+                "word": "pa",
+                "points": 4,
+                "i": 5,
+                "scrabble": "pa is a valid word in scrabble. As per TWL06 dictionary it has 4 points, and as per SOWPODS dictionary it has 4 points.",
+                "wordswithfriend": "pa is a valid word in words with friends. As per Words with Friends dictionary it has 5 points."
+            }
+        ]
+    ]
+}

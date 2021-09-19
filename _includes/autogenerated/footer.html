@@ -1,0 +1,72 @@
+<style>
+    .inner-dropdown {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .inner-dropdown li {
+        list-style: none;
+        padding: 5px 0;
+        text-align: left;
+    }
+
+    .anchor_links {
+        text-decoration: none;
+        color: white;
+        font-size: 13px;
+    }
+
+    .anchor_links:hover {
+        text-decoration: underline !important;
+        color: white;
+    }
+
+    @media(max-width:768px) {
+        .inner-dropdown {
+            flex-direction: column;
+        }
+    }
+</style>
+<div class="main_row row py-5 mx-0 mt-5" style="background: #262626;">
+    <div class="col-md-11 mx-auto">
+        <ul>
+            <div class="inner-dropdown">
+                <div class="catPad mb-4">
+                    <li class="text-muted" style="  font-size: 13px">Recommended Pages</li>
+                    {%- for item in page.recomendURLS limit: 10 -%}
+                    {% assign Url = item[0]%}
+                    <li class="list-unstyled">
+                        <a class="anchor_links" href="/{{Url}}">
+                            {{ Url | replace: '-', ' ' }}
+                        </a>
+                    </li>
+                    {%- endfor -%}
+
+                </div>
+                <div class="catPad mb-4">
+                    <li class="text-muted" style="  font-size: 13px">Users Also Visited</li>
+
+                    {%- for item in page.randomURLS limit: 25 -%}
+                    {% assign Url = item[0]%}
+                    <li class="list-unstyled">
+                        <a class="anchor_links" href="/{{Url}}">
+                            {{ Url | replace: '-', ' ' }}
+                        </a>
+                    </li>
+                    {%- endfor -%}
+                </div>
+        </ul>
+    </div>
+</div>
+
+<div class="row m-0 py-3" style="background-color: #000;">
+    <div class="col-12">
+        <div class="d-flex justify-content-between px-md-5 px-0 footer__flexbox">
+            <p class="m-0 text-white">{{site.copyright_text}}</p>
+            <p class="m-0"><a class="anchor_links" href="/privacy-policy">Privacy Policy</a>
+                <a class="anchor_links" href="/terms-and-conditions">| Terms of Use</a>
+            </p>
+        </div>
+    </div>
+</div>
+</div>

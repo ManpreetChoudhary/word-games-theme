@@ -15,7 +15,7 @@ let prefixValue = params.get('prefix')
 let containsValue = params.get('contains')
 let suffixValue = params.get('suffix')
 let lengthValue = params.get('length')
-let dictonary = params.get('dictonary')
+let dictonary = params.get('dictionary')
 
 // advanced filter element grabs
 let tick

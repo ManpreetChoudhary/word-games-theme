@@ -87,18 +87,23 @@
                             {% else %}
                             <h3 class="font-weight-bolder">Checkout out these features</h3>
                             <br>
-                            {%- for item in site.pages limit: 10 -%}
-                            {%- if item.tool != "wordfinders" and item.tool != 'wordswithletter' and item.tool != '
-                            word-scramble-help' and item.tool != 'wordfinders' and item.tool != "wordscramblers" and
-                            item.tool
-                            != 'wordunscramblerss' -%}
 
-                            <p class="mb-3"> <a class="featureLink" style="font-size: 13px"
-                                    href="/{{item.permalink }}">{{item.permalink
-                                    |
-                                    capitalize |
-                                    replace: '-', ' '
-                                    }}</a></p>
+                            {% assign tools = site.pages | where_exp:"item","item.tool" %}
+                            {% assign allRandomUrls = "" | split: ',' %}
+                            {%- for item in tools -%}
+                            {%- if item.lang=="en" -%}
+                            {% assign allRandomUrls = allRandomUrls | push: item.url %}
+                            {%- endif -%}
+                            {%- endfor -%}
+
+                            {%- for url in allRandomUrls limit: 10-%}
+                            {% if url %}
+                            <p class="mb-3">
+                                <a class="featureLink" style="font-size: 13px" href="{{url }}">
+                                    {%- assign name = url | replace: '/', ' ' | replace: '-', ' ' -%}
+                                    {{ name }}
+                                </a>
+                            </p>
                             {%- endif -%}
                             {%- endfor -%}
                             {%- endif -%}
@@ -107,7 +112,7 @@
                     </div>
                 </div>
                 <div class="col-md-12">
-                    {%- if page.categories or page.tags-%}
+                    {%- if page.categories.size> 0 or page.tags.size>0-%}
                     {%- include section/related_categories_post.html -%}
                     {%- else -%}
                     {%- include section/recent_posts.html -%}

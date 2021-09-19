@@ -1,0 +1,62 @@
+{
+    "letter": "react",
+    "x": 5,
+    "h1": "5 letters words created using letters react",
+    "h2": "Find Possible combinations of words with letters react",
+    "title": "Words with letters react | Find all the words with these letters",
+    "meta": "Searching for words with letters react for games like word with friends or scrabble? Don't worry ,we have provided all the possible combinations for you.",
+    "wordLength": "5 letter words with letters made by words with letters  r,e,a,c,t",
+    "words": [
+        [
+            {
+                "word": "caret",
+                "points": 7,
+                "i": 5,
+                "scrabble": "<b>caret</b> is a valid word in scrabble. As per TWL06 dictionary it has 7 points, and as per SOWPODS dictionary it has 7 points.",
+                "wordswithfriend": "caret is a valid word in words with friends. As per Words with Friends dictionary it has 8 points."
+            },
+            {
+                "word": "carte",
+                "points": 7,
+                "i": 5,
+                "scrabble": "carte is a valid word in scrabble. As per TWL06 dictionary it has 7 points, and as per SOWPODS dictionary it has 7 points.",
+                "wordswithfriend": "carte is a valid word in words with friends. As per Words with Friends dictionary it has 8 points."
+            },
+            {
+                "word": "cater",
+                "points": 7,
+                "i": 5,
+                "scrabble": "cater is a valid word in scrabble. As per TWL06 dictionary it has 7 points, and as per SOWPODS dictionary it has 7 points.",
+                "wordswithfriend": "cater is a valid word in words with friends. As per Words with Friends dictionary it has 8 points."
+            },
+            {
+                "word": "crate",
+                "points": 7,
+                "i": 5,
+                "scrabble": "crate is a valid word in scrabble. As per TWL06 dictionary it has 7 points, and as per SOWPODS dictionary it has 7 points.",
+                "wordswithfriend": "crate is a valid word in words with friends. As per Words with Friends dictionary it has 8 points."
+            },
+            {
+                "word": "react",
+                "points": 7,
+                "i": 5,
+                "scrabble": "react is a valid word in scrabble. As per TWL06 dictionary it has 7 points, and as per SOWPODS dictionary it has 7 points.",
+                "wordswithfriend": "react is a valid word in words with friends. As per Words with Friends dictionary it has 8 points."
+            },
+            {
+                "word": "recta",
+                "points": 7,
+                "i": 5,
+                "scrabble": "recta is a valid word in scrabble. As per TWL06 dictionary it has 7 points, and as per SOWPODS dictionary it has 7 points.",
+                "wordswithfriend": "recta is a valid word in words with friends. As per Words with Friends dictionary it has 8 points."
+            },
+            {
+                "word": "trace",
+                "points": 7,
+                "i": 5,
+                "scrabble": "trace is a valid word in scrabble. As per TWL06 dictionary it has 7 points, and as per SOWPODS dictionary it has 7 points.",
+                "wordswithfriend": "trace is a valid word in words with friends. As per Words with Friends dictionary it has 8 points."
+            }
+        ]
+    ]
+}

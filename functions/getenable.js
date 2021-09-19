@@ -2,16 +2,16 @@ const enable = require('./Dictonary/enable.js')
 
 // const scrabble = require('scrabble')
 
-// let userWordLength = 6
-// let userword = 'python'
-// let obj = enable.filter((item) => item.length == userWordLength)
+let userWordLength = 6
+let userword = 'python'
+let obj = enable.filter((item) => item.length == userWordLength)
 
-// obj.map((item) => {
-//   let tr = scrabble(item)
-//   if (item.includes(tr)) {
-//     console.log(item)
-//   }
-// })
+obj.map((item) => {
+  let tr = scrabble(item)
+  if (item.includes(tr)) {
+    console.log(item)
+  }
+})
 
 // ob((elem) => {
 //   if (obj.indexOf(userword) > -1) {

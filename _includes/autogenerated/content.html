@@ -1,0 +1,105 @@
+{% assign file = page.fileName %}
+{% assign lang = page.lang %}
+{% assign dataToShow = site.data.[page.folderName][lang][file] %}
+
+<div class="container-fluid mx-0 article auto-gen-content">
+    <div class="row mx-auto-0">
+        <div class="col-md-8 mx-auto">
+            <div class="pageHeading text-left mb-5">
+                <h1 class="content-heading pb-0 m-0">
+                    {{dataToShow.h1}}</h1>
+                {%- if dataToShow.h2 -%}
+                <h2>
+                    {{dataToShow.h2}}</h2>
+                {%- endif -%}
+            </div>
+            <div id="toc_container table-of-content">
+                <ul class="toc_list px-4 pt-5 pb-4">
+                    <h2 class=" text-left" style="font-weight: 900;">Table of contents</h2>
+                    <li class="tabledata mt-4" style="list-style: none">
+                        <a class="sameStyle" href="#" style="font-size: 15px; font-weight: 600;">
+                            {{dataToShow.letter | capitalize }}
+                        </a>
+                        <ul>
+                            {%- for letter in dataToShow.words-%}
+                            {%- for item in letter -%}
+                            <li class="tabledata">
+                                <a class="sameStyle" href="#{{item.word}}">
+                                    {{item.word | capitalize }}
+                                </a>
+                            </li>
+                            {%- endfor -%}
+                            {%- endfor -%}
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="subHeading" style="margin: 50px 0;">
+                {%- if site.name == "wordswithletters" -%}
+                <h1 class="content_sub_heading pb-0 m-0">
+                    Using our {{dataToShow.x}} letter words with letters , you can find following high
+                    scoring words
+                    using
+                    {{dataToShow.letter | capitalize }}
+                </h1>
+                {%- endif -%}
+                {%- if site.name == "wordfinders" -%}
+                <h1 class="content_sub_heading pb-0 m-0">
+                    Using our {{dataToShow.x}} letter Word Finder you can find the following high scoring words with
+                    given letters
+                    {{dataToShow.letter | capitalize }}
+                </h1>
+                {%- endif -%}
+                {%- if site.name == "wordscramblers" -%}
+                <h1 class="content_sub_heading pb-0 m-0">
+
+                    All possible high scoring words from scrambled letters {{dataToShow.letter | capitalize }} which you
+                    can find
+                    using our
+                    unscramble {{dataToShow.x}}
+                    letter tool are as following
+                </h1>
+                {%- endif -%}
+                {%- if site.name == "wordunscramblerss" -%}
+                <h1 class="content_sub_heading pb-0 m-0">
+                    Following are the high scoring unscrambled words with the letters {{dataToShow.letter | capitalize}}
+                    which you
+                    can find using
+                    our {{dataToShow.x}}
+                    letter word scramble
+                </h1>
+                {%- endif -%}
+            </div>
+
+            <div class="listofwords">
+                {%- for letter in dataToShow.words-%}
+                {%- for item in letter -%}
+                <div class="wordsdata" id="{{item.word}}">
+                    <a>
+                        <h2 class="word-heading">
+                            {{forloop.index}}.
+                            {{dataToShow.wordLength }}
+                        </h2>
+                    </a>
+                    <ul class="word-details">
+                        <a>
+                            <h2 class="word-title">
+                                {{item.word | capitalize }}
+                            </h2>
+                        </a>
+                        <li class="wordsDetails">
+                            {{item.scrabble}}
+                        </li>
+                        <li class="wordsDetails">{{item.wordswithfriend}}</li>
+                    </ul>
+                </div>
+                {%- endfor -%}
+                {%- endfor -%}
+            </div>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="../../assets/css/content.css">

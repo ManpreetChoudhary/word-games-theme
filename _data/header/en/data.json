@@ -1,6 +1,14 @@
 {
   "more": [
     {
+      "name": "words",
+      "url": "/test"
+    },
+    {
+      "name": "unscramble-letters",
+      "url": "/unscramble-letters-to-make-words"
+    },
+    {
       "name": "Anagram word finder",
       "url": "/anagram-word-finder"
     },

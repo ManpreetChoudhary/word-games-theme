@@ -43,8 +43,6 @@ txtBox.addEventListener('keyup', (e) => {
     e.target.value = e.target.value.replace(/ /g, '?')
     let data = []
     data = e.target.value.split('').filter((i) => i === '?')
-    console.log(e.target.value.split(''))
-    console.log(data)
     if (data.length > rangeOfBlankTile) {
       e.target.value = e.target.value.replace(/\?$/, '')
     }

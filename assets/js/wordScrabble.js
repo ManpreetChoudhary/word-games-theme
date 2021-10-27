@@ -77,12 +77,13 @@ const getDiff = (text1, text2) => {
 // getWords define...
 const getData = async (serachValue) => {
   try {
+    let selectedDictionary = document.querySelector('.select_dropDown2').value
     main.innerHTML = `<div class="loader">
     <img src='/assets/images/loading.gif'>
     </div>`
     /// loader
     const response = await fetch(
-      `http://localhost:9000/getWords?name=${serachValue}`
+      `/.netlify/functions/getWords?name=${serachValue}&selecteddictionary=${selectedDictionary}`
     )
     const data = await response.json()
     main.innerHTML = ''

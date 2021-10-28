@@ -34,19 +34,18 @@ var sortBool = false
 
 let txtBox = document.querySelector('.txtBox')
 txtBox.value = serachValue
-txtBox.addEventListener('keyup', (e) => {
-  if (e.keyCode === 32 || e.keyCode === 191) {
-    let rangeOfBlankTile = script.dataset.range
-    if (rangeOfBlankTile === null) {
-      rangeOfBlankTile = 10
-    }
-    e.target.value = e.target.value.replace(/ /g, '?')
-    let data = []
-    data = e.target.value.split('').filter((i) => i === '?')
-    if (data.length > rangeOfBlankTile) {
-      e.target.value = e.target.value.replace(/\?$/, '')
-    }
+txtBox.addEventListener('input', (e) => {
+  let rangeOfBlankTile = '{{ page.blanktitlerange }}'
+  if (rangeOfBlankTile === null) {
+    rangeOfBlankTile = 10
   }
+  e.target.value = e.target.value.replace(/ /g, '?')
+  let data = []
+  data = e.target.value.split('').filter((i) => i === '?')
+  if (data.length > rangeOfBlankTile) {
+    e.target.value = e.target.value.replace(/\?$/, '')
+  }
+  e.target.value = e.target.value.replace(/[0-9]/g, '')
 })
 var theSelect = document.getElementById('select_dropDown')
 document.querySelector('.select_dropDown2').value = dictonary

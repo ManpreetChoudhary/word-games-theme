@@ -43,24 +43,19 @@
     <script>
         let txtBox = document.querySelector('.txtBox')
         txtBox.addEventListener('input', (e) => {
-            alert(e.which)
-        })
-        txtBox.addEventListener('keyup touchend', (e) => {
-            alert(e)
-            if (e.keyCode === 32 || e.keyCode === 191) {
-                let rangeOfBlankTile = '{{ page.blanktitlerange }}'
-                console.log(rangeOfBlankTile)
-                if (rangeOfBlankTile === null) {
-                    rangeOfBlankTile = 10
-                }
-                e.target.value = e.target.value.replace(/ /g, '?')
-                let data = []
-                data = e.target.value.split('').filter((i) => i === '?')
-                if (data.length > rangeOfBlankTile) {
-                    e.target.value = e.target.value.replace(/\?$/, '')
-                }
+            e.target.value = e.target.value.replace(/[^a-zA-Z? ]/g, "")
+            let rangeOfBlankTile = '{{ page.blanktitlerange }}'
+            if (rangeOfBlankTile === null) {
+                rangeOfBlankTile = 10
+            }
+            e.target.value = e.target.value.replace(/ /g, '?')
+            let data = []
+            data = e.target.value.split('').filter((i) => i === '?')
+            if (data.length > rangeOfBlankTile) {
+                e.target.value = e.target.value.replace(/\?$/, '')
             }
         })
+
     </script>
 </body>
 

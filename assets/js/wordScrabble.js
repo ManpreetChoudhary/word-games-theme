@@ -34,8 +34,9 @@ var sortBool = false
 
 let txtBox = document.querySelector('.txtBox')
 txtBox.value = serachValue
-txtBox.addEventListener('input', (e) => {
-  let rangeOfBlankTile = '{{ page.blanktitlerange }}'
+txtBox.addEventListener('keyup', (e) => {
+  let rangeOfBlankTile = script.dataset.range
+  e.target.value = e.target.value.replace(/[^a-zA-Z? ]/g, '')
   if (rangeOfBlankTile === null) {
     rangeOfBlankTile = 10
   }
@@ -45,7 +46,6 @@ txtBox.addEventListener('input', (e) => {
   if (data.length > rangeOfBlankTile) {
     e.target.value = e.target.value.replace(/\?$/, '')
   }
-  e.target.value = e.target.value.replace(/[0-9]/g, '')
 })
 var theSelect = document.getElementById('select_dropDown')
 document.querySelector('.select_dropDown2').value = dictonary

@@ -42,6 +42,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
     <script>
         let txtBox = document.querySelector('.txtBox')
+        txtBox.addEventListener('input', (e) => {
+            alert(e.which)
+        })
         txtBox.addEventListener('keyup touchend', (e) => {
             alert(e)
             if (e.keyCode === 32 || e.keyCode === 191) {

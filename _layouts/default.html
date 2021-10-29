@@ -44,13 +44,15 @@
         let txtBox = document.querySelector('.txtBox')
         txtBox.addEventListener('input', (e) => {
             e.target.value = e.target.value.replace(/[^a-zA-Z? ]/g, "")
-            let rangeOfBlankTile = '{{ page.blanktitlerange }}'
-            if (rangeOfBlankTile === null) {
-                rangeOfBlankTile = 10
+            let rangeOfBlankTile = '{{ page.blanktilerange }}'
+            if (rangeOfBlankTile === "") {
+                rangeOfBlankTile = 5
             }
             e.target.value = e.target.value.replace(/ /g, '?')
             let data = []
             data = e.target.value.split('').filter((i) => i === '?')
+            console.log(data.length)
+            console.log(rangeOfBlankTile)
             if (data.length > rangeOfBlankTile) {
                 e.target.value = e.target.value.replace(/\?$/, '')
             }

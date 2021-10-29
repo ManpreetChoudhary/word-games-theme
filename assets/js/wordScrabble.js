@@ -11,7 +11,7 @@ let script = document.currentScript
 
 // getqueryUrl from form
 const params = new URLSearchParams(window.location.search)
-let serachValue = params.get('search')
+let serachValue = params.get('search').toLowerCase()
 let prefixValue = params.get('prefix')
 let containsValue = params.get('contains')
 let suffixValue = params.get('suffix')
@@ -34,11 +34,11 @@ var sortBool = false
 
 let txtBox = document.querySelector('.txtBox')
 txtBox.value = serachValue
-txtBox.addEventListener('keyup', (e) => {
+txtBox.addEventListener('input', (e) => {
   let rangeOfBlankTile = script.dataset.range
   e.target.value = e.target.value.replace(/[^a-zA-Z? ]/g, '')
-  if (rangeOfBlankTile === null) {
-    rangeOfBlankTile = 10
+  if (rangeOfBlankTile === '') {
+    rangeOfBlankTile = 5
   }
   e.target.value = e.target.value.replace(/ /g, '?')
   let data = []
@@ -80,7 +80,7 @@ const getData = async (serachValue) => {
     </div>`
     /// loader
     const response = await fetch(
-      `/.netlify/functions/getWords?name=${serachValue}&selecteddictionary=${selectedDictionary}`
+      `http://localhost:9000/getWords?name=${serachValue}&selecteddictionary=${selectedDictionary}`
     )
     const data = await response.json()
     main.innerHTML = ''
@@ -193,7 +193,7 @@ function getWords(data) {
             for (let i = 0; i < item.length; i++) {
               sum += ScrabbleLetterScore[item[i]] || 0 // for unknown characters
             }
-            return `<a class="anchor__style" title="Lookup python in Dictionary" target="_blank" href="/word-meaning?search=${item}">
+            return `<a class="anchor__style" title="Lookup python in Dictionary" target="_blank" href="/word-meaning?search=${item.toLowerCase()}">
             <li>${itemHtml}
           <span class="points" value="${sum}" style="position:relative; top:4px; font-size:12px"> ${sum}</span>
             </li></a>`
@@ -376,7 +376,7 @@ function sortby(sortBool, data) {
               sum += ScrabbleLetterScore[item[i]] || 0 // for unknown characters
             }
 
-            return `<a class="anchor__style" title="Lookup python in Dictionary" target="_blank" href="/word-meaning?search=${item}">
+            return `<a class="anchor__style" title="Lookup python in Dictionary" target="_blank" href="/word-meaning?search=${item.toLowerCase()}">
             <li>${itemHtml}
         <span class="points" value="${sum}" style="position:relative; top:4px; font-size:12px"> ${sum}</span>
           </li></a>`
@@ -439,7 +439,7 @@ function sortby(sortBool, data) {
               sum += ScrabbleLetterScore[item[i]] || 0 // for unknown characters
             }
 
-            return `<a class="anchor__style" title="Lookup python in Dictionary" target="_blank" href="/word-meaning?search=${item}">
+            return `<a class="anchor__style" title="Lookup python in Dictionary" target="_blank" href="/word-meaning?search=${item.toLowerCase()}">
             <li>${itemHtml}
         <span class="points" value="${sum}" style="position:relative; top:4px; font-size:12px"> ${sum}</span>
           </li></a>`

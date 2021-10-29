@@ -1,4 +1,4 @@
-/* styling........ */
+styling........
 * {
   margin: 0;
   padding: 0;
@@ -391,4 +391,8 @@ header {
 }
 .social-icon:hover {
   color: black;
+}
+
+.highlight{
+  color: #ff0000 !important;
 }

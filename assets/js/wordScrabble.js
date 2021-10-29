@@ -7,6 +7,7 @@ let form = document.querySelector('#form')
 let wordCount = document.querySelector('.wordCount')
 let main = document.querySelector('.main')
 let errorMsg = document.querySelector('.errorMsg')
+let script = document.currentScript
 
 // getqueryUrl from form
 const params = new URLSearchParams(window.location.search)
@@ -33,19 +34,53 @@ var sortBool = false
 
 let txtBox = document.querySelector('.txtBox')
 txtBox.value = serachValue
-
+txtBox.addEventListener('keyup', (e) => {
+  let rangeOfBlankTile = script.dataset.range
+  e.target.value = e.target.value.replace(/[^a-zA-Z? ]/g, '')
+  if (rangeOfBlankTile === null) {
+    rangeOfBlankTile = 10
+  }
+  e.target.value = e.target.value.replace(/ /g, '?')
+  let data = []
+  data = e.target.value.split('').filter((i) => i === '?')
+  if (data.length > rangeOfBlankTile) {
+    e.target.value = e.target.value.replace(/\?$/, '')
+  }
+})
 var theSelect = document.getElementById('select_dropDown')
 document.querySelector('.select_dropDown2').value = dictonary
+const getDiff = (text1, text2) => {
+  var diffRange = []
+  var currentRange = undefined
+  for (var i = 0; i < text1.length; i++) {
+    if (text1[i] != text2[i]) {
+      if (currentRange == undefined) {
+        currentRange = [i]
+      }
+    }
+    if (currentRange != undefined && text1[i] == text2[i]) {
+      currentRange.push(i)
+      diffRange.push(currentRange)
+      currentRange = undefined
+    }
+  }
+  if (currentRange != undefined) {
+    currentRange.push(i)
+    diffRange.push(currentRange)
+  }
+  return diffRange
+}
 
 // getWords define...
 const getData = async (serachValue) => {
   try {
+    let selectedDictionary = document.querySelector('.select_dropDown2').value
     main.innerHTML = `<div class="loader">
     <img src='/assets/images/loading.gif'>
     </div>`
     /// loader
     const response = await fetch(
-      `/.netlify/functions/getWords?name=${serachValue}`
+      `/.netlify/functions/getWords?name=${serachValue}&selecteddictionary=${selectedDictionary}`
     )
     const data = await response.json()
     main.innerHTML = ''
@@ -123,8 +158,31 @@ function getWords(data) {
         main.innerHTML += ''
       } else {
         newWordsLength += newdata.length
-
         const result = newdata.map((item) => {
+          var text1 = serachValue.replace('?', '')
+          var text2 = item
+          var text3 = item
+          let chars = text1.split('')
+          let indexs = []
+          chars.map((i) => {
+            let findIndexes = findIndex(text3, i)
+            if (findIndexes.length > 0) {
+              text3 = text3.split('')
+              text3[findIndexes] = '$'
+              text3 = text3.join('')
+              indexs = [...indexs, ...findIndexes]
+            }
+          })
+          let itemHtml = ''
+          text2.split('').map((itemValue, index) => {
+            let check = indexs.find((i) => i === index)
+            if (check !== undefined) {
+              itemHtml += `${itemValue}`
+            } else {
+              itemHtml += `<span class='highlight'>${itemValue}</span>`
+            }
+          })
+
           if (item.length === 1) {
             ok = false
             newWordsLength = newWordsLength - 1
@@ -136,7 +194,7 @@ function getWords(data) {
               sum += ScrabbleLetterScore[item[i]] || 0 // for unknown characters
             }
             return `<a class="anchor__style" title="Lookup python in Dictionary" target="_blank" href="/word-meaning?search=${item}">
-            <li>${item}
+            <li>${itemHtml}
           <span class="points" value="${sum}" style="position:relative; top:4px; font-size:12px"> ${sum}</span>
             </li></a>`
           }
@@ -149,7 +207,6 @@ function getWords(data) {
           `
           let tabs = document.getElementsByClassName('tab_link')
           tabs[0] ? tabs[0].classList.add('active-tab') : ''
-
           main.innerHTML += `
           <div class="allGroupWords wordlistContainer" id="alpha_${i}">
               <div class="wordListHeading">
@@ -213,8 +270,42 @@ function sortPointsby(sortValue, data) {
         })
 
         const result = newArray.map((item) => {
+          var text1 = serachValue.replace('?', '')
+          var text2 = item.words
+          var text3 = item.words
+          function findIndex(str, char) {
+            const strLength = str.length
+            const indexes = []
+            let newStr = str
+            while (newStr && newStr.indexOf(char) > -1) {
+              indexes.push(newStr.indexOf(char) + strLength - newStr.length)
+              newStr = newStr.substring(newStr.indexOf(char) + 1)
+              newStr = newStr.substring(newStr.indexOf(char) + 1)
+            }
+            return indexes
+          }
+          let chars = text1.split('')
+          let indexs = []
+          chars.map((i) => {
+            let findIndexes = findIndex(text3, i)
+            if (findIndexes.length > 0) {
+              text3 = text3.split('')
+              text3[findIndexes] = '$'
+              text3 = text3.join('')
+              indexs = [...indexs, ...findIndexes]
+            }
+          })
+          let itemHtml = ''
+          text2.split('').map((itemValue, index) => {
+            let check = indexs.find((i) => i === index)
+            if (check !== undefined) {
+              itemHtml += `${itemValue}`
+            } else {
+              itemHtml += `<span class='highlight'>${itemValue}</span>`
+            }
+          })
           return `<a class="anchor__style" title="Lookup python in Dictionary" target="_blank" href="/word-meaning?search=${item.words}">
-          <li>${item.words}
+          <li>${itemHtml}
         <span class="points" value="${item.points}" style="position:relative; top:4px; font-size:12px"> ${item.points}</span>
           </li></a>`
         })
@@ -251,6 +342,29 @@ function sortby(sortBool, data) {
         newWordsLength += newdata.length
 
         const result = newdata.map((item) => {
+          var text1 = serachValue.replace('?', '')
+          var text2 = item
+          var text3 = item
+          let chars = text1.split('')
+          let indexs = []
+          chars.map((i) => {
+            let findIndexes = findIndex(text3, i)
+            if (findIndexes.length > 0) {
+              text3 = text3.split('')
+              text3[findIndexes] = '$'
+              text3 = text3.join('')
+              indexs = [...indexs, ...findIndexes]
+            }
+          })
+          let itemHtml = ''
+          text2.split('').map((itemValue, index) => {
+            let check = indexs.find((i) => i === index)
+            if (check !== undefined) {
+              itemHtml += `${itemValue}`
+            } else {
+              itemHtml += `<span class='highlight'>${itemValue}</span>`
+            }
+          })
           if (item.length === 1) {
             ok = false
             newWordsLength = newWordsLength - 1
@@ -263,7 +377,7 @@ function sortby(sortBool, data) {
             }
 
             return `<a class="anchor__style" title="Lookup python in Dictionary" target="_blank" href="/word-meaning?search=${item}">
-            <li>${item}
+            <li>${itemHtml}
         <span class="points" value="${sum}" style="position:relative; top:4px; font-size:12px"> ${sum}</span>
           </li></a>`
           }
@@ -292,6 +406,29 @@ function sortby(sortBool, data) {
         main.innerHTML += ''
       } else {
         const result = newdata.map((item) => {
+          var text1 = serachValue.replace('?', '')
+          var text2 = item
+          var text3 = item
+          let chars = text1.split('')
+          let indexs = []
+          chars.map((i) => {
+            let findIndexes = findIndex(text3, i)
+            if (findIndexes.length > 0) {
+              text3 = text3.split('')
+              text3[findIndexes] = '$'
+              text3 = text3.join('')
+              indexs = [...indexs, ...findIndexes]
+            }
+          })
+          let itemHtml = ''
+          text2.split('').map((itemValue, index) => {
+            let check = indexs.find((i) => i === index)
+            if (check !== undefined) {
+              itemHtml += `${itemValue}`
+            } else {
+              itemHtml += `<span class='highlight'>${itemValue}</span>`
+            }
+          })
           if (item.length === 1) {
             ok = false
           } else {
@@ -303,7 +440,7 @@ function sortby(sortBool, data) {
             }
 
             return `<a class="anchor__style" title="Lookup python in Dictionary" target="_blank" href="/word-meaning?search=${item}">
-            <li>${item}
+            <li>${itemHtml}
         <span class="points" value="${sum}" style="position:relative; top:4px; font-size:12px"> ${sum}</span>
           </li></a>`
           }
@@ -508,4 +645,17 @@ function scroll_Left() {
 }
 function scroll_Right() {
   tab_container.scrollLeft -= 130
+}
+function findIndex(str, char) {
+  const strLength = str.length
+  const indexes = []
+  let newStr = str
+
+  while (newStr && newStr.indexOf(char) > -1) {
+    indexes.push(newStr.indexOf(char) + strLength - newStr.length)
+    newStr = newStr.substring(newStr.indexOf(char) + 1)
+    newStr = newStr.substring(newStr.indexOf(char) + 1)
+  }
+
+  return indexes
 }

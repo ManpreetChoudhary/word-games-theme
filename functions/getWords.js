@@ -1,11 +1,58 @@
 const axios = require('axios')
 const scrabble = require('scrabble')
-
+const twl06 = require('./Dictonary/twl06.js')
+const sowpods = require('./Dictonary/sowpods.js')
+const words = require('./Dictonary/scrabbleword.js')
+const enable = require('./Dictonary/enable.js')
 exports.handler = function (event, context, callback) {
-  // your server-side functionality
-  request_data = event['queryStringParameters']
-  name = request_data['name']
-  const data = scrabble(name)
+  let resultArr = []
+  let request_data = event['queryStringParameters']
+  let name = request_data['name']
+  let selectedDictionary = request_data['selecteddictionary']
+  let dictionaryData = []
+  if (selectedDictionary === 'Dictionary') {
+    dictionaryData = [...words]
+    resultArr = words
+  } else if (selectedDictionary === 'sowpods') {
+    dictionaryData = [...sowpods]
+    resultArr = sowpods
+  } else if (selectedDictionary === 'twl06') {
+    dictionaryData = [...twl06]
+    resultArr = twl06
+  } else {
+    dictionaryData = [...enable]
+    resultArr = enable
+  }
+
+  let data = []
+  if (name.includes('?')) {
+    const searchWord = (word) => {
+      let wordValue = word.split('')
+      dictionaryData.map((i, index) => {
+        let check = true
+        for (let k = 0; k < wordValue.length; k++) {
+          if (i.includes(wordValue[k])) {
+            check = true
+            dictionaryData[index] = i.split('')
+            let findIndex = i.indexOf(wordValue[k])
+            dictionaryData[index][findIndex] = '$'
+            dictionaryData[index] = dictionaryData[index].join('')
+            i = dictionaryData[index]
+          } else {
+            check = false
+            break
+          }
+        }
+        if (check === true) {
+          data.push(resultArr[index])
+        }
+      })
+    }
+    searchWord(name.replace(/\?/g, ''))
+    data = [...new Set(data)]
+  } else {
+    data = scrabble(name)
+  }
   const send = (body) => {
     callback(null, {
       statusCode: 200,

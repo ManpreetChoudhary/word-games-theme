@@ -41,6 +41,8 @@
     {%- endunless -%}
     {{ page.title}}</title>
 
+
+
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
@@ -104,6 +106,7 @@
   {%- include Rating/structureddata.html -%}
   {%- endif -%}
   </script>
+  {% include Monumetric/Monumetric.html %}
   {% include adsense/adsense.html %}
   {%- include google-analytics.html -%}
 </head>

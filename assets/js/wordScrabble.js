@@ -80,7 +80,7 @@ const getData = async (serachValue) => {
     </div>`
     /// loader
     const response = await fetch(
-      `http://localhost:9000/getWords?name=${serachValue}&selecteddictionary=${selectedDictionary}`
+      `/.netlify/functions/getWords?name=${serachValue}&selecteddictionary=${selectedDictionary}`
     )
     const data = await response.json()
     main.innerHTML = ''

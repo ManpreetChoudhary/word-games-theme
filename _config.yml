@@ -23,7 +23,6 @@ paginate_path: '/blog/page:num/'
 keyboard: "Scrabble,Unscrabbler, Words with letters"
 MonumetricID: //monu.delivery/site/d/0/6481fa-881e-4a2e-8a0a-35fdd10adea3.js
 production_google_analytics: 'Your_GA_ID'
-development_google_analytics: 'Your_GA_ID'
 sass:
   sass_dir: _sass
   style: compressed

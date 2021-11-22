@@ -128,12 +128,10 @@
     </section>
     {%- include section/count.html -%}
     {%- include section/alertbar.html -%}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" />
     {% include script.html %}
     <script src="{{ '/assets/js/TopScroll.js' | relative_url }}"></script>
-
-    window.onload = function(){
     {% include Monumetric/Monumetric.html %}
-    };
 </body>
 
 </html>

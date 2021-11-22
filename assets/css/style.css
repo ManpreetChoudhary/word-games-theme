@@ -1,4 +1,4 @@
-styling........
+/* styling........ */
 * {
   margin: 0;
   padding: 0;
@@ -393,6 +393,6 @@ header {
   color: black;
 }
 
-.highlight{
+.highlight {
   color: #ff0000 !important;
 }

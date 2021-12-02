@@ -24,7 +24,8 @@
                 <div class="col-lg-4 col-md-6 mb-4 card-group">
                     <div class="card h-100">
                         <a href="{{ post.url }}">
-                            <img src="{{ post.image }}" loading="lazy"  height="215px" width="100%" class="card-img-top" alt="">
+                            <img src="{{ post.image }}" loading="lazy" height="215px" width="100%" class="card-img-top"
+                                alt="">
                         </a>
                         <div class="card-body">
                             <a href="{{ post.url }}" class="anchor_link">
@@ -46,7 +47,8 @@
                                     </span><br>
                                     <span class="post-date">{{post.date | date_to_string }}</span>
                                 </span>
-                                <span class="post-read-more "><a class="text-dark" href="{{ post.url }}" title="Read Story">Read More</a></span>
+                                <span class="post-read-more "><a class="text-dark" href="{{ post.url }}"
+                                        title="Read Story">Read More</a></span>
                             </div>
                         </div>
                     </div>
@@ -60,8 +62,10 @@
     </section>
     {%- include section/alertbar.html -%}
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" />
     {% include script.html %}
     <script src="{{ '/assets/js/TopScroll.js' | relative_url }}"></script>
+    {% include Monumetric/Monumetric.html %}
 </body>
 
 </html>

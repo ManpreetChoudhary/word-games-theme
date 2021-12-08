@@ -74,18 +74,18 @@
          {%- for item in dataToShow.faqList-%}
          {%- if forloop.last == true -%}
          {"@type": "Question",
-         "name": "{{item.Question}}",
+         "name": "{{item.Question | replace:'"', "'"}}",
          "acceptedAnswer": {
            "@type": "Answer",
-           "text": "{{item.Answer}}"
+           "text": "{{item.Answer | replace:'"', "'"}}"
          }
        }
          {%- else -%}
          {"@type": "Question",
-         "name": "{{item.Question}}",
+         "name": "{{item.Question | replace:'"', "'"}}",
          "acceptedAnswer": {
            "@type": "Answer",
-           "text": "{{item.Answer}}"
+           "text": "{{item.Answer | replace:'"', "'"}}"
          }
        },
        {%- endif -%}

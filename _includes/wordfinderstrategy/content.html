@@ -1,0 +1,160 @@
+{% assign file = page.fileName %}
+{% assign lang = page.lang %}
+{% assign dataToShow = site.data.[page.folderName][lang][file] %}
+
+<div class="container-fluid mx-0 auto-gen-content" style="margin-top: 100px;">
+    <div class="row mx-auto-0">
+        <div class="col-md-8 mx-auto">
+            <div class="pageHeading text-left mb-5">
+                <h1 class="content-heading pb-0 m-0">
+                    {{dataToShow.h1}}</h1>
+                {%- if dataToShow.h2 -%}
+                <h2>
+                    {{dataToShow.h2}}</h2>
+                {%- endif -%}
+            </div>
+            <div id="toc_container table-of-content">
+                <ul class="toc_list px-4 pt-5 pb-4">
+                    <h2 class=" text-left" style="font-weight: 900;">Table of contents</h2>
+                    <li class="tabledata mt-4" style="list-style: none">
+                        <ul>
+                            {%- for data in dataToShow.tableofcontent-%}
+                            {%- for item in data -%}
+                            <li class="tabledata">
+                                <a class="sameStyle" href="#{{item}}">
+                                    {{item | capitalize }}
+                                </a>
+                            </li>
+                            {%- endfor -%}
+                            {%- endfor -%}
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="subHeading template-heading" style="margin: 50px 0;">
+                {%- if site.name == "wordswithletters" -%}
+                <h1 class="content_sub_heading pb-0 m-0">
+                    Using our {{dataToShow.x}} letter word finder you can create high scoring {{dataToShow.x}} letter
+                    words in
+                    scrabble/word with friends as follows.
+                </h1>
+                {%- endif -%}
+                {%- if site.name == "wordfinders" -%}
+                <h1 class="content_sub_heading pb-0 m-0">
+                    Using our {{dataToShow.x}} letter word finder you can create high scoring {{dataToShow.x}} letter
+                    words in
+                    scrabble/word with friends as follows.
+                </h1>
+                {%- endif -%}
+                {%- if site.name == "wordscramblers" -%}
+                <h1 class="content_sub_heading pb-0 m-0">
+                    Using our {{dataToShow.x}} letter word finder you can create high scoring {{dataToShow.x}} letter
+                    words in
+                    scrabble/word with friends as follows.
+                </h1>
+                {%- endif -%}
+                {%- if site.name == "wordunscramblerss" -%}
+                <h1 class="content_sub_heading pb-0 m-0">
+                    Using our {{dataToShow.x}} letter word finder you can create high scoring {{dataToShow.x}} letter
+                    words in
+                    scrabble/word with friends as follows.
+                </h1>
+                {%- endif -%}
+            </div>
+
+            <div class="listofletters">
+                {%- for data in dataToShow.words-%}
+                <div class="list of letters" style="padding-bottom:50px" id="{{data.letter}}">
+                    <span style="font-size: 20px;">
+                        <strong>
+                            {{data.letter | capitalize }}
+                        </strong> </span>
+                    <br>
+
+                    <div class="allletters" style="word-wrap: break-word;">
+                        {%- for item in data.highestPoints -%}
+                        <span class="pr-2" style="font-size: 13px;">{{item.letters}},</span>
+                        {%- endfor -%}
+                    </div>
+
+
+                    {%- for item in data.highestPoints -%}
+                    {%- if {{forloop.first}} -%}
+                    {%- assign Hletter = item.letters -%}
+                    {%- assign Hlowerpointscrablle = item.scrablepoints -%}
+                    {%- assign Hlowerpointwwf = item.wwfpoints -%}
+                    {%- endif -%}
+                    {%- endfor -%}
+
+                    {%- for item in data.lowesPoints -%}
+                    {%- if {{forloop.first}} -%}
+                    {%- assign lowerletter = item.letters -%}
+                    {%- assign lowerpointscrablle = item.scrablepoints -%}
+                    {%- assign lowerpointwwf = item.wwfpoints -%}
+                    {%- endif -%}
+                    {%- endfor -%}
+
+
+                    <p style="color:#000; font-size:15px; margin-top:10px; margin-bottom: 0;">
+                        If you get letters <b>{{data.letter}}</b>, you can use our {{data.x}} letter word finder to
+                        create word
+                        <b> {{Hletter}}</b>
+                        which has <b>{{Hlowerpointscrablle}}</b> points in scrabble. One can also create
+                        <b>{{lowerletter}}</b>
+                        with
+                        these
+                        letters
+                        which would have
+                        fetched <b>{{lowerpointscrablle}}</b> points, but would have been a wrong choice, as it would
+                        have led
+                        to a
+                        lower score.
+                        Similarly you can use our {{data.x}} letter word finder to create word <b>{{Hletter}}</b> which
+                        has <b>{{Hlowerpointwwf}}</b>
+                        points in
+                        words
+                        with friends and word <b>{{lowerletter}}</b> which has <b>{{lowerpointwwf}}</b> points
+                    </p>
+
+
+                    <br>
+                    <strong style="font-size: 15px;">
+                        Summary
+                    </strong>
+                    {%- for item in data.highestPoints -%}
+                    {%- if {{forloop.first}} -%}
+                    <table class="table table-bordered" style="font-size: 14px;">
+                        <tr>
+                            <th>
+                                letter
+                            </th>
+                            <th>
+                                Highest score in scrabble
+                            </th>
+                            <th>
+                                Highest score in words with friends.
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                {{data.letter | capitalize }}
+                            </td>
+                            <td>{{item.letters }} - {{item.scrablepoints}}</td>
+                            <td>{{item.letters }} - {{item.wwfpoints}}</td>
+                        </tr>
+                    </table>
+                    {%- endif -%}
+                    {%- endfor -%}
+
+                </div>
+                {%- endfor -%}
+            </div>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="../../assets/css/content.css">
+
+
+    {%- include Rating/rating.html -%}

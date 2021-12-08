@@ -1,0 +1,1336 @@
+{
+    "x": "5",
+    "h1": "How to use 5 letter word finder to score high in scrabble/words with friends ?",
+    "h2": "",
+    "title": "How to use 5 letter word finder to score high in scrabble/words with friends ?",
+    "meta": "Looking for a tool that can get all highest scoring scrabble words from given letters? Don't worry our online free Word finder tool is here for help.",
+    "tableofcontent": [
+        "mercury",
+        "imagine",
+        "florida",
+        "student",
+        "initial",
+        "mystery",
+        "natural",
+        "kingdom",
+        "captain",
+        "healthy",
+        "library",
+        "message",
+        "magical",
+        "failure",
+        "forward"
+    ],
+    "words": [
+        {
+            "x": 5,
+            "letter": "mercury",
+            "highestPoints": [
+                {
+                    "letters": "mercy",
+                    "scrablepoints": 12,
+                    "wwfpoints": 13
+                },
+                {
+                    "letters": "curry",
+                    "scrablepoints": 10,
+                    "wwfpoints": 11
+                },
+                {
+                    "letters": "murry",
+                    "scrablepoints": 10,
+                    "wwfpoints": 11
+                },
+                {
+                    "letters": "merry",
+                    "scrablepoints": 10,
+                    "wwfpoints": 10
+                },
+                {
+                    "letters": "curer",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "murre",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "recur",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                }
+            ],
+            "lowesPoints": [
+                {
+                    "letters": "curer",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "murre",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "recur",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "merry",
+                    "scrablepoints": 10,
+                    "wwfpoints": 10
+                },
+                {
+                    "letters": "curry",
+                    "scrablepoints": 10,
+                    "wwfpoints": 11
+                },
+                {
+                    "letters": "murry",
+                    "scrablepoints": 10,
+                    "wwfpoints": 11
+                },
+                {
+                    "letters": "mercy",
+                    "scrablepoints": 12,
+                    "wwfpoints": 13
+                }
+            ]
+        },
+        {
+            "x": 5,
+            "letter": "imagine",
+            "highestPoints": [
+                {
+                    "letters": "gamin",
+                    "scrablepoints": 8,
+                    "wwfpoints": 11
+                },
+                {
+                    "letters": "mange",
+                    "scrablepoints": 8,
+                    "wwfpoints": 11
+                },
+                {
+                    "letters": "image",
+                    "scrablepoints": 8,
+                    "wwfpoints": 10
+                },
+                {
+                    "letters": "amine",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "anime",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "animi",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "imine",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "minae",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "genii",
+                    "scrablepoints": 6,
+                    "wwfpoints": 8
+                }
+            ],
+            "lowesPoints": [
+                {
+                    "letters": "genii",
+                    "scrablepoints": 6,
+                    "wwfpoints": 8
+                },
+                {
+                    "letters": "amine",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "anime",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "animi",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "imine",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "minae",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "image",
+                    "scrablepoints": 8,
+                    "wwfpoints": 10
+                },
+                {
+                    "letters": "gamin",
+                    "scrablepoints": 8,
+                    "wwfpoints": 11
+                },
+                {
+                    "letters": "mange",
+                    "scrablepoints": 8,
+                    "wwfpoints": 11
+                }
+            ]
+        },
+        {
+            "x": 5,
+            "letter": "florida",
+            "highestPoints": [
+                {
+                    "letters": "filar",
+                    "scrablepoints": 8,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "fiord",
+                    "scrablepoints": 9,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "flair",
+                    "scrablepoints": 8,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "flora",
+                    "scrablepoints": 8,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "folia",
+                    "scrablepoints": 8,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "frail",
+                    "scrablepoints": 8,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "drail",
+                    "scrablepoints": 6,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "laird",
+                    "scrablepoints": 6,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "liard",
+                    "scrablepoints": 6,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "lidar",
+                    "scrablepoints": 6,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "aroid",
+                    "scrablepoints": 6,
+                    "wwfpoints": 6
+                },
+                {
+                    "letters": "radio",
+                    "scrablepoints": 6,
+                    "wwfpoints": 6
+                }
+            ],
+            "lowesPoints": [
+                {
+                    "letters": "aroid",
+                    "scrablepoints": 6,
+                    "wwfpoints": 6
+                },
+                {
+                    "letters": "radio",
+                    "scrablepoints": 6,
+                    "wwfpoints": 6
+                },
+                {
+                    "letters": "drail",
+                    "scrablepoints": 6,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "laird",
+                    "scrablepoints": 6,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "liard",
+                    "scrablepoints": 6,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "lidar",
+                    "scrablepoints": 6,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "filar",
+                    "scrablepoints": 8,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "fiord",
+                    "scrablepoints": 9,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "flair",
+                    "scrablepoints": 8,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "flora",
+                    "scrablepoints": 8,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "folia",
+                    "scrablepoints": 8,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "frail",
+                    "scrablepoints": 8,
+                    "wwfpoints": 9
+                }
+            ]
+        },
+        {
+            "x": 5,
+            "letter": "student",
+            "highestPoints": [
+                {
+                    "letters": "dunes",
+                    "scrablepoints": 6,
+                    "wwfpoints": 8
+                },
+                {
+                    "letters": "dunts",
+                    "scrablepoints": 6,
+                    "wwfpoints": 8
+                },
+                {
+                    "letters": "nudes",
+                    "scrablepoints": 6,
+                    "wwfpoints": 8
+                },
+                {
+                    "letters": "tuned",
+                    "scrablepoints": 6,
+                    "wwfpoints": 8
+                },
+                {
+                    "letters": "dents",
+                    "scrablepoints": 6,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "duets",
+                    "scrablepoints": 6,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "stunt",
+                    "scrablepoints": 5,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "tends",
+                    "scrablepoints": 6,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "tunes",
+                    "scrablepoints": 5,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "unset",
+                    "scrablepoints": 5,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "netts",
+                    "scrablepoints": 5,
+                    "wwfpoints": 6
+                },
+                {
+                    "letters": "stent",
+                    "scrablepoints": 5,
+                    "wwfpoints": 6
+                },
+                {
+                    "letters": "tents",
+                    "scrablepoints": 5,
+                    "wwfpoints": 6
+                }
+            ],
+            "lowesPoints": [
+                {
+                    "letters": "netts",
+                    "scrablepoints": 5,
+                    "wwfpoints": 6
+                },
+                {
+                    "letters": "stent",
+                    "scrablepoints": 5,
+                    "wwfpoints": 6
+                },
+                {
+                    "letters": "tents",
+                    "scrablepoints": 5,
+                    "wwfpoints": 6
+                },
+                {
+                    "letters": "dents",
+                    "scrablepoints": 6,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "duets",
+                    "scrablepoints": 6,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "stunt",
+                    "scrablepoints": 5,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "tends",
+                    "scrablepoints": 6,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "tunes",
+                    "scrablepoints": 5,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "unset",
+                    "scrablepoints": 5,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "dunes",
+                    "scrablepoints": 6,
+                    "wwfpoints": 8
+                },
+                {
+                    "letters": "dunts",
+                    "scrablepoints": 6,
+                    "wwfpoints": 8
+                },
+                {
+                    "letters": "nudes",
+                    "scrablepoints": 6,
+                    "wwfpoints": 8
+                },
+                {
+                    "letters": "tuned",
+                    "scrablepoints": 6,
+                    "wwfpoints": 8
+                }
+            ]
+        },
+        {
+            "x": 5,
+            "letter": "initial",
+            "highestPoints": [
+                {
+                    "letters": "litai",
+                    "scrablepoints": 5,
+                    "wwfpoints": 6
+                }
+            ],
+            "lowesPoints": [
+                {
+                    "letters": "litai",
+                    "scrablepoints": 5,
+                    "wwfpoints": 6
+                }
+            ]
+        },
+        {
+            "x": 5,
+            "letter": "mystery",
+            "highestPoints": [
+                {
+                    "letters": "stymy",
+                    "scrablepoints": 13,
+                    "wwfpoints": 12
+                },
+                {
+                    "letters": "terms",
+                    "scrablepoints": 7,
+                    "wwfpoints": 8
+                },
+                {
+                    "letters": "treys",
+                    "scrablepoints": 8,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "tyers",
+                    "scrablepoints": 8,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "tyres",
+                    "scrablepoints": 8,
+                    "wwfpoints": 7
+                }
+            ],
+            "lowesPoints": [
+                {
+                    "letters": "treys",
+                    "scrablepoints": 8,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "tyers",
+                    "scrablepoints": 8,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "tyres",
+                    "scrablepoints": 8,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "terms",
+                    "scrablepoints": 7,
+                    "wwfpoints": 8
+                },
+                {
+                    "letters": "stymy",
+                    "scrablepoints": 13,
+                    "wwfpoints": 12
+                }
+            ]
+        },
+        {
+            "x": 5,
+            "letter": "natural",
+            "highestPoints": [
+                {
+                    "letters": "lauan",
+                    "scrablepoints": 5,
+                    "wwfpoints": 8
+                },
+                {
+                    "letters": "lunar",
+                    "scrablepoints": 5,
+                    "wwfpoints": 8
+                },
+                {
+                    "letters": "ulnar",
+                    "scrablepoints": 5,
+                    "wwfpoints": 8
+                },
+                {
+                    "letters": "alant",
+                    "scrablepoints": 5,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "aural",
+                    "scrablepoints": 5,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "laura",
+                    "scrablepoints": 5,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "natal",
+                    "scrablepoints": 5,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "ruana",
+                    "scrablepoints": 5,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "ultra",
+                    "scrablepoints": 5,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "altar",
+                    "scrablepoints": 5,
+                    "wwfpoints": 6
+                },
+                {
+                    "letters": "antra",
+                    "scrablepoints": 5,
+                    "wwfpoints": 6
+                },
+                {
+                    "letters": "artal",
+                    "scrablepoints": 5,
+                    "wwfpoints": 6
+                },
+                {
+                    "letters": "ratal",
+                    "scrablepoints": 5,
+                    "wwfpoints": 6
+                },
+                {
+                    "letters": "ratan",
+                    "scrablepoints": 5,
+                    "wwfpoints": 6
+                },
+                {
+                    "letters": "talar",
+                    "scrablepoints": 5,
+                    "wwfpoints": 6
+                }
+            ],
+            "lowesPoints": [
+                {
+                    "letters": "altar",
+                    "scrablepoints": 5,
+                    "wwfpoints": 6
+                },
+                {
+                    "letters": "antra",
+                    "scrablepoints": 5,
+                    "wwfpoints": 6
+                },
+                {
+                    "letters": "artal",
+                    "scrablepoints": 5,
+                    "wwfpoints": 6
+                },
+                {
+                    "letters": "ratal",
+                    "scrablepoints": 5,
+                    "wwfpoints": 6
+                },
+                {
+                    "letters": "ratan",
+                    "scrablepoints": 5,
+                    "wwfpoints": 6
+                },
+                {
+                    "letters": "talar",
+                    "scrablepoints": 5,
+                    "wwfpoints": 6
+                },
+                {
+                    "letters": "alant",
+                    "scrablepoints": 5,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "aural",
+                    "scrablepoints": 5,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "laura",
+                    "scrablepoints": 5,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "natal",
+                    "scrablepoints": 5,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "ruana",
+                    "scrablepoints": 5,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "ultra",
+                    "scrablepoints": 5,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "lauan",
+                    "scrablepoints": 5,
+                    "wwfpoints": 8
+                },
+                {
+                    "letters": "lunar",
+                    "scrablepoints": 5,
+                    "wwfpoints": 8
+                },
+                {
+                    "letters": "ulnar",
+                    "scrablepoints": 5,
+                    "wwfpoints": 8
+                }
+            ]
+        },
+        {
+            "x": 5,
+            "letter": "kingdom",
+            "highestPoints": [
+                {
+                    "letters": "dingo",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "doing",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                }
+            ],
+            "lowesPoints": [
+                {
+                    "letters": "dingo",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "doing",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                }
+            ]
+        },
+        {
+            "x": 5,
+            "letter": "captain",
+            "highestPoints": [
+                {
+                    "letters": "panic",
+                    "scrablepoints": 9,
+                    "wwfpoints": 12
+                },
+                {
+                    "letters": "actin",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "antic",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "apian",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "inapt",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "paint",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "patin",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "pinta",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                }
+            ],
+            "lowesPoints": [
+                {
+                    "letters": "actin",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "antic",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "apian",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "inapt",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "paint",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "patin",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "pinta",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "panic",
+                    "scrablepoints": 9,
+                    "wwfpoints": 12
+                }
+            ]
+        },
+        {
+            "x": 5,
+            "letter": "healthy",
+            "highestPoints": [
+                {
+                    "letters": "ethyl",
+                    "scrablepoints": 11,
+                    "wwfpoints": 10
+                },
+                {
+                    "letters": "lathy",
+                    "scrablepoints": 11,
+                    "wwfpoints": 10
+                },
+                {
+                    "letters": "heath",
+                    "scrablepoints": 11,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "lathe",
+                    "scrablepoints": 8,
+                    "wwfpoints": 8
+                }
+            ],
+            "lowesPoints": [
+                {
+                    "letters": "lathe",
+                    "scrablepoints": 8,
+                    "wwfpoints": 8
+                },
+                {
+                    "letters": "heath",
+                    "scrablepoints": 11,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "ethyl",
+                    "scrablepoints": 11,
+                    "wwfpoints": 10
+                },
+                {
+                    "letters": "lathy",
+                    "scrablepoints": 11,
+                    "wwfpoints": 10
+                }
+            ]
+        },
+        {
+            "x": 5,
+            "letter": "library",
+            "highestPoints": [
+                {
+                    "letters": "bialy",
+                    "scrablepoints": 10,
+                    "wwfpoints": 11
+                },
+                {
+                    "letters": "brail",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "libra",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "briar",
+                    "scrablepoints": 7,
+                    "wwfpoints": 8
+                },
+                {
+                    "letters": "riyal",
+                    "scrablepoints": 8,
+                    "wwfpoints": 8
+                }
+            ],
+            "lowesPoints": [
+                {
+                    "letters": "briar",
+                    "scrablepoints": 7,
+                    "wwfpoints": 8
+                },
+                {
+                    "letters": "riyal",
+                    "scrablepoints": 8,
+                    "wwfpoints": 8
+                },
+                {
+                    "letters": "brail",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "libra",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "bialy",
+                    "scrablepoints": 10,
+                    "wwfpoints": 11
+                }
+            ]
+        },
+        {
+            "x": 5,
+            "letter": "message",
+            "highestPoints": [
+                {
+                    "letters": "games",
+                    "scrablepoints": 8,
+                    "wwfpoints": 10
+                },
+                {
+                    "letters": "mages",
+                    "scrablepoints": 8,
+                    "wwfpoints": 10
+                },
+                {
+                    "letters": "masse",
+                    "scrablepoints": 7,
+                    "wwfpoints": 8
+                },
+                {
+                    "letters": "mesas",
+                    "scrablepoints": 7,
+                    "wwfpoints": 8
+                },
+                {
+                    "letters": "seams",
+                    "scrablepoints": 7,
+                    "wwfpoints": 8
+                },
+                {
+                    "letters": "seems",
+                    "scrablepoints": 7,
+                    "wwfpoints": 8
+                },
+                {
+                    "letters": "semes",
+                    "scrablepoints": 7,
+                    "wwfpoints": 8
+                },
+                {
+                    "letters": "gases",
+                    "scrablepoints": 6,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "sages",
+                    "scrablepoints": 6,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "eases",
+                    "scrablepoints": 5,
+                    "wwfpoints": 5
+                }
+            ],
+            "lowesPoints": [
+                {
+                    "letters": "eases",
+                    "scrablepoints": 5,
+                    "wwfpoints": 5
+                },
+                {
+                    "letters": "gases",
+                    "scrablepoints": 6,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "sages",
+                    "scrablepoints": 6,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "masse",
+                    "scrablepoints": 7,
+                    "wwfpoints": 8
+                },
+                {
+                    "letters": "mesas",
+                    "scrablepoints": 7,
+                    "wwfpoints": 8
+                },
+                {
+                    "letters": "seams",
+                    "scrablepoints": 7,
+                    "wwfpoints": 8
+                },
+                {
+                    "letters": "seems",
+                    "scrablepoints": 7,
+                    "wwfpoints": 8
+                },
+                {
+                    "letters": "semes",
+                    "scrablepoints": 7,
+                    "wwfpoints": 8
+                },
+                {
+                    "letters": "games",
+                    "scrablepoints": 8,
+                    "wwfpoints": 10
+                },
+                {
+                    "letters": "mages",
+                    "scrablepoints": 8,
+                    "wwfpoints": 10
+                }
+            ]
+        },
+        {
+            "x": 5,
+            "letter": "magical",
+            "highestPoints": [
+                {
+                    "letters": "gamic",
+                    "scrablepoints": 10,
+                    "wwfpoints": 13
+                },
+                {
+                    "letters": "magic",
+                    "scrablepoints": 10,
+                    "wwfpoints": 13
+                },
+                {
+                    "letters": "claim",
+                    "scrablepoints": 9,
+                    "wwfpoints": 12
+                },
+                {
+                    "letters": "malic",
+                    "scrablepoints": 9,
+                    "wwfpoints": 12
+                },
+                {
+                    "letters": "amiga",
+                    "scrablepoints": 8,
+                    "wwfpoints": 10
+                },
+                {
+                    "letters": "lamia",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                }
+            ],
+            "lowesPoints": [
+                {
+                    "letters": "lamia",
+                    "scrablepoints": 7,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "amiga",
+                    "scrablepoints": 8,
+                    "wwfpoints": 10
+                },
+                {
+                    "letters": "claim",
+                    "scrablepoints": 9,
+                    "wwfpoints": 12
+                },
+                {
+                    "letters": "malic",
+                    "scrablepoints": 9,
+                    "wwfpoints": 12
+                },
+                {
+                    "letters": "gamic",
+                    "scrablepoints": 10,
+                    "wwfpoints": 13
+                },
+                {
+                    "letters": "magic",
+                    "scrablepoints": 10,
+                    "wwfpoints": 13
+                }
+            ]
+        },
+        {
+            "x": 5,
+            "letter": "failure",
+            "highestPoints": [
+                {
+                    "letters": "farle",
+                    "scrablepoints": 8,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "feral",
+                    "scrablepoints": 8,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "feuar",
+                    "scrablepoints": 8,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "filar",
+                    "scrablepoints": 8,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "filer",
+                    "scrablepoints": 8,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "flair",
+                    "scrablepoints": 8,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "flare",
+                    "scrablepoints": 8,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "flier",
+                    "scrablepoints": 8,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "frail",
+                    "scrablepoints": 8,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "lifer",
+                    "scrablepoints": 8,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "rifle",
+                    "scrablepoints": 8,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "afire",
+                    "scrablepoints": 8,
+                    "wwfpoints": 8
+                },
+                {
+                    "letters": "feria",
+                    "scrablepoints": 8,
+                    "wwfpoints": 8
+                },
+                {
+                    "letters": "alure",
+                    "scrablepoints": 5,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "ureal",
+                    "scrablepoints": 5,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "urial",
+                    "scrablepoints": 5,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "ariel",
+                    "scrablepoints": 5,
+                    "wwfpoints": 6
+                },
+                {
+                    "letters": "aurei",
+                    "scrablepoints": 5,
+                    "wwfpoints": 6
+                },
+                {
+                    "letters": "uraei",
+                    "scrablepoints": 5,
+                    "wwfpoints": 6
+                }
+            ],
+            "lowesPoints": [
+                {
+                    "letters": "ariel",
+                    "scrablepoints": 5,
+                    "wwfpoints": 6
+                },
+                {
+                    "letters": "aurei",
+                    "scrablepoints": 5,
+                    "wwfpoints": 6
+                },
+                {
+                    "letters": "uraei",
+                    "scrablepoints": 5,
+                    "wwfpoints": 6
+                },
+                {
+                    "letters": "alure",
+                    "scrablepoints": 5,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "ureal",
+                    "scrablepoints": 5,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "urial",
+                    "scrablepoints": 5,
+                    "wwfpoints": 7
+                },
+                {
+                    "letters": "afire",
+                    "scrablepoints": 8,
+                    "wwfpoints": 8
+                },
+                {
+                    "letters": "feria",
+                    "scrablepoints": 8,
+                    "wwfpoints": 8
+                },
+                {
+                    "letters": "farle",
+                    "scrablepoints": 8,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "feral",
+                    "scrablepoints": 8,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "feuar",
+                    "scrablepoints": 8,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "filar",
+                    "scrablepoints": 8,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "filer",
+                    "scrablepoints": 8,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "flair",
+                    "scrablepoints": 8,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "flare",
+                    "scrablepoints": 8,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "flier",
+                    "scrablepoints": 8,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "frail",
+                    "scrablepoints": 8,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "lifer",
+                    "scrablepoints": 8,
+                    "wwfpoints": 9
+                },
+                {
+                    "letters": "rifle",
+                    "scrablepoints": 8,
+                    "wwfpoints": 9
+                }
+            ]
+        },
+        {
+            "x": 5,
+            "letter": "forward",
+            "highestPoints": [
+                {
+                    "letters": "dwarf",
+                    "scrablepoints": 12,
+                    "wwfpoints": 12
+                },
+                {
+                    "letters": "arrow",
+                    "scrablepoints": 8,
+                    "wwfpoints": 8
+                },
+                {
+                    "letters": "ardor",
+                    "scrablepoints": 6,
+                    "wwfpoints": 6
+                }
+            ],
+            "lowesPoints": [
+                {
+                    "letters": "ardor",
+                    "scrablepoints": 6,
+                    "wwfpoints": 6
+                },
+                {
+                    "letters": "arrow",
+                    "scrablepoints": 8,
+                    "wwfpoints": 8
+                },
+                {
+                    "letters": "dwarf",
+                    "scrablepoints": 12,
+                    "wwfpoints": 12
+                }
+            ]
+        }
+    ]
+}

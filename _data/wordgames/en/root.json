@@ -12,7 +12,7 @@
    "about_title": "About",
    "featureList": [
       {
-         "feature_heading": "The Simple, Easy-to-go word finder for you",
+         "feature_heading": "Words with letters  and a blank?",
          "feature_text": "Stuck in srabble games? Making enemies in word finder games? Here's your solution. A word finder tool for you that can help ypu wipe out the competition",
          "fa_class": "../assets/images/star.svg"
       },
@@ -49,7 +49,7 @@
    ],
    "faqList": [
       {
-         "Question": "How many words can I enter in this Word Finder?",
+         "Question": "Words with letters  and a blank?",
          "Answer": "You can enter upto 15 letters in our Word Finder."
       },
       {

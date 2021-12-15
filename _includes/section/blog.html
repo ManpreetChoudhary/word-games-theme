@@ -4,16 +4,16 @@
 
 <div class="container-fluid" id="blog">
     <div class="row rowHeight3">
-        <div class="col-md-12 p-0">
+        <!-- <div class="col-md-12 p-0"> -->
             <div class="blog">
-                <img src="/assets/images/right_obj_01.png" alt="">
-                <div class="content">
-                    <span class="site-no">05</span>
+                <!-- <img src="/assets/images/right_obj_01.png" alt=""> -->
+                <!-- <div class="content"> -->
+                    <!-- <span class="site-no">05</span> -->
                     <h5 class="title">{{dataToShow.blog_title}}</h5>
-                </div>
+                <!-- </div> -->
             </div>
-        </div>
-        <div class="col-xl-8 col-lg-12 blog_section" style="padding-left: 120px; margin-top:50px">
+        <!-- </div> -->
+        <div class="blog_section container" style="padding-left: 120px; margin-top:50px"> <!--earlier class=col-xl-8 col-lg-12-->
             <section class="section_post">
                 <div class="row">
                     {% for post in site.posts limit: 2 %}

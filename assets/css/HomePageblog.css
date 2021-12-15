@@ -1,7 +1,8 @@
 .rowHeight3 {
-  margin: 300px 0 150px 0;
+  /* margin: 300px 0 150px 0; */
+  margin: 120px -15px 0px -15px;
 }
-.blog {
+/* .blog {
   margin-top: -80px;
 }
 .blog img {
@@ -10,7 +11,15 @@
   right: -15px;
   height: 700px;
   z-index: -1;
+} */
+.blog {
+  background: #b641da;
+  padding: 15px;
+  width: 100%;
+  color: white;
+  text-align: center;
 }
+
 .anchor_link {
   text-decoration: none !important;
   color: #343a40 !important;

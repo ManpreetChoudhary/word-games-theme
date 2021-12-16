@@ -1,5 +1,6 @@
 .rowHeight {
-  margin: 300px 0 620px 0;
+  /* margin: 300px 0 620px 0; */
+  margin: 100px -15px 0px -15px;
 }
 .about_content > .text {
   width: 80%;
@@ -9,7 +10,7 @@
   position: relative;
   top: 100px;
 }
-.about {
+/* .about {
   margin-top: -80px;
 }
 .about img {
@@ -18,6 +19,14 @@
   right: -15px;
   height: 700px;
   z-index: -1;
+} */
+
+.about {
+  background: #b641da;
+  padding: 10px 0;
+  width: 100%;
+  color: white;
+  text-align: center;
 }
 .content {
   position: absolute;

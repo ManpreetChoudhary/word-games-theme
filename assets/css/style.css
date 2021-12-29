@@ -64,7 +64,7 @@ header {
 }
 .dropdown:hover .dropdown-menu {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto;
   border: none;
   font-size: 14px;
   left: -70px;

@@ -23,6 +23,15 @@
   text-align: center;
   width: 100%;
 }
+.feature .feature-title,
+.feature-description {
+  width: 100% !important;
+  text-align: center;
+}
+/* .feature img,
+.site-no {
+  display: none;
+} */
 
 .card-body > i {
   font-size: 20px;
@@ -52,22 +61,6 @@
 }
 
 @media (max-width: 1125px) {
-  .feature {
-    padding: 15px;
-    background-color: #b641da;
-    margin-left: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  .feature .feature-title,
-  .feature-description {
-    width: 100% !important;
-    text-align: center;
-  }
-  .feature img,
-  .site-no {
-    display: none;
-  }
   .card-body .card-text {
     color: #6c757d !important;
   }

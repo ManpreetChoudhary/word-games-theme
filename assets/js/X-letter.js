@@ -12,8 +12,10 @@ let serachValue = params.get('search')
 let prefixValue = params.get('prefix')
 let containsValue = params.get('contains')
 let suffixValue = params.get('suffix')
+let exculdeValue = params.get('exculde')
 let lengthValue = params.get('length')
 let dictonary = params.get('dictionary')
+
 
 let tab_container = document.querySelector('.tab_container')
 
@@ -29,7 +31,7 @@ const getData = async (serachValue) => {
     <img src='/assets/images/loading.gif'>
     </div>`
     const response = await fetch(
-      `/.netlify/functions/getWords?name=${serachValue}`
+      `http://127.0.0.1:9000/getWords?name=${serachValue}`
     )
     const data = await response.json()
     main.innerHTML = ''
@@ -78,6 +80,15 @@ function x_with_letters(data) {
       endsWith.classList.add('tick')
       endsWith.value = suffixValue
     }
+
+    if (exculdeValue) {
+      filterData = filterData.filter(
+        (item) => !item.includes(exculdeValue.toLowerCase())
+      )
+      exculdeWith.classList.add('tick')
+      exculdeWith.value = exculdeValue
+    }
+
 
     if (filterData.length === 0) {
       main.innerHTML += ''
@@ -154,7 +165,8 @@ function addFilterCount() {
   filter_val[0].value = prefixValue
   filter_val[1].value = containsValue
   filter_val[2].value = suffixValue
-  filter_val[3].value = lengthValue
+  filter_val[3].value = exculdeValue
+  filter_val[4].value = lengthValue
 
   for (var i = 0; i < 4; i++) {
     if (filter_val[i].value != '') {

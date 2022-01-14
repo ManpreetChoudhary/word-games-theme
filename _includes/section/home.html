@@ -57,13 +57,16 @@
                             <label for="mustInclude">Must Include </label>
                             <br>
                             <input type="text" id="mustInclude" placeholder="Contains" name="contains">
-
                         </div>
                         <div class="endsWith">
                             <label for="endsWith">End With</label>
                             <br>
                             <input type="text" id="endsWith" placeholder="Suffix" name="suffix">
-
+                        </div>
+                        <div class="exculdeWith">
+                            <label for="exculdeWith">Exculde</label>
+                            <br>
+                            <input type="text" id="exculdeWith" placeholder="Exculde" value="" name="exculde">
                         </div>
                         <div class="wordLength">
                             <label for="wordLength">Word Length </label>
@@ -98,6 +101,7 @@
         startsWith.value = ""
         mustInclude.value = ""
         endsWith.value = ""
+        exculdeWith.value = ""
         wordLength.value = ""
     }))
 

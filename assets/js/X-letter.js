@@ -82,9 +82,10 @@ function x_with_letters(data) {
     }
 
     if (exculdeValue) {
-      filterData = filterData.filter(
-        (item) => !item.includes(exculdeValue.toLowerCase())
-      )
+      filterData = filterData.filter((item) =>{
+        return !item.includes(exculdeValue.toLowerCase())
+      })
+    
       exculdeWith.classList.add('tick')
       exculdeWith.value = exculdeValue
     }

@@ -7,15 +7,15 @@
                     <div class="col-md-6 p-0">
                         <div class="d-flex">
                             <input type="text" autocomplete="off" class="wordleSolver-field form-control px-5"
-                                maxlength="1" id="greenLetters">
+                                maxlength="1" id="greenLetters" tabIndex="0">
                             <input type="text" autocomplete="off" class="wordleSolver-field form-control px-5"
-                                maxlength="1" id="greenLetters">
+                                maxlength="1" id="greenLetters" tabIndex="1">
                             <input type="text" autocomplete="off" class="wordleSolver-field form-control px-5"
-                                maxlength="1" id="greenLetters">
+                                maxlength="1" id="greenLetters" tabIndex="2">
                             <input type="text" autocomplete="off" class="wordleSolver-field form-control px-5"
-                                maxlength="1" id="greenLetters">
+                                maxlength="1" id="greenLetters" tabIndex="3">
                             <input type="text" autocomplete="off" class="wordleSolver-field form-control px-5"
-                                maxlength="1" id="greenLetters">
+                                maxlength="1" id="greenLetters" tabIndex="4">
                         </div>
                     </div>
                 </div>
@@ -24,15 +24,15 @@
                     <div class="col-md-6 p-0">
                         <div class="d-flex">
                             <input type="text" autocomplete="off" class="wordleSolver-field form-control px-5"
-                                maxlength="1" id="yellowLetters">
+                                maxlength="1" id="yellowLetters" tabIndex="5">
                             <input type="text" autocomplete="off" class="wordleSolver-field form-control px-5"
-                                maxlength="1" id="yellowLetters">
+                                maxlength="1" id="yellowLetters" tabIndex="6">
                             <input type="text" autocomplete="off" class="wordleSolver-field form-control px-5"
-                                maxlength="1" id="yellowLetters">
+                                maxlength="1" id="yellowLetters" tabIndex="7">
                             <input type="text" autocomplete="off" class="wordleSolver-field form-control px-5"
-                                maxlength="1" id="yellowLetters">
+                                maxlength="1" id="yellowLetters" tabIndex="8">
                             <input type="text" autocomplete="off" class="wordleSolver-field form-control px-5"
-                                maxlength="1" id="yellowLetters">
+                                maxlength="1" id="yellowLetters" tabIndex="9">
                         </div>
                     </div>
                 </div>
@@ -41,27 +41,27 @@
                     <div class="col-md-6 p-0">
                         <div class="d-flex">
                             <input type="text" class="wordleSolver-field form-control px-5" maxlength="1"
-                                id="greyLetters" value="" autocomplete="off">
+                                id="greyLetters" value="" autocomplete="off" tabIndex="10">
                             <input type="text" class="wordleSolver-field form-control px-5" maxlength="1"
-                                id="greyLetters" value="" autocomplete="off">
+                                id="greyLetters" value="" autocomplete="off" tabIndex="11">
                             <input type="text" class="wordleSolver-field form-control px-5" maxlength="1"
-                                id="greyLetters" value="" autocomplete="off">
+                                id="greyLetters" value="" autocomplete="off" tabIndex="12">
                             <input type="text" class="wordleSolver-field form-control px-5" maxlength="1"
-                                id="greyLetters" value="" autocomplete="off">
+                                id="greyLetters" value="" autocomplete="off" tabIndex="13">
                             <input type="text" class="wordleSolver-field form-control px-5" maxlength="1"
-                                id="greyLetters" value="" autocomplete="off">
+                                id="greyLetters" value="" autocomplete="off" tabIndex="14">
                         </div>
                         <div class="d-flex mt-2">
-                            <input type="text" autocomplete="off" class="wordleSolver-field form-control px-5"
-                                maxlength="1" id="greyLetters">
-                            <input type="text" autocomplete="off" class="wordleSolver-field form-control px-5"
-                                maxlength="1" id="greyLetters">
-                            <input type="text" autocomplete="off" class="wordleSolver-field form-control px-5"
-                                maxlength="1" id="greyLetters">
-                            <input type="text" autocomplete="off" class="wordleSolver-field form-control px-5"
-                                maxlength="1" id="greyLetters">
-                            <input type="text" autocomplete="off" class="wordleSolver-field form-control px-5"
-                                maxlength="1" id="greyLetters">
+                            <input type="text" autocomplete="off" tabIndex="15"
+                                class="wordleSolver-field form-control px-5" maxlength="1" id="greyLetters">
+                            <input type="text" autocomplete="off" tabIndex="16"
+                                class="wordleSolver-field form-control px-5" maxlength="1" id="greyLetters">
+                            <input type="text" autocomplete="off" tabIndex="17"
+                                class="wordleSolver-field form-control px-5" maxlength="1" id="greyLetters">
+                            <input type="text" autocomplete="off" tabIndex="18"
+                                class="wordleSolver-field form-control px-5" maxlength="1" id="greyLetters">
+                            <input type="text" autocomplete="off" tabIndex="19"
+                                class="wordleSolver-field form-control px-5" maxlength="1" id="greyLetters">
                         </div>
                     </div>
                 </div>
@@ -77,6 +77,25 @@
             <div id="wordleWordCount"></div>
             <div id="wordleSolverData"></div>
         </div>
-
     </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+
+    $(document).on('keypress', 'input', function (e) {
+        if (e.which === 8 || e.which === 9 || (e.which >= 65 && e.which <= 90) || e.which === 32) {
+            e.preventDefault();
+            var $next = $('[tabIndex=' + (+this.tabIndex + 1) + ']');
+
+            if (!$next.length) {
+                $next = $('[tabIndex=1]');
+            }
+            // let elem = $("#greenLetters")
+            // elem.focus()
+            $next.focus().click();
+        }
+    });
+
+
+</script>

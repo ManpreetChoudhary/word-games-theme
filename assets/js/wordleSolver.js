@@ -1,31 +1,40 @@
 console.log('wordle solver ...')
 
+let form = document.querySelector('[name=verify')
+
+let greenLetters = document.querySelectorAll('#greenLetters')
+let yellowLetters = document.querySelectorAll('#yellowLetters')
 let greyLetters = document.querySelectorAll('#greyLetters')
-let yellowLetters = document.getElementById('yellowLetters')
-let greenLetters = document.getElementById('greenLetters')
 let wordleSolverData = document.getElementById('wordleSolverData')
+
+let wordleWordCount = document.querySelector('#wordleWordCount')
 let wordlesolver_submit = document.getElementById('wordlesolver_submit')
+let newWordsLength = 0
 
 const wordleSolver = async (value, value2, value3) => {
   try {
+    wordleWordCount.innerHTML = 'Searching for best possible letters...'
     let response = await fetch('http://127.0.0.1:9000/wordleSolver', {
       method: 'POST',
       body: JSON.stringify({
-        greyLetters: value,
+        greenLetters: value,
         yellowLetters: value2,
-        greenLetters: value3,
+        greyLetters: value3,
       }),
     })
     const data = await response.json()
+    wordleWordCount.innerHTML = ''
     wordleSolverData.innerHTML = ''
 
     let ok = true
     if (data.length === 0) {
       wordleSolverData.innerHTML += ''
     } else {
+      newWordsLength += data.length
       const result = data.map((item) => {
         if (item.length === 1) {
           ok = false
+          newWordsLength = newWordsLength - 1
         } else {
           let ScrabbleLetterScore = ScrabbleScore()
           sum = 0
@@ -45,7 +54,7 @@ const wordleSolver = async (value, value2, value3) => {
       })
       if (ok) {
         wordleSolverData.innerHTML += `
-            <div class="allGroupWords wordlistContainer">
+            <div class="allfiveletterswords wordlistContainer">
                 <div class="wordListHeading">
                     <h3 class="lead">All 5 Letter Words</h3>
                 </div>
@@ -58,23 +67,50 @@ const wordleSolver = async (value, value2, value3) => {
             `
       }
     }
+
+    if (newWordsLength === 0) {
+      // errorMsg.innerHTML = 'no words found'
+    } else {
+      wordleWordCount.innerHTML = `<strong>${newWordsLength} Results</strong>`
+    }
   } catch (error) {
     console.log(error)
   }
 }
 
-function onSubmit() {
-  for (let i = 0; i < greyLetters.length; i++) {
-    greyLetters[i].addEventListener('change', function () {
-      wordleSolver(
-        greyLetters[i].value,
-        yellowLetters.value,
-        greenLetters.value
-      )
-      // console.log(greyLetters[i].value)
-    })
-  }
+let arr = []
+for (let g = 0; g < greenLetters.length; g++) {
+  const elem = greenLetters[g]
+  elem.addEventListener('input', (e) => {
+    e.target.classList.add('ws-fcs')
+    arr.push(e.target.value)
+  })
 }
+
+let arr2 = []
+for (let y = 0; y < yellowLetters.length; y++) {
+  const elem = yellowLetters[y]
+  elem.addEventListener('input', (e) => {
+    e.target.classList.add('ws-fcs2')
+    arr2.push(e.target.value)
+  })
+}
+
+let arr3 = []
+for (let e = 0; e < greyLetters.length; e++) {
+  const elem = greyLetters[e]
+  elem.addEventListener('input', (e) => {
+    e.target.classList.add('ws-fcs3')
+    arr3.push(e.target.value)
+  })
+}
+
+function handleSubmit(e) {
+  e.preventDefault()
+  wordleSolver(arr, arr2, arr3)
+}
+
+form.addEventListener('submit', handleSubmit)
 
 // Scrabble Point Array
 const ScrabbleScore = () => {

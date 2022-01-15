@@ -1,19 +1,17 @@
-const dictionaryData = require('./Dictonary/scrabbleword.js')
+const allWords = require('./Dictonary/scrabbleword.js')
 exports.handler = function (event, context, callback) {
   let body = JSON.parse(event.body)
-  let greyLetters = body.greyLetters.replace(/\s/g, '')
+  let greyLetters = body.greyLetters
   let yellowLetters = body.yellowLetters
   let greenLetters = body.greenLetters
 
   let data = []
   let letterLen = 5
-  let filterData = dictionaryData.filter((item) => item.length == letterLen)
+  let dictionaryData = allWords.filter((item) => item.length == letterLen)
 
-  let wordValue = greyLetters.split('')
-
-  filterData.map((item, index) => {
-    for (let e = 0; e < wordValue.length; e++) {
-      if (!item.includes(wordValue[e])) {
+  dictionaryData.map((item, index) => {
+    for (let e = 0; e < greyLetters.length; e++) {
+      if (!item.includes(greyLetters[e])) {
         data.push(item)
       }
     }

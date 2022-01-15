@@ -123,9 +123,6 @@
     }
 
     function runScripts() {
-      console.log(document.querySelector("script"))
-      console.log("Javascript Executed!")
-      console.log(document.querySelectorAll("script[delay]"))
       document.querySelectorAll("script[delay]").forEach(function (scriptTag) {
         scriptTag.setAttribute("src", scriptTag.getAttribute("delay"));
       });

@@ -1,0 +1,81 @@
+.ws {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 15px 0px !important;
+}
+.wordleSolver_headings {
+  margin-top: 110px;
+  margin-bottom: 20px;
+}
+.wordleSolver-field {
+  border-radius: 5px;
+  margin: 0 5px 0 0 !important;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  font-weight: bold;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #fff;
+  padding: 0 !important;
+  outline: none !important;
+}
+
+.wordleSolver-field:focus {
+  box-shadow: unset !important;
+  border-color: #ced4da !important;
+}
+
+.wordlesolver-btn {
+  padding: 8px 25px;
+  font-size: 15px;
+  background-color: #50bd47;
+  border-color: #50bd47;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: 900;
+}
+.wordlesolver-btn:hover {
+  color: #fff;
+}
+
+.wordleSolver-label {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.allfiveletterswords {
+  background-color: white !important;
+  width: auto;
+  height: auto;
+  box-shadow: 0 0 2px rgb(0 0 0 / 20%);
+  margin: 10px 0;
+}
+.allfiveletterswords > .wordListHeading {
+  background: gray;
+  padding: 10px 0px 5px 25px;
+  color: #fff;
+}
+
+#wordleWordCount {
+  font-size: 18px;
+}
+
+.ws-fcs {
+  color: #fff !important;
+  background-color: #6aaa64 !important;
+}
+.ws-fcs2 {
+  color: #fff !important;
+  background-color: #c9b458 !important;
+}
+
+.ws-fcs3 {
+  color: #fff !important;
+  background-color: #787c7e !important;
+}

@@ -15,6 +15,7 @@ let serachValue = params.get('search').toLowerCase()
 let prefixValue = params.get('prefix')
 let containsValue = params.get('contains')
 let suffixValue = params.get('suffix')
+let exculdeValue = params.get('exculde')
 let lengthValue = params.get('length')
 let dictonary = params.get('dictionary')
 
@@ -23,6 +24,7 @@ let tick
 let startsWith = document.getElementById('startsWith')
 let mustInclude = document.getElementById('mustInclude')
 let endsWith = document.getElementById('endsWith')
+let exculdeWith = document.getElementById('exculdeWith')
 let wordLength = document.getElementById('wordLength')
 
 let ok = true
@@ -80,7 +82,7 @@ const getData = async (serachValue) => {
     </div>`
     /// loader
     const response = await fetch(
-      `/.netlify/functions/getWords?name=${serachValue}&selecteddictionary=${selectedDictionary}`
+      `http://127.0.0.1:9000/getWords?name=${serachValue}&selecteddictionary=${selectedDictionary}`
     )
     const data = await response.json()
     main.innerHTML = ''
@@ -133,7 +135,6 @@ function getWords(data) {
         startsWith.classList.add('tick')
         startsWith.value = prefixValue
       }
-
       if (containsValue) {
         newdata = newdata.filter((item) =>
           item.includes(containsValue.toLowerCase())
@@ -148,6 +149,15 @@ function getWords(data) {
         endsWith.classList.add('tick')
         endsWith.value = suffixValue
       }
+
+      if (exculdeValue) {
+        newdata = newdata.filter(
+          (item) => !item.includes(exculdeValue.toLowerCase())
+        )
+        exculdeWith.classList.add('tick')
+        exculdeWith.value = exculdeValue
+      }
+
       if (lengthValue) {
         newdata = newdata.filter((item) => item.length == lengthValue)
         wordLength.classList.add('tick')
@@ -538,9 +548,10 @@ function addFilterCount() {
   filter_val[0].value = prefixValue
   filter_val[1].value = containsValue
   filter_val[2].value = suffixValue
-  filter_val[3].value = lengthValue
+  filter_val[3].value = exculdeValue
+  filter_val[4].value = lengthValue
 
-  for (var i = 0; i < 4; i++) {
+  for (var i = 0; i <= 4; i++) {
     if (filter_val[i].value != '') {
       filter_count += 1
     }

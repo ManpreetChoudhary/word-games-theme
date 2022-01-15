@@ -1,0 +1,47 @@
+{% assign file = page.fileName %}
+{% assign lang = page.lang %}
+{% assign folder = page.folderName %}
+{% assign homeData= site.data[folder][lang][file] %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+{%- include head/index.html -%}
+
+<body>
+    {%- include header/index.html -%}
+
+
+    {%- if homeData.h1 or homeData.h2 -%}
+    <div class="wordleSolver_headings">
+        <div class="container">
+            <div class="pageHeading text-center">
+                <h1 class="heading pb-0 m-0">{{homeData.h1}}</h1>
+                <h2>{{homeData.h2}}</h2>
+            </div>
+        </div>
+    </div>
+    {%- endif -%}
+
+    <div class="wordleSolver-feature my-5">
+        {{content}}
+    </div>
+
+
+
+    {%- if dataToShow.faqList -%}
+    {%- if dataToShow.faqList.first.Question !='' -%}
+    {% include section/news.html %}
+    {% endif %}
+    {% endif %}
+
+
+    <!-- {%- include footer/index.html -%} -->
+    <link rel="stylesheet" href="{{ '../assets/css/wordleSolver.css' | relative_url }}">
+    <script defer src="../assets/js/wordleSolver.js"></script>
+    <script defer src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
+    {% include Monumetric/Monumetric.html %}
+</body>
+
+</html>

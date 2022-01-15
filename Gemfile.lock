@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    word-games-theme (0.6.3)
+    word-games-theme (0.6.6)
       jekyll (~> 3.9)
 
 GEM

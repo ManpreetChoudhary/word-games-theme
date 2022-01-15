@@ -1,0 +1,82 @@
+<div class="container wordleSolver-container">
+    <div class="row">
+        <div class="col-md-10 mx-auto ws">
+            <form name="verify">
+                <div class="form-group">
+                    <label for="greenLetters" class="my-1 p-0 wordleSolver-label">Green letters</label>
+                    <div class="col-md-6 p-0">
+                        <div class="d-flex">
+                            <input data-id="0" type="text" autocomplete="off"
+                                class="wordleSolver-field form-control px-5" maxlength="1" id="greenLetters">
+                            <input data-id="1" type="text" autocomplete="off"
+                                class="wordleSolver-field form-control px-5" maxlength="1" id="greenLetters">
+                            <input data-id="2" type="text" autocomplete="off"
+                                class="wordleSolver-field form-control px-5" maxlength="1" id="greenLetters">
+                            <input data-id="3" type="text" autocomplete="off"
+                                class="wordleSolver-field form-control px-5" maxlength="1" id="greenLetters">
+                            <input data-id="4" type="text" autocomplete="off"
+                                class="wordleSolver-field form-control px-5" maxlength="1" id="greenLetters">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="yellowLetters" class="my-1 p-0 wordleSolver-label">Yellow letters</label>
+                    <div class="col-md-6 p-0">
+                        <div class="d-flex">
+                            <input type="text" autocomplete="off" class="wordleSolver-field form-control px-5"
+                                maxlength="1" id="yellowLetters">
+                            <input type="text" autocomplete="off" class="wordleSolver-field form-control px-5"
+                                maxlength="1" id="yellowLetters">
+                            <input type="text" autocomplete="off" class="wordleSolver-field form-control px-5"
+                                maxlength="1" id="yellowLetters">
+                            <input type="text" autocomplete="off" class="wordleSolver-field form-control px-5"
+                                maxlength="1" id="yellowLetters">
+                            <input type="text" autocomplete="off" class="wordleSolver-field form-control px-5"
+                                maxlength="1" id="yellowLetters">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="greyLetters" class="my-1 p-0 wordleSolver-label">Grey letters</label>
+                    <div class="col-md-6 p-0">
+                        <div class="d-flex">
+                            <input type="text" class="wordleSolver-field form-control px-5" maxlength="1"
+                                id="greyLetters" value="" autocomplete="off">
+                            <input type="text" class="wordleSolver-field form-control px-5" maxlength="1"
+                                id="greyLetters" value="" autocomplete="off">
+                            <input type="text" class="wordleSolver-field form-control px-5" maxlength="1"
+                                id="greyLetters" value="" autocomplete="off">
+                            <input type="text" class="wordleSolver-field form-control px-5" maxlength="1"
+                                id="greyLetters" value="" autocomplete="off">
+                            <input type="text" class="wordleSolver-field form-control px-5" maxlength="1"
+                                id="greyLetters" value="" autocomplete="off">
+                        </div>
+                        <div class="d-flex mt-2">
+                            <input type="text" autocomplete="off" class="wordleSolver-field form-control px-5"
+                                maxlength="1" id="greyLetters">
+                            <input type="text" autocomplete="off" class="wordleSolver-field form-control px-5"
+                                maxlength="1" id="greyLetters">
+                            <input type="text" autocomplete="off" class="wordleSolver-field form-control px-5"
+                                maxlength="1" id="greyLetters">
+                            <input type="text" autocomplete="off" class="wordleSolver-field form-control px-5"
+                                maxlength="1" id="greyLetters">
+                            <input type="text" autocomplete="off" class="wordleSolver-field form-control px-5"
+                                maxlength="1" id="greyLetters">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group text-right">
+                    <div class="col-md-4 p-0" style="margin: 0 0 0 auto;">
+                        <button type="submit" id="wordlesolver_submit" class="btn wordlesolver-btn mt-3">Update</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-md-10 mx-auto p-0 mt-3">
+            <div id="wordleWordCount"></div>
+            <div id="wordleSolverData"></div>
+        </div>
+
+    </div>
+</div>

@@ -53,14 +53,18 @@
                             <input type="text" id="startsWith" placeholder="Prefix" value="" name="prefix">
                         </div>
                         <div class="mustInclude">
-                            <label for="mustInclude">Must Include </label>
+                            <label for="mustInclude">Must Contains </label>
                             <input type="text" id="mustInclude" placeholder="Contains" name="contains">
 
                         </div>
                         <div class="endsWith">
                             <label for="endsWith">End With</label>
                             <input type="text" id="endsWith" placeholder="Suffix" name="suffix">
-
+                        </div>
+                        <div class="exculdeWith">
+                            <label for="exculdeWith">Exculde</label>
+                            <br>
+                            <input type="text" id="exculdeWith" placeholder="Exculde" value="" name="exculde">
                         </div>
 
                         <div class="wordLength same">
@@ -74,6 +78,7 @@
                             <input type="submit" value="Apply" class="btn-info text-white"
                                 style="background-color: {{CustomColor.inputButtonBg}};">
                         </div>
+                        <p class="m-0" style="font-size:12px">Solve wordle quickly using our wordle solver</p>
                     </div>
                 </form>
             </div>
@@ -94,6 +99,7 @@
         startsWith.value = ''
         mustInclude.value = ''
         endsWith.value = ''
+        exculdeWith.value = ''
         wordLength.value = ''
     })
     const advancedFilter = document.querySelector('.advancedFilter')

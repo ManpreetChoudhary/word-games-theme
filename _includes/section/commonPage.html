@@ -59,7 +59,7 @@
                                 name="prefix">
                         </div>
                         <div class="mustInclude same">
-                            <label for="mustInclude">Must Include </label>
+                            <label for="mustInclude">Must Contains </label>
                             <input type="text" class="filter_val" id="mustInclude" placeholder="Contains"
                                 name="contains" value="">
                         </div>
@@ -67,6 +67,12 @@
                             <label for="endsWith">End With</label>
                             <input type="text" class="filter_val" id="endsWith" placeholder="Suffix" name="suffix"
                                 value="">
+                        </div>
+                        <div class="exculdeWith same">
+                            <label for="exculdeWith">Exculde</label>
+                            <br>
+                            <input type="text" class="filter_val" id="exculdeWith" placeholder="Exculde" value=""
+                                name="exculde">
                         </div>
                         <div class="wordLength same">
                             <label for="wordLength">Word Length </label>
@@ -98,6 +104,7 @@
         startsWith.value = ''
         mustInclude.value = ''
         endsWith.value = ''
+        exculdeWith.value = ''
         wordLength.value = ''
     })
     const fillterWrapper = document.querySelector('.fillterWrapper')

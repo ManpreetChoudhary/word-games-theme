@@ -11,15 +11,16 @@ let wordleWordCount = document.querySelector('#wordleWordCount')
 let wordlesolver_submit = document.getElementById('wordlesolver_submit')
 let newWordsLength = 0
 
-const wordleSolver = async (value, value2, value3) => {
+const wordleSolver = async (value, value2, value3, greenWithIndex) => {
   try {
     wordleWordCount.innerHTML = 'Searching for best possible letters...'
-    let response = await fetch('http://127.0.0.1:9000/wordleSolver', {
+    let response = await fetch('./netlify/functions/wordleSolver', {
       method: 'POST',
       body: JSON.stringify({
         greenLetters: value,
         yellowLetters: value2,
         greyLetters: value3,
+        greenWithIndex: greenWithIndex,
       }),
     })
     const data = await response.json()
@@ -79,11 +80,16 @@ const wordleSolver = async (value, value2, value3) => {
 }
 
 let arr = []
+let greenWithIndex = []
 for (let g = 0; g < greenLetters.length; g++) {
   const elem = greenLetters[g]
   elem.addEventListener('input', (e) => {
     e.target.classList.add('ws-fcs')
     arr.push(e.target.value)
+    greenWithIndex.push({
+      value: e.target.value,
+      index: e.target.dataset.id,
+    })
   })
 }
 
@@ -107,7 +113,7 @@ for (let e = 0; e < greyLetters.length; e++) {
 
 function handleSubmit(e) {
   e.preventDefault()
-  wordleSolver(arr, arr2, arr3)
+  wordleSolver(arr, arr2, arr3, greenWithIndex)
 }
 
 form.addEventListener('submit', handleSubmit)

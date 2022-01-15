@@ -14,7 +14,7 @@ let newWordsLength = 0
 const wordleSolver = async (value, value2, value3, greenWithIndex) => {
   try {
     wordleWordCount.innerHTML = 'Searching for best possible letters...'
-    let response = await fetch('./netlify/functions/wordleSolver', {
+    let response = await fetch('/.netlify/functions/wordleSolver', {
       method: 'POST',
       body: JSON.stringify({
         greenLetters: value,

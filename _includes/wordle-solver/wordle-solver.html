@@ -1,30 +1,34 @@
 <div class="container wordleSolver-container">
     <div class="row">
         <div class="col-md-10 mx-auto ws">
+            <div style="font-size: 15px;" class="alert errMessage" role="alert"></div>
+
             <form name="verify">
                 <div class="form-group">
-                    <label for="greenLetters" class="my-1 p-0 wordleSolver-label">Green letters</label>
+                    <label for="greenLetters" class="my-1 p-0 wordleSolver-label">Enter green letters at correct
+                        position</label>
                     <div class="col-md-6 p-0">
                         <div class="d-flex">
-                            <input type="text" autocomplete="off" class="wordleSolver-field form-control px-5"
-                                maxlength="1" id="greenLetters" tabIndex="0">
-                            <input type="text" autocomplete="off" class="wordleSolver-field form-control px-5"
-                                maxlength="1" id="greenLetters" tabIndex="1">
-                            <input type="text" autocomplete="off" class="wordleSolver-field form-control px-5"
-                                maxlength="1" id="greenLetters" tabIndex="2">
-                            <input type="text" autocomplete="off" class="wordleSolver-field form-control px-5"
-                                maxlength="1" id="greenLetters" tabIndex="3">
-                            <input type="text" autocomplete="off" class="wordleSolver-field form-control px-5"
-                                maxlength="1" id="greenLetters" tabIndex="4">
+                            <input data-id="0" type="text" autocomplete="off" tabIndex="0"
+                                class="wordleSolver-field form-control px-5" maxlength="1" id="greenLetters">
+                            <input data-id="1" type="text" autocomplete="off" tabIndex="1"
+                                class="wordleSolver-field form-control px-5" maxlength="1" id="greenLetters">
+                            <input data-id="2" type="text" autocomplete="off" tabIndex="2"
+                                class="wordleSolver-field form-control px-5" maxlength="1" id="greenLetters">
+                            <input data-id="3" type="text" autocomplete="off" tabIndex="3"
+                                class="wordleSolver-field form-control px-5" maxlength="1" id="greenLetters">
+                            <input data-id="4" type="text" autocomplete="off" tabIndex="4"
+                                class="wordleSolver-field form-control px-5" maxlength="1" id="greenLetters">
                         </div>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="yellowLetters" class="my-1 p-0 wordleSolver-label">Yellow letters</label>
+                    <label for="yellowLetters" class="my-1 p-0 wordleSolver-label">Enter letters in yellow below</label>
                     <div class="col-md-6 p-0">
                         <div class="d-flex">
-                            <input type="text" autocomplete="off" class="wordleSolver-field form-control px-5"
-                                maxlength="1" id="yellowLetters" tabIndex="5">
+                            <input type="text" autocomplete="off" tabIndex="1"
+                                class="wordleSolver-field form-control px-5" maxlength="1" id="yellowLetters"
+                                tabIndex="5">
                             <input type="text" autocomplete="off" class="wordleSolver-field form-control px-5"
                                 maxlength="1" id="yellowLetters" tabIndex="6">
                             <input type="text" autocomplete="off" class="wordleSolver-field form-control px-5"
@@ -37,7 +41,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="greyLetters" class="my-1 p-0 wordleSolver-label">Grey letters</label>
+                    <label for="greyLetters" class="my-1 p-0 wordleSolver-label">Enter letters in grey below</label>
                     <div class="col-md-6 p-0">
                         <div class="d-flex">
                             <input type="text" class="wordleSolver-field form-control px-5" maxlength="1"
@@ -76,13 +80,14 @@
         <div class="col-md-10 mx-auto p-0 mt-3">
             <div id="wordleWordCount"></div>
             <div id="wordleSolverData"></div>
+            <div class="alert" role="alert" id="wordleSolvererrorMsg" style="font-size: 15px; padding:15px"></div>
         </div>
     </div>
 </div>
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
-
     $(document).on('keypress', 'input', function (e) {
         if (e.which === 8 || e.which === 9 || (e.which >= 65 && e.which <= 90) || e.which === 32) {
             e.preventDefault();
@@ -91,11 +96,7 @@
             if (!$next.length) {
                 $next = $('[tabIndex=1]');
             }
-            // let elem = $("#greenLetters")
-            // elem.focus()
             $next.focus().click();
         }
     });
-
-
 </script>

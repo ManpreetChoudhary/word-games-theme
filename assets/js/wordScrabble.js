@@ -16,6 +16,7 @@ let prefixValue = params.get('prefix')
 let containsValue = params.get('contains')
 let suffixValue = params.get('suffix')
 let exculdeValue = params.get('exculde')
+let includeValue = params.get('include')
 let lengthValue = params.get('length')
 let dictonary = params.get('dictionary')
 
@@ -25,6 +26,7 @@ let startsWith = document.getElementById('startsWith')
 let mustInclude = document.getElementById('mustInclude')
 let endsWith = document.getElementById('endsWith')
 let exculdeWith = document.getElementById('exculdeWith')
+let inculdeWith = document.getElementById('inculdeWith')
 let wordLength = document.getElementById('wordLength')
 
 let ok = true
@@ -82,7 +84,7 @@ const getData = async (serachValue) => {
     </div>`
     /// loader
     const response = await fetch(
-      `http://127.0.0.1:9000/getWords?name=${serachValue}&selecteddictionary=${selectedDictionary}`
+      `/.netlify/functions/getWords?name=${serachValue}&selecteddictionary=${selectedDictionary}`
     )
     const data = await response.json()
     main.innerHTML = ''
@@ -151,11 +153,46 @@ function getWords(data) {
       }
 
       if (exculdeValue) {
-        newdata = newdata.filter(
-          (item) => !item.includes(exculdeValue.toLowerCase())
-        )
+        let data = []
+        newdata.map((item) => {
+          let check = false
+          for (let e = 0; e < exculdeValue.length; e++) {
+            const element = exculdeValue[e]
+            if (item.includes(element)) {
+              check = true
+              break
+            } else {
+              check = false
+            }
+          }
+          if (check === false) {
+            data.push(item)
+          }
+        })
         exculdeWith.classList.add('tick')
         exculdeWith.value = exculdeValue
+        newdata = data
+      }
+      if (includeValue) {
+        let data = []
+        newdata.map((item) => {
+          let check = false
+          for (let e = 0; e < includeValue.length; e++) {
+            const element = includeValue[e]
+            if (!item.includes(element)) {
+              check = true
+              break
+            } else {
+              check = false
+            }
+          }
+          if (check === false) {
+            data.push(item)
+          }
+        })
+        inculdeWith.classList.add('tick')
+        inculdeWith.value = includeValue
+        newdata = data
       }
 
       if (lengthValue) {
@@ -549,7 +586,8 @@ function addFilterCount() {
   filter_val[1].value = containsValue
   filter_val[2].value = suffixValue
   filter_val[3].value = exculdeValue
-  filter_val[4].value = lengthValue
+  filter_val[4].value = includeValue
+  filter_val[5].value = lengthValue
 
   for (var i = 0; i <= 4; i++) {
     if (filter_val[i].value != '') {

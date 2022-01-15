@@ -13,9 +13,9 @@ let prefixValue = params.get('prefix')
 let containsValue = params.get('contains')
 let suffixValue = params.get('suffix')
 let exculdeValue = params.get('exculde')
+let includeValue = params.get('include')
 let lengthValue = params.get('length')
 let dictonary = params.get('dictionary')
-
 
 let tab_container = document.querySelector('.tab_container')
 
@@ -31,7 +31,7 @@ const getData = async (serachValue) => {
     <img src='/assets/images/loading.gif'>
     </div>`
     const response = await fetch(
-      `http://127.0.0.1:9000/getWords?name=${serachValue}`
+      `/.netlify/functions/getWords?name=${serachValue}`
     )
     const data = await response.json()
     main.innerHTML = ''
@@ -82,14 +82,50 @@ function x_with_letters(data) {
     }
 
     if (exculdeValue) {
-      filterData = filterData.filter((item) =>{
-        return !item.includes(exculdeValue.toLowerCase())
+      let data = []
+      filterData.map((item) => {
+        let check = false
+        for (let e = 0; e < exculdeValue.length; e++) {
+          const element = exculdeValue[e]
+          if (item.includes(element)) {
+            check = true
+            break
+          } else {
+            check = false
+          }
+        }
+        if (check === false) {
+          data.push(item)
+        }
       })
-    
       exculdeWith.classList.add('tick')
       exculdeWith.value = exculdeValue
+      filterData = data
     }
 
+    if (includeValue) {
+      let data = []
+      filterData.map((item) => {
+        let check = false
+        for (let e = 0; e < includeValue.length; e++) {
+          const element = includeValue[e]
+          if (!item.includes(element)) {
+            check = true
+            break
+          } else {
+            check = false
+          }
+        }
+        if (check === false) {
+          data.push(item)
+        }
+      })
+      inculdeWith.classList.add('tick')
+      inculdeWith.value = includeValue
+      filterData = data
+    }
+
+    
 
     if (filterData.length === 0) {
       main.innerHTML += ''
@@ -167,9 +203,10 @@ function addFilterCount() {
   filter_val[1].value = containsValue
   filter_val[2].value = suffixValue
   filter_val[3].value = exculdeValue
-  filter_val[4].value = lengthValue
+  filter_val[4].value = includeValue
+  filter_val[5].value = lengthValue
 
-  for (var i = 0; i < 4; i++) {
+  for (var i = 0; i <= 4; i++) {
     if (filter_val[i].value != '') {
       filter_count += 1
     }

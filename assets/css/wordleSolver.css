@@ -45,7 +45,7 @@
 }
 
 .wordleSolver-label {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -55,11 +55,14 @@
   height: auto;
   box-shadow: 0 0 2px rgb(0 0 0 / 20%);
   margin: 10px 0;
+  border-radius: 15px;
 }
 .allfiveletterswords > .wordListHeading {
   background: gray;
   padding: 10px 0px 5px 25px;
   color: #fff;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
 }
 
 #wordleWordCount {

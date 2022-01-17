@@ -15,6 +15,8 @@ let serachValue = params.get('search').toLowerCase()
 let prefixValue = params.get('prefix')
 let containsValue = params.get('contains')
 let suffixValue = params.get('suffix')
+let exculdeValue = params.get('exculde')
+let includeValue = params.get('include')
 let lengthValue = params.get('length')
 let dictonary = params.get('dictionary')
 
@@ -23,6 +25,8 @@ let tick
 let startsWith = document.getElementById('startsWith')
 let mustInclude = document.getElementById('mustInclude')
 let endsWith = document.getElementById('endsWith')
+let exculdeWith = document.getElementById('exculdeWith')
+let inculdeWith = document.getElementById('inculdeWith')
 let wordLength = document.getElementById('wordLength')
 
 let ok = true
@@ -133,7 +137,6 @@ function getWords(data) {
         startsWith.classList.add('tick')
         startsWith.value = prefixValue
       }
-
       if (containsValue) {
         newdata = newdata.filter((item) =>
           item.includes(containsValue.toLowerCase())
@@ -148,6 +151,50 @@ function getWords(data) {
         endsWith.classList.add('tick')
         endsWith.value = suffixValue
       }
+
+      if (exculdeValue) {
+        let data = []
+        newdata.map((item) => {
+          let check = false
+          for (let e = 0; e < exculdeValue.length; e++) {
+            const element = exculdeValue[e]
+            if (item.includes(element)) {
+              check = true
+              break
+            } else {
+              check = false
+            }
+          }
+          if (check === false) {
+            data.push(item)
+          }
+        })
+        exculdeWith.classList.add('tick')
+        exculdeWith.value = exculdeValue
+        newdata = data
+      }
+      if (includeValue) {
+        let data = []
+        newdata.map((item) => {
+          let check = false
+          for (let e = 0; e < includeValue.length; e++) {
+            const element = includeValue[e]
+            if (!item.includes(element)) {
+              check = true
+              break
+            } else {
+              check = false
+            }
+          }
+          if (check === false) {
+            data.push(item)
+          }
+        })
+        inculdeWith.classList.add('tick')
+        inculdeWith.value = includeValue
+        newdata = data
+      }
+
       if (lengthValue) {
         newdata = newdata.filter((item) => item.length == lengthValue)
         wordLength.classList.add('tick')
@@ -538,9 +585,11 @@ function addFilterCount() {
   filter_val[0].value = prefixValue
   filter_val[1].value = containsValue
   filter_val[2].value = suffixValue
-  filter_val[3].value = lengthValue
+  filter_val[3].value = exculdeValue
+  filter_val[4].value = includeValue
+  filter_val[5].value = lengthValue
 
-  for (var i = 0; i < 4; i++) {
+  for (var i = 0; i <= 4; i++) {
     if (filter_val[i].value != '') {
       filter_count += 1
     }

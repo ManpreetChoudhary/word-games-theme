@@ -1,0 +1,46 @@
+{
+    "title": "Solve wordle easily in minimum guesses",
+    "h1": "Solve todays wordle by entering letters used so far",
+    "h2": "Enters letters in gray, yellow, and green to see potential words",
+    "meta": "Input letters in grey, yellow and green, and get list of matching 5 letter words to solve todays wordle in mimimum attempts, and impress your friends",
+    "featureNo": "02",
+    "feature_title": "Features",
+    "featureList": [
+        {
+            "feature_heading": "",
+            "feature_text": "",
+            "fa_class": "../assets/images/star.svg"
+        },
+        {
+            "feature_heading": "",
+            "feature_text": "",
+            "fa_class": "../assets/images/star.svg"
+        },
+        {
+            "feature_heading": "",
+            "feature_text": "",
+            "fa_class": "../assets/images/star.svg"
+        },
+        {
+            "feature_heading": "",
+            "feature_text": "",
+            "fa_class": "../assets/images/star.svg"
+        },
+        {
+            "feature_heading": "",
+            "feature_text": "",
+            "fa_class": "../assets/images/star.svg"
+        },
+        {
+            "feature_heading": "",
+            "feature_text": "",
+            "fa_class": "../assets/images/star.svg"
+        }
+    ],
+    "faqList": [
+        {
+            "Question": "",
+            "Answer": ""
+        }
+    ]
+}

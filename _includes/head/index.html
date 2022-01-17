@@ -103,7 +103,7 @@
   {%- include google-analytics.html -%}
 
 
-
+  {%- if site.MonumetricID -%}
   <script>
     const autoLoadDuration = 5; //In Seconds
     const eventList = ["keydown", "mousemove", "wheel", "touchmove", "touchstart", "touchend"];
@@ -123,12 +123,11 @@
     }
 
     function runScripts() {
-      console.log(document.querySelector("script"))
-      console.log("Javascript Executed!")
-      console.log(document.querySelectorAll("script[delay]"))
       document.querySelectorAll("script[delay]").forEach(function (scriptTag) {
         scriptTag.setAttribute("src", scriptTag.getAttribute("delay"));
       });
     }
   </script>
+  {%- endif -%}
+
 </head>

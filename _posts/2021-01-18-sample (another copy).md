@@ -1,0 +1,85 @@
+---
+tags: []
+categories: wordswithletters
+layout: post
+title: What are some of the benefits of playing Word with Friends
+image: '/uploads/output-3.png'
+image2: '/uploads/useful-2.PNG'
+author: Ankita
+URLS:
+  [
+    name: 'BlogLevelUrl',
+    url: '/url',
+    name: 'BlogLevelUrl',
+    url: '/url',
+    name: 'BlogLevelUrl',
+    url: '/url',
+    name: 'BlogLevelUrl',
+    url: '/url',
+    name: 'BlogLevelUrl',
+    url: '/url',
+    name: 'BlogLevelUrl',
+    url: '/url',
+    name: 'BlogLevelUrl',
+    url: '/url',
+    name: 'BlogLevelUrl',
+    url: '/url',
+    name: 'BlogLevelUrl',
+    url: '/url',
+    name: 'BlogLevelUrl',
+    url: '/url',
+  ]
+comments: true
+---
+
+![](/uploads/useful-2.PNG)
+
+Words with Friends is a multiplayer word game designed by Newtoy. Players turn to construct crossword-puzzle-style words in a manner similar to the classic Scrabble board game. The rules of both games are identical, but Words with Friends is not synonymous with the Scrabble brand. Up to 40 games can be played simultaneously using push notifications to alert players when they turn. Players can look up friends either by username or Facebook, or be randomly assigned to an opponent by "Smart Match" Players can also find potential opponents by using the Community Match.
+
+Released in July 2009, Words with Friends is available for cross-platform play on Android, Windows Phone, and iOS operating systems. The game can also be found on Facebook, Kindle Fire, and Nook Tablet. In addition, there is a chat feature built into the game that allows the opponent to exchange messages.
+
+Between 2010 and 2011, Words with Friends was one of the top-ranking games in the iOS app store. A sequel to the game, Words with Friends 2, was released in September 2017. The rules of the game are generally the same as those of the two-player Scrabble, with a few differences, such as the arrangement of the premium squares and the distribution and point values of some of the letters. Players will receive seven randomly selected letter tiles, which will be replenished until all 104 tiles have been used.Players take turns creating words on the board or, instead of playing a word, they can may opt to swap tiles with a pool of currently unused tiles or move their turn. Players can form words on the board either vertically or horizontally. The goal of the player is to score as many points as possible.In 2012, Zynga, in collaboration with Hasbro, launched several iterations of the "Hasbro Gaming" versions of Words with Friends. In October 2019, it was revealed that the hack of Zynga's social game creator had compromised the data of 218 million Words with Friends profiles. The information you access include player names, email addresses, login IDs, phone numbers, and Zynga account.
+
+You've been playing Scrabble for years. Family brought it out to battle an often dull rainy day, or friends used it to give game night a little of an analytical edge. Then came Zynga's Words with Friends, an incredibly common app that lets you play in—say—"Scrabble-like" let's games with your buddies or even strangers.
+
+It's no wonder that a lot of people love to play word games. They're the best way to mix fun and vocabulary. When it comes to the debate of what kind of games are at the forefront when it comes to educational advantages, there's no doubt that word games are the champions.We just need outlets to help us face the day, and that might be word games for you if you plan to give them a try and enjoy them from time to time. Here's how this game will be helpful to your mental health.
+
+**Stress relief**
+
+Word games have a role to play in calming anxiety and alleviating stress. You've probably heard how you lose yourself in the game and forget about all your issues. They are also known to produce dopamine, which is the chemical that helps us experience joy, optimism and accomplishment.
+
+**Improvisation of vocabulary**
+
+There is immense satisfaction in being able to use large words and also having the ability to understand complex concepts. Word games are selling it. After a while of playing, you'll find that you've mastered new vocabulary that you wouldn't have known otherwise. Not only does learning new words and improving your vocabulary make you feel amazing, but it's also a factor in your personal growth and can help you progress your career, particularly if you're a writer. Not to mention, it could make you look smart. There are many ways you can broaden your vocabulary. One of these is knowing anagrams. An anagram means that there are two separate words with the same characters. They can have the same meaning, opposite meanings, or relevant meanings. You may use an online unscrambler for anagrams that can go a long way toward preparing your mind to function better and learn new anagrams.
+
+**Helps is socializing better with others**
+
+Word games are a fun way to get to know people. You can gather new or old friends and play together in teams that will make you all bond. Socialization provides a lot of mental health advantages. According to study, it will boost the attitude. There are various mental and physical health benefits to socializing, such as stress relief and relaxation.
+
+**Concentration booster**
+
+Concentration is an important skill that we need in everyday life, from doing simple things to solving big problems. You'll need to focus to solve word games, particularly puzzle games. The more difficult the word is, the more concentrated you have to be. After a while of playing regularly, you'll notice that you're going to solve them faster.
+
+**Improving brain functions**
+
+Playing word games can improve various brain functions, such as problem-solving, memory, cognition, and creativity. They can all make life easier and help you move forward in your career and on a more personal level.
+
+If you think that your Words With Friends addiction helps your brain, you might be wrong. While these kinds of games (Words with Friends, Scrabble, and Sudoko) help keep our brains sharp, according to our experts, they will not help to reduce your risk factors for Alzheimer's disease and dementia on their own.Dr. Marie Pasinski, a neurologist at Massachusetts General Hospital, a faculty member at Harvard Medical School, and author of a book, Beautiful Brain, Beautiful You, says brain games are good, but once you've mastered that game or skill, you don't do any favors to your brain. Let’s look at her tips to improve brain health:
+
+**Learning something new**
+
+"Our brains have this incredible ability to make new neurons and new connections throughout our lives," says Pasinski. The bottom line: you're never too old to learn new skills. Pasinski says that one of her patients, a woman in the mid-40s, recently started singing and memorizing lyrics, and now her brain is sharper than ever before.
+
+**Getting more sleep**
+
+Pasinski says that. "Sleep promotes neuroplasticity, the growth of new neurons. New neurons grow in the hippocampus, the brain's memory center, and sleep deprivation reduces the production of new neurons."
+
+**Improving one’s diet**
+
+"Diet is incredibly important and a Mediterranean-style diet is the best diet for the brain. It has been associated with improved cognitive function and lower rates of dementia," says Pasinski. "Probably one of the reasons that is good for the brain is that it is rich in omega-3s, which are literally the building blocks of the brain.
+
+**Popular word games**
+
+Crossword puzzles are the most famous word game ever. They're old-fashioned but timelessly entertaining. They have the most obvious benefit of improving your vocabulary, especially for young students and people learning English as a new language. They can also release stress by shutting down the voices in our brains and allowing us to enjoy the game. Scrabble has similar health benefits as it releases stress, engages your mind, and teaches you new vocabulary. They help you develop your intellectual abilities, as you learn new words about different topics. It's a game that encourages a group game that allows you to get to know new people.
+
+Call your friends and get together to have a lovely evening full of challenging, brain-teasing and mind-squeezing. Getting better at these games will boost your self-confidence and vigor, as well as enrich personal development skills. Most importantly, it's the perfect way to relax and be stress-free.

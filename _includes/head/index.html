@@ -103,7 +103,7 @@
   {%- include google-analytics.html -%}
 
 
-
+  {%- if site.MonumetricID -%}
   <script>
     const autoLoadDuration = 5; //In Seconds
     const eventList = ["keydown", "mousemove", "wheel", "touchmove", "touchstart", "touchend"];
@@ -128,4 +128,6 @@
       });
     }
   </script>
+  {%- endif -%}
+
 </head>

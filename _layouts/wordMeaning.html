@@ -43,6 +43,7 @@
             background-color: #F8F9FA !important;
         }
     </style>
+    {%- if site.MonumetricID -%}
     <script>
         const autoLoadDuration = 5; //In Seconds
         const eventList = ["keydown", "mousemove", "wheel", "touchmove", "touchstart", "touchend"];
@@ -70,7 +71,7 @@
             });
         }
     </script>
-
+    {%- endif -%}
 </head>
 
 <body>

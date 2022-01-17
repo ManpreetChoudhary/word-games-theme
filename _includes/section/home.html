@@ -49,27 +49,41 @@
 
                         </div>
                         <div class="startsWith">
-                            <label for="startsWith">Starts With</label>
+                            <label data-toggle="tooltip" data-placement="top"
+                                title="Filter for words that starts with these letters" for="startsWith">Starts
+                                With</label>
                             <br>
                             <input type="text" id="startsWith" placeholder="Prefix" value="" name="prefix">
                         </div>
                         <div class="mustInclude">
-                            <label for="mustInclude">Must Include </label>
+                            <label for="mustInclude" data-toggle="tooltip" data-placement="top"
+                                title=" Words that contain letters in this order(ab)">Must Contains </label>
                             <br>
                             <input type="text" id="mustInclude" placeholder="Contains" name="contains">
                         </div>
                         <div class="endsWith">
-                            <label for="endsWith">End With</label>
+                            <label for="endsWith" data-toggle="tooltip" data-placement="top"
+                                title="Filter for words that ends with these letters">End With</label>
                             <br>
                             <input type="text" id="endsWith" placeholder="Suffix" name="suffix">
                         </div>
                         <div class="exculdeWith">
-                            <label for="exculdeWith">Exculde</label>
+                            <label data-toggle="tooltip" data-placement="top"
+                                title="Only words that not contain the letters you enter here"
+                                for="exculdeWith">Exculde</label>
                             <br>
                             <input type="text" id="exculdeWith" placeholder="Exculde" value="" name="exculde">
                         </div>
+                        <div class="inculdeWith">
+                            <label data-toggle="tooltip" data-placement="top"
+                                title="Only words that contain the letters you enter here"
+                                for="inculdeWith">Include</label>
+                            <br>
+                            <input type="text" id="inculdeWith" placeholder="Include" value="" name="include">
+                        </div>
                         <div class="wordLength">
-                            <label for="wordLength">Word Length </label>
+                            <label data-toggle="tooltip" data-placement="top" title="Filter for words with this length"
+                                for="wordLength">Word Length </label>
                             <br>
                             <input type="text" id="wordLength" placeholder="Length" name="length">
                             <div style="margin-top: 1.2rem; gap:5px" class="d-flex w-100">
@@ -80,7 +94,6 @@
 
                             </div>
                         </div>
-
                     </div>
                 </form>
             </div>
@@ -102,6 +115,7 @@
         mustInclude.value = ""
         endsWith.value = ""
         exculdeWith.value = ""
+        inculdeWith.value = ''
         wordLength.value = ""
     }))
 

@@ -30,22 +30,34 @@
   box-shadow: unset !important;
   border-color: #ced4da !important;
 }
+#addMore {
+  font-size: 25px;
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  text-align: right;
+  padding-right: 2px;
+}
 
 .wordlesolver-btn {
   padding: 8px 25px;
   font-size: 15px;
-  background-color: #50bd47;
-  border-color: #50bd47;
+  background-color: #6aaa64;
+  border-color: #6aaa64;
   color: #fff;
   border-radius: 5px;
   font-weight: 900;
+}
+.wordlesolver-btn:focus {
+  outline: none;
+  box-shadow: unset !important;
 }
 .wordlesolver-btn:hover {
   color: #fff;
 }
 
 .wordleSolver-label {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -55,11 +67,14 @@
   height: auto;
   box-shadow: 0 0 2px rgb(0 0 0 / 20%);
   margin: 10px 0;
+  border-radius: 15px;
 }
 .allfiveletterswords > .wordListHeading {
   background: gray;
   padding: 10px 0px 5px 25px;
   color: #fff;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
 }
 
 #wordleWordCount {

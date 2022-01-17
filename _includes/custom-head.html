@@ -28,6 +28,7 @@
 
     {%- include google-analytics.html -%}
     <!-- {% include adsense/adsense.html %} -->
+    {%- if site.MonumetricID -%}
     <script>
         const autoLoadDuration = 5; //In Seconds
         const eventList = ["keydown", "mousemove", "wheel", "touchmove", "touchstart", "touchend"];
@@ -55,5 +56,6 @@
             });
         }
     </script>
+    {%- endif -%}
     {% include Monumetric/Monumetric.html %}
 </head>

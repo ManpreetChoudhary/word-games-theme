@@ -25,21 +25,7 @@ exports.handler = function (event, context, callback) {
       lettersWithoutGray.push(item)
     }
   })
-  dictionaryData.map((item) => {
-    let check = false
-    for (let index = 0; index < greyLetters.length; index++) {
-      const element = greyLetters[index]
-      if (item.includes(element)) {
-        check = true
-        break
-      } else {
-        check = false
-      }
-    }
-    if (check === false) {
-      lettersWithoutGray.push(item)
-    }
-  })
+
   let wordsMatched = []
   lettersWithoutGray.map((item) => {
     let check = false

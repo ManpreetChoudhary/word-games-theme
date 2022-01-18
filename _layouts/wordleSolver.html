@@ -9,6 +9,7 @@
 {%- include head/index.html -%}
 
 <body>
+    <link rel="stylesheet" href="{{ '../assets/css/wordleSolver.css' | relative_url }}">
     {%- include header/index.html -%}
 
 
@@ -23,7 +24,7 @@
     </div>
     {%- endif -%}
 
-    <div class="wordleSolver-feature my-5">
+    <div class="wordleSolver-feature">
         {{content}}
     </div>
 
@@ -39,7 +40,7 @@
     {%- include footer/index.html -%}
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" />
-    <link rel="stylesheet" href="{{ '../assets/css/wordleSolver.css' | relative_url }}">
+
     <script defer src="../assets/js/wordleSolver.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
     {% include Monumetric/Monumetric.html %}

@@ -186,10 +186,12 @@ function handleSubmit(e) {
   ) {
     errMessage.innerHTML = ''
     errMessage.classList.remove('alert-danger')
+    errMessage.style.display = 'none'
     wordleSolver(greenLetter, yellowLetters, greyLetters, greenWithIndex)
   } else {
     errMessage.innerHTML = 'You must enter at least 1 green letter'
     errMessage.classList.add('alert-danger')
+    errMessage.style.display = 'block'
   }
 }
 form.addEventListener('submit', handleSubmit)

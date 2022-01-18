@@ -37,7 +37,6 @@
                     </div>
 
                     <div class="wrapper_dropDown d-flex justify-content-end mt-5" style="gap:15px">
-
                         <div class="advancedFilter" style="position: relative;" onclick="myFunction()">
                             <input type="button" value="Advanced Filter" class="filterButton">
                             <div class="angle-arrow2"></div>
@@ -84,9 +83,13 @@
                             <input type="submit" value="Apply" class="btn-info text-white"
                                 style="background-color: {{CustomColor.inputButtonBg}};">
                         </div>
-                        <p class="m-0" style="font-size:13px">Solve wordle quickly using our wordle solver</p>
                     </div>
                 </form>
+                {%- if page.letter == 5 -%}
+                <h2 class="m-0 mt-4 text-center" style="font-size:16px">
+                    <a style="color:#000" href="/wordle-solver">Solve wordle quickly using our wordle solver</a>
+                </h2>
+                {%- endif -%}
             </div>
         </div>
     </div>

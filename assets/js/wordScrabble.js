@@ -240,7 +240,7 @@ function getWords(data) {
             for (let i = 0; i < item.length; i++) {
               sum += ScrabbleLetterScore[item[i]] || 0 // for unknown characters
             }
-            return `<a class="anchor__style" title="Lookup python in Dictionary" target="_blank" href="/word-meaning?search=${item.toLowerCase()}">
+            return `<a class="anchor__style" title="Lookup ${item} in Dictionary" target="_blank" href="/word-meaning?search=${item.toLowerCase()}">
             <li>${itemHtml}
           <span class="points" value="${sum}" style="position:relative; top:4px; font-size:12px"> ${sum}</span>
             </li></a>`

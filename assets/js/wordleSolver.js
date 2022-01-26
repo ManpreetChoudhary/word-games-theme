@@ -2,9 +2,9 @@ console.log('wordle solver ...')
 
 let form = document.querySelector('[name=verify')
 
-let greenLetters = document.querySelectorAll('#greenLetters')
-let yellowLetters = document.querySelectorAll('#yellowLetters')
-let greyLetters = document.querySelectorAll('#greyLetters')
+let greenLetters = document.querySelectorAll('.greenLetters')
+let yellowLetters = document.querySelectorAll('.yellowLetters')
+let greyLetters = document.querySelectorAll('.greyLetters')
 let wordleSolverData = document.getElementById('wordleSolverData')
 
 let wordleWordCount = document.querySelector('#wordleWordCount')
@@ -42,7 +42,7 @@ const wordleSolver = async (value, value2, value3, greenWithIndex) => {
   try {
     let result = ''
     wordleWordCount.innerHTML = 'Searching for best possible letters...'
-    let response = await fetch('/.netlify/functions/wordleSolver', {
+    let response = await fetch('http://127.0.0.1:9000/wordleSolver', {
       method: 'POST',
       body: JSON.stringify({
         greenLetters: value,
@@ -90,7 +90,7 @@ const wordleSolver = async (value, value2, value3, greenWithIndex) => {
         wordleSolverData.innerHTML += `
             <div class="allfiveletterswords wordlistContainer">
                 <div class="wordListHeading">
-                    <h3 class="lead">All 5 Letter Words</h3>
+                    <h3 class="lead">Solve wordle with these words</h3>
                 </div>
                 <div class="wordList">
                     <ul class="ul list-unstyled">
@@ -105,7 +105,7 @@ const wordleSolver = async (value, value2, value3, greenWithIndex) => {
       wordleSolvererrorMsg.classList.add('alert-danger')
       wordleSolvererrorMsg.innerHTML = 'Sorry!! No words found'
     } else {
-      wordleWordCount.innerHTML = `<strong>${newWordsLength} Results</strong>`
+      wordleWordCount.innerHTML = `<strong>Found <span style="color:#6aaa64">${newWordsLength}</span> matching words for wordle</strong>`
     }
   } catch (error) {
     console.log(error)

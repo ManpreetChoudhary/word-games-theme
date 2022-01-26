@@ -1,3 +1,10 @@
+{% assign file = page.fileName %}
+{% assign lang = page.lang %}
+{% assign dataToShow = site.data.[page.folderName][lang][file] %}
+
+
+
+
 <div class="container">
     <div class="relatedPosts">
 
@@ -8,15 +15,17 @@
         {% assign maxRelatedCounter = 0 %}
 
         <div class="row">
+
             {% for post in site.posts %}
             {% assign sameTagCount = 0 %}
             {% assign commonTags = '' %}
 
 
-            {%- if page.categories-%}
+
+            {%- if page.categories or dataToShow.categories-%}
             {% for category in post.categories %}
             {% if post.url != page.url %}
-            {% if page.categories contains category %}
+            {% if page.categories or dataToShow.categories contains category %}
             {% assign sameTagCount = sameTagCount | plus: 1 %}
             {% endif %}
             {% endif %}
@@ -96,13 +105,13 @@
             {%- endif -%}
             {% endfor %}
             {%- endif -%}
-            {%- if page.categories-%}
+            {%- if page.categories or dataToShow.categories-%}
             {%- if tagData == false -%}
             {%- continue -%}
             {%- else -%}
             {% for category in post.categories %}
             {% if post.url != page.url %}
-            {% if page.categories contains category %}
+            {% if page.categories or dataToShow.categories contains category %}
             {%- assign catData = false -%}
             {%- break -%}
             {% endif %}

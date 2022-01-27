@@ -20,6 +20,7 @@ let dictonary = params.get('dictionary')
 let tab_container = document.querySelector('.tab_container')
 
 let txtBox = document.querySelector('.txtBox')
+txtBox.focus()
 txtBox.value = serachValue
 
 var theSelect = document.getElementById('select_dropDown')
@@ -46,7 +47,7 @@ getData(serachValue.toLowerCase())
 function x_with_letters(data) {
   if (typeof data === 'string') {
     errorMsg.innerHTML = 'No words found'
-    wordCount.innerHTML = `<strong> 0 words with letters ${serachValue.split(
+    wordCount.innerHTML = `<strong>Found 0 words with letters ${serachValue.split(
       ''
     )}</strong>`
   } else {
@@ -158,7 +159,7 @@ function x_with_letters(data) {
           sum += ScrabbleLetterScore[item[i]] || 0 // for unknown characters
         }
         wordLength.value = itemLength
-        return `<a class="anchor__style" title="Lookup python in Dictionary" target="_blank" href="/word-meaning?search=${item}">
+        return `<a class="anchor__style" title="Lookup ${item} in Dictionary" target="_blank" href="/word-meaning?search=${item}">
         <li>${item}
           <span class="points" value="${sum}" style="position:relative; top:4px; font-size:12px"> ${sum}</span>
             </li></a>`
@@ -187,7 +188,7 @@ function x_with_letters(data) {
   </div>
   `
     }
-    wordCount.innerHTML = `<strong>${newWordsLength} words with letters ${serachValue.split(
+    wordCount.innerHTML = `<strong>Found ${newWordsLength} words with letters with ${serachValue.split(
       ''
     )}</strong>`
   }

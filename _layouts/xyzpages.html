@@ -85,8 +85,13 @@
 </style>
 
 <body>
-    {%- include header/index.html -%}
-
+    <div class="container py-3 result_header">
+        <nav class="navbar result_page_navbar">
+            <a class="navbar-brand result_header_logo" href="/" title="words with letters">
+                <img src="{{ site.favicon | relative_url }}" alt="{{site.name}}-logo" style="width:35px; height:35px;">
+            </a>
+        </nav>
+    </div>
     {%- include xyzpages/xyz.html -%}
 
     {%- include share/socialshare.html -%}

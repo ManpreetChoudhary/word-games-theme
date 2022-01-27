@@ -6,7 +6,7 @@ let greenLetters = document.querySelectorAll('.greenLetters')
 let yellowLetters = document.querySelectorAll('.yellowLetters')
 let greyLetters = document.querySelectorAll('.greyLetters')
 let wordleSolverData = document.getElementById('wordleSolverData')
-
+greenLetters[0].focus()
 let wordleWordCount = document.querySelector('#wordleWordCount')
 let wordleSolvererrorMsg = document.querySelector('#wordleSolvererrorMsg')
 let wordlesolver_submit = document.getElementById('wordlesolver_submit')
@@ -38,9 +38,12 @@ addMore.addEventListener('click', (e) => {
   }
 })
 
+let spinner = document.querySelector('.spinner')
 const wordleSolver = async (value, value2, value3, greenWithIndex) => {
   try {
     let result = ''
+    document.querySelector('#updateTxt').innerHTML = ''
+    spinner.classList.add('spinner-border')
     wordleWordCount.innerHTML = 'Searching for best possible letters...'
     let response = await fetch('/.netlify/functions/wordleSolver', {
       method: 'POST',
@@ -52,6 +55,8 @@ const wordleSolver = async (value, value2, value3, greenWithIndex) => {
       }),
     })
     const data = await response.json()
+    document.querySelector('#updateTxt').innerHTML = 'Update'
+    spinner.classList.remove('spinner-border')
 
     let ok = true
     if (data.length === 0) {
@@ -59,10 +64,13 @@ const wordleSolver = async (value, value2, value3, greenWithIndex) => {
       wordleSolverData.innerHTML = ''
       wordleSolvererrorMsg.classList.add('alert-danger')
       wordleSolvererrorMsg.innerHTML = 'Sorry!! No words found'
+      wordleWordCount.style.display = 'none'
+      // console.log(wordleWordCount)
     } else {
+      wordleWordCount.style.display = 'block'
+      wordleSolverData.innerHTML = ''
       wordleSolvererrorMsg.classList.remove('alert-danger')
       wordleSolvererrorMsg.innerHTML = ''
-      wordleSolverData.innerHTML = ''
       newWordsLength = ''
       newWordsLength += data.length
       result = data.map((item) => {
@@ -77,7 +85,7 @@ const wordleSolver = async (value, value2, value3, greenWithIndex) => {
             sum += ScrabbleLetterScore[item[i]] || 0 // for unknown characters
           }
           return `
-          <a class="anchor__style" title="Lookup python in Dictionary" target="_blank" href="/word-meaning?search=${item.toLowerCase()}">
+          <a class="anchor__style" title="Lookup ${item} in Dictionary" target="_blank" href="/word-meaning?search=${item.toLowerCase()}">
           <li>
           ${item.toLowerCase()}
           <span class="points" value="${sum}" style="position:relative; top:4px; font-size:12px"> ${sum}</span>
@@ -101,7 +109,9 @@ const wordleSolver = async (value, value2, value3, greenWithIndex) => {
             `
       }
     }
+
     if (newWordsLength === 0) {
+      console.log(true)
       wordleSolvererrorMsg.classList.add('alert-danger')
       wordleSolvererrorMsg.innerHTML = 'Sorry!! No words found'
     } else {

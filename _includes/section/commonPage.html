@@ -4,9 +4,17 @@
 
 {%- assign CustomColor = site.data.theme.colors -%}
 <!-- start commonPage as LandingPage -->
+
+<div class="container py-3 result_header">
+    <nav class="navbar result_page_navbar">
+        <a class="navbar-brand result_header_logo" href="/" title="words with letters">
+            <img src="{{ site.favicon | relative_url }}" alt="{{site.name}}-logo" style="width:35px; height:35px;">
+        </a>
+    </nav>
+</div>
 <div class="container" id="containerWd">
     <section class="sticky_nav">
-        <div class="pageHeading text-center pt-5">
+        <div class="pageHeading text-center">
             <h1 class="heading m-0 pb-0">
                 {{dataToShow.h1}}</h1>
             {%- if dataToShow.h2 != "" -%}
@@ -18,13 +26,13 @@
             <div class="position-relative serachBox">
                 <form action="" id='form'>
                     <input style="border-radius: {{CustomColor.inputFieldBorder}}" type="text"
-                        placeholder="Enter up to 15 letters?" class="txtBox" value='' name="search" maxlength="15" value
-                        required>
+                        placeholder="Enter up to 15 letters?" class="txtBox resultPageTxtBox" value='' name="search"
+                        maxlength="15" value required>
                     <input
                         style="border-radius: {{CustomColor.inputFieldBorder}}; background-color: {{CustomColor.inputButtonBg}};"
-                        type="submit" class="serachBtn" id="serach" value>
+                        type="submit" class="serachBtn resultPageSearchBtn" id="serach" value>
                     <div class="dictonaryDropdown">
-                        <select class="form-select select_dropDown2" name="dictionary"
+                        <select class="form-select select_dropDown2 resultPageDropdown2" name="dictionary"
                             aria-label="Default select example">
                             <option selected value="Dictionary">Dictionary</option>
                             <option value="twl06" id="twl06">TWL06 (US, Canada, Thailand)</option>

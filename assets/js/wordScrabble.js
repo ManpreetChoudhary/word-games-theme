@@ -37,6 +37,7 @@ var sortValue
 var sortBool = false
 
 let txtBox = document.querySelector('.txtBox')
+txtBox.focus()
 txtBox.value = serachValue
 txtBox.addEventListener('input', (e) => {
   let rangeOfBlankTile = script.dataset.range
@@ -105,7 +106,7 @@ if (lengthValue === '1') {
 function getWords(data) {
   if (typeof data === 'string') {
     errorMsg.innerHTML = 'no words found'
-    wordCount.innerHTML = `<strong> 0 words with letters ${serachValue.split(
+    wordCount.innerHTML = `<strong>Found 0 words with letters ${serachValue.split(
       ''
     )}</strong>`
   } else {
@@ -273,7 +274,7 @@ function getWords(data) {
     if (newWordsLength === 0) {
       errorMsg.innerHTML = 'no words found'
     } else {
-      wordCount.innerHTML = `<strong>${newWordsLength} words with letters ${serachValue.split(
+      wordCount.innerHTML = `<strong>Found ${newWordsLength} words with letters with ${serachValue.split(
         ''
       )}</strong>`
     }

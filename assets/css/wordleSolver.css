@@ -11,7 +11,9 @@
 }
 .forms_data {
   border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 25px;
+  padding: 0px 25px;
+  padding-top: 15px;
+  text-align: center;
 }
 .wordleSolver_headings {
   margin-top: 110px;
@@ -53,6 +55,7 @@
   border-color: #6aaa64;
   color: #fff;
   border-radius: 5px;
+  width: 100px;
   font-weight: 900;
 }
 .wordlesolver-btn:focus {
@@ -104,7 +107,25 @@
   color: #fff !important;
   background-color: #787c7e !important;
 }
+.related_post_heading {
+  width: 100%;
+  font-size: 46px;
+  text-align: center;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.24;
+  letter-spacing: normal;
+  color: #11304e;
+  margin-bottom: 45px;
+  padding-top: 75px;
+  display: inline-block;
+}
 
+#wordleSolvererrorMsg {
+  margin: 10px auto;
+  width: 75%;
+}
 @media (max-width: 768px) {
   .allfiveletterswords,
   #wordleWordCount {

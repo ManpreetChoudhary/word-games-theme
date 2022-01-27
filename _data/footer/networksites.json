@@ -5,12 +5,12 @@
             "url": "http://wordswithletters.org/"
         },
         {
-            "name": "alarmsetter",
-            "url": "https://alarmsetter.com/"
+            "name": "wordfinders",
+            "url": "https://wordfinders.org/"
         },
         {
-            "name": "safepdfkit",
-            "url": "http://safepdfkit.com/"
+            "name": "wordscramblers",
+            "url": "http://wordscramblers.org/"
         }
     ]
 }

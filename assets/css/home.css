@@ -255,7 +255,7 @@ input:-webkit-autofill:active {
     z-index: 99;
   }
   .pageHeading h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     padding-top: 3rem;
   }
   #containerWd {

@@ -259,14 +259,22 @@ hr {
   color: gray;
   font-size: 15px;
   text-decoration: none !important;
+  margin: 2rem 0px;
 }
 .txt-secondary:hover {
   color: #000;
 }
 
+.footer_hr {
+  width: 50px;
+  margin: 2rem auto;
+  border: 2px solid #000;
+}
+
 .footer-section {
-  padding: 60px 0px;
+  padding: 5px 0px;
   background-color: #f8f9fa;
+  margin-top: 3rem;
 }
 
 .footer-logo-cont {
@@ -274,7 +282,7 @@ hr {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  font-size: 15px;
+  font-size: 20px;
   color: #000;
   font-weight: 900;
 }
@@ -293,7 +301,7 @@ hr {
   line-height: 35px;
   text-align: center;
   vertical-align: middle;
-  font-size: 14px;
+  font-size: 18px;
   background: #000;
   -webkit-background-clip: text;
   color: transparent;
@@ -307,4 +315,10 @@ hr {
 }
 .footer-address p {
   margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .txt-secondary {
+    text-align: center;
+  }
 }

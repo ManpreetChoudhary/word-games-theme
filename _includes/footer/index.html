@@ -69,6 +69,7 @@
                             <!-- <div class="footer-title">{{dataToShow.heading}}</div> -->
                         </div>
                         {%- endif -%}
+                        <hr class="footer_hr">
                         <div class="footer-social-list mt-4">
                             <ul class="list-inline">
                                 {% for data in dataToShow.social %}
@@ -81,6 +82,7 @@
                             </ul>
                         </div>
                     </div>
+
                     <div class="col-md-2 txt-secondary">
                         <p class=" font-weight-bold txt-primary footer_subheading">{{dataToShow.companytitle | default:
                             'Company' }}</p>
@@ -89,12 +91,13 @@
                         {% endfor %}
                     </div>
                     <div class="col-md-2 txt-secondary">
-                        <p class=" font-weight-bold txt-primary footer_subheading">{{dataToShow.companytitle | default:
-                            'Company' }}</p>
-                        {% for data in dataToShow.company %}
+                        <p class=" font-weight-bold txt-primary footer_subheading">{{dataToShow.linksTitle | default:
+                            'Links' }}</p>
+                        {% for data in dataToShow.links %}
                         <p class="mb-4"><a class="footer-links txt-secondary" href="{{data.url}}">{{data.name}}</a></p>
                         {% endfor %}
                     </div>
+
                     <div class="col-md-2 txt-secondary ">
                         <p class=" font-weight-bold txt-primary footer_subheading">{{dataToShow.producttitle | default:
                             'tools' }}</p>

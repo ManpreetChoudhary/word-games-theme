@@ -1,6 +1,7 @@
 {
     "logo": "https://d33wubrfki0l68.cloudfront.net/ed710b6efb59f7057f7a02f110608e34d61929e6/2a338/assets/images/wordswithletters-logo.svg",
     "heading": "marketing@wordgames.org",
+    "linksTitle": "Resources",
     "companytitle": "Company",
     "networksitestitle": "Network sites",
     "producttitle": "Tools",
@@ -16,6 +17,32 @@
         {
             "name": "Disclaimer",
             "url": "/disclaimer"
+        }
+    ],
+    "links": [
+        {
+            "name": "Ten letter words with these letters",
+            "url": "/ten-letter-words-with-these-letters"
+        },
+        {
+            "name": "Two letter words with these letters",
+            "url": "/two-letter-words-with-these-letters"
+        },
+        {
+            "name": "Thirteen letter words with these letters",
+            "url": "/thirteen-letter-words-with-these-letters"
+        },
+        {
+            "name": "Three letter words with these letters",
+            "url": "/three-letter-words-with-these-letters"
+        },
+        {
+            "name": "Twelve letter words with these letters",
+            "url": "/twelve-letter-words-with-these-letters"
+        },
+        {
+            "name": "Eleven letter words with these letters",
+            "url": "/eleven-letter-words-with-these-letters"
         }
     ],
     "tools": [

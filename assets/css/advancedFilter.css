@@ -41,7 +41,7 @@
   background: #fff;
   position: absolute;
   z-index: 999;
-  top: 140px;
+  top: 100px;
   right: 150px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
   padding: 30px 15px;
@@ -68,7 +68,7 @@
 .sticky_nav {
   position: sticky;
   width: inherit;
-  top: 0px;
+  top: 58px;
   background-color: #fff;
   z-index: 99;
 }

@@ -5,16 +5,16 @@
 {%- assign CustomColor = site.data.theme.colors -%}
 <!-- start commonPage as LandingPage -->
 
-<div class="container py-3 result_header">
+<!-- <div class="container py-3 result_header">
     <nav class="navbar result_page_navbar">
         <a class="navbar-brand result_header_logo" href="/" title="words with letters">
             <img src="{{ site.favicon | relative_url }}" alt="{{site.name}}-logo" style="width:35px; height:35px;">
         </a>
     </nav>
-</div>
+</div> -->
 <div class="container" id="containerWd">
     <section class="sticky_nav">
-        <div class="pageHeading text-center">
+        <div class="pageHeading text-center pt-5">
             <h1 class="heading m-0 pb-0">
                 {{dataToShow.h1}}</h1>
             {%- if dataToShow.h2 != "" -%}
@@ -27,7 +27,7 @@
                 <form action="" id='form'>
                     <input style="border-radius: {{CustomColor.inputFieldBorder}}" type="text"
                         placeholder="Enter up to 15 letters?" class="txtBox resultPageTxtBox" value='' name="search"
-                        maxlength="15" value required>
+                        maxlength="15" value required autocomplete="off">
                     <input
                         style="border-radius: {{CustomColor.inputFieldBorder}}; background-color: {{CustomColor.inputButtonBg}};"
                         type="submit" class="serachBtn resultPageSearchBtn" id="serach" value>

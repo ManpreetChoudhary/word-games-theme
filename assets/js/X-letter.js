@@ -17,7 +17,8 @@ let includeValue = params.get('include')
 let lengthValue = params.get('length')
 let dictonary = params.get('dictionary')
 
-let tab_container = document.querySelector('.tab_container')
+let tab_link_wrapper = document.querySelector('.tab_link_wrapper')
+tab_link_wrapper.style.display = "none"
 
 let txtBox = document.querySelector('.txtBox')
 txtBox.focus()
@@ -165,15 +166,15 @@ function x_with_letters(data) {
             </li></a>`
       })
 
-      tab_container.innerHTML += `
-      <a href="#${itemLength}">
-      <input type="button" value="${itemLength} Letter" id="Tab${itemLength}" onclick="addFilter(${itemLength})"
-      class="tab_link">
-      </a>
-      `
+      // tab_container.innerHTML += `
+      // <a href="#${itemLength}">
+      // <input type="button" value="${itemLength} Letter" id="Tab${itemLength}" onclick="addFilter(${itemLength})"
+      // class="tab_link">
+      // </a>
+      // `
 
-      let tabs = document.getElementsByClassName('tab_link')
-      tabs[0] ? tabs[0].classList.add('active-tab') : ''
+      // let tabs = document.getElementsByClassName('tab_link')
+      // tabs[0] ? tabs[0].classList.add('active-tab') : ''
 
       main.innerHTML += `
         <div class="allGroupWords">
@@ -329,18 +330,18 @@ function sortby(sortBool, data, i) {
 }
 
 // Implement Active class
-const addFilter = () => {
-  let tabs = document.getElementsByClassName('tab_link')
-  tabs[0] ? tabs[0].classList.add('active-tab') : ''
+// const addFilter = () => {
+//   let tabs = document.getElementsByClassName('tab_link')
+//   tabs[0] ? tabs[0].classList.add('active-tab') : ''
 
-  Array.from(tabs).map((item) => {
-    item.classList.remove('active-tab')
-  })
-  main.innerHTML += ``
-  let activeLetter = event.target
-  // console.log(activeLetter)
-  activeLetter.classList.add('active-tab')
-}
+//   Array.from(tabs).map((item) => {
+//     item.classList.remove('active-tab')
+//   })
+//   main.innerHTML += ``
+//   let activeLetter = event.target
+//   // console.log(activeLetter)
+//   activeLetter.classList.add('active-tab')
+// }
 
 // Scrabble Point Counts
 const ScrabbleScore = () => {

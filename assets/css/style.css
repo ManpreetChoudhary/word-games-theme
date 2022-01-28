@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 /* styling........ */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif !important;
 }
 :root {
   --txtColor: #000;
@@ -41,6 +43,7 @@ header {
   font-size: 2.2rem;
   color: var(--txtColor) !important;
   font-weight: 900;
+  position: relative;
 }
 .navbar-dark .navbar-toggler {
   outline: none !important;

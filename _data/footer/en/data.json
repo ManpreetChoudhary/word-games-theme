@@ -6,7 +6,7 @@
     "producttitle": "Tools",
     "company": [
         {
-            "name": "Terms and conditions",
+            "name": "Terms of use",
             "url": "/terms-and-conditions"
         },
         {
@@ -34,26 +34,26 @@
     ],
     "social": [
         {
-            "logo": "https://d33wubrfki0l68.cloudfront.net/e5fa7730655be5691999bb536f8e1a55a8a9c73e/ff772/assets/footer/facebook.png",
+            "icon": "bi bi-facebook",
             "url": "/",
             "title": "facebook"
         },
         {
-            "logo": "https://d33wubrfki0l68.cloudfront.net/d539a46928a5250c3d84414fb5c946c791752757/c75ff/assets/footer/instagram.png",
+            "icon": "bi bi-instagram",
             "url": "/",
             "title": "instagram"
         },
         {
-            "logo": "https://d33wubrfki0l68.cloudfront.net/fc8b0b4c0f237155e9c5135afe46ca182dcd04ff/2d334/assets/footer/linkedin.png",
+            "icon": "bi bi-linkedin",
             "url": "/",
             "title": "linkden"
         },
         {
-            "logo": "https://d33wubrfki0l68.cloudfront.net/270e94712aa37fcce48bd184f757a2df9270cfe8/d47e4/assets/footer/twitter.png",
+            "icon": "bi bi-twitter",
             "url": "/",
             "title": "twitter"
         }
     ],
-    "messege": "Copyright © 2020 All rights reserved to",
+    "messege": "Copyright © 2020 All rights reserved to wordgames",
     "legal": []
 }

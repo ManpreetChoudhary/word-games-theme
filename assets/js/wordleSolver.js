@@ -55,7 +55,7 @@ const wordleSolver = async (value, value2, value3, greenWithIndex) => {
       }),
     })
     const data = await response.json()
-    document.querySelector('#updateTxt').innerHTML = 'Update'
+    document.querySelector('#updateTxt').innerHTML = 'Solve'
     spinner.classList.remove('spinner-border')
 
     let ok = true

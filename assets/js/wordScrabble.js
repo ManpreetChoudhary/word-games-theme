@@ -321,6 +321,8 @@ function sortPointsby(sortValue, data) {
           var text1 = serachValue.replace('?', '')
           var text2 = item.words
           var text3 = item.words
+           
+         
           function findIndex(str, char) {
             const strLength = str.length
             const indexes = []

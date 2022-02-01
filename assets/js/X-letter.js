@@ -4,6 +4,7 @@ const getScript=document.currentScript
 const letterLen = getScript.dataset.letter
 
 let errorMsg = document.querySelector('.errorMsg')
+let script = document.currentScript
 let wordCount = document.querySelector('.wordCount')
 let main = document.querySelector('.main')
 
@@ -23,10 +24,43 @@ tab_link_wrapper.style.display = "none"
 let txtBox = document.querySelector('.txtBox')
 txtBox.focus()
 txtBox.value = serachValue
+txtBox.addEventListener('input', (e) => {
+  let rangeOfBlankTile = script.dataset.range
+  e.target.value = e.target.value.replace(/[^a-zA-Z? ]/g, '')
+  if (rangeOfBlankTile === '') {
+    rangeOfBlankTile = 5
+  }
+  e.target.value = e.target.value.replace(/ /g, '?')
+  let data = []
+  data = e.target.value.split('').filter((i) => i === '?')
+  if (data.length > rangeOfBlankTile) {
+    e.target.value = e.target.value.replace(/\?$/, '')
+  }
+})
 
 var theSelect = document.getElementById('select_dropDown')
 document.querySelector('.select_dropDown2').value = dictonary
-
+const getDiff = (text1, text2) => {
+  var diffRange = []
+  var currentRange = undefined
+  for (var i = 0; i < text1.length; i++) {
+    if (text1[i] != text2[i]) {
+      if (currentRange == undefined) {
+        currentRange = [i]
+      }
+    }
+    if (currentRange != undefined && text1[i] == text2[i]) {
+      currentRange.push(i)
+      diffRange.push(currentRange)
+      currentRange = undefined
+    }
+  }
+  if (currentRange != undefined) {
+    currentRange.push(i)
+    diffRange.push(currentRange)
+  }
+  return diffRange
+}
 const getData = async (serachValue) => {
   try {
     main.innerHTML = `<div class="loader">
@@ -160,8 +194,45 @@ function x_with_letters(data) {
           sum += ScrabbleLetterScore[item[i]] || 0 // for unknown characters
         }
         wordLength.value = itemLength
+
+        var text1 = serachValue.replace('?', '')
+        var text2 = item
+        var text3 = item
+        function findIndex(str, char) {
+          const strLength = str.length
+          const indexes = []
+          let newStr = str
+          while (newStr && newStr.indexOf(char) > -1) {
+            indexes.push(newStr.indexOf(char) + strLength - newStr.length)
+            newStr = newStr.substring(newStr.indexOf(char) + 1)
+            newStr = newStr.substring(newStr.indexOf(char) + 1)
+          }
+          return indexes
+        }
+        let chars = text1.split('')
+        let indexs = []
+        chars.map((i) => {
+          let findIndexes = findIndex(text3, i)
+          if (findIndexes.length > 0) {
+            text3 = text3.split('')
+            text3[findIndexes] = '$'
+            text3 = text3.join('')
+            indexs = [...indexs, ...findIndexes]
+          }
+        })
+        let itemHtml = ''
+        text2.split('').map((itemValue, index) => {
+          let check = indexs.find((i) => i === index)
+          if (check !== undefined) {
+            itemHtml += `${itemValue}`
+          } else {
+            itemHtml += `<span class='highlight'>${itemValue}</span>`
+          }
+        })
+      
+        
         return `<a class="anchor__style" title="Lookup ${item} in Dictionary" target="_blank" href="/word-meaning?search=${item}">
-        <li>${item}
+        <li>${itemHtml}
           <span class="points" value="${sum}" style="position:relative; top:4px; font-size:12px"> ${sum}</span>
             </li></a>`
       })

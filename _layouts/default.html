@@ -57,8 +57,10 @@
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
     <script>
         let txtBox = document.querySelector('.txtBox')
+        let focusBorder = document.querySelector('.focus-border')
         txtBox.focus()
         txtBox.addEventListener('input', (e) => {
+            focusBorder.classList.remove("focus-border")
             e.target.value = e.target.value.replace(/[^a-zA-Z? ]/g, "")
             let rangeOfBlankTile = '{{ page.blanktilerange }}'
             if (rangeOfBlankTile === "") {

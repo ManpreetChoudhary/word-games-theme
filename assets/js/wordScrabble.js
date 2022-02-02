@@ -354,7 +354,7 @@ function sortPointsby(sortValue, data) {
               itemHtml += `<span class='highlight'>${itemValue}</span>`
             }
           })
-          return `<a class="anchor__style" title="Lookup python in Dictionary" target="_blank" href="/word-meaning?search=${item.words}">
+          return `<a class="anchor__style" title="Lookup ${item} in Dictionary" target="_blank" href="/word-meaning?search=${item.words}">
           <li>${itemHtml}
         <span class="points" value="${item.points}" style="position:relative; top:4px; font-size:12px"> ${item.points}</span>
           </li></a>`
@@ -426,7 +426,7 @@ function sortby(sortBool, data) {
               sum += ScrabbleLetterScore[item[i]] || 0 // for unknown characters
             }
 
-            return `<a class="anchor__style" title="Lookup python in Dictionary" target="_blank" href="/word-meaning?search=${item.toLowerCase()}">
+            return `<a class="anchor__style" title="Lookup ${item} in Dictionary" target="_blank" href="/word-meaning?search=${item.toLowerCase()}">
             <li>${itemHtml}
         <span class="points" value="${sum}" style="position:relative; top:4px; font-size:12px"> ${sum}</span>
           </li></a>`
@@ -489,7 +489,7 @@ function sortby(sortBool, data) {
               sum += ScrabbleLetterScore[item[i]] || 0 // for unknown characters
             }
 
-            return `<a class="anchor__style" title="Lookup python in Dictionary" target="_blank" href="/word-meaning?search=${item.toLowerCase()}">
+            return `<a class="anchor__style" title="Lookup ${item} in Dictionary" target="_blank" href="/word-meaning?search=${item.toLowerCase()}">
             <li>${itemHtml}
         <span class="points" value="${sum}" style="position:relative; top:4px; font-size:12px"> ${sum}</span>
           </li></a>`

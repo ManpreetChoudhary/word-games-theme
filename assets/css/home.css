@@ -55,6 +55,77 @@ input:-webkit-autofill:active {
   outline: none;
   position: relative;
 }
+
+.txtBox~.focus-border:before,
+.txtBox~.focus-border:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 2px;
+	background-color: #000;
+	transition: .5s;
+	transition-delay: 0.2s;
+  z-index: 9;
+}
+.txtBox~.focus-border:after {
+	top: auto;
+	bottom: 0;
+	right: auto;
+	left: 0;
+	transition-delay: 0.6s;
+}
+.txtBox:focus~.focus-border:before,
+.txtBox:focus~.focus-border:after,
+.has-content.txtBox~.focus-border:before,
+.has-content.txtBox~.focus-border:after {
+	width: 100%;
+	transition: .5s;
+	transition-delay: 0.6s;
+}
+
+.txtBox:focus~.focus-border:after,
+.has-content.txtBox~.focus-border:after {
+	transition-delay: 0.2s;
+}
+
+.txtBox:focus~.focus-border i:before,
+.txtBox:focus~.focus-border i:after,
+.has-content.txtBox~.focus-border i:before,
+.has-content.txtBox~.focus-border i:after {
+	height: 100%;
+	transition: 0.2s;
+}
+
+.txtBox:focus~.focus-border i:after,
+.has-conten.txtBox~.focus-border i:after {
+	transition-delay: 0.4s;
+}
+.txtBox~.focus-border i:before,
+.txtBox~.focus-border i:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 2px;
+	height: 0;
+	background-color: #000;
+	transition: .5s;
+}
+
+.txtBox~.focus-border i:after {
+	left: auto;
+	right: 0;
+	top: auto;
+	bottom: 0;
+	transition-delay: 0.4s;
+}
+
+
+
+
+
 /* ravi */
 .txtBox::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */

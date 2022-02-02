@@ -6,6 +6,10 @@
       "url": "/test"
     },
     {
+      "name": "4 letter words with these letters and a blank",
+      "url": "/4-letter-words-with-these-letters-and-a-blank"
+    },
+    {
       "name": "unscramble-letters",
       "url": "/unscramble-letters-to-make-words"
     },

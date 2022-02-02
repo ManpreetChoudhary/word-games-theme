@@ -20,10 +20,14 @@
         <div class="serachSection">
             <div class="position-relative serachBox">
                 <form action="/result" id='form' method="GET">
-
-                    <input style="border-radius: {{CustomColor.inputFieldBorder}}" type="text"
-                        placeholder="Enter up to 15 letters?" class="txtBox" value='' name="search" maxlength="15"
-                        required autocomplete="off">
+                    <div style="position: relative;">
+                        <input style="border-radius: {{CustomColor.inputFieldBorder}}" type="text"
+                            placeholder="Enter up to 15 letters?" class="txtBox" value='' name="search" maxlength="15"
+                            required autocomplete="off">
+                        <span class="focus-border">
+                            <i></i>
+                        </span>
+                    </div>
                     <input style="border-radius: {{CustomColor.inputFieldBorder}}; 
                         background-color: {{CustomColor.inputButtonBg}};" type="submit" class="serachBtn" id="serach"
                         value>

@@ -54,9 +54,9 @@
 
 @media (max-width: 768px) {
   .wordCount {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
   .pad {
-    padding-top: 50px !important;
+    padding-top: 0px !important;
   }
 }

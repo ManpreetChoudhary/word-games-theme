@@ -58,38 +58,6 @@
         <div class="container">
             <div class="footer-single-col">
                 <div class="row d-flex  justify-content-between mt-5 ">
-                    <div class="col-md-12 txt-secondary mb-5">
-                        {%- if dataToShow.logo -%}
-                        <div class="footer-logo-cont">
-                            <img loading="lazy" src="{{dataToShow.logo}}" title="logo" class="footer-logo  d-block"
-                                alt="footer logo" width="30px">
-                            <span>
-                                {{dataToShow.heading}}
-                            </span>
-                            <!-- <div class="footer-title">{{dataToShow.heading}}</div> -->
-                        </div>
-                        {%- endif -%}
-                        <hr class="footer_hr">
-                        <div class="footer-social-list mt-4">
-                            <ul class="list-inline">
-                                {% for data in dataToShow.social %}
-                                <li>
-                                    <a href="{{data.url}}" target="_blank">
-                                        <i class="{{data.icon}}"></i>
-                                    </a>
-                                </li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-md-2 txt-secondary">
-                        <p class=" font-weight-bold txt-primary footer_subheading">{{dataToShow.companytitle | default:
-                            'Company' }}</p>
-                        {% for data in dataToShow.company %}
-                        <p class="mb-4"><a class="footer-links txt-secondary" href="{{data.url}}">{{data.name}}</a></p>
-                        {% endfor %}
-                    </div>
                     <div class="col-md-2 txt-secondary">
                         <p class=" font-weight-bold txt-primary footer_subheading">{{dataToShow.linksTitle | default:
                             'Links' }}</p>
@@ -97,7 +65,6 @@
                         <p class="mb-4"><a class="footer-links txt-secondary" href="{{data.url}}">{{data.name}}</a></p>
                         {% endfor %}
                     </div>
-
                     <div class="col-md-2 txt-secondary ">
                         <p class=" font-weight-bold txt-primary footer_subheading">{{dataToShow.producttitle | default:
                             'tools' }}</p>
@@ -111,6 +78,38 @@
                         {% for data in networksitesData.networkSites %}
                         <p class="mb-4"><a class="footer-links txt-secondary" href="{{data.url}}">{{data.name}}</a></p>
                         {% endfor %}
+                    </div>
+                    <div class="col-md-2 txt-secondary">
+                        <p class=" font-weight-bold txt-primary footer_subheading">{{dataToShow.companytitle | default:
+                            'Company' }}</p>
+                        {% for data in dataToShow.company %}
+                        <p class="mb-4"><a class="footer-links txt-secondary" href="{{data.url}}">{{data.name}}</a></p>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="col-md-12 txt-secondary mb-5">
+                    {%- if dataToShow.logo -%}
+                    <div class="footer-logo-cont">
+                        <img loading="lazy" src="{{dataToShow.logo}}" title="logo" class="footer-logo  d-block"
+                            alt="footer logo" width="30px">
+                        <span class="email_heaidng">
+                            {{dataToShow.heading}}
+                        </span>
+                        <!-- <div class="footer-title">{{dataToShow.heading}}</div> -->
+                    </div>
+                    {%- endif -%}
+                    <hr class="footer_hr">
+                    <div class="footer-social-list mt-4">
+                        <ul class="list-inline">
+                            {% for data in dataToShow.social %}
+                            <li>
+                                <a href="{{data.url}}" target="_blank">
+                                    <i class="{{data.icon}}"></i>
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
                     </div>
                 </div>
                 <div class="copyright-text mt-5 txt-secondary text-center">

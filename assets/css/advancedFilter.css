@@ -137,7 +137,8 @@ a {
   }
 
   .sticky_nav {
-    top: 50px;
+    top: 0px;
+    padding-top: 1.5rem;
   }
 
   .Advancedbtn {

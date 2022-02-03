@@ -11,7 +11,7 @@ let wordCount = document.querySelector('.wordCount')
 let main = document.querySelector('.main')
 
 const params = new URLSearchParams(window.location.search)
-let serachValue = params.get('search')
+let serachValue = params.get('search').toLowerCase()
 let prefixValue = params.get('prefix')
 let containsValue = params.get('contains')
 let suffixValue = params.get('suffix')

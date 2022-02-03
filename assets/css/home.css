@@ -12,6 +12,7 @@
 }
 .pageHeading {
   margin-bottom: 2rem;
+  padding-top: 3rem;
 }
 .pageHeading > h1 {
   font-size: 30px;
@@ -293,9 +294,20 @@ input:-webkit-autofill:active {
   padding: 0px;
 }
 @media (max-width: 768px) {
+  .pageHeaderBg{
+    height: 25vh;
+  }
+  .pageHeading{
+    padding:0 !important;
+  }
+  .pageHeading > h2{
+    font-size: 1.4rem;
+  }
   .wrapper_dropDown {
     align-items: flex-end;
     flex-direction: column;
+    gap: 0 !important;
+    margin:0 !important
   }
   .txtBox {
     height: 50px !important;
@@ -322,12 +334,11 @@ input:-webkit-autofill:active {
     width: 50%;
     right: 0;
     border-radius: 0;
-    padding: 9.5px;
+    padding: 7.5px;
     z-index: 99;
   }
   .pageHeading h1 {
     font-size: 2rem;
-    padding-top: 3rem;
   }
   #containerWd {
     width: 100% !important;

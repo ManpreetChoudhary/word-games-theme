@@ -31,13 +31,18 @@ header {
   position: relative;
 }
 
-.navbar {
+.navbar-section {
   width: 100%;
   padding: 1.2rem 10rem !important;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .navbar-brand {
   font-size: 2.2rem;
@@ -240,7 +245,7 @@ header {
 }
 
 @media (max-width: 768px) {
-  .navbar {
+  .navbar-section {
     padding: 1.2rem 15px !important;
   }
 

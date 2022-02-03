@@ -295,7 +295,7 @@ input:-webkit-autofill:active {
 }
 @media (max-width: 768px) {
   .pageHeaderBg{
-    height: 35vh;
+    height: 300px;
   }
   .pageHeading{
     padding:0 !important;

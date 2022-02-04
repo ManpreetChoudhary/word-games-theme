@@ -11,8 +11,8 @@
   margin-bottom: 20vh;
 }
 .pageHeading {
-  margin-bottom: 2rem;
-  padding-top: 3rem;
+  margin-bottom: 0.8rem;
+  /* padding-top: 1.5rem; */
 }
 .pageHeading > h1 {
   font-size: 30px;
@@ -298,7 +298,7 @@ input:-webkit-autofill:active {
     height: 300px;
   }
   .pageHeading{
-    padding:0 !important;
+    margin-bottom: 1rem;
   }
   .pageHeading > h2{
     font-size: 1.4rem;
@@ -307,7 +307,7 @@ input:-webkit-autofill:active {
     align-items: flex-end;
     flex-direction: column;
     gap: 0 !important;
-    margin:0 !important
+    /* margin:0 !important */
   }
   .txtBox {
     height: 50px !important;
@@ -326,6 +326,12 @@ input:-webkit-autofill:active {
     padding: 9.5px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
   }
+}
+@media (max-width:400px) {
+  .pageHeading{
+   padding-left: 25px;
+  }
+  
 }
 @media (max-width: 768px) {
   #select_dropDown {

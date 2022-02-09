@@ -1,4 +1,4 @@
-const allWords = require('./Dictonary/scrabbleword.js')
+const allWords = require('./Dictonary/sowpods.js')
 exports.handler = function (event, context, callback) {
   let body = JSON.parse(event.body)
   let greyLetters = body.greyLetters

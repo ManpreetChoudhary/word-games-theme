@@ -46,9 +46,9 @@
         }
     ],
     "jsfilepaths": [
-        ""
+        "../assets/js/words-in-certain-positions.js"
     ],
     "cssfilepaths": [
-        "../assets/css/wordleSolver.css"
+        "../assets/css/wordsInCertainPosition.css"
     ]
 }

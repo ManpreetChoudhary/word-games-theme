@@ -1,19 +1,12 @@
-const allWords = require('./Dictonary/scrabbleword.js')
+const allWords = require('./Dictonary/sowpods.js')
 exports.handler = function (event, context, callback) {
   let body = JSON.parse(event.body)
-
-
-  let greenWithIndex = body.greenWithIndex
-  // let letterLen = body.wordLength
-
-  // let dictionaryData = allWords.filter((item) => item.length == 9)
-
-
+  let lettersWithIndex = body.greenWithIndex
   let result = []
   allWords.map((item) => {
     let check = false
-    for (let index = 0; index < greenWithIndex.length; index++) {
-      const element = greenWithIndex[index]
+    for (let index = 0; index < lettersWithIndex.length; index++) {
+      const element = lettersWithIndex[index]
       let findIndex = item.indexOf(element.value)
       if (findIndex == element.index) {
         check = true

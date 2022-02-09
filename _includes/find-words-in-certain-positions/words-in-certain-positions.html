@@ -1,6 +1,6 @@
-<div class="container wordleSolver-container">
+<div class="container wordsInCertainPos_container">
     <div class="row">
-        <div class="col-md-10 mx-auto ws">
+        <div class="col-md-10 mx-auto wordsInCertainPos">
             <div style="font-size: 15px;" class="alert errMessage" role="alert"></div>
             <form name="verify" class="forms_data">
                 <div class="form-group">
@@ -8,35 +8,35 @@
                         <div class="d-flex">
                             <div class="Ist">
                                 <input data-id="0" type="text" autocomplete="off" tabIndex="0"
-                                    class="wordleSolver-field greenLetters greenWithIndex form-control px-5"
-                                    maxlength="1" id="first" onkeyup="move(this,'second')">
+                                    class="letter_field greenLetters greenWithIndex form-control px-5" maxlength="1"
+                                    id="first" onkeyup="move(this,'second')">
                                 <small>1st<span> Letter</span></small>
                             </div>
                             <div class="2nd">
                                 <input data-id="1" type="text" autocomplete="off" tabIndex="1"
-                                    class="wordleSolver-field greenLetters greenWithIndex form-control px-5"
-                                    maxlength="1" id="second" onkeyup="move(this,'third')">
+                                    class="letter_field greenLetters greenWithIndex form-control px-5" maxlength="1"
+                                    id="second" onkeyup="move(this,'third')">
                                 <small>2nd<span> Letter</span></small>
                             </div>
 
                             <div class="3rd">
                                 <input data-id="2" type="text" autocomplete="off" tabIndex="2"
-                                    class="wordleSolver-field greenLetters greenWithIndex form-control px-5"
-                                    maxlength="1" id="third" onkeyup="move(this,'fourth')">
+                                    class="letter_field greenLetters greenWithIndex form-control px-5" maxlength="1"
+                                    id="third" onkeyup="move(this,'fourth')">
                                 <small>3rd<span> Letter</span></small>
                             </div>
 
                             <div class="4th">
                                 <input data-id="3" type="text" autocomplete="off" tabIndex="3"
-                                    class="wordleSolver-field greenLetters greenWithIndex form-control px-5"
-                                    maxlength="1" id="fourth" onkeyup="move(this,'fivth')">
+                                    class="letter_field greenLetters greenWithIndex form-control px-5" maxlength="1"
+                                    id="fourth" onkeyup="move(this,'fivth')">
                                 <small>4th<span> Letter</span></small>
                             </div>
 
                             <div class="5th">
                                 <input data-id="4" type="text" autocomplete="off" tabIndex="4"
-                                    class="wordleSolver-field greenLetters greenWithIndex form-control px-5"
-                                    maxlength="1" id="fivth" onkeyup="move(this,'six')">
+                                    class="letter_field greenLetters greenWithIndex form-control px-5" maxlength="1"
+                                    id="fivth" onkeyup="move(this,'six')">
                                 <small>5th<span> Letter</span></small>
                             </div>
 
@@ -48,34 +48,34 @@
                         <div class="d-flex">
                             <div class="6th">
                                 <input data-id="5" type="text" autocomplete="off" tabIndex="1"
-                                    class="wordleSolver-field greenLetters greenWithIndex form-control px-5"
-                                    maxlength="1" id="six" tabIndex="5" onkeyup="move(this,'seven')">
+                                    class="letter_field greenLetters greenWithIndex form-control px-5" maxlength="1"
+                                    id="six" tabIndex="5" onkeyup="move(this,'seven')">
                                 <small>6th<span> Letter</span></small>
                             </div>
 
                             <div class="7th">
                                 <input data-id="6" type="text" autocomplete="off"
-                                    class="wordleSolver-field greenLetters greenWithIndex form-control px-5"
-                                    maxlength="1" id="seven" tabIndex="6" onkeyup="move(this,'eight')">
+                                    class="letter_field greenLetters greenWithIndex form-control px-5" maxlength="1"
+                                    id="seven" tabIndex="6" onkeyup="move(this,'eight')">
                                 <small>7th<span> Letter</span></small>
                             </div>
                             <div class="8th">
                                 <input data-id="7" type="text" autocomplete="off"
-                                    class="wordleSolver-field greenLetters greenWithIndex form-control px-5"
-                                    maxlength="1" id="eight" tabIndex="7" onkeyup="move(this,'nine')">
+                                    class="letter_field greenLetters greenWithIndex form-control px-5" maxlength="1"
+                                    id="eight" tabIndex="7" onkeyup="move(this,'nine')">
                                 <small>8th<span> Letter</span></small>
                             </div>
                             <div class="9th">
                                 <input data-id="8" type="text" autocomplete="off"
-                                    class="wordleSolver-field greenLetters greenWithIndex form-control px-5"
-                                    maxlength="1" id="nine" tabIndex="8" onkeyup="move(this,'ten')">
+                                    class="letter_field greenLetters greenWithIndex form-control px-5" maxlength="1"
+                                    id="nine" tabIndex="8" onkeyup="move(this,'ten')">
                                 <small>9th<span> Letter</span></small>
                             </div>
 
                             <div class="10th">
                                 <input data-id="9" type="text" autocomplete="off"
-                                    class="wordleSolver-field greenLetters greenWithIndex form-control px-5"
-                                    maxlength="1" id="ten" tabIndex="9" onkeyup="move(this,'eleven')">
+                                    class="letter_field greenLetters greenWithIndex form-control px-5" maxlength="1"
+                                    id="ten" tabIndex="9" onkeyup="move(this,'eleven')">
                                 <small>10th<span> Letter</span></small>
                             </div>
 
@@ -87,39 +87,38 @@
                         <div class="d-flex">
                             <div class="11th">
                                 <input data-id="10" type="text"
-                                    class="wordleSolver-field greenLetters greenWithIndex form-control px-5"
-                                    maxlength="1" id="eleven" value="" autocomplete="off" tabIndex="10"
-                                    onkeyup="move(this,'twelve')">
+                                    class="letter_field greenLetters greenWithIndex form-control px-5" maxlength="1"
+                                    id="eleven" value="" autocomplete="off" tabIndex="10" onkeyup="move(this,'twelve')">
                                 <small>11th<span> Letter</span></small>
                             </div>
 
                             <div class="12th">
-                                <input type="text"
-                                    class="wordleSolver-field greenLetters greenWithIndex form-control px-5"
-                                    maxlength="1" id="twelve" value="" autocomplete="off" tabIndex="11"
+                                <input data-id="11" type="text"
+                                    class="letter_field greenLetters greenWithIndex form-control px-5" maxlength="1"
+                                    id="twelve" value="" autocomplete="off" tabIndex="11"
                                     onkeyup="move(this,'thirteen')">
                                 <small>12th<span> Letter</span></small>
                             </div>
 
                             <div class="13th">
-                                <input type="text"
-                                    class="wordleSolver-field greenLetters greenWithIndex form-control px-5"
-                                    maxlength="1" id="thirteen" value="" autocomplete="off" tabIndex="12"
+                                <input data-id="12" type="text"
+                                    class="letter_field greenLetters greenWithIndex form-control px-5" maxlength="1"
+                                    id="thirteen" value="" autocomplete="off" tabIndex="12"
                                     onkeyup="move(this,'fourteen')">
                                 <small>13th<span> Letter</span></small>
                             </div>
                             <div class="14th">
-                                <input type="text"
-                                    class="wordleSolver-field greenLetters greenWithIndex form-control px-5"
-                                    maxlength="1" id="fourteen" value="" autocomplete="off" tabIndex="13"
+                                <input data-id="13" type="text"
+                                    class="letter_field greenLetters greenWithIndex form-control px-5" maxlength="1"
+                                    id="fourteen" value="" autocomplete="off" tabIndex="13"
                                     onkeyup="move(this,'fifteen')">
                                 <small>14th<span> Letter</span></small>
                             </div>
 
                             <div class="15th">
-                                <input type="text"
-                                    class="wordleSolver-field greenLetters greenWithIndex form-control px-5"
-                                    maxlength="1" id="fifteen" value="" autocomplete="off" tabIndex="14"
+                                <input data-id="14" type="text"
+                                    class="letter_field greenLetters greenWithIndex form-control px-5" maxlength="1"
+                                    id="fifteen" value="" autocomplete="off" tabIndex="14"
                                     onkeyup="move(this,'sixteen')">
                                 <small>15th<span> Letter</span></small>
                             </div>
@@ -128,22 +127,20 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="form-group text-right">
                     <div class="col-md-4 p-0" style="margin: 0 0 0 auto;">
-                        <button type="submit" id="wordlesolver_submit" class="btn wordlesolver-btn mt-3">
-                            <span id="updateTxt">SEARCH</span>
+                        <button type="submit" id="certain_pos_submit" class="btn wordsInCertainPos_btn mt-3">
+                            <span id="searchData">SEARCH</span>
                             <div class="spinner"></div>
                         </button>
                     </div>
                 </div>
             </form>
         </div>
-
         <div class="col-md-10 mx-auto p-0 mt-3">
-            <div id="wordleWordCount"></div>
-            <div id="wordleSolverData"></div>
-            <div class="alert" role="alert" id="wordleSolvererrorMsg" style="font-size: 15px; padding:15px"></div>
+            <div id="certain_pos_count"></div>
+            <div id="certain_pos_words_data"></div>
+            <div class="alert" role="alert" id="certain_pos_error_msg" style="font-size: 15px; padding:15px"></div>
         </div>
     </div>
 </div>
@@ -168,4 +165,3 @@
         }
     }
 </script>
-<script defer src="../assets/js/words-in-certain-pos.js"></script>

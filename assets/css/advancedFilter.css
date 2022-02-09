@@ -1,3 +1,11 @@
+#home_page_search_result{
+  padding:10px;
+  font-size: 12px;
+}
+#home_page_search_result:hover{
+  text-decoration: underline !important;
+}
+
 .result_header > .result_header_logo {
   position: fixed;
   z-index: 999;

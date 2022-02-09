@@ -20,6 +20,19 @@ let includeValue = params.get('include')
 let lengthValue = params.get('length')
 let dictonary = params.get('dictionary')
 
+
+
+let home_page_search_result =  document.querySelector("#home_page_search_result")
+let homePageSearchResult = `/result?search=${serachValue}&dictionary=Dictionary&prefix=&contains=&suffix=&exculde=&inculde=&length=`;
+
+
+ // Attach click listener to relevant buttons.
+ home_page_search_result.addEventListener("click",()=>{
+  ga('send', 'event', 'Link click', 'click', home_page_search_result.innerText)
+  // ga('send', 'event', 'CTA click', 'click', home_page_search_result.innerText);
+})
+
+
 let tab_link_wrapper = document.querySelector('.tab_link_wrapper')
 tab_link_wrapper.style.display = "none"
 
@@ -79,7 +92,7 @@ const getData = async (serachValue) => {
     <img src='/assets/images/loading.gif'>
     </div>`
     const response = await fetch(
-      `/.netlify/functions/getWords?name=${serachValue}`
+      `http://127.0.0.1:9000/getWords?name=${serachValue}`
     )
     const data = await response.json()
     main.innerHTML = ''
@@ -92,7 +105,7 @@ const getData = async (serachValue) => {
 getData(serachValue.toLowerCase())
 
 function x_with_letters(data) {
-  console.log(data);
+  // console.log(data);
   if (typeof data === 'string') {
     errorMsg.innerHTML = 'No words found'
     wordCount.innerHTML = `<strong>Found 0 words with letters ${serachValue.split(
@@ -273,6 +286,9 @@ function x_with_letters(data) {
   </div>
   `
     }
+  
+    home_page_search_result.href = homePageSearchResult 
+    home_page_search_result.innerHTML = `See words of any length with letters ${serachValue.split("")}`
     wordCount.innerHTML = `<strong>Found ${newWordsLength} words with letters with ${serachValue.split(
       ''
     )}</strong>`

@@ -10,12 +10,29 @@
   background-size: cover;
   margin-bottom: 20vh;
 }
+.result_navbar_section{
+  width: 100%;
+  padding: .8rem 9% !important;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+}
 .pageHeading {
   margin-bottom: 0.8rem;
   /* padding-top: 1.5rem; */
 }
 .pageHeading > h1 {
   font-size: 30px;
+}
+.pageHeading > .result_heading{
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
 }
 .table {
   height: 5em;
@@ -293,47 +310,47 @@ input:-webkit-autofill:active {
   width: 700px !important;
   padding: 0px;
 }
+
 @media (max-width: 768px) {
-  .pageHeaderBg{
-    height: 300px;
-  }
-  .pageHeading{
-    margin-bottom: 1rem;
-  }
-  .pageHeading > h2{
-    font-size: 1.4rem;
-  }
-  .wrapper_dropDown {
-    align-items: flex-end;
-    flex-direction: column;
-    gap: 0 !important;
-    /* margin:0 !important */
-  }
-  .txtBox {
-    height: 50px !important;
-  }
-  .serachBtn {
-    height: 50px !important;
-    width: 40px !important;
-  }
-  .advancedFilter .filterButton {
-    top: 60px;
-  }
-  .select_dropDown2 {
-    height: 50px;
-    width: 30%;
-    right: 40px;
-    padding: 9.5px 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
-  }
-}
-@media (max-width:400px) {
-  .pageHeading{
+  .result_navbar_section{
+    padding: 1.2rem 15px !important;
+ }
+ .pageHeaderBg{
+   height: 300px;
+ }
+ .pageHeading{
+   margin-bottom: 1rem;
+ }
+ .pageHeading > h2{
+   font-size: 1.4rem;
+ }
+ .pageHeading > .result_heading{
+   font-size: 1.8rem;
    padding-left: 25px;
-  }
-  
-}
-@media (max-width: 768px) {
+ }
+ .wrapper_dropDown {
+   align-items: flex-end;
+   flex-direction: column;
+   gap: 0 !important;
+   /* margin:0 !important */
+ }
+ .txtBox {
+   height: 50px !important;
+ }
+ .serachBtn {
+   height: 50px !important;
+   width: 40px !important;
+ }
+ .advancedFilter .filterButton {
+   top: 60px;
+ }
+ .select_dropDown2 {
+   height: 50px;
+   width: 30%;
+   right: 40px;
+   padding: 9.5px 0;
+   border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+ }
   #select_dropDown {
     bottom: 0;
     position: fixed;

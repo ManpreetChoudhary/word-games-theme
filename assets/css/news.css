@@ -37,11 +37,11 @@
   padding-right: 30px;
   line-height: 1.4;
   cursor: pointer;
-  padding-left: 48px;
+  /* padding-left: 48px; */
 }
 .meduim-text {
   font-size: 14px;
-  padding-left: 48px;
+  /* padding-left: 48px; */
   font-weight: 500;
   line-height: 1.75;
   text-align: left;

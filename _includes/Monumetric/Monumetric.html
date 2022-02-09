@@ -1,7 +1,55 @@
 {% if jekyll.environment == 'production' and site.MonumetricID %}
+<script>
+    const autoLoadDuration = 5; //In Seconds
+    const eventList = ["keydown", "mousemove", "wheel", "touchmove", "touchstart", "touchend"];
+
+    const autoLoadTimeout = setTimeout(runScripts, autoLoadDuration * 1000);
+
+    eventList.forEach(function (event) {
+        window.addEventListener(event, triggerScripts, { passive: true })
+    });
+
+    function triggerScripts() {
+        runScripts();
+        clearTimeout(autoLoadTimeout);
+        eventList.forEach(function (event) {
+            window.removeEventListener(event, triggerScripts, { passive: true });
+        });
+    }
+
+    function runScripts() {
+        document.querySelectorAll("script[delay]").forEach(function (scriptTag) {
+            scriptTag.setAttribute("src", scriptTag.getAttribute("delay"));
+        });
+    }
+</script>
 <script type="text/javascript" defer delay="{{site.MonumetricID}}" data-cfasync="false"></script>
 {% endif %}
 
 {% if jekyll.environment == 'development' and site.MonumetricID %}
+<script>
+    const autoLoadDuration = 5; //In Seconds
+    const eventList = ["keydown", "mousemove", "wheel", "touchmove", "touchstart", "touchend"];
+
+    const autoLoadTimeout = setTimeout(runScripts, autoLoadDuration * 1000);
+
+    eventList.forEach(function (event) {
+        window.addEventListener(event, triggerScripts, { passive: true })
+    });
+
+    function triggerScripts() {
+        runScripts();
+        clearTimeout(autoLoadTimeout);
+        eventList.forEach(function (event) {
+            window.removeEventListener(event, triggerScripts, { passive: true });
+        });
+    }
+
+    function runScripts() {
+        document.querySelectorAll("script[delay]").forEach(function (scriptTag) {
+            scriptTag.setAttribute("src", scriptTag.getAttribute("delay"));
+        });
+    }
+</script>
 <script type="text/javascript" delay="{{site.MonumetricID}}"></script>
 {% endif %}

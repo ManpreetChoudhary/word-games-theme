@@ -7,20 +7,21 @@
         <!--<div class="col-xl-3 col-lg-12">
             <div class="row">
                 <div class="col-xl-3 p-0">-->
-                    <div class="news">
-                        <!-- <img src="/assets/images/left_obj_02.png" alt="">
+        <div class="news">
+            <!-- <img src="/assets/images/left_obj_02.png" alt="">
                         <span class="site-no">03</span> -->
-                        <h5 class="title">{{dataToShow.Faq_title}}</h5>
-                    </div>
-                <!-- </div>
+            <h5 class="title">{{dataToShow.Faq_title}}</h5>
+        </div>
+        <!-- </div>
             </div>
         </div> -->
 
 
-         <div class="container"> <!--class earlier=col-xl-9 col-lg-12 -->
+        <div class="container">
+            <!--class earlier=col-xl-9 col-lg-12 -->
             <div class="row my-xl-0">
                 {% for entry in dataToShow.faqList %}
-                <div class="col-md-6 pt-5">
+                <div class="col-8 mx-auto pt-5">
                     <p class="meduim-text2 mb-0">{{entry.Question}}</p>
                     <p class="meduim-text mb-0">{{entry.Answer}}</p>
                 </div>

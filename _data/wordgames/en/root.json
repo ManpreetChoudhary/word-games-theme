@@ -1,7 +1,9 @@
 {
    "title": "Word finders to help you find word with given letters.",
-   "h1": "Word Games Scrabble World",
-   "h2": "Enters letters in gray, yellow, and green to see potential words",
+   "h1": "Enter letters to create words with letters!",
+   "h2": "Enter the letters in input below",
+   "tags": "",
+   "categories": "",
    "meta": "Use wordfinders to win any word games such as scrabble, word with friends etc.",
    "featureNo": "02",
    "feature_title": "Features",
@@ -69,6 +71,12 @@
          "Question": "Can I use this wordfinder on my phone?",
          "Answer": "Yes, our word finder is mobile friendly. So you can use it on your laptop, tab or smart phone also."
       }
+   ],
+   "jsfilepaths": [
+      ""
+   ],
+   "cssfilepaths": [
+      ""
    ],
    "aboutList": [
       {

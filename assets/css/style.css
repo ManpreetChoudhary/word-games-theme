@@ -30,10 +30,9 @@ header {
   width: 100%;
   position: relative;
 }
-
-.navbar-section {
+.navbar {
   width: 100%;
-  padding: 1.2rem 10rem !important;
+  padding: 1.2rem 9% !important;
   position: fixed;
   top: 0;
   left: 0;
@@ -54,7 +53,7 @@ header {
   outline: none !important;
 }
 .navbar-nav {
-  margin-left: 11rem;
+  margin-left: 14rem;
 }
 .navbar-nav .nav-item {
   padding: 0 15px;
@@ -244,8 +243,13 @@ header {
   font-size: 14px;
 }
 
+.tools_headings {
+  margin-top: 110px;
+  margin-bottom: 20px;
+}
+
 @media (max-width: 768px) {
-  .navbar-section {
+  .navbar {
     padding: 1.2rem 15px !important;
   }
 
@@ -310,7 +314,6 @@ header {
   filter: brightness();
   filter: brightness(100);
 }
-
 .rating-tool {
   width: 100%;
   display: flex;
@@ -417,7 +420,20 @@ header {
 .social-icon:hover {
   color: black;
 }
-
 .highlight {
   color: #ff0000 !important;
+}
+.related_post_heading,.related_post_heading{
+  width: 100%;
+  font-size: 46px;
+  text-align: center;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.24;
+  letter-spacing: normal;
+  color: #11304e;
+  margin-bottom: 45px;
+  padding-top: 75px;
+  display: inline-block;
 }

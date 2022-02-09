@@ -1,4 +1,4 @@
-console.log('wordle solver ...')
+// console.log('wordle solver ...')
 
 let form = document.querySelector('[name=verify')
 
@@ -45,7 +45,7 @@ const wordleSolver = async (value, value2, value3, greenWithIndex) => {
     document.querySelector('#updateTxt').innerHTML = ''
     spinner.classList.add('spinner-border')
     wordleWordCount.innerHTML = 'Searching for best possible letters...'
-    let response = await fetch('/.netlify/functions/wordleSolver', {
+    let response = await fetch('http://127.0.0.1:9000/wordleSolver', {
       method: 'POST',
       body: JSON.stringify({
         greenLetters: value,
@@ -54,7 +54,8 @@ const wordleSolver = async (value, value2, value3, greenWithIndex) => {
         greenWithIndex: greenWithIndex,
       }),
     })
-    const data = await response.json()
+    let  data = await response.json()
+    data = data.slice(0,1000)
     document.querySelector('#updateTxt').innerHTML = 'Solve'
     spinner.classList.remove('spinner-border')
 
@@ -78,6 +79,7 @@ const wordleSolver = async (value, value2, value3, greenWithIndex) => {
           ok = false
           newWordsLength = newWordsLength - 1
         } else {
+          // console.log(newWordsLength);
           let ScrabbleLetterScore = ScrabbleScore()
           sum = 0
           item = item.toLowerCase()
@@ -115,7 +117,7 @@ const wordleSolver = async (value, value2, value3, greenWithIndex) => {
       wordleSolvererrorMsg.classList.add('alert-danger')
       wordleSolvererrorMsg.innerHTML = 'Sorry!! No words found'
     } else {
-      wordleWordCount.innerHTML = `<strong>Found <span style="color:#6aaa64">${newWordsLength}</span> matching words for wordle</strong>`
+      wordleWordCount.innerHTML = `<strong>Found <span style="color:#20a815">${newWordsLength}</span> matching words for wordle</strong>`
     }
   } catch (error) {
     console.log(error)
@@ -125,6 +127,7 @@ const wordleSolver = async (value, value2, value3, greenWithIndex) => {
 for (let g = 0; g < greenLetters.length; g++) {
   const elem = greenLetters[g]
   elem.addEventListener('input', (e) => {
+    e.target.value = e.target.value.replace(/[^a-zA-Z? ]/g, "")
     if (e.target.value) {
       e.target.classList.add('ws-fcs')
     } else {
@@ -135,6 +138,7 @@ for (let g = 0; g < greenLetters.length; g++) {
 for (let y = 0; y < yellowLetters.length; y++) {
   const elem = yellowLetters[y]
   elem.addEventListener('input', (e) => {
+    e.target.value = e.target.value.replace(/[^a-zA-Z? ]/g, "")
     if (e.target.value) {
       e.target.classList.add('ws-fcs2')
     } else {
@@ -145,6 +149,7 @@ for (let y = 0; y < yellowLetters.length; y++) {
 for (let e = 0; e < greyLetters.length; e++) {
   const elem = greyLetters[e]
   elem.addEventListener('input', (e) => {
+    e.target.value = e.target.value.replace(/[^a-zA-Z? ]/g, "")
     if (e.target.value) {
       e.target.classList.add('ws-fcs3')
     } else {
@@ -183,26 +188,28 @@ const getIndexs = (object) => {
 
 function handleSubmit(e) {
   e.preventDefault()
+
   let greenLetter = getLetters('.greenLetters')
   let yellowLetters = getLetters('.yellowLetters')
   let greyLetters = getLetters('.greyLetters')
   let greenWithIndex = getIndexs('.greenWithIndex')
-  if (
-    greenLetters[0].value !== '' ||
-    greenLetters[1].value !== '' ||
-    greenLetters[2].value !== '' ||
-    greenLetters[3].value !== '' ||
-    greenLetters[4].value !== ''
-  ) {
-    errMessage.innerHTML = ''
-    errMessage.classList.remove('alert-danger')
-    errMessage.style.display = 'none'
+  
+  // if (
+  //   greenLetters[0].value !== '' ||
+  //   greenLetters[1].value !== '' ||
+  //   greenLetters[2].value !== '' ||
+  //   greenLetters[3].value !== '' ||
+  //   greenLetters[4].value !== ''
+  // ) {
+  //   errMessage.innerHTML = ''
+  //   errMessage.classList.remove('alert-danger')
+  //   errMessage.style.display = 'none'
     wordleSolver(greenLetter, yellowLetters, greyLetters, greenWithIndex)
-  } else {
-    errMessage.innerHTML = 'You must enter at least 1 green letter'
-    errMessage.classList.add('alert-danger')
-    errMessage.style.display = 'block'
-  }
+  // } else {
+  //   errMessage.innerHTML = 'You must enter at least 1 green letter'
+  //   errMessage.classList.add('alert-danger')
+  //   errMessage.style.display = 'block'
+  // }
 }
 form.addEventListener('submit', handleSubmit)
 

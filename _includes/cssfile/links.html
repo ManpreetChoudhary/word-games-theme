@@ -1,0 +1,12 @@
+{% assign cssData = site.data.[page.folderName][lang][file] %}
+{{site.data.customcdns.customcdns.cssfiles}}
+{%- if cssData.cssfilepaths -%}
+{%- for path in cssData.cssfilepaths -%}
+<link defer rel="stylesheet" href="{{path}}">
+{%- endfor -%}
+{%- endif -%}
+{%- if cssData.csscdns -%}
+{%- for item in cssData.csscdns -%}
+{{item}}
+{%- endfor -%}
+{%- endif -%}

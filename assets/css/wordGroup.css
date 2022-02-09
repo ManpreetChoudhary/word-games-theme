@@ -53,9 +53,9 @@
 @media (max-width: 768px) {
   .wordCount {
     font-size: 1.3rem;
-    margin-top: 15px;
+    /* margin-top: 15px; */
   }
-  .pagePad{
+  /* .pagePad{
   padding-top: 130px !important ;
   }
   .pad {
@@ -63,5 +63,5 @@
   }
   .xyzPad{
     padding-top: 50px;
-  }
+  } */
 }

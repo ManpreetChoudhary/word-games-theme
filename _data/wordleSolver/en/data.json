@@ -44,5 +44,11 @@
             "Question": "",
             "Answer": ""
         }
+    ],
+    "jsfilepaths": [
+        ""
+    ],
+    "cssfilepaths": [
+        "../assets/css/wordleSolver.css"
     ]
 }

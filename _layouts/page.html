@@ -56,7 +56,12 @@
   {%- include footer/index.html -%}
 
   {%- include script.html -%}
-  <script data-range="{{page.blanktilerange}}" src="/assets/js/wordScrabble.js"></script>
+
+
+
+  {%- if page.tool != 'words-that-start-with-the-letters' -%}
+  <script data-url="{{site.url}}" data-range="{{page.blanktilerange}}" src="/assets/js/wordScrabble.js"></script>
+  {%- endif -%}
 </body>
 
 </html>

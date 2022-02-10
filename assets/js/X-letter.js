@@ -2,8 +2,10 @@
 ---
 const getScript=document.currentScript
 const letterLen = getScript.dataset.letter
-
 const ablank = getScript.dataset.ablank
+
+const siteName = getScript.dataset.name
+const siteUrl = getScript.dataset.url
 
 let errorMsg = document.querySelector('.errorMsg')
 let script = document.currentScript
@@ -19,18 +21,6 @@ let exculdeValue = params.get('exculde')
 let includeValue = params.get('include')
 let lengthValue = params.get('length')
 let dictonary = params.get('dictionary')
-
-
-
-let home_page_search_result =  document.querySelector("#home_page_search_result")
-let homePageSearchResult = `/result?search=${serachValue}&dictionary=Dictionary&prefix=&contains=&suffix=&exculde=&inculde=&length=`;
-
-
- // Attach click listener to relevant buttons.
- home_page_search_result.addEventListener("click",()=>{
-  ga('send', 'event', 'Link click', 'click', home_page_search_result.innerText)
-  // ga('send', 'event', 'CTA click', 'click', home_page_search_result.innerText);
-})
 
 
 let tab_link_wrapper = document.querySelector('.tab_link_wrapper')
@@ -90,9 +80,10 @@ const getData = async (serachValue) => {
   try {
     main.innerHTML = `<div class="loader">
     <img src='/assets/images/loading.gif'>
+    <div style="font-weight:900;font-size:14px" >Finding words - Powered by ${siteUrl.replace(/^https?:\/\//, '')}</div>
     </div>`
     const response = await fetch(
-      `http://127.0.0.1:9000/getWords?name=${serachValue}`
+      `/.netlify/functions/getWords?name=${serachValue}`
     )
     const data = await response.json()
     main.innerHTML = ''
@@ -273,6 +264,15 @@ function x_with_letters(data) {
       // let tabs = document.getElementsByClassName('tab_link')
       // tabs[0] ? tabs[0].classList.add('active-tab') : ''
 
+
+if(siteName == "wordswithletters"){
+  let home_page_search_result = document.querySelector("#home_page_search_result")
+  let homePageSearchResult = `/result?search=${serachValue}&dictionary=Dictionary&prefix=&contains=&suffix=&exculde=&inculde=&length=`;
+  home_page_search_result.href = homePageSearchResult 
+  home_page_search_result.innerHTML = `See words of any length with letters ${serachValue.split("")}`
+}
+
+
       main.innerHTML += `
         <div class="allGroupWords">
           <div class="wordListHeading">
@@ -286,9 +286,6 @@ function x_with_letters(data) {
   </div>
   `
     }
-  
-    home_page_search_result.href = homePageSearchResult 
-    home_page_search_result.innerHTML = `See words of any length with letters ${serachValue.split("")}`
     wordCount.innerHTML = `<strong>Found ${newWordsLength} words with letters with ${serachValue.split(
       ''
     )}</strong>`

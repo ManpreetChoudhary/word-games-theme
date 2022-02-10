@@ -114,9 +114,10 @@
 </nav>
 <!-- </header> -->
 <div class="container" id="containerWd">
-    {%- if page.layout == 'page2' -%}
-    <a id="home_page_search_result"></a>
+    {%- if site.name == 'wordswithletters' and page.layout == "page2" -%}
+    <a id="home_page_search_result" onclick="ga('send', 'event', 'Link click', 'click', 'Home Page Search Result')"></a>
     {%- endif -%}
+
     {% include section/wordGroup.html %}
 </div>
 <!-- navbar close -->

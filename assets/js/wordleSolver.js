@@ -45,7 +45,7 @@ const wordleSolver = async (value, value2, value3, greenWithIndex) => {
     document.querySelector('#updateTxt').innerHTML = ''
     spinner.classList.add('spinner-border')
     wordleWordCount.innerHTML = 'Searching for best possible letters...'
-    let response = await fetch('http://127.0.0.1:9000/wordleSolver', {
+    let response = await fetch('/.netlify/functions/wordleSolver', {
       method: 'POST',
       body: JSON.stringify({
         greenLetters: value,

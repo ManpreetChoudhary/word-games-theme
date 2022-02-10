@@ -3,6 +3,8 @@
 ***************/
 
 // grab some html elements
+
+const getScript=document.currentScript
 let form = document.querySelector('#form')
 let wordCount = document.querySelector('.wordCount')
 let main = document.querySelector('.main')
@@ -32,7 +34,7 @@ let wordLength = document.getElementById('wordLength')
 let ok = true
 
 let tab_container = document.querySelector('.tab_container')
-
+const siteUrl = getScript.dataset.url
 var sortValue
 var sortBool = false
 
@@ -82,11 +84,11 @@ const getData = async (serachValue) => {
     let selectedDictionary = document.querySelector('.select_dropDown2').value
     main.innerHTML = `<div class="loader">
     <img src='/assets/images/loading.gif'>
-    <div style="font-weight:900;font-size:14px" >Words with letters</div>
+    <div style="font-weight:900;font-size:14px" >Finding words - Powered by ${siteUrl.replace(/^https?:\/\//, '')}</div>
     </div>`
     /// loader
     const response = await fetch(
-      `http://127.0.0.1:9000/getWords?name=${serachValue}&selecteddictionary=${selectedDictionary}`
+      `/.netlify/functions/getWords?name=${serachValue}&selecteddictionary=${selectedDictionary}`
     )
     const data = await response.json()
     main.innerHTML = ''

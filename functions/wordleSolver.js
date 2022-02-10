@@ -59,8 +59,13 @@ exports.handler = function (event, context, callback) {
       result.push(item)
     }
   })
-  // wordsMatched
-
+  if(greyLetters[0]){
+    data = lettersWithoutGray
+  }
+  if(greenLetters[0])
+  {
+    data = result
+  }
   const send = () => {
     callback(null, {
       statusCode: 200,
@@ -69,7 +74,7 @@ exports.handler = function (event, context, callback) {
         'Access-Control-Allow-Headers':
           'Origin, X-Request-With, Content-Type , Accept',
       },
-      body: JSON.stringify(result),
+      body: JSON.stringify(data),
     })
   }
 

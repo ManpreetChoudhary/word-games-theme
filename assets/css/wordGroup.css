@@ -55,6 +55,9 @@
     font-size: 1.3rem;
     /* margin-top: 15px; */
   }
+  .pad{
+    padding-bottom: 50px;
+  }
   /* .pagePad{
   padding-top: 130px !important ;
   }

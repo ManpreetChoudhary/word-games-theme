@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-{% assign path = page.jsonFile %}
-{% assign jsonPath = site.data[path] %}
-{% assign dataToShow = jsonPath %}
+{% assign folderName = page.folderName %}
+{% assign file = page.fileName %}
+{% assign lang = page.lang %}
+{% assign dataToShow = site.data[folderName][lang][file] %}
+
 
 <head>
     <!-- Mobile Specific Meta -->

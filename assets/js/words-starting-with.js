@@ -27,7 +27,6 @@ let wordLength = document.getElementById('wordLength')
 let ok = true
 
 let tab_container = document.querySelector('.tab_container')
-
 var sortValue
 var sortBool = false
 
@@ -43,7 +42,7 @@ const getData = async (serachValue) => {
     let selectedDictionary = document.querySelector('.select_dropDown2').value
     main.innerHTML = `<div class="loader">
     <img src='/assets/images/loading.gif'>
-    <div style="font-weight:900;font-size:14px" >Words with letters</div>
+    <div style="font-weight:900;font-size:14px" >Finding words - Powered by wordswithletters.org</div>
     </div>`
     /// loader
     const response = await fetch(

@@ -4,7 +4,6 @@ const getScript=document.currentScript
 const letterLen = getScript.dataset.letter
 const ablank = getScript.dataset.ablank
 
-const siteName = getScript.dataset.name
 const siteUrl = getScript.dataset.url
 
 let errorMsg = document.querySelector('.errorMsg')
@@ -25,6 +24,9 @@ let dictonary = params.get('dictionary')
 
 let tab_link_wrapper = document.querySelector('.tab_link_wrapper')
 tab_link_wrapper.style.display = "none"
+
+let home_page_search_result = document.querySelector("#home_page_search_result")
+let homePageSearchResult = `/result?search=${serachValue}&dictionary=Dictionary&prefix=&contains=&suffix=&exculde=&inculde=&length=`;
 
 let txtBox = document.querySelector('.txtBox')
 txtBox.focus()
@@ -264,13 +266,8 @@ function x_with_letters(data) {
       // let tabs = document.getElementsByClassName('tab_link')
       // tabs[0] ? tabs[0].classList.add('active-tab') : ''
 
-
-if(siteName == "wordswithletters"){
-  let home_page_search_result = document.querySelector("#home_page_search_result")
-  let homePageSearchResult = `/result?search=${serachValue}&dictionary=Dictionary&prefix=&contains=&suffix=&exculde=&inculde=&length=`;
   home_page_search_result.href = homePageSearchResult 
   home_page_search_result.innerHTML = `See words of any length with letters ${serachValue.split("")}`
-}
 
 
       main.innerHTML += `

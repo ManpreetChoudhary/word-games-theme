@@ -1,8 +1,21 @@
 {
+  "tooltip": "words with letters",
   "more": [
     {
-      "name": "words",
-      "url": "/test"
+      "name": "Wordle Solver",
+      "url": "/wordle-solver"
+    },
+    {
+      "name": "Find words with letters in certain positions",
+      "url": "/find-words-with-letters-in-certain-positions"
+    },
+    {
+      "name": "Find words that start with the letters",
+      "url": "find-words-that-start-with-the-letters"
+    },
+    {
+      "name": "4 letter words with these letters and a blank",
+      "url": "/4-letter-words-with-these-letters-and-a-blank"
     },
     {
       "name": "unscramble-letters",

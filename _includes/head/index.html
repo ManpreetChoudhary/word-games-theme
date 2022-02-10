@@ -29,13 +29,13 @@
   <link rel="stylesheet" href="{{ '/assets/css/wordGroup.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/footer.css' | relative_url }}">
 
+  {% include cssfile/links.html %}
+
   <title>
     {%- unless page.layout == "home" -%}
     {{dataToShow.title }}
     {%- endunless -%}
     {{ page.title}}</title>
-
-
 
   <script>
     if ('serviceWorker' in navigator) {
@@ -102,32 +102,6 @@
 
   {%- include google-analytics.html -%}
 
-
-  {%- if site.MonumetricID -%}
-  <script>
-    const autoLoadDuration = 5; //In Seconds
-    const eventList = ["keydown", "mousemove", "wheel", "touchmove", "touchstart", "touchend"];
-
-    const autoLoadTimeout = setTimeout(runScripts, autoLoadDuration * 1000);
-
-    eventList.forEach(function (event) {
-      window.addEventListener(event, triggerScripts, { passive: true })
-    });
-
-    function triggerScripts() {
-      runScripts();
-      clearTimeout(autoLoadTimeout);
-      eventList.forEach(function (event) {
-        window.removeEventListener(event, triggerScripts, { passive: true });
-      });
-    }
-
-    function runScripts() {
-      document.querySelectorAll("script[delay]").forEach(function (scriptTag) {
-        scriptTag.setAttribute("src", scriptTag.getAttribute("delay"));
-      });
-    }
-  </script>
-  {%- endif -%}
+  {% include Monumetric/Monumetric.html %}
 
 </head>

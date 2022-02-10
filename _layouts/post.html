@@ -1,15 +1,12 @@
 <html>
-
 {% include custom-head.html %}
-
-
 <style>
     p {
         margin-bottom: 3rem;
     }
 
     .mainThings {
-        padding-left: 40px;
+        /* padding-left: 40px; */
         position: sticky;
         top: 80px;
     }
@@ -34,12 +31,12 @@
     <section class="section_post">
         <div class="container">
             <div class="row section-title-wrap">
-                <div class="col-md-12 mt-5">
+                <div class="col-md-8  mx-auto mt-5">
                     <h1 class="display-4" style="font-weight: 900;">{{ page.title }}</h1>
                 </div>
             </div>
             <div class="row mt-5">
-                <div class="col-md-8">
+                <div class="col-md-8 mx-auto">
                     {%- include authors/authors.html -%}
                     {%- include postauthorbio.html -%}
                     {% if page.author %}
@@ -51,7 +48,7 @@
 
                     {%- include paginationPostPage.html -%}
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-8 mx-auto">
                     <div class="mainThings">
                         <div class="socialIons">
                             <ul class="list-unstyled item-lists2">
@@ -80,10 +77,15 @@
                             {%- if page.URLS -%}
                             <h3 class="font-weight-bolder">Checkout out these features</h3>
                             <br>
-                            {%- for item in page.URLS -%}
-                            <p class="mb-3"> <a class="featureLink" style="font-size: 13px"
-                                    href="{{item.url}}">{{item.name}}</a></p>
-                            {%- endfor -%}
+                            <div class="row">
+                                {%- for item in page.URLS -%}
+                                {%- if item.name-%}
+
+                                <p class="mb-3 col-md-6 col-lg-3"> <a class="featureLink" style="font-size: 13px"
+                                        href="{{item.url}}">{{item.name}}</a></p>
+                                {%- endif -%}
+                                {%- endfor -%}
+                            </div>
                             {% else %}
                             <h3 class="font-weight-bolder">Checkout out these features</h3>
                             <br>
@@ -96,16 +98,18 @@
                             {%- endif -%}
                             {%- endfor -%}
 
-                            {%- for url in allRandomUrls limit: 10-%}
-                            {% if url %}
-                            <p class="mb-3">
-                                <a class="featureLink" style="font-size: 13px" href="{{url }}">
-                                    {%- assign name = url | replace: '/', ' ' | replace: '-', ' ' -%}
-                                    {{ name }}
-                                </a>
-                            </p>
-                            {%- endif -%}
-                            {%- endfor -%}
+                            <div class="row">
+                                {%- for url in allRandomUrls limit: 10-%}
+                                {% if url %}
+                                <p class="mb-3 col-md-6 col-lg-3">
+                                    <a class="featureLink" style="font-size: 13px" href="{{url }}">
+                                        {%- assign name = url | replace: '/', ' ' | replace: '-', ' ' -%}
+                                        {{ name }}
+                                    </a>
+                                </p>
+                                {%- endif -%}
+                                {%- endfor -%}
+                            </div>
                             {%- endif -%}
 
                         </div>
@@ -127,11 +131,10 @@
         </div>
     </section>
     {%- include section/count.html -%}
-    {%- include section/alertbar.html -%}
+    <!-- {%- include section/alertbar.html -%} -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" />
     {% include script.html %}
     <script src="{{ '/assets/js/TopScroll.js' | relative_url }}"></script>
-    {% include Monumetric/Monumetric.html %}
 </body>
 
 </html>

@@ -3,6 +3,8 @@
 ***************/
 
 // grab some html elements
+
+const getScript=document.currentScript
 let form = document.querySelector('#form')
 let wordCount = document.querySelector('.wordCount')
 let main = document.querySelector('.main')
@@ -32,11 +34,12 @@ let wordLength = document.getElementById('wordLength')
 let ok = true
 
 let tab_container = document.querySelector('.tab_container')
-
+const siteUrl = getScript.dataset.url
 var sortValue
 var sortBool = false
 
 let txtBox = document.querySelector('.txtBox')
+txtBox.focus()
 txtBox.value = serachValue
 txtBox.addEventListener('input', (e) => {
   let rangeOfBlankTile = script.dataset.range
@@ -81,6 +84,7 @@ const getData = async (serachValue) => {
     let selectedDictionary = document.querySelector('.select_dropDown2').value
     main.innerHTML = `<div class="loader">
     <img src='/assets/images/loading.gif'>
+    <div style="font-weight:900;font-size:14px" >Finding words - Powered by ${siteUrl.replace(/^https?:\/\//, '')}</div>
     </div>`
     /// loader
     const response = await fetch(
@@ -105,7 +109,7 @@ if (lengthValue === '1') {
 function getWords(data) {
   if (typeof data === 'string') {
     errorMsg.innerHTML = 'no words found'
-    wordCount.innerHTML = `<strong> 0 words with letters ${serachValue.split(
+    wordCount.innerHTML = `<strong>Found 0 words with letters ${serachValue.split(
       ''
     )}</strong>`
   } else {
@@ -240,7 +244,7 @@ function getWords(data) {
             for (let i = 0; i < item.length; i++) {
               sum += ScrabbleLetterScore[item[i]] || 0 // for unknown characters
             }
-            return `<a class="anchor__style" title="Lookup python in Dictionary" target="_blank" href="/word-meaning?search=${item.toLowerCase()}">
+            return `<a class="anchor__style" title="Lookup ${item} in Dictionary" target="_blank" href="/word-meaning?search=${item.toLowerCase()}">
             <li>${itemHtml}
           <span class="points" value="${sum}" style="position:relative; top:4px; font-size:12px"> ${sum}</span>
             </li></a>`
@@ -273,7 +277,7 @@ function getWords(data) {
     if (newWordsLength === 0) {
       errorMsg.innerHTML = 'no words found'
     } else {
-      wordCount.innerHTML = `<strong>${newWordsLength} words with letters ${serachValue.split(
+      wordCount.innerHTML = `<strong>Found ${newWordsLength} words with letters with ${serachValue.split(
         ''
       )}</strong>`
     }
@@ -320,6 +324,8 @@ function sortPointsby(sortValue, data) {
           var text1 = serachValue.replace('?', '')
           var text2 = item.words
           var text3 = item.words
+           
+         
           function findIndex(str, char) {
             const strLength = str.length
             const indexes = []
@@ -351,7 +357,7 @@ function sortPointsby(sortValue, data) {
               itemHtml += `<span class='highlight'>${itemValue}</span>`
             }
           })
-          return `<a class="anchor__style" title="Lookup python in Dictionary" target="_blank" href="/word-meaning?search=${item.words}">
+          return `<a class="anchor__style" title="Lookup ${item} in Dictionary" target="_blank" href="/word-meaning?search=${item.words}">
           <li>${itemHtml}
         <span class="points" value="${item.points}" style="position:relative; top:4px; font-size:12px"> ${item.points}</span>
           </li></a>`
@@ -423,7 +429,7 @@ function sortby(sortBool, data) {
               sum += ScrabbleLetterScore[item[i]] || 0 // for unknown characters
             }
 
-            return `<a class="anchor__style" title="Lookup python in Dictionary" target="_blank" href="/word-meaning?search=${item.toLowerCase()}">
+            return `<a class="anchor__style" title="Lookup ${item} in Dictionary" target="_blank" href="/word-meaning?search=${item.toLowerCase()}">
             <li>${itemHtml}
         <span class="points" value="${sum}" style="position:relative; top:4px; font-size:12px"> ${sum}</span>
           </li></a>`
@@ -486,7 +492,7 @@ function sortby(sortBool, data) {
               sum += ScrabbleLetterScore[item[i]] || 0 // for unknown characters
             }
 
-            return `<a class="anchor__style" title="Lookup python in Dictionary" target="_blank" href="/word-meaning?search=${item.toLowerCase()}">
+            return `<a class="anchor__style" title="Lookup ${item} in Dictionary" target="_blank" href="/word-meaning?search=${item.toLowerCase()}">
             <li>${itemHtml}
         <span class="points" value="${sum}" style="position:relative; top:4px; font-size:12px"> ${sum}</span>
           </li></a>`

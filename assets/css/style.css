@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 /* styling........ */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif !important;
 }
 :root {
   --txtColor: #000;
@@ -28,25 +30,30 @@ header {
   width: 100%;
   position: relative;
 }
-
 .navbar {
   width: 100%;
-  padding: 1.2rem 10rem !important;
+  padding: 1.2rem 9% !important;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .navbar-brand {
   font-size: 2.2rem;
   color: var(--txtColor) !important;
   font-weight: 900;
+  position: relative;
 }
 .navbar-dark .navbar-toggler {
   outline: none !important;
 }
 .navbar-nav {
-  margin-left: 11rem;
+  margin-left: 14rem;
 }
 .navbar-nav .nav-item {
   padding: 0 15px;
@@ -236,6 +243,11 @@ header {
   font-size: 14px;
 }
 
+.tools_headings {
+  margin-top: 110px;
+  margin-bottom: 20px;
+}
+
 @media (max-width: 768px) {
   .navbar {
     padding: 1.2rem 15px !important;
@@ -302,7 +314,6 @@ header {
   filter: brightness();
   filter: brightness(100);
 }
-
 .rating-tool {
   width: 100%;
   display: flex;
@@ -382,6 +393,10 @@ header {
   padding: 4px 0;
 }
 @media (max-width: 768px) {
+  .rating-text,.rating-value{
+    font-size: 12px;
+  }
+ 
   .social-icons {
     left: 0;
     bottom: 0 !important;
@@ -408,7 +423,20 @@ header {
 .social-icon:hover {
   color: black;
 }
-
 .highlight {
   color: #ff0000 !important;
+}
+.related_post_heading,.related_post_heading{
+  width: 100%;
+  font-size: 46px;
+  text-align: center;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.24;
+  letter-spacing: normal;
+  color: #11304e;
+  margin-bottom: 45px;
+  padding-top: 75px;
+  display: inline-block;
 }

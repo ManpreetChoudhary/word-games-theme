@@ -2,28 +2,27 @@
     <div class="row">
         <div class="col-md-10 mx-auto ws">
             <div style="font-size: 15px;" class="alert errMessage" role="alert"></div>
-            <form name="verify">
+            <form name="verify" class="forms_data">
                 <div class="form-group">
-
                     <label for="greenLetters" class="my-1 p-0 wordleSolver-label">Enter green letters at correct
                         position</label>
                     <div class="col-md-6 p-0">
                         <div class="d-flex">
                             <input data-id="0" type="text" autocomplete="off" tabIndex="0"
                                 class="wordleSolver-field greenLetters greenWithIndex form-control px-5" maxlength="1"
-                                id="greenLetters">
+                                id="first" onkeyup="move(this,'second')">
                             <input data-id="1" type="text" autocomplete="off" tabIndex="1"
                                 class="wordleSolver-field greenLetters greenWithIndex form-control px-5" maxlength="1"
-                                id="greenLetters">
+                                id="second" onkeyup="move(this,'third')">
                             <input data-id="2" type="text" autocomplete="off" tabIndex="2"
                                 class="wordleSolver-field greenLetters greenWithIndex form-control px-5" maxlength="1"
-                                id="greenLetters">
+                                id="third" onkeyup="move(this,'fourth')">
                             <input data-id="3" type="text" autocomplete="off" tabIndex="3"
                                 class="wordleSolver-field greenLetters greenWithIndex form-control px-5" maxlength="1"
-                                id="greenLetters">
+                                id="fourth" onkeyup="move(this,'fivth')">
                             <input data-id="4" type="text" autocomplete="off" tabIndex="4"
                                 class="wordleSolver-field greenLetters greenWithIndex form-control px-5" maxlength="1"
-                                id="greenLetters">
+                                id="fivth" onkeyup="move(this,'six')">
                         </div>
                     </div>
                 </div>
@@ -32,20 +31,20 @@
                     <div class="col-md-6 p-0">
                         <div class="d-flex">
                             <input type="text" autocomplete="off" tabIndex="1"
-                                class="wordleSolver-field yellowLetters form-control px-5" maxlength="1"
-                                id="yellowLetters" tabIndex="5">
+                                class="wordleSolver-field yellowLetters form-control px-5" maxlength="1" id="six"
+                                tabIndex="5" onkeyup="move(this,'seven')">
                             <input type="text" autocomplete="off"
-                                class="wordleSolver-field yellowLetters form-control px-5" maxlength="1"
-                                id="yellowLetters" tabIndex="6">
+                                class="wordleSolver-field yellowLetters form-control px-5" maxlength="1" id="seven"
+                                tabIndex="6" onkeyup="move(this,'eight')">
                             <input type="text" autocomplete="off"
-                                class="wordleSolver-field yellowLetters form-control px-5" maxlength="1"
-                                id="yellowLetters" tabIndex="7">
+                                class="wordleSolver-field yellowLetters form-control px-5" maxlength="1" id="eight"
+                                tabIndex="7" onkeyup="move(this,'nine')">
                             <input type="text" autocomplete="off"
-                                class="wordleSolver-field yellowLetters form-control px-5" maxlength="1"
-                                id="yellowLetters" tabIndex="8">
+                                class="wordleSolver-field yellowLetters form-control px-5" maxlength="1" id="nine"
+                                tabIndex="8" onkeyup="move(this,'ten')">
                             <input type="text" autocomplete="off"
-                                class="wordleSolver-field yellowLetters form-control px-5" maxlength="1"
-                                id="yellowLetters" tabIndex="9">
+                                class="wordleSolver-field yellowLetters form-control px-5" maxlength="1" id="ten"
+                                tabIndex="9" onkeyup="move(this,'eleven')">
                         </div>
                     </div>
                 </div>
@@ -54,27 +53,32 @@
                     <div class="col-md-6 p-0 wrapper">
                         <div class="d-flex">
                             <input type="text" class="wordleSolver-field greyLetters form-control px-5" maxlength="1"
-                                id="greyLetters" value="" autocomplete="off" tabIndex="10">
+                                id="eleven" value="" autocomplete="off" tabIndex="10" onkeyup="move(this,'twelve')">
                             <input type="text" class="wordleSolver-field greyLetters form-control px-5" maxlength="1"
-                                id="greyLetters" value="" autocomplete="off" tabIndex="11">
+                                id="twelve" value="" autocomplete="off" tabIndex="11" onkeyup="move(this,'thirteen')">
                             <input type="text" class="wordleSolver-field greyLetters form-control px-5" maxlength="1"
-                                id="greyLetters" value="" autocomplete="off" tabIndex="12">
+                                id="thirteen" value="" autocomplete="off" tabIndex="12" onkeyup="move(this,'fourteen')">
                             <input type="text" class="wordleSolver-field greyLetters form-control px-5" maxlength="1"
-                                id="greyLetters" value="" autocomplete="off" tabIndex="13">
+                                id="fourteen" value="" autocomplete="off" tabIndex="13" onkeyup="move(this,'fifteen')">
                             <input type="text" class="wordleSolver-field greyLetters form-control px-5" maxlength="1"
-                                id="greyLetters" value="" autocomplete="off" tabIndex="14">
+                                id="fifteen" value="" autocomplete="off" tabIndex="14" onkeyup="move(this,'sixteen')">
                         </div>
                         <div class="d-flex mt-2">
                             <input type="text" autocomplete="off" tabIndex="15"
-                                class="wordleSolver-field greyLetters form-control px-5" maxlength="1" id="greyLetters">
+                                class="wordleSolver-field greyLetters form-control px-5" maxlength="1" id="sixteen"
+                                onkeyup="move(this,'seventeen')">
                             <input type="text" autocomplete="off" tabIndex="16"
-                                class="wordleSolver-field greyLetters form-control px-5" maxlength="1" id="greyLetters">
+                                class="wordleSolver-field greyLetters form-control px-5" maxlength="1" id="seventeen"
+                                onkeyup="move(this,'eightteen')">
                             <input type="text" autocomplete="off" tabIndex="17"
-                                class="wordleSolver-field greyLetters form-control px-5" maxlength="1" id="greyLetters">
+                                class="wordleSolver-field greyLetters form-control px-5" maxlength="1" id="eightteen"
+                                onkeyup="move(this,'nineteen')">
                             <input type="text" autocomplete="off" tabIndex="18"
-                                class="wordleSolver-field greyLetters form-control px-5" maxlength="1" id="greyLetters">
+                                class="wordleSolver-field greyLetters form-control px-5" maxlength="1" id="nineteen"
+                                onkeyup="move(this,'twenty')">
                             <input type="text" autocomplete="off" tabIndex="19"
-                                class="wordleSolver-field greyLetters form-control px-5" maxlength="1" id="greyLetters">
+                                class="wordleSolver-field greyLetters form-control px-5" maxlength="1" id="twenty"
+                                onkeyup="move(this,'eleven')">
                         </div>
                     </div>
 
@@ -85,7 +89,11 @@
                 </button>
                 <div class="form-group text-right">
                     <div class="col-md-4 p-0" style="margin: 0 0 0 auto;">
-                        <button type="submit" id="wordlesolver_submit" class="btn wordlesolver-btn mt-3">Update</button>
+                        <button type="submit" id="wordlesolver_submit" class="btn wordlesolver-btn mt-3">
+                            <span id="updateTxt">Solve</span>
+                            <div class="spinner"></div>
+                        </button>
+
                     </div>
                 </div>
             </form>
@@ -98,10 +106,6 @@
         </div>
     </div>
 </div>
-
-
-
-
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
@@ -116,4 +120,12 @@
             $next.focus().click();
         }
     });
+
+
+    function move(first, last) {
+        if (first.value.length) {
+            document.getElementById(last).focus()
+        }
+    }
 </script>
+<script defer src="../assets/js/wordleSolver.js"></script>

@@ -1,0 +1,139 @@
+
+/* words in certain position*/
+.wordsInCertainPos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.errMessage {
+  display: none;
+}
+.forms_data {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0px 25px;
+    padding-top: 15px;
+    text-align: center;
+}
+.letter_field{
+    border-radius: 5px;
+    margin: 0 5px 0 0 !important;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    width: 48px;
+    height: 48px;
+    line-height: 55px;
+    font-weight: bold;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: #fff;
+    padding: 0 !important;
+    outline: none !important;
+}
+.letter_field:focus {
+    box-shadow: unset !important;
+    border-color: #ced4da !important;
+}
+.wordsInCertainPos_btn {
+    padding: 8px 18px;
+    font-size: 15px;
+    background-color: #000;
+    border-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    /* width: 100px; */
+    font-weight: 900;
+    position: relative;
+}
+.wordsInCertainPos_btn:focus {
+    outline: none;
+    box-shadow: unset !important;
+}
+.wordsInCertainPos_btn:hover {
+    color: #fff;
+}
+.letterswords {
+    background-color: white !important;
+    width: 75%;
+    margin: 15px auto;
+    height: auto;
+    box-shadow: 0 0 2px rgb(0 0 0 / 20%);
+    /* margin: 10px 0; */
+    border-radius: 15px;
+}
+.letterswords > .wordListHeading {
+    background: gray;
+    padding: 10px 0px 5px 25px;
+    color: #fff;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+.wordListHeading > .lead{
+    font-size: 18px;
+}
+#certain_pos_count {
+    font-size: 16px;
+    width: 75%;
+    margin: 10px auto;
+}
+.related_post_heading {
+    width: 100%;
+    font-size: 46px;
+    text-align: center;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.24;
+    letter-spacing: normal;
+    color: #11304e;
+    margin-bottom: 45px;
+    padding-top: 75px;
+    display: inline-block;
+}
+#certain_pos_error_msg {
+    margin: 10px auto;
+    width: 75%;
+}
+.certainWordsList {
+    padding: 15px;
+}
+.certainWordsList > ul {
+    display: inline-flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.certainWordsList > ul li {
+    border: solid 2px rgba(226, 248, 198, 0.47);
+    padding: 8px;
+    background: #f8f9fa;
+    border-radius: 5px;
+    margin: 6px 6px;
+    width: auto;
+    text-align: center;
+}
+.certainWordsList .anchor__style {
+    color: #000 !important;
+    font-size: 15px;
+    text-decoration: none !important;
+    font-weight: 600;
+}
+
+/* #searchData:before{
+    content: "\1F50D";
+   position: absolute;
+   top:8px;
+   left: 5px;
+} */
+@media (max-width: 768px) {
+    .letterswords > .wordListHeading{
+        padding:10px 15px 5px 15px;
+    }
+    #certain_pos_count,.wordListHeading > .lead{
+        font-size: 13px ;
+    }
+    .allfiveletterswords,
+    #certain_pos_count,.letterswords {
+      width: 85%;
+    }
+  }
+  

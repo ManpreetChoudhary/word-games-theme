@@ -1,5 +1,5 @@
 ---
-layout: wordleSolver
+layout: tools
 folderName: wordleSolver
 lang: en
 fileName: data

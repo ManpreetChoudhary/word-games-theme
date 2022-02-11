@@ -180,7 +180,7 @@ function wordsStartingWith(data) {
               sum += ScrabbleLetterScore[item[i]] || 0 // for unknown characters
             }
             return `<a class="anchor__style" title="Lookup ${item} in Dictionary" target="_blank" href="/word-meaning?search=${item.toLowerCase()}">
-            <li style="width:auto !important">${item}
+            <li style="width: auto; min-width: 100px;">${item}
           <span class="points" value="${sum}" style="position:relative; top:4px; font-size:12px"> ${sum}</span>
             </li></a>`
           }
@@ -257,7 +257,7 @@ function sortPointsby(sortValue, data) {
 
         const result = newArray.map((item) => {
           return `<a class="anchor__style" title="Lookup ${item} in Dictionary" target="_blank" href="/word-meaning?search=${item.words}">
-          <li style="width:auto !important">${item.words}
+          <li style="width: auto; min-width: 100px;">${item.words}
         <span class="points" value="${item.points}" style="position:relative; top:4px; font-size:12px"> ${item.points}</span>
           </li></a>`
         })
@@ -305,7 +305,7 @@ function sortby(sortBool, data) {
             }
 
             return `<a class="anchor__style" title="Lookup ${item} in Dictionary" target="_blank" href="/word-meaning?search=${item.toLowerCase()}">
-            <li style="width:auto !important">${item}
+            <li style="width: auto; min-width: 100px;">${item}
         <span class="points" value="${sum}" style="position:relative; top:4px; font-size:12px"> ${sum}</span>
           </li></a>`
           }
@@ -345,7 +345,7 @@ function sortby(sortBool, data) {
             }
 
             return `<a class="anchor__style" title="Lookup ${item} in Dictionary" target="_blank" href="/word-meaning?search=${item.toLowerCase()}">
-            <li style="width:auto !important">${item}
+            <li style="width: auto; min-width: 100px;">${item}
         <span class="points" value="${sum}" style="position:relative; top:4px; font-size:12px"> ${sum}</span>
           </li></a>`
           }

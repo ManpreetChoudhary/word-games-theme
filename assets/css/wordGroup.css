@@ -35,7 +35,8 @@
   background: #f8f9fa;
   border-radius: 5px;
   margin: 6px 6px;
-  width: 100px;
+  width: auto;
+  min-width: 100px;
   text-align: center;
 }
 .wordList .anchor__style {

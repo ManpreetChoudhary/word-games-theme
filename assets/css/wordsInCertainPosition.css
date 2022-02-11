@@ -109,6 +109,7 @@
     border-radius: 5px;
     margin: 6px 6px;
     width: auto;
+    min-width: 100px;
     text-align: center;
 }
 .certainWordsList .anchor__style {

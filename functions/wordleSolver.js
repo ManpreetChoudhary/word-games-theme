@@ -9,6 +9,7 @@ exports.handler = function (event, context, callback) {
   let data = []
   let letterLen = 5
   let dictionaryData = allWords.filter((item) => item.length == letterLen)
+  data = dictionaryData
   let lettersWithoutGray = []
   dictionaryData.map((item) => {
     let check = false
@@ -61,6 +62,10 @@ exports.handler = function (event, context, callback) {
   })
   if(greyLetters[0]){
     data = lettersWithoutGray
+  }
+  if(yellowLetters[0])
+  {
+    data = wordsMatched
   }
   if(greenLetters[0])
   {

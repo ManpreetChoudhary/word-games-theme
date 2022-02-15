@@ -110,33 +110,5 @@ exports.handler = function (event, context,callback) {
         else
             counter++;
     },200)
-
-    // if (defi.length > 0) {
-    //   return {
-    //     statusCode: 200,
-    //     headers: {
-    //       'Access-Control-Allow-Origin': '*',
-    //       'Access-Control-Allow-Headers': 'Origin,X-Requested-With,Content-Type,Accept'
-    //     },
-    //     body: JSON.stringify({Type:ty,Meaning:defi,Examples:ex,Synonyms:syn})
-    //   };
-    // }
-    // else {
-    //   await new Promise(r => setTimeout(r, 1000));
-    //   if (defi.length > 0) {
-    //     return {
-    //       statusCode: 200,
-    //       headers: {
-    //         'Access-Control-Allow-Origin': '*',
-    //         'Access-Control-Allow-Headers': 'Origin,X-Requested-With,Content-Type,Accept'
-    //       },
-    //       body: JSON.stringify({Type:ty,Meaning:defi,Examples:ex,Synonyms:syn})
-    //     };
-    //   }
-    //   return {
-    //     statusCode: 400,
-    //     body: JSON.stringify({ msg: "Error Getting Data" })
-    //   };
-    // }
   }
   

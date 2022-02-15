@@ -8,7 +8,7 @@ txtBox.value = serachValue
 // DICTONARY
 const fetchMeaning = async (serachValue) => {
   try{
-  let resMeaning = await fetch(`http://127.0.0.1:9000/wordMeaning?search=${serachValue}`)
+  let resMeaning = await fetch(`/.netlify/functions/wordMeaning?search=${serachValue}`)
   let getDef = await resMeaning.text()
 
   if (getDef && resMeaning.status == 200) {
@@ -146,7 +146,7 @@ const fetchTWL06Dic = async (serachValue) => {
   }
 
   try {
-    let res = await fetch(`http://127.0.0.1:9000/gettwl06?search=${serachValue}`)
+    let res = await fetch(`/.netlify/functions/gettwl06?search=${serachValue}`)
     
     let getData = await res.text()
     
@@ -204,9 +204,9 @@ const fetchSOWPODSDic = async (serachValue) => {
   }
 
   let res = await fetch(`/.netlify/functions/getsowpods?search=${serachValue}`)
-  // let resMeaning = await fetch(`http://localhost:9000/wordMeaning?search=${serachValue}`)
+  
   let getData = await res.text()
-  // let getDef = await resMeaning.text()
+  
 
   if (getData) {
     document.getElementsByClassName('found-word')[1].innerHTML = 'Yes'
@@ -257,9 +257,8 @@ const fetchEnableDic = async (serachValue) => {
   }
 
   let res = await fetch(`/.netlify/functions/getenable?search=${serachValue}`)
-  // let resMeaning = await fetch(`http://localhost:9000/wordMeaning?search=${serachValue}`)
+  
   let getData = await res.text()
-  // let getDef = await resMeaning.text()
   
   if (getData) {
     document.getElementsByClassName('found-word')[2].innerHTML = 'Yes'

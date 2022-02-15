@@ -17,7 +17,6 @@
     "wordnet-db": "^3.1.14",
     "wordpos": "^2.1.0"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ManpreetChoudhary/word-games-theme.git"

@@ -55,7 +55,7 @@
 
 <body>
     {%- include header/index.html -%}
-    <div class="pageHeaderBg" style="height:70vh">
+    <div class="pageHeaderBg" style="min-height: 70vh;height:auto">
         <div class="container">
             <div class="pageHeading text-center">
                 <h1 class="heading font-weight-bolder pb-3">
@@ -71,34 +71,43 @@
                     </form>
                 </div>
             </div>
-        </div>
+            <div class="dictionary-word-container container" style="position: relative;top: 30px;">
+                <div class="padding15px">
+                    <div class="medium-heading">
+                        <h2 class="font-weight-bolder">Dictionary</h2>
+                    </div>
+                    <div class="dictionary">
+                        <div class="dictionary-item">
+                            <span class="font16px">TWL06 (US, Canada and Thailand)</span>
 
-        <div class="dictionary-word-container container" style="position:relative; top: 50px;">
-            <div class="padding15px">
-                <div class="medium-heading">
-                    <h2 class="font-weight-bolder">Dictionary</h2>
+                            <span class="found-word"></span>
+                            <span class="word-score"></span>
+                        </div>
+                        <div class="dictionary-item">
+                            <span class="font16px">SOWPODS (UK and Others)</span>
+
+                            <span class="found-word"></span>
+                            <span class="word-score"></span>
+                        </div>
+
+                        <div class="dictionary-item">
+                            <span class="font16px">Enable (Words with Friends)</span>
+
+                            <span class="found-word"></span>
+                            <span class="word-score"></span>
+                        </div>
+                    </div>
                 </div>
-                <div class="dictionary">
-                    <div class="dictionary-item">
-                        <span class="font16px">TWL06 (US, Canada and Thailand)</span>
+            </div>
 
-                        <span class="found-word"></span>
-                        <span class="word-score"></span>
-                    </div>
-                    <div class="dictionary-item">
-                        <span class="font16px">SOWPODS (UK and Others)</span>
-
-                        <span class="found-word"></span>
-                        <span class="word-score"></span>
-                    </div>
-
-                    <div class="dictionary-item">
-                        <span class="font16px">Enable (Words with Friends)</span>
-
-                        <span class="found-word"></span>
-                        <span class="word-score"></span>
-                    </div>
-                </div>
+            <div class="container" id="defintions" style="margin-top: 50px;">
+                <h3><b>Defintion(s)</b></h3>
+                <br>
+                <h2 id="err" style="display: none;">No Definition Found!</h2>
+                <h4 id="noun" style="display: none;"><b>Noun</b></h4>
+                <h4 id="verb" style="display: none;"><b>Verb</b></h4>
+                <h4 id="adj" style="display: none;"><b>Adjective</b></h4>
+                <h4 id="adv" style="display: none;"><b>Adverb</b></h4>
             </div>
         </div>
     </div>

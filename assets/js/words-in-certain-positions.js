@@ -10,11 +10,11 @@ let newWordsLength
 let errMessage = document.querySelector('.errMessage')
 let spinner = document.querySelector('.spinner')
 let tab_container = document.querySelector('.tab_container')
-let tab_link_wrapper =  document.querySelector(".tab_link_wrapper")
+let tab_link_wrapper = document.querySelector(".tab_link_wrapper")
 tab_link_wrapper.style.marginTop = "1rem"
 tab_link_wrapper.style.display = "none"
 
-const wordsInCertainPos = async (letters, lettersWithIndex,wordLength) => {
+const wordsInCertainPos = async (letters, lettersWithIndex, wordLength) => {
   let maxLength = Math.max.apply(null, wordLength);
   // maxLength = maxLength + 1
   try {
@@ -22,7 +22,7 @@ const wordsInCertainPos = async (letters, lettersWithIndex,wordLength) => {
     document.querySelector('#searchData').innerHTML = ''
     spinner.classList.add('spinner-border')
     certain_pos_count.innerHTML = 'Finding words  in certain position...'
-    let response = await fetch('http://127.0.0.1:9000/wordsInCertainPositions', {
+    let response = await fetch('/.netlify/functions/wordsInCertainPositions', {
       method: 'POST',
       body: JSON.stringify({
         greenLetters: letters,
@@ -30,65 +30,65 @@ const wordsInCertainPos = async (letters, lettersWithIndex,wordLength) => {
       }),
     })
     let data = await response.json()
-   
-    if(data.length == 0){
-        errMessage.innerHTML = 'Sorry!! No words found'
-        errMessage.classList.add('alert-danger')
-        errMessage.style.display = 'block'
-        document.querySelector('#searchData').innerHTML = 'Search'
-        spinner.classList.remove('spinner-border')
-        certain_pos_words_data.innerHTML = ""
-        tab_container.innerHTML = ""
-        certain_pos_count.innerHTML = ""
-        newWordsLength = 0
+
+    if (data.length == 0) {
+      errMessage.innerHTML = 'Sorry!! No words found'
+      errMessage.classList.add('alert-danger')
+      errMessage.style.display = 'block'
+      document.querySelector('#searchData').innerHTML = 'Search'
+      spinner.classList.remove('spinner-border')
+      certain_pos_words_data.innerHTML = ""
+      tab_container.innerHTML = ""
+      certain_pos_count.innerHTML = ""
+      newWordsLength = 0
     }
-    else{
-    errMessage.innerHTML = ''
-    errMessage.classList.remove('alert-danger')
-    data = data.slice(0,1500)
-    document.querySelector('#searchData').innerHTML = 'Search'
-    spinner.classList.remove('spinner-border')
-    certain_pos_words_data.innerHTML = ""
-    tab_container.innerHTML = ""
-    newWordsLength = 0
-    
+    else {
+      errMessage.innerHTML = ''
+      errMessage.classList.remove('alert-danger')
+      data = data.slice(0, 1500)
+      document.querySelector('#searchData').innerHTML = 'Search'
+      spinner.classList.remove('spinner-border')
+      certain_pos_words_data.innerHTML = ""
+      tab_container.innerHTML = ""
+      newWordsLength = 0
 
-    let ok = true
 
-    for (let i = maxLength; i <= 15; i++) {
-      let newdata = data.filter((item) => item.length === i)
-      if (newdata.length === 0) {
-        certain_pos_words_data.innerHTML += ''
-      } else {
-        newWordsLength += newdata.length
-        certain_pos_error_msg.classList.remove('alert-danger')
-        certain_pos_error_msg.innerHTML = ''
-        const result = newdata.map((item) => {
-          if (item.length === 1) {
-            ok = false
-            newWordsLength = newWordsLength - 1
-          } else {
-            let ScrabbleLetterScore = ScrabbleScore()
-            sum = 0
-            item = item.toLowerCase()
-            for (let i = 0; i < item.length; i++) {
-              sum += ScrabbleLetterScore[item[i]] || 0 // for unknown characters
-            }
-            return `<a class="anchor__style" title="Lookup ${item} in Dictionary" target="_blank" href="/word-meaning?search=${item.toLowerCase()}">
+      let ok = true
+
+      for (let i = maxLength; i <= 15; i++) {
+        let newdata = data.filter((item) => item.length === i)
+        if (newdata.length === 0) {
+          certain_pos_words_data.innerHTML += ''
+        } else {
+          newWordsLength += newdata.length
+          certain_pos_error_msg.classList.remove('alert-danger')
+          certain_pos_error_msg.innerHTML = ''
+          const result = newdata.map((item) => {
+            if (item.length === 1) {
+              ok = false
+              newWordsLength = newWordsLength - 1
+            } else {
+              let ScrabbleLetterScore = ScrabbleScore()
+              sum = 0
+              item = item.toLowerCase()
+              for (let i = 0; i < item.length; i++) {
+                sum += ScrabbleLetterScore[item[i]] || 0 // for unknown characters
+              }
+              return `<a class="anchor__style" title="Lookup ${item} in Dictionary" target="_blank" href="/word-meaning?search=${item.toLowerCase()}">
             <li>${item}
           <span class="points" value="${sum}" style="position:relative; top:4px; font-size:12px"> ${sum}</span>
             </li></a>`
-          }
-        })
-        if (ok) {
-          tab_link_wrapper.style.display = "inline-flex"
-          tab_container.innerHTML += `
+            }
+          })
+          if (ok) {
+            tab_link_wrapper.style.display = "inline-flex"
+            tab_container.innerHTML += `
           <input type="button" id="Tab_${i}" onclick="Filtering(${i})" value="${i} Letter"
           class="tab_link  cursorPointer" />
           `
-          let tabs = document.getElementsByClassName('tab_link')
-          tabs[0] ? tabs[0].classList.add('active-tab') : ''
-          certain_pos_words_data.innerHTML += `
+            let tabs = document.getElementsByClassName('tab_link')
+            tabs[0] ? tabs[0].classList.add('active-tab') : ''
+            certain_pos_words_data.innerHTML += `
           <div class="letterswords wordlistContainer" id="alpha_${i}">
               <div class="wordListHeading">
                   <h3 class="lead">List of ${i} letter words that contain letters ${letters}</h3>
@@ -100,24 +100,24 @@ const wordsInCertainPos = async (letters, lettersWithIndex,wordLength) => {
               </div>
           </div>
           `
+          }
         }
       }
-    }
-    if (newWordsLength === 0) {
-      certain_pos_count.innerHTML = ""
-      certain_pos_error_msg.classList.add('alert-danger')
-      certain_pos_error_msg.innerHTML = 'Sorry!! No words found'
-    } else {
-      certain_pos_count.innerHTML = `<strong>Found <span>${newWordsLength}</span> 
+      if (newWordsLength === 0) {
+        certain_pos_count.innerHTML = ""
+        certain_pos_error_msg.classList.add('alert-danger')
+        certain_pos_error_msg.innerHTML = 'Sorry!! No words found'
+      } else {
+        certain_pos_count.innerHTML = `<strong>Found <span>${newWordsLength}</span> 
       words matching your search criteria </strong>`
+      }
+
+
+
+
+
     }
- 
-  
-  
-  
-  
-  }
-} catch (error) {
+  } catch (error) {
     console.log(error)
   }
 }
@@ -156,7 +156,7 @@ const getIndexs = (object) => {
   }
   return index
 }
-const getLength= (object) => {
+const getLength = (object) => {
   let index = []
   if (typeof object === 'string') {
     object = document.querySelectorAll(object)
@@ -174,8 +174,8 @@ function handleSubmit(e) {
   let letters = getLetters('.greenLetters')
   let lettersWithIndex = getIndexs('.greenWithIndex')
   let wordLength = getLength('.greenWithIndex')
-  
-  wordsInCertainPos(letters,lettersWithIndex,wordLength)
+
+  wordsInCertainPos(letters, lettersWithIndex, wordLength)
 }
 form.addEventListener('submit', handleSubmit)
 
@@ -221,7 +221,7 @@ function Filtering(id) {
 
   var section = document.querySelectorAll('.letterswords')
   var sort_val = "alpha"
-  
+
   Array.prototype.forEach.call(section, function (e) {
     if (document.body.clientWidth > 991) {
       sections[e.id] = e.offsetTop - 10

@@ -7,102 +7,94 @@ txtBox.value = serachValue
 
 // DICTONARY
 const fetchMeaning = async (serachValue) => {
-  try{
-  let resMeaning = await fetch(`/.netlify/functions/wordMeaning?search=${serachValue}`)
-  let getDef = await resMeaning.text()
+  try {
+    let resMeaning = await fetch(`/.netlify/functions/wordMeaning?search=${serachValue}`)
+    let getDef = await resMeaning.text()
 
-  if (getDef && resMeaning.status == 200) {
-    let removeQuote = getDef.replaceAll(`"`,``);
-    let arr = removeQuote.split("&");
-    let cols1 = null;
-    let cols2 = null;
-    let cols3 = null;
-    let cols4 = null;
-    if(arr[0].length>0)
-      cols1 = arr[0].split(";");
-    if(arr[1].length>0)
-      cols2 = arr[1].split(";");
-    if(arr[2].length>0)
-      cols3 = arr[2].split(";");
-    if(arr[3].length>0)
-      cols4 = arr[3].split(";");
-    if(cols1!=null)
-    {
-      let noun = document.getElementById("noun");
-      let oList = document.createElement("ol");
-      oList.setAttribute("class","list-group list-group-numbered");
-      for(let i=0;i<cols1.length;i++)
-      {
-        if(cols1[i]=="")
-          continue;
-        let temp = document.createElement("li");
-        temp.setAttribute("class","list-group-item my-2");
-        temp.style.display="list-item";
-        temp.innerHTML = cols1[i];
-        oList.appendChild(temp);
+    if (getDef && resMeaning.status == 200) {
+      let removeQuote = getDef.replaceAll(`"`, ``);
+      let arr = removeQuote.split("&");
+      let cols1 = null;
+      let cols2 = null;
+      let cols3 = null;
+      let cols4 = null;
+      if (arr[0].length > 0)
+        cols1 = arr[0].split(";");
+      if (arr[1].length > 0)
+        cols2 = arr[1].split(";");
+      if (arr[2].length > 0)
+        cols3 = arr[2].split(";");
+      if (arr[3].length > 0)
+        cols4 = arr[3].split(";");
+      if (cols1 != null) {
+        let noun = document.getElementById("noun");
+        let oList = document.createElement("ol");
+        oList.setAttribute("class", "list-group list-group-numbered");
+        for (let i = 0; i < cols1.length; i++) {
+          if (cols1[i] == "")
+            continue;
+          let temp = document.createElement("li");
+          temp.setAttribute("class", "list-group-item my-2");
+          temp.style.display = "list-item";
+          temp.innerHTML = cols1[i];
+          oList.appendChild(temp);
+        }
+        noun.appendChild(oList);
+        noun.style.display = "inherit";
       }
-      noun.appendChild(oList);
-      noun.style.display = "inherit";
-    }
-    if(cols2!=null)
-    {
-      let verb = document.getElementById("verb");
-      let oList = document.createElement("ol");
-      oList.setAttribute("class","list-group list-group-numbered");
-      for(let i=0;i<cols2.length;i++)
-      {
-        if(cols2[i]=="")
-          continue;
-        let temp = document.createElement("li");
-        temp.setAttribute("class","list-group-item my-2");
-        temp.style.display="list-item";
-        temp.innerHTML = cols2[i];
-        oList.appendChild(temp);
+      if (cols2 != null) {
+        let verb = document.getElementById("verb");
+        let oList = document.createElement("ol");
+        oList.setAttribute("class", "list-group list-group-numbered");
+        for (let i = 0; i < cols2.length; i++) {
+          if (cols2[i] == "")
+            continue;
+          let temp = document.createElement("li");
+          temp.setAttribute("class", "list-group-item my-2");
+          temp.style.display = "list-item";
+          temp.innerHTML = cols2[i];
+          oList.appendChild(temp);
+        }
+        verb.appendChild(oList);
+        verb.style.display = "inherit";
       }
-      verb.appendChild(oList);
-      verb.style.display = "inherit";
-    }
-    if(cols3!=null)
-    {
-      let adj = document.getElementById("adj");
-      let oList = document.createElement("ol");
-      oList.setAttribute("class","list-group list-group-numbered");
-      for(let i=0;i<cols3.length;i++)
-      {
-        if(cols3[i]=="")
-          continue;
-        let temp = document.createElement("li");
-        temp.setAttribute("class","list-group-item my-2");
-        temp.style.display="list-item";
-        temp.innerHTML = cols3[i];
-        oList.appendChild(temp);
+      if (cols3 != null) {
+        let adj = document.getElementById("adj");
+        let oList = document.createElement("ol");
+        oList.setAttribute("class", "list-group list-group-numbered");
+        for (let i = 0; i < cols3.length; i++) {
+          if (cols3[i] == "")
+            continue;
+          let temp = document.createElement("li");
+          temp.setAttribute("class", "list-group-item my-2");
+          temp.style.display = "list-item";
+          temp.innerHTML = cols3[i];
+          oList.appendChild(temp);
+        }
+        adj.appendChild(oList);
+        adj.style.display = "inherit";
       }
-      adj.appendChild(oList);
-      adj.style.display = "inherit";
-    }
-    if(cols4!=null)
-    {
-      let adv = document.getElementById("adv");
-      let oList = document.createElement("ol");
-      oList.setAttribute("class","list-group list-group-numbered");
-      for(let i=0;i<cols4.length;i++)
-      {
-        if(cols4[i]=="")
-          continue;
-        let temp = document.createElement("li");
-        temp.setAttribute("class","list-group-item my-2");
-        temp.style.display="list-item";
-        temp.innerHTML = cols4[i];
-        oList.appendChild(temp);
+      if (cols4 != null) {
+        let adv = document.getElementById("adv");
+        let oList = document.createElement("ol");
+        oList.setAttribute("class", "list-group list-group-numbered");
+        for (let i = 0; i < cols4.length; i++) {
+          if (cols4[i] == "")
+            continue;
+          let temp = document.createElement("li");
+          temp.setAttribute("class", "list-group-item my-2");
+          temp.style.display = "list-item";
+          temp.innerHTML = cols4[i];
+          oList.appendChild(temp);
+        }
+        adv.appendChild(oList);
+        adv.style.display = "inherit";
       }
-      adv.appendChild(oList);
-      adv.style.display = "inherit";
+    } else {
+      document.getElementById("err").style.display = "block";
     }
-  } else {
-    document.getElementById("err").style.display="block";
-  }
-  }catch(e){
-    document.getElementById("err").style.display="block";
+  } catch (e) {
+    document.getElementById("err").style.display = "block";
   }
 }
 
@@ -147,9 +139,9 @@ const fetchTWL06Dic = async (serachValue) => {
 
   try {
     let res = await fetch(`/.netlify/functions/gettwl06?search=${serachValue}`)
-    
+
     let getData = await res.text()
-    
+
 
     if (getData) {
       document.getElementsByClassName('found-word')[0].innerHTML = 'Yes'
@@ -204,9 +196,9 @@ const fetchSOWPODSDic = async (serachValue) => {
   }
 
   let res = await fetch(`/.netlify/functions/getsowpods?search=${serachValue}`)
-  
+
   let getData = await res.text()
-  
+
 
   if (getData) {
     document.getElementsByClassName('found-word')[1].innerHTML = 'Yes'
@@ -257,9 +249,9 @@ const fetchEnableDic = async (serachValue) => {
   }
 
   let res = await fetch(`/.netlify/functions/getenable?search=${serachValue}`)
-  
+
   let getData = await res.text()
-  
+
   if (getData) {
     document.getElementsByClassName('found-word')[2].innerHTML = 'Yes'
     document.getElementsByClassName('word-score')[2].innerHTML =

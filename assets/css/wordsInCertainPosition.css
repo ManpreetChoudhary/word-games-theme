@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     position: sticky;
-    width: inherit;
+    width: -webkit-fill-available;
     top: 58px;
     background-color: #fff;
     z-index: 99;

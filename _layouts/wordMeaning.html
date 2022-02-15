@@ -47,6 +47,11 @@
         .pageHeaderBg {
             background-color: #F8F9FA !important;
         }
+
+        .list-group-item {
+            background-color: transparent !important;
+            border: none !important
+        }
     </style>
 
     {% include Monumetric/Monumetric.html %}
@@ -55,11 +60,24 @@
 
 <body>
     {%- include header/index.html -%}
-    <div class="pageHeaderBg" style="min-height: 70vh;height:auto">
+
+
+    {% assign folderName = page.folderName %}
+    {% assign file = page.fileName %}
+    {% assign lang = page.lang %}
+    {% assign dataToShow = site.data[folderName][lang][file] %}
+
+
+
+    <div style="padding-top: 80px;">
         <div class="container">
             <div class="pageHeading text-center">
-                <h1 class="heading font-weight-bolder pb-3">
-                    Word Meaning</h1>
+                <h1 class="heading font-weight-bolder pb-">
+                    {{dataToShow.h1}}</h1>
+                {%- if dataToShow.h2 != "" -%}
+                <h2>
+                    {{dataToShow.h2}}</h2>
+                {%- endif -%}
             </div>
         </div>
         <div class="container-fluid" id="containerWd">
@@ -71,7 +89,7 @@
                     </form>
                 </div>
             </div>
-            <div class="dictionary-word-container container" style="position: relative;top: 30px;">
+            <div class="dictionary-word-container p-0 container" style="position: relative;top: 50px;">
                 <div class="padding15px">
                     <div class="medium-heading">
                         <h2 class="font-weight-bolder">Dictionary</h2>
@@ -99,8 +117,7 @@
                     </div>
                 </div>
             </div>
-
-            <div class="container" id="defintions" style="margin-top: 50px;">
+            <div class="container p-0" id="defintions" style="margin-top: 100px;">
                 <h3><b>Defintion(s)</b></h3>
                 <br>
                 <h2 id="err" style="display: none;">No Definition Found!</h2>

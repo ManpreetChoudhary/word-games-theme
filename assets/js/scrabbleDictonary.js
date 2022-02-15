@@ -98,10 +98,16 @@ const fetchMeaning = async (serachValue) => {
       adv.appendChild(oList);
       adv.style.display = "inherit";
     }
+    document.getElementById("loaderMeaning").style.display = "none";
+    document.getElementById("loaderMeaning1").style.display = "none";
   } else {
+    document.getElementById("loaderMeaning").style.display = "none";
+    document.getElementById("loaderMeaning1").style.display = "none";
     document.getElementById("err").style.display="block";
   }
   }catch(e){
+    document.getElementById("loaderMeaning").style.display = "none";
+    document.getElementById("loaderMeaning1").style.display = "none";
     document.getElementById("err").style.display="block";
   }
 }

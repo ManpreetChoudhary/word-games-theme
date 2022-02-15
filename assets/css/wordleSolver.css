@@ -1,23 +1,31 @@
+
+/* wordle solver tool css */
 .ws {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.1);
-  padding: 15px 0px !important;
+  /* background: rgba(0, 0, 0, 0.1); */
+  /* padding: 15px 0px !important; */
 }
-.wordleSolver_headings {
-  margin-top: 110px;
-  margin-bottom: 20px;
+.errMessage {
+  display: none;
 }
+.forms_data {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0px 25px;
+  padding-top: 15px;
+  text-align: center;
+}
+
 .wordleSolver-field {
   border-radius: 5px;
   margin: 0 5px 0 0 !important;
   font-size: 30px;
   text-transform: uppercase;
   text-align: center;
-  width: 55px;
-  height: 55px;
+  width: 48px;
+  height: 48px;
   line-height: 55px;
   font-weight: bold;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -42,10 +50,11 @@
 .wordlesolver-btn {
   padding: 8px 25px;
   font-size: 15px;
-  background-color: #6aaa64;
-  border-color: #6aaa64;
+  background-color: #20a815;
+  border-color: #20a815;
   color: #fff;
   border-radius: 5px;
+  width: 100px;
   font-weight: 900;
 }
 .wordlesolver-btn:focus {
@@ -60,13 +69,13 @@
   font-size: 14px;
   font-weight: 600;
 }
-
 .allfiveletterswords {
   background-color: white !important;
-  width: auto;
+  width: 75%;
+  margin: 10px auto;
   height: auto;
   box-shadow: 0 0 2px rgb(0 0 0 / 20%);
-  margin: 10px 0;
+  /* margin: 10px 0; */
   border-radius: 15px;
 }
 .allfiveletterswords > .wordListHeading {
@@ -76,21 +85,44 @@
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
 }
-
 #wordleWordCount {
   font-size: 18px;
+  width: 75%;
+  margin: 10px auto;
 }
-
 .ws-fcs {
   color: #fff !important;
-  background-color: #6aaa64 !important;
+  background-color: #20a815 !important;
 }
 .ws-fcs2 {
   color: #fff !important;
-  background-color: #c9b458 !important;
+  background-color: #C59E28 !important;
 }
-
 .ws-fcs3 {
   color: #fff !important;
-  background-color: #787c7e !important;
+  background-color: #3D3D3E !important;
+}
+.related_post_heading {
+  width: 100%;
+  font-size: 46px;
+  text-align: center;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.24;
+  letter-spacing: normal;
+  color: #11304e;
+  margin-bottom: 45px;
+  padding-top: 75px;
+  display: inline-block;
+}
+#wordleSolvererrorMsg {
+  margin: 10px auto;
+  width: 75%;
+}
+@media (max-width: 768px) {
+  .allfiveletterswords,
+  #wordleWordCount {
+    width: 80%;
+  }
 }

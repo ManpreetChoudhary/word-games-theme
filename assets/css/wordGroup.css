@@ -44,9 +44,7 @@
   text-decoration: none !important;
   font-weight: 600;
 }
-.wordCount {
-  margin-top: 15px;
-}
+
 .points {
   color: #73716e;
   font-weight: 600;
@@ -54,9 +52,19 @@
 
 @media (max-width: 768px) {
   .wordCount {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    /* margin-top: 15px; */
+  }
+  .pad{
+    padding-bottom: 50px;
+  }
+  /* .pagePad{
+  padding-top: 130px !important ;
   }
   .pad {
-    padding-top: 70px !important;
+    padding-top: 170px !important;
   }
+  .xyzPad{
+    padding-top: 50px;
+  } */
 }

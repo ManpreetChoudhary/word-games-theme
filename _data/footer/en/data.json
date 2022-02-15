@@ -1,75 +1,86 @@
 {
-    "logo":"https://sta1.pdfdoctor.com/1/2962/logo.png.png",
-    "heading":"We make PDF easy.",
-    "company":[
-       {
-        "name":"About",
-        "url":"/about"  
-       },
-       {
-        "name":"Help",
-        "url":"/help"
-      },
-      {
-        "name":"Blog",
-        "url":"/blog"
-      }
-    ],
-    "product":[
+    "logo": "https://d33wubrfki0l68.cloudfront.net/ed710b6efb59f7057f7a02f110608e34d61929e6/2a338/assets/images/wordswithletters-logo.svg",
+    "heading": "marketing@wordgames.org",
+    "linksTitle": "Resources",
+    "companytitle": "Company",
+    "networksitestitle": "Network sites",
+    "producttitle": "Tools",
+    "company": [
         {
-            "name":"Pricing",
-            "url":"/pricing"
+            "name": "Terms of use",
+            "url": "/terms-and-conditions"
         },
         {
-            "name":"Team",
-            "url":"/team"
+            "name": "Privacy Policy",
+            "url": "/privacy-policy"
         },
         {
-            "name":"Developers",
-            "url":"/developers"
+            "name": "Disclaimer",
+            "url": "/disclaimer"
         }
     ],
-    "social":[
+    "links": [
         {
-            "logo":"/assets/facebook.svg",
-            "url": "/",
-            "title":"abc"
-            
+            "name": "Ten letter words with these letters",
+            "url": "/ten-letter-words-with-these-letters"
         },
         {
-            "logo":"/assets/youtube.svg",
-            "url": "/",
-            "title":"abc"
+            "name": "Two letter words with these letters",
+            "url": "/two-letter-words-with-these-letters"
         },
         {
-            "logo":"/assets/instagram.svg",
-            "url": "/",
-            "title":"abc"
-            
+            "name": "Thirteen letter words with these letters",
+            "url": "/thirteen-letter-words-with-these-letters"
         },
         {
-            "logo":"/assets/linkdin.svg",
-            "url": "/",
-            "title":"abc"
-            
+            "name": "Three letter words with these letters",
+            "url": "/three-letter-words-with-these-letters"
         },
         {
-            "logo":"/assets/twitter.svg",
-            "url": "/",
-            "title":"abc"
-            
+            "name": "Twelve letter words with these letters",
+            "url": "/twelve-letter-words-with-these-letters"
+        },
+        {
+            "name": "Eleven letter words with these letters",
+            "url": "/eleven-letter-words-with-these-letters"
         }
     ],
-    "messege": "© 2021 pdf AG — Made with love for the people of the internet.",
-    "legal":[
+    "tools": [
         {
-         "name":"Terms and conditions",
-         "url":"/terms-and-conditions"
-       },
+            "name": "Wordle Solver",
+            "url": "/wordle-solver"
+        },
         {
-         "name":"Privacy Policy",
-         "url":"/privacy-policy"
-       }
-     ]
-
- }
+            "name": "Five letter word finder",
+            "url": "/five-letter-word-finder"
+        },
+        {
+            "name": "Anagram word finder",
+            "url": "/anagram-word-finder"
+        }
+    ],
+    "social": [
+        {
+            "icon": "bi bi-facebook",
+            "url": "/",
+            "title": "facebook"
+        },
+        {
+            "icon": "bi bi-instagram",
+            "url": "/",
+            "title": "instagram"
+        },
+        {
+            "icon": "bi bi-linkedin",
+            "url": "/",
+            "title": "linkden"
+        },
+        {
+            "icon": "bi bi-twitter",
+            "url": "/",
+            "title": "twitter"
+        }
+    ],
+    "messege": "Copyright © 2020 All rights reserved to wordgames",
+    "legal": []
+}

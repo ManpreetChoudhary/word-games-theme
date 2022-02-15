@@ -36,7 +36,7 @@
 .card-body > i {
   font-size: 20px;
 }
-.card-body > .card-title {
+.features_data .card-body > .card-title {
   transition: all 0.5s ease;
   font-size: 1.5rem;
   line-height: 25px;
@@ -45,15 +45,15 @@
   margin-bottom: 8px;
   margin-top: 5px;
 }
-.card-body:hover i {
+.features_data .card-body:hover i {
   transform: scale(1.2);
   transition: all 0.5s linear;
 }
-.card-body:hover .card-text {
+.features_data .card-body:hover .card-text {
   transition: all 0.5s linear;
   color: #6c757d !important;
 }
-.card-body:hover {
+.features_data .card-body:hover {
   border-radius: 10px;
   transition: all 0.5s ease;
   background-color: #f7f7f7;
@@ -61,10 +61,10 @@
 }
 
 @media (max-width: 1125px) {
-  .card-body .card-text {
+  .features_data .card-body .card-text {
     color: #6c757d !important;
   }
-  .card-body {
+  .features_data .card-body {
     border-radius: 10px;
     background-color: #f7f7f7;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);

@@ -3,6 +3,8 @@
     "h1": "Solve todays wordle by entering letters used so far",
     "h2": "Enters letters in gray, yellow, and green to see potential words",
     "meta": "Input letters in grey, yellow and green, and get list of matching 5 letter words to solve todays wordle in mimimum attempts, and impress your friends",
+    "tags": "",
+    "categories": "wordle",
     "featureNo": "02",
     "feature_title": "Features",
     "featureList": [
@@ -42,5 +44,11 @@
             "Question": "",
             "Answer": ""
         }
+    ],
+    "jsfilepaths": [
+        ""
+    ],
+    "cssfilepaths": [
+        "../assets/css/wordleSolver.css"
     ]
 }

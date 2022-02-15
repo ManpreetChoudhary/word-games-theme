@@ -1,0 +1,54 @@
+{
+    "title": "Easiest way to find words starting with given - Wordswithletters",
+    "h1": "Find words that start with the letters",
+    "h2": "Enter letters from which words start and submit",
+    "meta": "Enter letters from which words should start, press submit, and that's all you need to do to find words starting with given letters. Easy and fast !",
+    "tags": "",
+    "categories": "wordle",
+    "featureNo": "02",
+    "feature_title": "Features",
+    "featureList": [
+        {
+            "feature_heading": "",
+            "feature_text": "",
+            "fa_class": "../assets/images/star.svg"
+        },
+        {
+            "feature_heading": "",
+            "feature_text": "",
+            "fa_class": "../assets/images/star.svg"
+        },
+        {
+            "feature_heading": "",
+            "feature_text": "",
+            "fa_class": "../assets/images/star.svg"
+        },
+        {
+            "feature_heading": "",
+            "feature_text": "",
+            "fa_class": "../assets/images/star.svg"
+        },
+        {
+            "feature_heading": "",
+            "feature_text": "",
+            "fa_class": "../assets/images/star.svg"
+        },
+        {
+            "feature_heading": "",
+            "feature_text": "",
+            "fa_class": "../assets/images/star.svg"
+        }
+    ],
+    "faqList": [
+        {
+            "Question": "",
+            "Answer": ""
+        }
+    ],
+    "jsfilepaths": [
+        "../assets/js/words-starting-with.js"
+    ],
+    "cssfilepaths": [
+        ""
+    ]
+}

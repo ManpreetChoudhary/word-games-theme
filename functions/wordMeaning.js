@@ -43,43 +43,43 @@ exports.handler = function (event, context,callback) {
       }
 
     function structureData(word,type,mean,exam,syns) {
-        for(let i=0;i<type.length||i<20;i++)
+        for(let i=0;i<type.length||i<25;i++)
         {
             switch(type[i])
             {
                 case 'n':{
-                    noun+="Meaning: "+mean[i]+"<br>";
+                    noun+="<b>Meaning:</b> "+mean[i]+"<br>";
                     if(exam[i]!=null)
-                        noun+="Examples: "+exam[i]+"<br>";
+                        noun+="<b>Examples:</b> "+exam[i]+"<br>";
                     if(syns[i]!=word)
-                        noun+="Synonyms: "+syns[i]+"<br>";
+                        noun+="<b>Synonyms:</b> "+syns[i]+"<br>";
                     noun+=";"
                     break;
                 }
                 case 'v':{
-                    verb+="Meaning: "+mean[i]+"<br>";
+                    verb+="<b>Meaning:</b> "+mean[i]+"<br>";
                     if(exam[i]!=null)
-                        verb+="Examples: "+exam[i]+"<br>";
+                        verb+="<b>Examples:</b> "+exam[i]+"<br>";
                     if(syns[i]!=word)
-                        verb+="Synonyms: "+syns[i]+"<br>";
+                        verb+="<b>Synonyms:</b> "+syns[i]+"<br>";
                     verb+=";"
                     break;
                 }
                 case 'a':{
-                    adjective+="Meaning: "+mean[i]+"<br>";
+                    adjective+="<b>Meaning:</b> "+mean[i]+"<br>";
                     if(exam[i]!=null)
-                        adjective+="Examples: "+exam[i]+"<br>";
+                        adjective+="<b>Examples:</b> "+exam[i]+"<br>";
                     if(syns[i]!=word)
-                        adjective+="Synonyms: "+syns[i]+"<br>";
+                        adjective+="<b>Synonyms:</b> "+syns[i]+"<br>";
                     adjective+=";"
                     break;
                 }
                 case 'r':{
-                    adverb+="Meaning: "+mean[i]+"<br>";
+                    adverb+="<b>Meaning:</b> "+mean[i]+"<br>";
                     if(exam[i]!=null)
-                        adverb+="Examples: "+exam[i]+"<br>";
+                        adverb+="<b>Examples:</b> "+exam[i]+"<br>";
                     if(syns[i]!=word)
-                        adverb+="Synonyms: "+syns[i]+"<br>";
+                        adverb+="<b>Synonyms:</b> "+syns[i]+"<br>";
                     adverb+=";"
                     break;
                 }
@@ -98,6 +98,11 @@ exports.handler = function (event, context,callback) {
         else if(counter>38){
             callback(null, {
                 statusCode: 404,
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Headers':
+                      'Origin, X-Request-With, Content-Type , Accept',
+                },
                 body: JSON.stringify({msg:"Error"})
               })
             clearInterval(check);

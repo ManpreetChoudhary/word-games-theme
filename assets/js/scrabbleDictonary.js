@@ -6,6 +6,108 @@ let txtBox = document.querySelector('.txtBox')
 txtBox.value = serachValue
 
 // DICTONARY
+const fetchMeaning = async (serachValue) => {
+  try{
+  let resMeaning = await fetch(`http://127.0.0.1:9000/wordMeaning?search=${serachValue}`)
+  let getDef = await resMeaning.text()
+
+  if (getDef && resMeaning.status == 200) {
+    let removeQuote = getDef.replaceAll(`"`,``);
+    let arr = removeQuote.split("&");
+    let cols1 = null;
+    let cols2 = null;
+    let cols3 = null;
+    let cols4 = null;
+    if(arr[0].length>0)
+      cols1 = arr[0].split(";");
+    if(arr[1].length>0)
+      cols2 = arr[1].split(";");
+    if(arr[2].length>0)
+      cols3 = arr[2].split(";");
+    if(arr[3].length>0)
+      cols4 = arr[3].split(";");
+    if(cols1!=null)
+    {
+      let noun = document.getElementById("noun");
+      let oList = document.createElement("ol");
+      oList.setAttribute("class","list-group list-group-numbered");
+      for(let i=0;i<cols1.length;i++)
+      {
+        if(cols1[i]=="")
+          continue;
+        let temp = document.createElement("li");
+        temp.setAttribute("class","list-group-item my-2");
+        temp.style.display="list-item";
+        temp.innerHTML = cols1[i];
+        oList.appendChild(temp);
+      }
+      noun.appendChild(oList);
+      noun.style.display = "inherit";
+    }
+    if(cols2!=null)
+    {
+      let verb = document.getElementById("verb");
+      let oList = document.createElement("ol");
+      oList.setAttribute("class","list-group list-group-numbered");
+      for(let i=0;i<cols2.length;i++)
+      {
+        if(cols2[i]=="")
+          continue;
+        let temp = document.createElement("li");
+        temp.setAttribute("class","list-group-item my-2");
+        temp.style.display="list-item";
+        temp.innerHTML = cols2[i];
+        oList.appendChild(temp);
+      }
+      verb.appendChild(oList);
+      verb.style.display = "inherit";
+    }
+    if(cols3!=null)
+    {
+      let adj = document.getElementById("adj");
+      let oList = document.createElement("ol");
+      oList.setAttribute("class","list-group list-group-numbered");
+      for(let i=0;i<cols3.length;i++)
+      {
+        if(cols3[i]=="")
+          continue;
+        let temp = document.createElement("li");
+        temp.setAttribute("class","list-group-item my-2");
+        temp.style.display="list-item";
+        temp.innerHTML = cols3[i];
+        oList.appendChild(temp);
+      }
+      adj.appendChild(oList);
+      adj.style.display = "inherit";
+    }
+    if(cols4!=null)
+    {
+      let adv = document.getElementById("adv");
+      let oList = document.createElement("ol");
+      oList.setAttribute("class","list-group list-group-numbered");
+      for(let i=0;i<cols4.length;i++)
+      {
+        if(cols4[i]=="")
+          continue;
+        let temp = document.createElement("li");
+        temp.setAttribute("class","list-group-item my-2");
+        temp.style.display="list-item";
+        temp.innerHTML = cols4[i];
+        oList.appendChild(temp);
+      }
+      adv.appendChild(oList);
+      adv.style.display = "inherit";
+    }
+  } else {
+    document.getElementById("err").style.display="block";
+  }
+  }catch(e){
+    document.getElementById("err").style.display="block";
+  }
+}
+
+fetchMeaning(serachValue);
+
 const fetchTWL06Dic = async (serachValue) => {
   let newAlphabet = {
     a: 1,
@@ -44,10 +146,10 @@ const fetchTWL06Dic = async (serachValue) => {
   }
 
   try {
-    let res = await fetch(`/.netlify/functions/gettwl06?search=${serachValue}`)
-    let resMeaning = await fetch(`/.netlify/functions/wordMeaning?search=${serachValue}`)
+    let res = await fetch(`http://127.0.0.1:9000/gettwl06?search=${serachValue}`)
+    
     let getData = await res.text()
-    let getDef = await resMeaning.text()
+    
 
     if (getData) {
       document.getElementsByClassName('found-word')[0].innerHTML = 'Yes'
@@ -57,101 +159,6 @@ const fetchTWL06Dic = async (serachValue) => {
       document.getElementsByClassName('found-word')[0].style.background =
         '#F34423'
       document.getElementsByClassName('found-word')[0].innerHTML = 'No'
-    }
-
-    if (getDef && resMeaning.status == 200) {
-      let removeQuote = getDef.replace(`"`,``);
-      removeQuote = removeQuote.replace(`&"`,``);
-      removeQuote+="&";
-      let arr = removeQuote.split("&");
-      let cols1 = null;
-      let cols2 = null;
-      let cols3 = null;
-      let cols4 = null;
-      if(arr[0].length>0)
-        cols1 = arr[0].split(";");
-      if(arr[1].length>0)
-        cols2 = arr[1].split(";");
-      if(arr[2].length>0)
-        cols3 = arr[2].split(";");
-      if(arr[3].length>0)
-        cols4 = arr[3].split(";");
-      if(cols1!=null)
-      {
-        let noun = document.getElementById("noun");
-        let oList = document.createElement("ol");
-        oList.setAttribute("class","list-group list-group-numbered");
-        for(let i=0;i<cols1.length;i++)
-        {
-          if(cols1[i]=="")
-            continue;
-          let temp = document.createElement("li");
-          temp.setAttribute("class","list-group-item");
-          temp.style.display="list-item";
-          temp.innerHTML = cols1[i];
-          oList.appendChild(temp);
-        }
-        noun.appendChild(oList);
-        noun.style.display = "inherit";
-      }
-      if(cols2!=null)
-      {
-        let verb = document.getElementById("verb");
-        let oList = document.createElement("ol");
-        oList.setAttribute("class","list-group list-group-numbered");
-        for(let i=0;i<cols2.length;i++)
-        {
-          if(cols2[i]=="")
-            continue;
-          let temp = document.createElement("li");
-          temp.setAttribute("class","list-group-item");
-          temp.style.display="list-item";
-          temp.innerHTML = cols2[i];
-          oList.appendChild(temp);
-        }
-        verb.appendChild(oList);
-        verb.style.display = "inherit";
-      }
-      if(cols3!=null)
-      {
-        let adj = document.getElementById("adj");
-        let oList = document.createElement("ol");
-        oList.setAttribute("class","list-group list-group-numbered");
-        for(let i=0;i<cols3.length;i++)
-        {
-          if(cols3[i]=="")
-            continue;
-          let temp = document.createElement("li");
-          temp.setAttribute("class","list-group-item");
-          temp.style.display="list-item";
-          temp.innerHTML = cols3[i];
-          oList.appendChild(temp);
-        }
-        adj.appendChild(oList);
-        adj.style.display = "inherit";
-      }
-      if(cols4!=null)
-      {
-        let adv = document.getElementById("adv");
-        let oList = document.createElement("ol");
-        oList.setAttribute("class","list-group list-group-numbered");
-        for(let i=0;i<cols4.length;i++)
-        {
-          if(cols4[i]=="")
-            continue;
-          let temp = document.createElement("li");
-          temp.setAttribute("class","list-group-item");
-          temp.style.display="list-item";
-          temp.innerHTML = cols4[i];
-          oList.appendChild(temp);
-        }
-        adv.appendChild(oList);
-        adv.style.display = "inherit";
-      }
-    } else {
-      let err = document.createElement("h2");
-      err.innerHTML="No Definition Found!";
-      document.getElementById("defintions").appendChild(err);
     }
   } catch (error) {
     console.log(error)
@@ -210,101 +217,6 @@ const fetchSOWPODSDic = async (serachValue) => {
       '#F34423'
     document.getElementsByClassName('found-word')[1].innerHTML = 'No'
   }
-
-  /*if (getDef && resMeaning.status == 200) {
-    let removeQuote = getDef.replace(`"`,``);
-    removeQuote = removeQuote.replace(`&"`,``);
-    removeQuote+="&";
-    let arr = removeQuote.split("&");
-    let cols1 = null;
-    let cols2 = null;
-    let cols3 = null;
-    let cols4 = null;
-    if(arr[0].length>0)
-      cols1 = arr[0].split(";");
-    if(arr[1].length>0)
-      cols2 = arr[1].split(";");
-    if(arr[2].length>0)
-      cols3 = arr[2].split(";");
-    if(arr[3].length>0)
-      cols4 = arr[3].split(";");
-    if(cols1!=null)
-    {
-      let noun = document.getElementById("noun");
-      let oList = document.createElement("ol");
-      oList.setAttribute("class","list-group list-group-numbered");
-      for(let i=0;i<cols1.length;i++)
-      {
-        if(cols1[i]=="")
-          continue;
-        let temp = document.createElement("li");
-        temp.setAttribute("class","list-group-item");
-        temp.style.display="list-item";
-        temp.innerHTML = cols1[i];
-        oList.appendChild(temp);
-      }
-      noun.appendChild(oList);
-      noun.style.display = "inherit";
-    }
-    if(cols2!=null)
-    {
-      let verb = document.getElementById("verb");
-      let oList = document.createElement("ol");
-      oList.setAttribute("class","list-group list-group-numbered");
-      for(let i=0;i<cols2.length;i++)
-      {
-        if(cols2[i]=="")
-          continue;
-        let temp = document.createElement("li");
-        temp.setAttribute("class","list-group-item");
-        temp.style.display="list-item";
-        temp.innerHTML = cols2[i];
-        oList.appendChild(temp);
-      }
-      verb.appendChild(oList);
-      verb.style.display = "inherit";
-    }
-    if(cols3!=null)
-    {
-      let adj = document.getElementById("adj");
-      let oList = document.createElement("ol");
-      oList.setAttribute("class","list-group list-group-numbered");
-      for(let i=0;i<cols3.length;i++)
-      {
-        if(cols3[i]=="")
-          continue;
-        let temp = document.createElement("li");
-        temp.setAttribute("class","list-group-item");
-        temp.style.display="list-item";
-        temp.innerHTML = cols3[i];
-        oList.appendChild(temp);
-      }
-      adj.appendChild(oList);
-      adj.style.display = "inherit";
-    }
-    if(cols4!=null)
-    {
-      let adv = document.getElementById("adv");
-      let oList = document.createElement("ol");
-      oList.setAttribute("class","list-group list-group-numbered");
-      for(let i=0;i<cols4.length;i++)
-      {
-        if(cols4[i]=="")
-          continue;
-        let temp = document.createElement("li");
-        temp.setAttribute("class","list-group-item");
-        temp.style.display="list-item";
-        temp.innerHTML = cols4[i];
-        oList.appendChild(temp);
-      }
-      adv.appendChild(oList);
-      adv.style.display = "inherit";
-    }
-  } else {
-    let err = document.createElement("h2");
-    err.innerHTML="No Definition Found!";
-    document.getElementById("defintions").appendChild(err);
-  }*/
 }
 fetchSOWPODSDic(serachValue)
 
@@ -358,101 +270,6 @@ const fetchEnableDic = async (serachValue) => {
       '#F34423'
     document.getElementsByClassName('found-word')[2].innerHTML = 'No'
   }
-
-  /*if (getDef && resMeaning.status == 200) {
-    let removeQuote = getDef.replace(`"`,``);
-    removeQuote = removeQuote.replace(`&"`,``);
-    removeQuote+="&";
-    let arr = removeQuote.split("&");
-    let cols1 = null;
-    let cols2 = null;
-    let cols3 = null;
-    let cols4 = null;
-    if(arr[0].length>0)
-      cols1 = arr[0].split(";");
-    if(arr[1].length>0)
-      cols2 = arr[1].split(";");
-    if(arr[2].length>0)
-      cols3 = arr[2].split(";");
-    if(arr[3].length>0)
-      cols4 = arr[3].split(";");
-    if(cols1!=null)
-    {
-      let noun = document.getElementById("noun");
-      let oList = document.createElement("ol");
-      oList.setAttribute("class","list-group list-group-numbered");
-      for(let i=0;i<cols1.length;i++)
-      {
-        if(cols1[i]=="")
-          continue;
-        let temp = document.createElement("li");
-        temp.setAttribute("class","list-group-item");
-        temp.style.display="list-item";
-        temp.innerHTML = cols1[i];
-        oList.appendChild(temp);
-      }
-      noun.appendChild(oList);
-      noun.style.display = "inherit";
-    }
-    if(cols2!=null)
-    {
-      let verb = document.getElementById("verb");
-      let oList = document.createElement("ol");
-      oList.setAttribute("class","list-group list-group-numbered");
-      for(let i=0;i<cols2.length;i++)
-      {
-        if(cols2[i]=="")
-          continue;
-        let temp = document.createElement("li");
-        temp.setAttribute("class","list-group-item");
-        temp.style.display="list-item";
-        temp.innerHTML = cols2[i];
-        oList.appendChild(temp);
-      }
-      verb.appendChild(oList);
-      verb.style.display = "inherit";
-    }
-    if(cols3!=null)
-    {
-      let adj = document.getElementById("adj");
-      let oList = document.createElement("ol");
-      oList.setAttribute("class","list-group list-group-numbered");
-      for(let i=0;i<cols3.length;i++)
-      {
-        if(cols3[i]=="")
-          continue;
-        let temp = document.createElement("li");
-        temp.setAttribute("class","list-group-item");
-        temp.style.display="list-item";
-        temp.innerHTML = cols3[i];
-        oList.appendChild(temp);
-      }
-      adj.appendChild(oList);
-      adj.style.display = "inherit";
-    }
-    if(cols4!=null)
-    {
-      let adv = document.getElementById("adv");
-      let oList = document.createElement("ol");
-      oList.setAttribute("class","list-group list-group-numbered");
-      for(let i=0;i<cols4.length;i++)
-      {
-        if(cols4[i]=="")
-          continue;
-        let temp = document.createElement("li");
-        temp.setAttribute("class","list-group-item");
-        temp.style.display="list-item";
-        temp.innerHTML = cols4[i];
-        oList.appendChild(temp);
-      }
-      adv.appendChild(oList);
-      adv.style.display = "inherit";
-    }
-  } else {
-    let err = document.createElement("h2");
-    err.innerHTML="No Definition Found!";
-    document.getElementById("defintions").appendChild(err);
-  }*/
 }
 
 fetchEnableDic(serachValue)

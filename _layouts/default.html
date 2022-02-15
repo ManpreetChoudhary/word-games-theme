@@ -29,22 +29,36 @@
     {%- if page.letter -%}
     {%- include WordPointTables/table.html -%}
     {%- endif -%}
-    {%- if site.posts.size>0 -%}
-    {% include section/blog.html %}
-    {%- endif -%}
-
 
     {%- include share/socialshare.html -%}
     {%- include Rating/rating.html -%}
+
+    {%- assign langen = "en" -%}
+    {%- if site.data[folder][langen][file].categories -%}
+    {% assign categories= site.data[folder][langen][file].categories %}
+    {%- else -%}
+    {% assign categories= page.categories %}
+    {%- endif -%}
+    {%- if site.data[folder][langen][file].tags -%}
+    {% assign tags= site.data[folder][langen][file].tags %}
+    {%- else -%}
+    {% assign tags= page.tags %}
+    {%- endif -%}
+    {%- if categories.size> 0 or tags.size>0-%}
+    {%- include section/related_categories_post.html -%}
+    {%- else -%}
+    {%- include section/recent_posts.html -%}
+    {% endif %}
+
     {%- include footer/index.html -%}
 
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" />
-    <script defer src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
+    {%- include script.html -%}
     <script>
         let txtBox = document.querySelector('.txtBox')
+        let focusBorder = document.querySelector('.focus-border')
+        txtBox.focus()
         txtBox.addEventListener('input', (e) => {
+            focusBorder.classList.remove("focus-border")
             e.target.value = e.target.value.replace(/[^a-zA-Z? ]/g, "")
             let rangeOfBlankTile = '{{ page.blanktilerange }}'
             if (rangeOfBlankTile === "") {
@@ -53,15 +67,13 @@
             e.target.value = e.target.value.replace(/ /g, '?')
             let data = []
             data = e.target.value.split('').filter((i) => i === '?')
-            console.log(data.length)
-            console.log(rangeOfBlankTile)
+            // console.log(data.length)
+            // console.log(rangeOfBlankTile)
             if (data.length > rangeOfBlankTile) {
                 e.target.value = e.target.value.replace(/\?$/, '')
             }
         })
     </script>
-
-    {% include Monumetric/Monumetric.html %}
 </body>
 
 </html>

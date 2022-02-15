@@ -1,0 +1,200 @@
+// console.log("certain position");
+let form = document.querySelector('[name=verify')
+let greenLetters = document.querySelectorAll('.greenLetters')
+let certain_pos_words_data = document.getElementById('certain_pos_words_data')
+greenLetters[0].focus()
+let certain_pos_count = document.querySelector('#certain_pos_count')
+let certain_pos_error_msg = document.querySelector('#certain_pos_error_msg')
+let certain_pos_submit = document.getElementById('certain_pos_submit')
+let newWordsLength
+let errMessage = document.querySelector('.errMessage')
+let spinner = document.querySelector('.spinner')
+
+const wordsInCertainPos = async (letters, lettersWithIndex,wordLength) => {
+  let maxLength = Math.max.apply(null, wordLength);
+  // maxLength = maxLength + 1
+  try {
+    let result = ''
+    document.querySelector('#searchData').innerHTML = ''
+    spinner.classList.add('spinner-border')
+    certain_pos_count.innerHTML = 'Finding words  in certain position...'
+    let response = await fetch('/.netlify/functions/wordsInCertainPositions', {
+      method: 'POST',
+      body: JSON.stringify({
+        greenLetters: letters,
+        greenWithIndex: lettersWithIndex,
+      }),
+    })
+    let data = await response.json()
+   
+    if(data.length == 0){
+        errMessage.innerHTML = 'Sorry!! No words found'
+        errMessage.classList.add('alert-danger')
+        errMessage.style.display = 'block'
+        document.querySelector('#searchData').innerHTML = 'Search'
+        spinner.classList.remove('spinner-border')
+        certain_pos_words_data.innerHTML = ""
+        certain_pos_count.innerHTML = ""
+        newWordsLength = 0
+    }
+    else{
+    errMessage.innerHTML = ''
+    errMessage.classList.remove('alert-danger')
+    data = data.slice(0,1500)
+    document.querySelector('#searchData').innerHTML = 'Search'
+    spinner.classList.remove('spinner-border')
+    certain_pos_words_data.innerHTML = ""
+    newWordsLength = 0
+    
+
+    let ok = true
+
+    for (let i = maxLength; i <= 15; i++) {
+      let newdata = data.filter((item) => item.length === i)
+      if (newdata.length === 0) {
+        certain_pos_words_data.innerHTML += ''
+      } else {
+        newWordsLength += newdata.length
+        certain_pos_error_msg.classList.remove('alert-danger')
+        certain_pos_error_msg.innerHTML = ''
+        const result = newdata.map((item) => {
+          if (item.length === 1) {
+            ok = false
+            newWordsLength = newWordsLength - 1
+          } else {
+            let ScrabbleLetterScore = ScrabbleScore()
+            sum = 0
+            item = item.toLowerCase()
+            for (let i = 0; i < item.length; i++) {
+              sum += ScrabbleLetterScore[item[i]] || 0 // for unknown characters
+            }
+            return `<a class="anchor__style" title="Lookup ${item} in Dictionary" target="_blank" href="/word-meaning?search=${item.toLowerCase()}">
+            <li>${item}
+          <span class="points" value="${sum}" style="position:relative; top:4px; font-size:12px"> ${sum}</span>
+            </li></a>`
+          }
+        })
+        if (ok) {
+          certain_pos_words_data.innerHTML += `
+          <div class="letterswords wordsInCertainPos_Container">
+              <div class="wordListHeading">
+                  <h3 class="lead">List of ${i} letter words that contain letters ${letters}</h3>
+              </div>
+              <div class="certainWordsList">
+                  <ul class="ul list-unstyled">
+                   ${result.join('')}
+                  </ul>
+              </div>
+          </div>
+          `
+        }
+      }
+    }
+    if (newWordsLength === 0) {
+      certain_pos_count.innerHTML = ""
+      certain_pos_error_msg.classList.add('alert-danger')
+      certain_pos_error_msg.innerHTML = 'Sorry!! No words found'
+    } else {
+      certain_pos_count.innerHTML = `<strong>There are <span>${newWordsLength}</span> 
+      words that contain letters ${letters}</strong>`
+    }
+ 
+  
+  
+  
+  
+  }
+} catch (error) {
+    console.log(error)
+  }
+}
+
+for (let g = 0; g < greenLetters.length; g++) {
+  const elem = greenLetters[g]
+  elem.addEventListener('input', (e) => {
+    e.target.value = e.target.value.replace(/[^a-zA-Z? ]/g, "")
+  })
+}
+
+const getLetters = (object) => {
+  let letters = []
+  if (typeof object === 'string') {
+    object = document.querySelectorAll(object)
+  }
+  for (let item of object) {
+    if (item.value.trim().length === 1) {
+      letters.push(item.value.toLowerCase())
+    }
+  }
+  return letters
+}
+const getIndexs = (object) => {
+  let index = []
+  if (typeof object === 'string') {
+    object = document.querySelectorAll(object)
+  }
+  for (let item of object) {
+    if (item.value.trim().length === 1) {
+      index.push({
+        value: item.value.toLowerCase(),
+        index: item.dataset.id,
+      })
+    }
+  }
+  return index
+}
+const getLength= (object) => {
+  let index = []
+  if (typeof object === 'string') {
+    object = document.querySelectorAll(object)
+  }
+  for (let item of object) {
+    if (item.value.trim().length === 1) {
+      index.push(
+        item.dataset.id)
+    }
+  }
+  return index
+}
+function handleSubmit(e) {
+  e.preventDefault()
+  let letters = getLetters('.greenLetters')
+  let lettersWithIndex = getIndexs('.greenWithIndex')
+  let wordLength = getLength('.greenWithIndex')
+  
+  wordsInCertainPos(letters,lettersWithIndex,wordLength)
+}
+form.addEventListener('submit', handleSubmit)
+
+// Scrabble Point Array
+const ScrabbleScore = () => {
+  let twl06_sowpods = {
+    a: 1,
+    e: 1,
+    i: 1,
+    o: 1,
+    u: 1,
+    l: 1,
+    n: 1,
+    r: 1,
+    s: 1,
+    t: 1,
+    d: 2,
+    g: 2,
+    b: 3,
+    c: 3,
+    m: 3,
+    p: 3,
+    f: 4,
+    h: 4,
+    v: 4,
+    w: 4,
+    y: 4,
+    k: 5,
+    j: 8,
+    x: 8,
+    q: 10,
+    z: 10,
+  }
+  return twl06_sowpods
+}

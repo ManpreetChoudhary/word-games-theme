@@ -2,6 +2,8 @@
    "title": "Anagram word finder",
    "h1": "Anagram word finder",
    "meta": "Still thinking of unscrambling words and anagrams ? Use our anagram finder now!",
+   "tags": "",
+   "categories": "wordle",
    "featureNo": "02",
    "feature_title": "Features",
    "blogNo": "03",

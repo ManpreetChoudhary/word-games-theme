@@ -4,7 +4,7 @@
 
 <div class="container-fluid mx-0 article auto-gen-content">
     <div class="row mx-auto-0">
-        <div class="col-md-8 mx-auto">
+        <div class="col-md-6 mx-auto">
             <div class="pageHeading text-left mb-5">
                 <h1 class="content-heading pb-0 m-0">
                     {{dataToShow.h1}}</h1>
@@ -34,8 +34,6 @@
                     </li>
                 </ul>
             </div>
-
-
             <div class="subHeading" style="margin: 50px 0;">
                 {%- if site.name == "wordswithletters" -%}
                 <h1 class="content_sub_heading pb-0 m-0">
@@ -72,7 +70,6 @@
                 </h1>
                 {%- endif -%}
             </div>
-
             <div class="listofwords">
                 {%- for letter in dataToShow.words-%}
                 {%- for item in letter -%}

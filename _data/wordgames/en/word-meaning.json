@@ -1,0 +1,85 @@
+{
+    "title": "Unscramble words - Jumble solver",
+    "h1": "Unscramble words - Jumble solver",
+    "meta": "Still thinking of unscrambling and unjumbling jumbled words ? Use our jumble solver now!",
+    "featureNo": "02",
+    "feature_title": "Features",
+    "blogNo": "03",
+    "blog_title": "Blog",
+    "FaqNo": "04",
+    "Faq_title": "FAQ",
+    "aboutNo": "05",
+    "about_title": "About",
+    "featureList": [
+        {
+            "feature_heading": "But you must have surely heard it if you are huge fan of jumble games",
+            "feature_text": "However, if word games is your cup of tea and especially jumble puzzles, you’ll understand how essential is an unscrambler to unscramble jumbled words",
+            "fa_class": "../assets/images/star.svg"
+        },
+        {
+            "feature_heading": "Where to use this Unscramble words - Jumble solver?",
+            "feature_text": "Unscramble words - Jumble solver can be used in any word game like Scrabble, Super Scrabble, AbbleDabble, AlphaJax, Wordfeud, Droidwords,Word By Post, Word hums, Wordsmith, Lexulous, Literati, etc.",
+            "fa_class": "../assets/images/star.svg"
+        },
+        {
+            "feature_heading": "How this Unscramble words - Jumble solver works?",
+            "feature_text": [
+                "It's extremely simple!: Just enter the jumbled word and there you get the actual word. For example:",
+                "\nATLS EON ADLCWIRD will become ONE LAST WILDCARD",
+                "\nOT AEKM NWI DORWS turns into MAKE WORDS TO WIN",
+                "\nBJMLU EELPHR turns into JUMBLE HELPER"
+            ],
+            "fa_class": "../assets/images/star.svg"
+        }
+    ],
+    "faqList": [
+        {
+            "Question": "How to use jumbled solver?",
+            "Answer": "Enter up to 15 letters in the large blue box above. When you’re done entering your letters, simply hit the search button on the right.The jumbled solver cheat can unscramble the letters and supply an inventory of doable words for you to use in your on-line games. You can use our advanced filter option to find the exact words you are looking for, or even sort these results out alphabetically or by points.",
+            "": "",
+            "__1": ""
+        },
+        {
+            "Question": "What is jumbled solver?",
+            "Answer": "Jumbled word finder will arrange the words entered by you in a word that makes sense. It shows the results of all the words that you can make using the letters entered by you. Youcan sort these reults out bu A-Z, Z-A or by points that you get per word.",
+            "": "",
+            "__1": ""
+        },
+        {
+            "Question": "Can I know how much points will the word score in a word game?",
+            "Answer": "Yes, absolutely. Our website not only provides you all the possible word formations from the words entered by you but also displays the points that you will score if you use this word in a game. The number displayed on the bottom right corner of each word is the points you will get from the word.",
+            "": "",
+            "__1": ""
+        },
+        {
+            "Question": "What are the sorting options available?",
+            "Answer": "We provide multiple sorting options. You can sort the search results from A-Z and from Z-A. We also have an option in which the results are sorted by the points they earn on a scrabble board from highest to lowest.",
+            "": "",
+            "__1": ""
+        },
+        {
+            "Question": "Can I sort the search results?",
+            "Answer": "Yes, jumble solver allows you to sort the search results. Once the results are displayed, according to the number of results generated, the sort function with appear on the screen.",
+            "": "",
+            "__1": ""
+        },
+        {
+            "Question": "What are the dictionary options available?",
+            "Answer": "Word jumble help unscramble allows you to take into consideration three dictionaries, thereby increasing your chances of finding more words that make sense. The dictionary options available with us are Dictionary, TWLO6(US, Canada and Thailand), SOWPODS (UK and others) and Enable (Words with Friends)",
+            "": "",
+            "__1": ""
+        },
+        {
+            "Question": "How can I use the Advanced filter option?",
+            "Answer": "To use the advanced filter option just click on Advanced Filters. Fill in your options like word Starts With, the Prefix, what letters or words it Must Include, what it Contains, what your word End With, the Suffix, the length of the word and click on apply."
+        }
+    ],
+    "aboutList": [
+        {
+            "aboutText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim odio sapiente unde voluptatibus, excepturi saepe quisquam veniam architecto delectus dolor eos dolorem id itaque necessitatibus laborum cupiditate asperiores officia? Deleniti!"
+        },
+        {
+            "aboutText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim odio sapiente unde voluptatibus, excepturi saepe quisquam veniam architecto delectus dolor eos dolorem id itaque necessitatibus laborum cupiditate asperiores officia? Deleniti!"
+        }
+    ]
+}

@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 .article {
-  padding-top: 150px;
-  font-family: Montserrat, sans-serif;
+  padding-top: 100px;
+  font-family: 'Poppins', sans-serif !important;
 }
 .main_h1 {
   font-size: 30px;

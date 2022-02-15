@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-{% assign path = page.jsonFile %}
-{% assign jsonPath = site.data[path] %}
-{% assign dataToShow = jsonPath %}
+{% assign folderName = page.folderName %}
+{% assign file = page.fileName %}
+{% assign lang = page.lang %}
+{% assign dataToShow = site.data[folderName][lang][file] %}
+
 
 <head>
     <!-- Mobile Specific Meta -->
@@ -29,7 +31,10 @@
 
     <link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="stylesheet" href="/assets/css/HomePageblog.css">
     <link rel="stylesheet" href="{{ '/assets/css/footer.css' | relative_url }}">
+
+    {%- include google-analytics.html -%}
 
 
     <title>
@@ -43,35 +48,9 @@
             background-color: #F8F9FA !important;
         }
     </style>
-    {%- if site.MonumetricID -%}
-    <script>
-        const autoLoadDuration = 5; //In Seconds
-        const eventList = ["keydown", "mousemove", "wheel", "touchmove", "touchstart", "touchend"];
 
-        const autoLoadTimeout = setTimeout(runScripts, autoLoadDuration * 1000);
+    {% include Monumetric/Monumetric.html %}
 
-        eventList.forEach(function (event) {
-            window.addEventListener(event, triggerScripts, { passive: true })
-        });
-
-        function triggerScripts() {
-            runScripts();
-            clearTimeout(autoLoadTimeout);
-            eventList.forEach(function (event) {
-                window.removeEventListener(event, triggerScripts, { passive: true });
-            });
-        }
-
-        function runScripts() {
-            console.log(document.querySelector("script"))
-            console.log("Javascript Executed!")
-            console.log(document.querySelectorAll("script[delay]"))
-            document.querySelectorAll("script[delay]").forEach(function (scriptTag) {
-                scriptTag.setAttribute("src", scriptTag.getAttribute("delay"));
-            });
-        }
-    </script>
-    {%- endif -%}
 </head>
 
 <body>
@@ -134,15 +113,27 @@
         </div>
     </div>
 
+    {%- assign langen = "en" -%}
+    {%- if site.data[folder][langen][file].categories -%}
+    {% assign categories= site.data[folder][langen][file].categories %}
+    {%- else -%}
+    {% assign categories= page.categories %}
+    {%- endif -%}
+    {%- if site.data[folder][langen][file].tags -%}
+    {% assign tags= site.data[folder][langen][file].tags %}
+    {%- else -%}
+    {% assign tags= page.tags %}
+    {%- endif -%}
+    {%- if categories.size> 0 or tags.size>0-%}
+    {%- include section/related_categories_post.html -%}
+    {%- else -%}
+    {%- include section/recent_posts.html -%}
+    {% endif %}
+
     {%- include footer/index.html -%}
 
-
-    <script defer src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" />
+    {%- include script.html -%}
     <script src="/assets/js/scrabbleDictonary.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
-    {% include Monumetric/Monumetric.html %}
 </body>
 
 </html>

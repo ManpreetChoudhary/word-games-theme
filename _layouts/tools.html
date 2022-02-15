@@ -1,0 +1,65 @@
+{% assign file = page.fileName %}
+{% assign lang = page.lang %}
+{% assign folder = page.folderName %}
+{% assign homeData= site.data[folder][lang][file] %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+{%- include head/index.html -%}
+
+<body>
+    {%- include header/index.html -%}
+
+    {%- if homeData.h1 or homeData.h2 -%}
+    <div class="tools_headings">
+        <div class="container">
+            <div class="pageHeading text-center">
+                <h1 class="heading pb-0 m-0">{{homeData.h1}}</h1>
+                {%- if homeData.h2 != '' -%}
+                <h2>{{homeData.h2}}</h2>
+                {%- endif -%}
+            </div>
+        </div>
+    </div>
+    {%- endif -%}
+
+    <div class="tools-feature">
+        {{content}}
+    </div>
+
+    {% include section/feature.html %}
+
+    {%- if dataToShow.faqList -%}
+    {%- if dataToShow.faqList.first.Question !='' -%}
+    {% include section/news.html %}
+    {% endif %}
+    {% endif %}
+
+
+    {%- include Rating/rating.html -%}
+
+    {%- assign langen = "en" -%}
+    {%- if site.data[folder][langen][file].categories -%}
+    {% assign categories= site.data[folder][langen][file].categories %}
+    {%- else -%}
+    {% assign categories= page.categories %}
+    {%- endif -%}
+    {%- if site.data[folder][langen][file].tags -%}
+    {% assign tags= site.data[folder][langen][file].tags %}
+    {%- else -%}
+    {% assign tags= page.tags %}
+    {%- endif -%}
+    {%- if categories.size> 0 or tags.size>0-%}
+    {%- include section/related_categories_post.html -%}
+    {%- else -%}
+    {%- include section/recent_posts.html -%}
+    {% endif %}
+
+
+    {%- include footer/index.html -%}
+
+    {%- include script.html -%}
+</body>
+
+</html>

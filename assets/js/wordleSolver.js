@@ -1,12 +1,12 @@
-console.log('wordle solver ...')
+// console.log('wordle solver ...')
 
 let form = document.querySelector('[name=verify')
 
-let greenLetters = document.querySelectorAll('#greenLetters')
-let yellowLetters = document.querySelectorAll('#yellowLetters')
-let greyLetters = document.querySelectorAll('#greyLetters')
+let greenLetters = document.querySelectorAll('.greenLetters')
+let yellowLetters = document.querySelectorAll('.yellowLetters')
+let greyLetters = document.querySelectorAll('.greyLetters')
 let wordleSolverData = document.getElementById('wordleSolverData')
-
+greenLetters[0].focus()
 let wordleWordCount = document.querySelector('#wordleWordCount')
 let wordleSolvererrorMsg = document.querySelector('#wordleSolvererrorMsg')
 let wordlesolver_submit = document.getElementById('wordlesolver_submit')
@@ -38,9 +38,12 @@ addMore.addEventListener('click', (e) => {
   }
 })
 
+let spinner = document.querySelector('.spinner')
 const wordleSolver = async (value, value2, value3, greenWithIndex) => {
   try {
     let result = ''
+    document.querySelector('#updateTxt').innerHTML = ''
+    spinner.classList.add('spinner-border')
     wordleWordCount.innerHTML = 'Searching for best possible letters...'
     let response = await fetch('/.netlify/functions/wordleSolver', {
       method: 'POST',
@@ -51,7 +54,10 @@ const wordleSolver = async (value, value2, value3, greenWithIndex) => {
         greenWithIndex: greenWithIndex,
       }),
     })
-    const data = await response.json()
+    let  data = await response.json()
+    data = data.slice(0,1000)
+    document.querySelector('#updateTxt').innerHTML = 'Solve'
+    spinner.classList.remove('spinner-border')
 
     let ok = true
     if (data.length === 0) {
@@ -59,10 +65,13 @@ const wordleSolver = async (value, value2, value3, greenWithIndex) => {
       wordleSolverData.innerHTML = ''
       wordleSolvererrorMsg.classList.add('alert-danger')
       wordleSolvererrorMsg.innerHTML = 'Sorry!! No words found'
+      wordleWordCount.style.display = 'none'
+      // console.log(wordleWordCount)
     } else {
+      wordleWordCount.style.display = 'block'
+      wordleSolverData.innerHTML = ''
       wordleSolvererrorMsg.classList.remove('alert-danger')
       wordleSolvererrorMsg.innerHTML = ''
-      wordleSolverData.innerHTML = ''
       newWordsLength = ''
       newWordsLength += data.length
       result = data.map((item) => {
@@ -70,6 +79,7 @@ const wordleSolver = async (value, value2, value3, greenWithIndex) => {
           ok = false
           newWordsLength = newWordsLength - 1
         } else {
+          // console.log(newWordsLength);
           let ScrabbleLetterScore = ScrabbleScore()
           sum = 0
           item = item.toLowerCase()
@@ -77,7 +87,7 @@ const wordleSolver = async (value, value2, value3, greenWithIndex) => {
             sum += ScrabbleLetterScore[item[i]] || 0 // for unknown characters
           }
           return `
-          <a class="anchor__style" title="Lookup python in Dictionary" target="_blank" href="/word-meaning?search=${item.toLowerCase()}">
+          <a class="anchor__style" title="Lookup ${item} in Dictionary" target="_blank" href="/word-meaning?search=${item.toLowerCase()}">
           <li>
           ${item.toLowerCase()}
           <span class="points" value="${sum}" style="position:relative; top:4px; font-size:12px"> ${sum}</span>
@@ -90,7 +100,7 @@ const wordleSolver = async (value, value2, value3, greenWithIndex) => {
         wordleSolverData.innerHTML += `
             <div class="allfiveletterswords wordlistContainer">
                 <div class="wordListHeading">
-                    <h3 class="lead">All 5 Letter Words</h3>
+                    <h3 class="lead">Solve wordle with these words</h3>
                 </div>
                 <div class="wordList">
                     <ul class="ul list-unstyled">
@@ -101,11 +111,13 @@ const wordleSolver = async (value, value2, value3, greenWithIndex) => {
             `
       }
     }
+
     if (newWordsLength === 0) {
+      console.log(true)
       wordleSolvererrorMsg.classList.add('alert-danger')
       wordleSolvererrorMsg.innerHTML = 'Sorry!! No words found'
     } else {
-      wordleWordCount.innerHTML = `<strong>${newWordsLength} Results</strong>`
+      wordleWordCount.innerHTML = `<strong>Found <span style="color:#20a815">${newWordsLength}</span> matching words for wordle</strong>`
     }
   } catch (error) {
     console.log(error)
@@ -115,6 +127,7 @@ const wordleSolver = async (value, value2, value3, greenWithIndex) => {
 for (let g = 0; g < greenLetters.length; g++) {
   const elem = greenLetters[g]
   elem.addEventListener('input', (e) => {
+    e.target.value = e.target.value.replace(/[^a-zA-Z? ]/g, "")
     if (e.target.value) {
       e.target.classList.add('ws-fcs')
     } else {
@@ -125,6 +138,7 @@ for (let g = 0; g < greenLetters.length; g++) {
 for (let y = 0; y < yellowLetters.length; y++) {
   const elem = yellowLetters[y]
   elem.addEventListener('input', (e) => {
+    e.target.value = e.target.value.replace(/[^a-zA-Z? ]/g, "")
     if (e.target.value) {
       e.target.classList.add('ws-fcs2')
     } else {
@@ -135,6 +149,7 @@ for (let y = 0; y < yellowLetters.length; y++) {
 for (let e = 0; e < greyLetters.length; e++) {
   const elem = greyLetters[e]
   elem.addEventListener('input', (e) => {
+    e.target.value = e.target.value.replace(/[^a-zA-Z? ]/g, "")
     if (e.target.value) {
       e.target.classList.add('ws-fcs3')
     } else {
@@ -173,24 +188,28 @@ const getIndexs = (object) => {
 
 function handleSubmit(e) {
   e.preventDefault()
+
   let greenLetter = getLetters('.greenLetters')
   let yellowLetters = getLetters('.yellowLetters')
   let greyLetters = getLetters('.greyLetters')
   let greenWithIndex = getIndexs('.greenWithIndex')
-  if (
-    greenLetters[0].value !== '' ||
-    greenLetters[1].value !== '' ||
-    greenLetters[2].value !== '' ||
-    greenLetters[3].value !== '' ||
-    greenLetters[4].value !== ''
-  ) {
-    errMessage.innerHTML = ''
-    errMessage.classList.remove('alert-danger')
+  
+  // if (
+  //   greenLetters[0].value !== '' ||
+  //   greenLetters[1].value !== '' ||
+  //   greenLetters[2].value !== '' ||
+  //   greenLetters[3].value !== '' ||
+  //   greenLetters[4].value !== ''
+  // ) {
+  //   errMessage.innerHTML = ''
+  //   errMessage.classList.remove('alert-danger')
+  //   errMessage.style.display = 'none'
     wordleSolver(greenLetter, yellowLetters, greyLetters, greenWithIndex)
-  } else {
-    errMessage.innerHTML = 'You must enter at least 1 green letter'
-    errMessage.classList.add('alert-danger')
-  }
+  // } else {
+  //   errMessage.innerHTML = 'You must enter at least 1 green letter'
+  //   errMessage.classList.add('alert-danger')
+  //   errMessage.style.display = 'block'
+  // }
 }
 form.addEventListener('submit', handleSubmit)
 

@@ -226,7 +226,7 @@ function Filtering(id) {
     if (document.body.clientWidth > 991) {
       sections[e.id] = e.offsetTop - 10
     } else {
-      sections[e.id] = e.offsetTop - 30
+      sections[e.id] = e.offsetTop - 10
     }
   })
   document.documentElement.scrollTop = sections[sort_val + '_' + id] + 5

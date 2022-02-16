@@ -21,9 +21,9 @@ exports.handler = function (event, context,callback) {
           temp[l] = example;
           l++;
         });
-        let o = temp[0];
+        let o ="{"+temp[0]+"}";
         for (let i = 1; i < temp.length; i++) {
-          o += ". " + temp[i];
+          o += ", {" + temp[i]+"}";
         }
         ex[k] =  o;
         k++;
@@ -49,7 +49,7 @@ exports.handler = function (event, context,callback) {
             {
                 case 'n':{
                     noun+="<b>Meaning:</b> "+mean[i]+"<br>";
-                    if(exam[i]!=null)
+                    if(exam[i]!="{null}")
                         noun+="<b>Examples:</b> "+exam[i]+"<br>";
                     if(syns[i]!=word)
                         noun+="<b>Synonyms:</b> "+syns[i]+"<br>";
@@ -58,7 +58,7 @@ exports.handler = function (event, context,callback) {
                 }
                 case 'v':{
                     verb+="<b>Meaning:</b> "+mean[i]+"<br>";
-                    if(exam[i]!=null)
+                    if(exam[i]!="{null}")
                         verb+="<b>Examples:</b> "+exam[i]+"<br>";
                     if(syns[i]!=word)
                         verb+="<b>Synonyms:</b> "+syns[i]+"<br>";
@@ -67,7 +67,7 @@ exports.handler = function (event, context,callback) {
                 }
                 case 'a':{
                     adjective+="<b>Meaning:</b> "+mean[i]+"<br>";
-                    if(exam[i]!=null)
+                    if(exam[i]!="{null}")
                         adjective+="<b>Examples:</b> "+exam[i]+"<br>";
                     if(syns[i]!=word)
                         adjective+="<b>Synonyms:</b> "+syns[i]+"<br>";
@@ -76,7 +76,7 @@ exports.handler = function (event, context,callback) {
                 }
                 case 'r':{
                     adverb+="<b>Meaning:</b> "+mean[i]+"<br>";
-                    if(exam[i]!=null)
+                    if(exam[i]!="{null}")
                         adverb+="<b>Examples:</b> "+exam[i]+"<br>";
                     if(syns[i]!=word)
                         adverb+="<b>Synonyms:</b> "+syns[i]+"<br>";

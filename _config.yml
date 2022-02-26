@@ -9,6 +9,8 @@ description: word games testing theme description
 siteurl: https://word-games.netlify.app
 favicon: /assets/images/wordswithletters-logo.png
 alternateName: wordgames
+show_allow_ad_blocker_pop: true
+adspopuptitle: Words with letters
 baseurl: ''
 permalink: /blog/:title
 author_name: Harshit Raghav

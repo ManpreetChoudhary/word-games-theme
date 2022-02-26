@@ -1,43 +1,111 @@
+const { on } = require('events')
 const fs = require('fs')
 const words = require('./functions/Dictonary/enable.js')
 
-// let words = ["ram", "python", "door", "pyhon", "aa", "aah", "aahed", "aahing", "aahs", "aal", "aalii", "aaliis", "aals", "aardvark", "aardvarks", "aardwolf", "aardwolves", "aargh", "aarrgh", "aarrghh", "aarti", "aartis", "aas", "aasvogel", "aasvogels", "ab", "aba", "abac", "abaca", "abacas", "abaci", "aback", "abacs", "abacterial", "abactinal", "abactinally", "abactor", "abactors", "abacus", "abacuses", "abaft", "abaka", "abakas", "abalone", "abalones", "abamp", "abampere", "abamperes", "abamps", "aband", "abanded", "abanding", "abandon", "abandoned", "abandonedly", "abandonee", "abandonees", "abandoner", "abandoners", "abandoning", "abandonment", "abandonments", "abandons", "abandonware", "abandonwares", "abands", "abapical", "abas", "abase", "abased", "abasedly", "abasement", "abasements", "abaser", "abasers", "abases", "abash", "abashed", "abashedly", "abashes", "abashing", "abashless", "abashment", "abashments", "abasia", "abasias", "abasing", "abask", "abatable", "abate", "abated", "abatement", "abatements", "abater", "abaters", "abates", "abating", "abatis", "abatises", "abator", "abators", "abattis"]
+// const words = ["hotshot"]
 dictionaryData = [...words]
 resultArr = words
-const searchWord = (word) => {
-  let wordValue = word.split('')
-  let data = []
-  dictionaryData.map((item, index) => {
-    let check = true
-    for (let e = 0; e < wordValue.length; e++) {
-      if (item.includes(wordValue[e])) {
-        check = true
-        dictionaryData[index] = item.split('')
-        let findIndex = item.indexOf(wordValue[e])
-        dictionaryData[index][findIndex] = '$'
-        dictionaryData[index] = dictionaryData[index].join('')
-        item = dictionaryData[index]
+let data = []
+
+const searchWord = (wordToSearch) => {
+  var blankTileCount = wordToSearch.split('').filter((i) => i === '?').length
+  wordToSearch = wordToSearch.replace(/ /g, '?')
+  dictionaryData.map((word, index) => {
+
+    var missedCounter = 0;
+    var matchedCounter = 0;
+
+    dicWord = word.split('')
+    for (let i = 0; i < dicWord.length; i++) {
+      if (wordToSearch.includes(dicWord[i])) {
+        matchedCounter++;
+
+        let newSet = wordToSearch.split("")
+        newSet = [...new Set(newSet)]
+
+        if (newSet.length + blankTileCount - 1 === wordToSearch.split("").length) {
+          let re = new RegExp(`${dicWord[i]}`, 'g');
+          let ds = word.replace(re, '$')
+          word = ds
+          dicWord = word.split('')
+        }
       }
       else {
-        check = false
-        break
+        missedCounter++;
       }
-      if (check === true) {
-        data.push((resultArr[index]))
+    }
+    if (matchedCounter != 0) {
+      if (missedCounter <= blankTileCount) {
+        data.push(resultArr[index])
       }
     }
   })
 
+
   data = [...new Set(data)]
 
-  for (let i = wordValue.length; i > 1; i--) {
+  for (let i = wordToSearch.length; i > 1; i--) {
     let newdata = data.filter((item) => item.length === i)
-    if (i == 5) {
-    }
     console.log(i + " " + "Letter Words", newdata)
   }
 }
-searchWord("ram??")
+searchWord('cool?')
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const searchWord = (word, tiles) => {
+//   let wordValue = word.split('')
+//   dictionaryData.map((i, index) => {
+//     let blankTiles = tiles
+//     let check = true
+//     for (let k = 0; k < wordValue.length; k++) {
+//       if (blankTiles >= 0) {
+//         // console.log(blankTiles + wordValue[k])
+//         // console.log
+//         if (i.includes(wordValue[k])) {
+//           check = true
+//           // dictionaryData[index] = i.split('')
+//           // let findIndex = i.indexOf(wordValue[k])
+//           // dictionaryData[index][findIndex] = '$'
+//           // dictionaryData[index] = dictionaryData[index].join('')
+//           // i = dictionaryData[index]
+//         } else {
+//           check = true
+//           if (blankTiles < 0) {
+//             check = false
+//             break
+//           }
+//           blankTiles = blankTiles - 1
+//         }
+//       }
+//     }
+//     if (check === true) {
+//       data.push(resultArr[index])
+//     }
+//   })
+//   // console.log(data)
+//   for (let i = wordValue.length + 1; i > 1; i--) {
+//     let newdata = data.filter((item) => item.length === i)
+//     console.log(i + " " + "Letter Words", newdata)
+//   }
+
+// }
+// searchWord('ram', 1)
+
+
+
+
+
 
 
 

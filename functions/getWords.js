@@ -24,32 +24,43 @@ exports.handler = function (event, context, callback) {
     resultArr = enable
   }
 
+
   let data = []
   if (name.includes('?')) {
-    const searchWord = (word) => {
-      let wordValue = word.split('')
-      dictionaryData.map((i, index) => {
-        let check = true
-        for (let k = 0; k < wordValue.length; k++) {
-          if (i.includes(wordValue[k])) {
-            check = true
-            dictionaryData[index] = i.split('')
-            let findIndex = i.indexOf(wordValue[k])
-            dictionaryData[index][findIndex] = '$'
-            dictionaryData[index] = dictionaryData[index].join('')
-            i = dictionaryData[index]
-          } else {
-            check = false
-            break
+    const searchWord = (wordToSearch) => {
+      var blankTileCount = wordToSearch.split('').filter((i) => i === '?').length
+      // wordToSearch = wordToSearch.replace(/\?$/, '')
+      dictionaryData.map((word, index) => {
+        var missedCounter = 0;
+        var matchedCounter = 0;
+        dicWord = word.split('')
+        for (let i = 0; i < dicWord.length; i++) {
+          if (wordToSearch.includes(dicWord[i])) {
+            matchedCounter++;
+
+            let newSet = wordToSearch.split("")
+            newSet = [...new Set(newSet)]
+
+            if (newSet.length + blankTileCount - 1 === wordToSearch.split("").length) {
+              let re = new RegExp(`${dicWord[i]}`, 'g');
+              let ds = word.replace(re, '$')
+              word = ds
+              dicWord = word.split('')
+            }
+          }
+          else {
+            missedCounter++;
           }
         }
-        if (check === true) {
-          data.push(resultArr[index])
+        if (matchedCounter != 0) {
+          if (missedCounter <= blankTileCount) {
+            data.push(resultArr[index])
+          }
         }
       })
+      data = [...new Set(data)]
     }
-    searchWord(name.replace(/\?/g, ''))
-    data = [...new Set(data)]
+    searchWord(name)
   } else {
     data = scrabble(name)
   }

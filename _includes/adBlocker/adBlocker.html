@@ -1,0 +1,155 @@
+{%- if site.show_allow_ad_blocker_pop -%}
+<link rel="stylesheet" href="../../assets/css/adBlocker.css">
+<div id="detect"></div>
+<div class="wrapper text-center">
+    <div class="innerWrapper">
+        <div class="closePopup p-1">
+            <i class="bi bi-x-circle-fill"></i>
+        </div>
+        <h2 class="brand-title">{{site.adspopuptitle}}</h2>
+        <p class="show-ads">
+            Please allow ads on our site
+        </p>
+        <p>Looks like you're using an ad blocker. We rely on advertising to help fund our site to keep it 100% free</p>
+        <div class="btn-container mx-auto">
+            <div class="bg-layer"></div>
+            <button class="allow-ads-btn">Allow ads</button>
+        </div>
+    </div>
+</div>
+<div class="extensions">
+    <section>
+        <div class="ads__content">
+            <div class="closePopup">
+                <i class="bi bi-x-circle-fill"></i>
+            </div>
+            <p style="font-size: 18px">Which of these extensions do you have?</p>
+            <ul class="nav nav-tabs tablist" role="tablist">
+                <a class="nav-link nav-tab-link active" data-toggle="tab" href="#home" role="tab">
+                    <li class="nav-item">
+                        <img class="ads_img" src="../../assets/images/adblock.svg" alt="AdBlock image">
+                    </li>
+                    AdBlock
+                </a>
+                <a class="nav-link nav-tab-link" data-toggle="tab" href="#adsblockPlus" role="tab">
+                    <li class="nav-item">
+                        <img class="ads_img" src="../../assets/images/abp.svg" alt="Adblock Plus Image">
+                    </li>
+                    Adblock Plus
+                </a>
+                <a class="nav-link nav-tab-link" data-toggle="tab" href="#uBlock" role="tab">
+                    <li class="nav-item">
+                        <img class="ads_img" src=".../../assets/images/uo.svg" alt="uBlock image">
+                    </li>
+                    uBlock Origin
+                </a>
+                <a class="nav-link nav-tab-link" data-toggle="tab" href="#other" role="tab">
+                    <li class="nav-item">
+                        <div class="three_dot">...</div>
+                    </li>
+                    Other
+                </a>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane active" id="home" role="tabpanel">
+                    <ol class="listContainer">
+                        <li class="listItem">Click the AdBlock icon
+                            <img width="18px" src="../../assets/images/adblock.svg" alt="AdBlock image">
+                            in the browser extension area on the upper right-hand corner. (You may see a small number
+                            covering
+                            part of
+                            the icon.)
+                        </li>
+                        <li class="listItem">Select <b>Don't run on pages on this site</b>.</li>
+                        <li class="listItem">In the "Don’t run AdBlock on..." dialog box, select <b>Exclude</b>. The
+                            AdBlock
+                            icon
+                            changes to a “thumbs up” image.</li>
+                    </ol>
+                    <div class="text-center w-100" onclick="refresh()">
+                        <button class="btn btn-primary" style="font-size: 12px;">Refresh page</button>
+                    </div>
+                </div>
+                <div class="tab-pane" id="adsblockPlus" role="tabpanel">
+                    <ol class="listContainer">
+                        <li class="listItem">Click the Adblock Plus icon
+                            <img width="18px" src="../../assets/images/abp.svg" alt="Adblock Plus Image">
+                            in the browser extension area on the
+                            upper right-hand corner. (You may see a small number covering part of the icon.)
+                        </li>
+                        <li class="listItem">Click the “power” button Power icon so that it slides left.</li>
+                        <li class="listItem">Click the <b>Refresh</b> button.</li>
+                    </ol>
+                    <div class="text-center w-100" onclick="refresh()">
+                        <button class="btn btn-primary" style="font-size: 12px;">Refresh page</button>
+                    </div>
+                </div>
+                <div class="tab-pane" id="uBlock" role="tabpanel">
+                    <ol class="listContainer">
+                        <li class="listItem">Click the uBlock Origin icon
+                            <img width="18px" src="../../assets/images/uo.svg" alt="uBlock image"> in the browser
+                            extension area on
+                            the upper right-hand corner. (You may see a small number covering part of the icon.)
+                        </li>
+                        <li class="listItem">
+                            Click the “power” button so that it slides left.
+                        </li>
+                        <li class="listItem">Click the <b>Refresh</b> button.</li>
+                    </ol>
+                    <div class="text-center w-100" onclick="refresh()">
+                        <button class="btn btn-primary" style="font-size: 12px;">Refresh page</button>
+                    </div>
+                </div>
+                <div class="tab-pane" id="other" role="tabpanel">
+                    <ol class="listContainer">
+                        <li class="listItem">Click the icon of the ad blocker extension installed on your browser.</li>
+                        <p class="text-muted">You’ll usually find this icon in the upper right-hand corner of your
+                            screen. You may
+                            have more than
+                            one ad blocker installed.</p>
+                        <li class="listItem">Follow the instructions for disabling the ad blocker on the site you’re
+                            viewing.</li>
+                        <p class="text-muted">You may have to select a menu option or click a button.</p>
+                        <li class="listItem">Refresh the page, either by following prompts or clicking your browser’s
+                            “refresh” or
+                            “reload” button.</li>
+                    </ol>
+                    <div class="text-center w-100" onclick="refresh()">
+                        <button class="btn btn-primary" style="font-size: 12px;">Refresh page</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+</div>
+<script>
+    const autoLoadDuration = 5; //In Seconds
+    const eventList = ["keydown", "mousemove", "wheel", "touchmove", "touchstart", "touchend"];
+
+    const autoLoadTimeout = setTimeout(runScripts, autoLoadDuration * 1000);
+
+    eventList.forEach(function (event) {
+        window.addEventListener(event, triggerScripts, { passive: true })
+    });
+
+    function triggerScripts() {
+        runScripts();
+        clearTimeout(autoLoadTimeout);
+        eventList.forEach(function (event) {
+            window.removeEventListener(event, triggerScripts, { passive: true });
+        });
+    }
+
+    function runScripts() {
+        document.querySelectorAll("script[delay]").forEach(function (scriptTag) {
+            scriptTag.setAttribute("src", scriptTag.getAttribute("delay"));
+        });
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script delay="../assets/js/adBlocker.js"></script>
+{%- endif -%}

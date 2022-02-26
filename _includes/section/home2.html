@@ -118,13 +118,13 @@
     const advancedFilter = document.querySelector('.advancedFilter')
     const fillterWrapper = document.querySelector('.fillterWrapper')
     advancedFilter.addEventListener('click', () => {
-        fillterWrapper.classList.toggle('active')
+        fillterWrapper.classList.toggle('actives')
         fillterWrapper.classList.remove('hide')
     })
 
     const close = document.querySelector('.times')
     close.addEventListener('click', () => {
-        fillterWrapper.classList.remove('active')
+        fillterWrapper.classList.remove('actives')
         fillterWrapper.classList.add('hide')
     })
 </script>

@@ -1,0 +1,37 @@
+<!-- how to section -->
+{%- if dataToShow.HOW_TO_CONTENT -%}
+<section class="how-to-section">
+    <div class="feature">
+        <h5 class="title">{{dataToShow.howto}}</h5>
+    </div>
+    <div class="container">
+        <div class="row pt-5">
+            <div class="col-md-6 order-0 ">
+                {%- if dataToShow.HOW_TO_CONTENT.logoImageUrl -%}
+                <div class="how-to-img-wrapper ">
+                    <img class="how-to-leftimg" height="180px" width="300px"
+                        src="{{dataToShow.HOW_TO_CONTENT.logoImageUrl}}" loading="lazy"
+                        alt="{{dataToShow.HOW_TO_CONTENT.logoImageAlt | default: 'how to image' }}">
+                </div>
+                {%- endif -%}
+            </div>
+            <div class="col-md-6 order-1">
+                <div class="how-to-right">
+                    <h3 class="how-to-title text-left">{{dataToShow.HOW_TO_CONTENT.heading | replace: "$variable",
+                        page.value}}</h3>
+                    <ol class="how-to-list">
+                        {% for data in dataToShow.HOW_TO_CONTENT.steps %}
+                        <li id="step{{forloop.index}}" class="how-to-list-item">
+                            <span>{{forloop.index}}.</span>{{data |
+                            replace: "$variable",
+                            page.value}}
+                        </li>
+                        {% endfor %}
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+{%- endif -%}

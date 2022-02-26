@@ -13,6 +13,7 @@
    "Faq_title": "FAQ",
    "aboutNo": "05",
    "about_title": "About",
+   "howto": "How to",
    "featureList": [
       {
          "feature_heading": "Words with letters  and a blank?",
@@ -50,6 +51,16 @@
          "fa_class": "../assets/images/star.svg"
       }
    ],
+   "HOW_TO_CONTENT": {
+      "logoImageUrl": "https://smallpdf.com/build/73d77e3d204fd7defc9de80bf83fcbeb.svg",
+      "heading": "How to set alarm for $variable minutes:",
+      "steps": [
+         "Click on set alarm ",
+         "Set $variable minutes for alarm.",
+         "Choose sound of your choice.",
+         "Click submit to set alarm, that's it !."
+      ]
+   },
    "faqList": [
       {
          "Question": "Words with letters  and a blank?",

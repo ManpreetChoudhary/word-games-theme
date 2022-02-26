@@ -19,6 +19,8 @@
 
     {% include section/feature.html %}
 
+
+
     {%- if dataToShow.faqList -%}
     {%- if dataToShow.faqList.first.Question !='' -%}
     {% include section/news.html %}
@@ -30,6 +32,7 @@
     {%- include WordPointTables/table.html -%}
     {%- endif -%}
 
+    {% include adBlocker/adBlocker.html %}
     {%- include share/socialshare.html -%}
     {%- include Rating/rating.html -%}
 

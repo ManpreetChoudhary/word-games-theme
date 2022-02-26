@@ -7,6 +7,16 @@
     "categories": "wordle",
     "featureNo": "02",
     "feature_title": "Features",
+    "HOW_TO_CONTENT": {
+        "logoImageUrl": "https://smallpdf.com/build/73d77e3d204fd7defc9de80bf83fcbeb.svg",
+        "heading": "How to set alarm for $variable minutes:",
+        "steps": [
+            "Click on set alarm ",
+            "Set $variable minutes for alarm.",
+            "Choose sound of your choice.",
+            "Click submit to set alarm, that's it !."
+        ]
+    },
     "featureList": [
         {
             "feature_heading": "",

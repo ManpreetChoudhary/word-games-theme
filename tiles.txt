@@ -1,0 +1,164 @@
+1. first, we have a (word-game) dictionary which includes lot of words. 
+   and we have one search value = "pyon" 
+
+   after that we will map that dictionary and split that search value.
+   and compare every searchValue  with dictionary(word).
+
+   const words = require('./functions/Dictonary/enable.js')
+   dictionaryData = [...words]
+   resultArr = words
+
+    let check = true
+    let data = []
+const searchWord = (value,tiles) => {
+    value.length  === 5
+   dictionary.map((word)=>{
+       let searchValue = value.split("") // 'p','y','o','n'
+
+       for (let i = 0; i < searchValue.length; i++) {
+       if (word.includes(searchValue[i])) {  "python" match 'p','y','o','n'
+          check = true   //matched words under check = [true] 
+       }
+       else{
+           check = false  // not matching words
+           break;
+       }
+     }
+      if (check === true) {
+      data.push(resultArr[word])
+    }
+   })
+
+    for (let i = searchValue.length + 1; i > 1; i--) {
+    let newdata = data.filter((item) => item.length === i)
+    // console.log(i + " " + "Letter Words", newdata)
+  }
+}
+
+searchWord("pyon",1)
+pyon$ py$on $yonp
+
+
+second logic :  : 
+const words = require('./functions/Dictonary/enable.js')
+   dictionaryData = [...words]
+   resultArr = words
+
+    let check = true
+    let data = []
+const searchWord = (value,tiles) => {
+    value.length  === 5
+   dictionary.map((word)=>{
+       let searchValue = value.split("") // 'p','y','o','n'
+
+       for (let i = 0; i < searchValue.length; i++) {
+       if (word.includes(searchValue[i])) {  "python" match 'p','y','o','n'
+          check = true   //matched words under check = [true] 
+       }
+       else{
+           check = false  // not matching words
+           break;
+       }
+     }
+      if (check === true) {
+      data.push(resultArr[word])
+    }
+   })
+
+
+
+   'pyon'
+   'phony',
+
+   data.map((item, ?)=>{
+     'pyon?'
+         var abcList = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+
+         var string = '';
+         for (var i = 0, size = abcList.length; i < size; i++) {
+            var newletter = '';
+            var item = abcList[i]; //itterate abc
+            var newletter = item.value.toLowerCase().replace('?', item);  //replacing ? with abc list 
+
+            pyon.mathced('a)
+            pyon.mathced('b')
+            pyon.mathced('c')
+            pyon.mathced('h') = 'phony'
+
+
+            if(item.find(newletter)){   'pyon?' => 'a','b','c' ...xyz for one blank tiles
+                check =  true               'pyon??' => 'ab','ba','ac','ca' ...xyz so on 
+                                            'pyon???' => 'abc','bca','cab','bac','cba',aca' so on...xyz
+            }
+
+         }
+   })
+
+    for (let i = searchValue.length + 1; i > 1; i--) {
+    let newdata = data.filter((item) => item.length === i)
+    // console.log(i + " " + "Letter Words", newdata)
+  }
+}
+
+searchWord("pyon",1)
+
+
+
+
+
+const fs = require('fs')
+const words = require('./functions/Dictonary/enable.js')
+dictionaryData = [...words]
+resultArr = words
+let data = []
+const searchWord = (word, tiles) => {
+  let wordValue = word.split('')
+
+  for (var i = 0; i < wordValue.length - 1; i++) {
+    var c = wordValue[i] + wordValue[i + 1];
+    console.log(c)
+
+    dictionaryData.map((i, index) => {
+      let blankTiles = tiles
+      let check = true
+      for (let k = 0; k < c.length; k++) {
+        if (blankTiles >= 0) {
+          // console.log(blankTiles + wordValue[k])
+          // console.log
+          if (i.includes(wordValue[k])) {
+            check = true
+            // dictionaryData[index] = i.split('')
+            // let findIndex = i.indexOf(wordValue[k])
+            // dictionaryData[index][findIndex] = '$'
+            // dictionaryData[index] = dictionaryData[index].join('')
+            // i = dictionaryData[index]
+            // console.log(i)
+          } else {
+            // console.log('p' + blankTiles)
+            // check = true
+            // if (blankTiles <= 0) {
+            check = false
+            break
+            // }
+            // blankTiles = blankTiles - 1
+          }
+        }
+      }
+      if (check === true) {
+        data.push(resultArr[index])
+        // console.log(data)
+      }
+    })
+
+  }
+  // console.log(data)
+  for (let i = wordValue.length + 1; i > 1; i--) {
+    let newdata = data.filter((item) => item.length === i)
+    // console.log(i + " " + "Letter Words", newdata)
+  }
+
+}
+searchWord('pyon', 1)
+
+
+
